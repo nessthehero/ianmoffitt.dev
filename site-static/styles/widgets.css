@@ -1,0 +1,26 @@
+.widget {
+	display: block;
+	float: left;
+	margin-bottom: 1em;
+	margin-right: 1em;
+	padding: 1em;
+}
+
+.widget p { }
+.widget p img { padding: 0.5em; }
+.widget p img[align="left"] { padding: 0.5em 0.5em 0.5em 0; }
+.widget p img[align="right"] { padding: 0.5em 0 0.5em 0.5em; }
+
+.widget table,
+.widget tbody,
+.widget th,
+.widget tr,
+.widget td { border: 1px solid #000; }
+
+.widget_calendar caption { margin: 0 0 0.2em; }
+.widget_calendar table,
+.widget_calendar tr,
+.widget_calendar th,
+.widget_calendar td { border-width: 2px; border-color: white; border-style: solid; }
+.widget_calendar td { text-align: center; white-space: nowrap; }
+.widget_calendar th { background-color: transparent; color: #333; }
