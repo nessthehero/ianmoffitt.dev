@@ -1,0 +1,183 @@
+body {
+    background: $bodyBgGrey;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    color: $fontGrey;
+    font-size: 16px;
+}
+
+body * {
+	word-break: break-word;
+	word-wrap: break-word;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+
+	background-color: transparent;
+	background-position: top center;
+	background-repeat: no-repeat;
+
+	-webkit-font-smoothing: antialiased;
+}
+
+a {
+	text-decoration: none;
+	color: $pink;
+	font-weight: bold;
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
+
+}
+
+input[type='text'],
+input[type='password'],
+input[type='search'] {
+	word-break: normal;
+}
+
+input[type='text'],
+textarea,
+select {
+	background-color: $white;
+	max-width: 100%;
+}
+
+input[type="text"],
+textarea {
+    -webkit-appearance: none;
+    border-radius: 12px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000;
+    padding: 0.3em 0.5em;
+}
+
+
+input[type='radio'],
+input[type='checkbox'] {
+	@include em_margin(0, 3.2);
+}
+
+img {
+	max-width: 100%;
+}
+
+table,
+tbody,
+tr,
+td {
+	border: 1px solid $black;
+}
+
+hr {
+	border-top: none;
+	border-bottom-color: $pink;
+	border-bottom-width: 3px;
+	border-left: none;
+	border-right: none;
+}
+
+.content {
+
+	img {
+
+		@include em_padding(8);
+
+		&[align=left] {
+			float: left;
+			@include em_padding(8, 8, 8, 0);
+		}
+
+		&[align=right] {
+			float: right;
+			@include em_padding(8, 0, 8, 8);
+		}
+
+	}
+
+}
+
+.tagline {
+	display: block;
+	font-style: italic;
+	float: right;
+	@include em_padding(8, 16);
+}
+
+a.menu-link {
+    display: block;
+    color: $pink;
+    font-weight: bold;
+    @include em_padding(16, 0);
+}
+
+nav[role=navigation] {
+    clear: both;
+    overflow: hidden;
+
+    .js & {
+    	height: 100%;
+    	position: absolute;
+    	top: 0;
+    	left: -16em;
+
+    	@include em_width(256);
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        border-top: 1px solid $pink;
+    }
+
+    li {
+    	a {
+	        display: block;
+	        @include em_padding(6.4, 12.8);
+	    }
+	}
+
+}
+
+@include bp("medium") {
+
+	nav[role=navigation] {
+
+	    background: $pink;
+
+		li {
+			a {
+			    color: $white;
+			    border-bottom: 1px solid $white;
+			    @include em_padding(12.8);
+			}
+		}
+
+		.js & {
+			max-width: none;
+			position: static;
+			width: auto;
+		}
+
+		ul {
+	        margin: 0;
+	        border: 0;
+	    }
+
+		li {
+			a {
+		        border: 0;
+		    }
+		}
+
+	}
+
+    a.menu-link {
+        display: none;
+    }
+
+}

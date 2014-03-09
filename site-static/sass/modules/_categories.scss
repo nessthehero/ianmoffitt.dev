@@ -1,0 +1,33 @@
+@include bp("medium") {
+
+    .tag-container,
+    .cat-container { display: block; }
+
+    .tags,
+    .categories {
+
+        margin: 0;
+        display: inline-block;
+
+        dl {
+            display: inline-block;
+            margin: 0;
+
+            &:before {
+                content: ' - ';
+                font-weight: bold;
+                padding-left: 0.1875em;
+            }
+            &:first-child:before {
+                content: '';
+            }
+
+        }
+
+    }
+
+    .tags ~ .cats-header {
+        margin-left: 1em;
+    }
+
+}

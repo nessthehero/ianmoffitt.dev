@@ -1,0 +1,27 @@
+.container {
+
+	position: relative;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+
+	&.active {
+		left: 16em;
+	}
+
+	@include bp("medium") {
+
+		& {
+			overflow: auto;
+			position: relative;
+		}
+
+		&.active {
+			left: 0;
+		}
+
+	}
+
+}

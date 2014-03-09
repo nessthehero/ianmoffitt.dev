@@ -1,0 +1,21 @@
+.search {
+	background-color: $bodyBgGrey;
+	border-right: 1px solid $pink;
+	@include em_paddingbottom(8);
+}
+
+#s {
+	width: 65%;
+	@include em_padding(4.8, 6.4);
+	@include em_marginleft(4.8);
+}
+
+#searchsubmit {
+	@include em_margintop(9.6);
+}
+
+@media only screen and (min-width: 45em) {
+
+    .search { border-right: none; }
+
+}

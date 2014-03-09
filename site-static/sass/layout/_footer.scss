@@ -1,0 +1,39 @@
+#footer {
+
+	@include em_fontsize(12.8);
+	@include em_padding(0, 12.8, 0, 12.8, 12.8);
+
+	.copyright {
+		@include em_padding(0);
+		@include em_margin(0);
+	}
+
+	.navigation {
+		@include em_padding(0);
+		@include em_margin(0, 0, 8, 0);
+
+		li {
+			display: inline-block;
+			background-color: $pink;
+			@include em_margintop(6.4);
+
+			a {
+				color: $white;
+				@include em_padding(6.4);
+			}
+
+		}
+
+	}
+
+	@include bp("medium") {
+		& {
+			position: fixed;
+			bottom: 2em;
+			left: 2em;
+			@include em_width(304);
+			@include em_padding(0, 6.4);
+		}
+	}
+
+}

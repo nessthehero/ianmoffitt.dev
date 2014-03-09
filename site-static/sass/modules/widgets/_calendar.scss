@@ -1,0 +1,26 @@
+.widget_calendar {
+
+	caption {
+		@include em_margin(0, 0, 0, 3.2);
+	}
+
+	table,
+	tr,
+	th,
+	td {
+		border-width: 2px;
+		border-color: $white;
+		border-style: solid;
+	}
+
+	td {
+		text-align: center;
+		white-space: nowrap;
+	}
+
+	th {
+		background-color: transparent;
+		color: $fontGrey;
+	}
+
+}

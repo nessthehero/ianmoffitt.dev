@@ -23,12 +23,19 @@ module.exports = function (grunt) {
 		theme: 'site-theme',
 		combine: 'dist',
 		wordpress: 'bower_components/Wordpress',
-		server: 'C:/xampp/htdocs'
+		server: 'C:/xampp/htdocs/personal'
 	};
 
 	grunt.initConfig({
 		yeoman: yeomanConfig,
 		watch: {
+			compass: {
+                files: [
+                    '<%= yeoman.app %>/sass/{,*/}*.{scss,sass}',
+                    '/img/{,*/}*.png'
+                ],
+                tasks: ['compass:server', 'autoprefixer']
+            },
 			styles: {
 				files: ['<%= yeoman.app %>/styles/**/*.css'],
 				tasks: ['copy:styles', 'autoprefixer']
@@ -177,6 +184,35 @@ module.exports = function (grunt) {
 				}]
 			}
 		},
+		compass: {
+            options: {
+                sassDir: '<%= yeoman.app %>/sass',
+                cssDir: '.tmp/css',
+                generatedImagesDir: '.tmp/images/generated',
+                imagesDir: '<%= yeoman.app %>/images',
+                javascriptsDir: '<%= yeoman.app %>/scripts',
+                fontsDir: '<%= yeoman.app %>/sass/fonts',
+                importPath: '<%= yeoman.app %>/../bower_components',
+                httpImagesPath: '/images',
+                httpGeneratedImagesPath: '/images/generated',
+                httpFontsPath: '/sass/fonts',
+                relativeAssets: false,
+                outputStyle: 'compact',
+                debugInfo: false
+            },
+            dist: {
+                options: {
+                    generatedImagesDir: '<%= yeoman.dist %>/images/generated',
+                    debugInfo: false,
+                    outputStyle: 'compressed'
+                }
+            },
+            server: {
+                options: {
+                    debugInfo: true
+                }
+            }
+        },
 		// Put files not handled in other tasks here
 		clean: {
 			options: {
@@ -291,9 +327,11 @@ module.exports = function (grunt) {
 		},
 		concurrent: {
 			server: [
+				'compass:server',
 				'copy:styles'
 			],
 			dist: [
+				'compass:dist',
 				'copy:styles',
 				'imagemin',
 				'svgmin',

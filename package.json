@@ -33,7 +33,8 @@
     "matchdep": "~0.1.1",
     "connect-livereload": "~0.2.0",
     "grunt-bump": "0.0.11",
-    "grunt-newer": "~0.6.1"
+    "grunt-newer": "~0.6.1",
+    "grunt-contrib-compass": "~0.7.2"
   },
   "repository": {
     "type": "git",

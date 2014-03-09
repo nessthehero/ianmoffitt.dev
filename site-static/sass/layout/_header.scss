@@ -1,0 +1,33 @@
+#header {
+
+	padding: 0.5em 1em;
+
+	h1 {
+
+		background-color: #ff5256;
+		margin: 0;
+		padding: 0.5em;
+
+		a,
+		a:visited {
+			color: #fff;
+		}
+
+	}
+
+	@include bp("medium") {
+
+		& {
+			position: fixed;
+			padding: 1em;
+			width: 18em;
+			height: 100%;
+			display: block;
+			border-right-style: dotted;
+			border-right-width: 0.5em;
+			border-right-color: $borderGrey2;
+		}
+
+	}
+
+}

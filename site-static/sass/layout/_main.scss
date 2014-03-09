@@ -1,0 +1,46 @@
+#main {
+
+	padding: 0 1em;
+	overflow: auto;
+
+	& > section { }
+	& > aside { }
+
+	@include bp("medium") {
+
+		& {
+			margin-left: 20em;
+			padding: 4em 5em 4em 1em;
+			overflow: visible;
+		}
+
+	}
+
+	@include bp("large") {
+
+		& > section {
+			width: 60%;
+			float: left;
+		}
+
+		& > aside {
+			width: 35%;
+			float: left;
+			@include em_paddingleft(48);
+		}
+
+	}
+
+	@include bp("huge") {
+
+		& > section {
+			width: 50%;
+		}
+
+    	& > aside {
+    		width: 48%;
+    	}
+
+	}
+
+}
