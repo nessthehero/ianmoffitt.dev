@@ -2,11 +2,11 @@
 	Theme Name: NessTheHero.com
 	Theme URI: http://www.nessthehero.com
 	Description: Personal Wordpress Theme for Ian Moffitt
-	Version: 0.6.0
+	Version: 0.7.0
 	Author: Ian Moffitt (@nessthehero)
 	Author URI: http://nessthehero.com
 	Tags: HTML5, CSS3, responsive, simple, programmer, web, developer, front-end, portfolio
-	
+
 	License: MIT
 	License URI: http://opensource.org/licenses/mit-license.php
 */

@@ -104,80 +104,15 @@ hr {
 .tagline {
 	display: block;
 	font-style: italic;
-	float: right;
-	@include em_padding(8, 16);
-}
+	@include em_padding(8, 0);
 
-a.menu-link {
-    display: block;
-    color: $pink;
-    font-weight: bold;
-    @include em_padding(16, 0);
-}
-
-nav[role=navigation] {
-    clear: both;
-    overflow: hidden;
-
-    .js & {
-    	height: 100%;
-    	position: absolute;
-    	top: 0;
-    	left: -16em;
-
-    	@include em_width(256);
-    }
-
-    ul {
-        margin: 0;
-        padding: 0;
-        border-top: 1px solid $pink;
-    }
-
-    li {
-    	a {
-	        display: block;
-	        @include em_padding(6.4, 12.8);
-	    }
+	@include bp("max_medium") {
+		& {
+			float: right;
+			@include em_padding(8, 16);
+		}
 	}
 
 }
 
-@include bp("medium") {
 
-	nav[role=navigation] {
-
-	    background: $pink;
-
-		li {
-			a {
-			    color: $white;
-			    border-bottom: 1px solid $white;
-			    @include em_padding(12.8);
-			}
-		}
-
-		.js & {
-			max-width: none;
-			position: static;
-			width: auto;
-		}
-
-		ul {
-	        margin: 0;
-	        border: 0;
-	    }
-
-		li {
-			a {
-		        border: 0;
-		    }
-		}
-
-	}
-
-    a.menu-link {
-        display: none;
-    }
-
-}

@@ -20,6 +20,7 @@
 			a {
 				color: $white;
 				@include em_padding(6.4);
+
 			}
 
 		}
@@ -30,9 +31,32 @@
 		& {
 			position: fixed;
 			bottom: 2em;
-			left: 2em;
+			left: 1em;
 			@include em_width(304);
 			@include em_padding(0, 6.4);
+		}
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	.menu-item {
+		list-style: none;
+		// margin-bottom: 0.2em;
+
+		a {
+			display: block;
+			background-color: $lightPink;
+			color: $white;
+			@include em_padding(6.4, 12.8);
+			transition: all 0.3s linear;
+			border-bottom: 1px solid $white;
+
+			&:hover {
+			    background-color: $pink;
+			}
 		}
 	}
 

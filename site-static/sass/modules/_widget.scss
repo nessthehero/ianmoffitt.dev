@@ -1,20 +1,31 @@
 .widget {
+
 	display: block;
 	float: left;
-	margin-bottom: 1em;
-	margin-right: 1em;
-	padding: 1em;
+	@include em_padding(16);
+	@include em_marginbottom(16);
+	@include em_marginright(16);
+
+	p {
+
+		img {
+			@include em_padding(8);
+
+			&[align="left"] {
+				@include em_padding(8, 8, 8, 0);
+			}
+
+			&[align="right"] {
+				@include em_padding(8, 0, 8, 8);
+			}
+		}
+
+	}
+
+	table,
+	tbody,
+	th,
+	tr,
+	td { border: 1px solid #000; }
+
 }
-
-.widget p { }
-.widget p img { padding: 0.5em; }
-.widget p img[align="left"] { padding: 0.5em 0.5em 0.5em 0; }
-.widget p img[align="right"] { padding: 0.5em 0 0.5em 0.5em; }
-
-.widget table,
-.widget tbody,
-.widget th,
-.widget tr,
-.widget td { border: 1px solid #000; }
-
-

@@ -70,11 +70,11 @@ function nth_main_nav()
 	wp_nav_menu(
 	array(
 		'theme_location'  => 'main-navigation',
-		'menu'            => '', 
-		'container'       => false, 
-		'container_class' => '', 
+		'menu'            => '',
+		'container'       => false,
+		'container_class' => '',
 		'container_id'    => '',
-		'menu_class'      => '', 
+		'menu_class'      => '',
 		'menu_id'         => '',
 		'echo'            => true,
 		'fallback_cb'     => '',
@@ -95,11 +95,11 @@ function nth_footer_nav()
     wp_nav_menu(
     array(
         'theme_location'  => 'footer-menu',
-        'menu'            => '', 
-        'container'       => false, 
-        'container_class' => '', 
+        'menu'            => '',
+        'container'       => false,
+        'container_class' => '',
         'container_id'    => '',
-        'menu_class'      => '', 
+        'menu_class'      => '',
         'menu_id'         => '',
         'echo'            => true,
         'fallback_cb'     => 'wp_page_menu',
@@ -127,7 +127,7 @@ function register_html5_menu()
 // Load main scripts (header.php)
 function nth_theme_header_scripts()
 {
-    if (!is_admin()) {        
+    if (!is_admin()) {
         wp_register_script('nth_modernizr', get_template_directory_uri() . '/scripts/vendor/modernizr.js', array(), '2.6.2'); // Custom scripts
         wp_enqueue_script('nth_modernizr'); // Enqueue it!
     }
@@ -136,8 +136,8 @@ function nth_theme_header_scripts()
 // Load main scripts (footer.php)
 function nth_theme_footer_scripts()
 {
-    if (!is_admin()) {   
-        // Require.js  
+    if (!is_admin()) {
+        // Require.js
         wp_register_script('nth_requirejs', get_template_directory_uri() . '/bower_components/requirejs/require.js', array(), '2.1.6'); // Custom scripts
         wp_enqueue_script('nth_requirejs'); // Enqueue it!
     }
@@ -260,13 +260,13 @@ function html5wp_pagination()
 // Custom Excerpts
 function html5wp_index($length) // Create 20 Word Callback for Index page Excerpts, call using html5wp_excerpt('html5wp_index');
 {
-    return 20;
+    return 50;
 }
 
 // Create 40 Word Callback for Custom Post Excerpts, call using html5wp_excerpt('html5wp_custom_post');
 function html5wp_custom_post($length)
 {
-    return 40;
+    return 80;
 }
 
 // Create the Custom Excerpts callback
@@ -335,7 +335,7 @@ function nth_themecomments($comment, $args, $depth)
 {
 	$GLOBALS['comment'] = $comment;
 	extract($args, EXTR_SKIP);
-	
+
 	if ( 'div' == $args['style'] ) {
 		$tag = 'div';
 		$add_below = 'comment';

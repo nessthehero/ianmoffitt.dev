@@ -22,7 +22,7 @@ module.exports = function (grunt) {
 		dist: 'site-compiled',
 		theme: 'site-theme',
 		combine: 'dist',
-		wordpress: 'bower_components/Wordpress',
+		wordpress: 'site-static/bower_components/Wordpress',
 		server: 'C:/xampp/htdocs/personal'
 	};
 
@@ -192,7 +192,7 @@ module.exports = function (grunt) {
                 imagesDir: '<%= yeoman.app %>/images',
                 javascriptsDir: '<%= yeoman.app %>/scripts',
                 fontsDir: '<%= yeoman.app %>/sass/fonts',
-                importPath: '<%= yeoman.app %>/../bower_components',
+                importPath: '<%= yeoman.app %>/bower_components',
                 httpImagesPath: '/images',
                 httpGeneratedImagesPath: '/images/generated',
                 httpFontsPath: '/sass/fonts',
@@ -365,14 +365,14 @@ module.exports = function (grunt) {
 
 	grunt.registerTask('build', [
 		'clean:dist',
-		'newer:useminPrepare',
+		'useminPrepare',
 		'concurrent:dist',
 		'autoprefixer',
 		'concat',
-		'newer:cssmin',
-		'newer:uglify',
+		'cssmin',
+		'uglify',
 		'copy:dist',
-		'newer:usemin'
+		'usemin'
 	]);
 
 	grunt.registerTask('default', [

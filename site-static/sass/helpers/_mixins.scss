@@ -4,12 +4,20 @@
 		@media only print { @content; }
 	}
 
+	@if $point == "tiny" {
+		@media only screen and (min-width: 38em) { @content; }
+	}
+
 	@if $point == "small" {
 		@media only screen and (min-width: 40em) { @content; }
 	}
 
 	@if $point == "medium" {
 		@media only screen and (min-width: 45em) { @content; }
+	}
+
+	@if $point == "max_medium" {
+		@media only screen and (max-width: 45em) { @content; }
 	}
 
 	@if $point == "large" {
@@ -28,12 +36,12 @@
 @mixin em_minwidth($px, $default: $fontsize) { min-width: #{$px / $default}em; }
 @mixin em_maxheight($px, $default: $fontsize) { max-height: #{$px / $default}em; }
 @mixin em_minheight($px, $default: $fontsize) { min-height: #{$px / $default}em; }
-@mixin em_margin($top: 0, $right: 0, $bot: $top, $left: $right, $default: $fontsize) { margin: #{$top / $default}em #{$right / $default}em #{$bot / $default}em #{$left / $default}em; }
+@mixin em_margin($top: 0, $right: $top, $bot: $top, $left: $right, $default: $fontsize) { margin: #{$top / $default}em #{$right / $default}em #{$bot / $default}em #{$left / $default}em; }
 @mixin em_margintop($top: 0, $default: $fontsize) { margin-top: #{$top / $default}em; }
 @mixin em_marginright($right: 0, $default: $fontsize) { margin-right: #{$right / $default}em; }
 @mixin em_marginbottom($bot: 0, $default: $fontsize) { margin-bottom: #{$bot / $default}em; }
 @mixin em_marginleft($left: 0, $default: $fontsize) { margin-left: #{$left / $default}em; }
-@mixin em_padding($top:0,$right:0,$bot:$top,$left:$right, $default: $fontsize) { padding: #{$top / $default}em #{$right / $default}em #{$bot / $default}em #{$left / $default}em; }
+@mixin em_padding($top: 0, $right: $top, $bot: $top, $left: $right, $default: $fontsize) { padding: #{$top / $default}em #{$right / $default}em #{$bot / $default}em #{$left / $default}em; }
 @mixin em_paddingtop($top: 0, $default: $fontsize) { padding-top: #{$top / $default}em }
 @mixin em_paddingright($right: 0, $default: $fontsize) { padding-right: #{$right / $default}em; }
 @mixin em_paddingbottom($bot: 0, $default: $fontsize) { padding-bottom: #{$bot / $default}em; }
