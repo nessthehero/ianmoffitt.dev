@@ -138,7 +138,7 @@ function nth_theme_footer_scripts()
 {
     if (!is_admin()) {
         // Require.js
-        wp_register_script('nth_requirejs', get_template_directory_uri() . '/bower_components/requirejs/require.js', array(), '2.1.6'); // Custom scripts
+        wp_register_script('nth_requirejs', get_template_directory_uri() . '/scripts/vendor/require.js', array(), '2.1.6'); // Custom scripts
         wp_enqueue_script('nth_requirejs'); // Enqueue it!
     }
 }

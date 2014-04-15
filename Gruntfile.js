@@ -391,9 +391,17 @@ module.exports = function (grunt) {
 		'wp',
 		'clean:combine',
 		'copy:theme',
-		'copy:live',
+		'copy:live'
+	]);
+
+	grunt.registerTask('deploy', [
 		'clean:deploy',
 		'copy:deploy'
+	]);
+
+	grunt.registerTask('full', [
+		'live',
+		'deploy'
 	]);
 
 };
