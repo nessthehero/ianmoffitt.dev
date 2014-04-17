@@ -22,7 +22,7 @@ module.exports = function (grunt) {
 		dist: 'site-compiled',
 		theme: 'site-theme',
 		combine: 'dist',
-		wordpress: 'site-static/bower_components/wordpress',
+		wordpress: 'bower_components/wordpress',
 		server: 'C:/xampp/htdocs/personal'
 	};
 
