@@ -1,0 +1,17 @@
+.widget_categories {
+
+    ul {
+        margin: 0 0 1em;
+        padding: 0;
+        border-top: 2px solid $white;
+    }
+
+    li {
+    	a {
+            color: $white;
+	        display: block;
+	        @include em_padding(6.4, 12.8);
+	    }
+	}
+
+}

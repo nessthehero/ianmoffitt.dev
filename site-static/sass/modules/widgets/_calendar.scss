@@ -9,18 +9,22 @@
 	th,
 	td {
 		border-width: 2px;
-		border-color: $white;
+		border-color: $bodyBgGrey;
 		border-style: solid;
 	}
 
 	td {
+		background-color: $white;
 		text-align: center;
 		white-space: nowrap;
+		border-radius: 8px;
+		@include em_width(32);
 	}
 
 	th {
-		background-color: transparent;
-		color: $fontGrey;
+		background-color: $lightPink;
+		color: $white;
+		border-radius: 8px;
 	}
 
 }

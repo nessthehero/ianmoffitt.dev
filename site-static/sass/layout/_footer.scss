@@ -1,5 +1,6 @@
 #footer {
 
+	clear: both;
 	@include em_fontsize(12.8);
 	@include em_padding(0, 12.8, 0, 12.8, 12.8);
 
@@ -29,11 +30,11 @@
 
 	@include bp("medium") {
 		& {
-			position: fixed;
-			bottom: 2em;
-			left: 1em;
+			// position: fixed;
+			// bottom: 2em;
+			// left: 1em;
 			@include em_width(304);
-			@include em_padding(0, 6.4);
+			// @include em_padding(0, 6.4);
 		}
 	}
 

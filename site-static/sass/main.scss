@@ -1,3 +1,5 @@
+@import "compass";
+
 // Sprites
 // @import "helpers/_sprites";
 
@@ -30,6 +32,7 @@
 @import "modules/_search";
 @import "modules/_widget";
 @import "modules/widgets/_calendar";
+@import "modules/widgets/_categories";
 
 // Helper Classes
 @import "helpers/_access";

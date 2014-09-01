@@ -1,7 +1,6 @@
 .widget {
 
 	display: block;
-	float: left;
 	@include em_padding(16);
 	@include em_marginbottom(16);
 	@include em_marginright(16);
@@ -27,5 +26,11 @@
 	th,
 	tr,
 	td { border: 1px solid #000; }
+
+	@include bp("small") {
+
+		float: left;
+
+	}
 
 }

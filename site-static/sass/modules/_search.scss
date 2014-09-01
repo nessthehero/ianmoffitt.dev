@@ -1,17 +1,36 @@
 .search {
 	background-color: $bodyBgGrey;
 	border-right: 1px solid $pink;
-	@include em_paddingbottom(8);
+	position: relative;
+	padding: 0;
+	// @include em_paddingbottom(8);
+
+	form {
+
+		div {
+			padding-right: 5em;
+		}
+
+	}
+
 }
 
 #s {
-	width: 65%;
-	@include em_padding(4.8, 6.4);
-	@include em_marginleft(4.8);
+	width: 100%;
+	border: none;
+	@include em_padding(5, 6.4);
+	// @include em_marginleft(4.8);
 }
 
 #searchsubmit {
-	@include em_margintop(9.6);
+	// margin-left: -3px;
+	// @include em_margintop(9.6);
+	font-family: $sharetech;
+	width:5em;
+	font-size:1em;
+	position:absolute;
+	right:0;
+	top:0;
 }
 
 @media only screen and (min-width: 45em) {

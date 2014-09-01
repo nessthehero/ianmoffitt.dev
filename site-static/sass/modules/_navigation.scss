@@ -13,9 +13,9 @@ nav[role=navigation] {
     }
 
     ul {
-        margin: 1em 0;
+        margin: 0 0 1em;
         padding: 0;
-        border-top: 1px solid $pink;
+        border-top: 2px solid $white;
     }
 
     li {
@@ -61,10 +61,6 @@ a.menu-link {
             max-width: none;
             position: static;
             width: auto;
-        }
-
-        ul {
-            border: 0;
         }
 
     }

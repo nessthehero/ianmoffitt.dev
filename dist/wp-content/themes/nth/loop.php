@@ -25,11 +25,13 @@
 		<footer>
 			<span class="comments">[<?php comments_popup_link( __( 'comment', 'html5blank' ), __( '1 comment', 'html5blank' ), __( '% comments', 'html5blank' )); ?>]</span>
 
-			<?php the_tags("<div class='tag-container'><span class='tags-header'>Tags:</span><dd class='tags'><dl>", "</dl><dl>", "</dl></dd></div>"); ?>
+			<?php the_tags("<div class='tag-container'><dd class='tags'><dl>", "</dl><dl>", "</dl></dd></div>"); ?>
 
-			<div class="cat-container"><span class="cats-header">Categories:</span><dd class="categories">
-            	<dl><?php the_category("</dl><dl>"); ?></dl>
-            </dd></div>
+			<div class="cat-container">
+				<dd class="categories">
+            		<dl><?php the_category("</dl><dl>"); ?></dl>
+            	</dd>
+            </div>
 
 			<?php edit_post_link(); ?>
 

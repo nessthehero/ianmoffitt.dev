@@ -5,11 +5,27 @@ dl {
     a {
         background-color: $lightPink;
         border-radius: 4px;
+        color: $white;
         @include em_padding(6, 8);
-        @include em_marginright(2);
+        // @include em_marginright(2);
+
+        &:hover {
+            background-color: $pink;
+        }
     }
 }
 
+
+.categories {
+    a {
+        background-color: $lightBlue;
+        color: $white;
+
+        &:hover {
+            background-color: $blue;
+        }
+    }
+}
 @include bp("medium") {
 
     .tag-container,
@@ -23,7 +39,7 @@ dl {
 
         dl {
             display: inline-block;
-            margin: 0;
+            margin: 1em 0 0;
 
             &:before {
                 content: ' - ';
@@ -32,6 +48,7 @@ dl {
             }
             &:first-child:before {
                 content: '';
+                display: none;
             }
 
         }
