@@ -1,14 +1,14 @@
 {
-  "name": "wordpress",
-  "homepage": "https://github.com/wordpress/wordpress",
-  "_release": "3.9",
+  "name": "Wordpress",
+  "homepage": "https://github.com/WordPress/WordPress",
+  "version": "3.9.2",
+  "_release": "3.9.2",
   "_resolution": {
-    "type": "tag",
-    "tag": "3.9",
-    "commit": "54a3b49fa91b7beeb3da2f448154f9e75f005a9a"
+    "type": "version",
+    "tag": "3.9.2",
+    "commit": "47520b3fb40c5605c3436fb69de3c8e3c297d5ca"
   },
-  "_source": "git://github.com/wordpress/wordpress.git",
-  "_target": "3.9",
-  "_originalSource": "wordpress/wordpress",
-  "_direct": true
+  "_source": "git://github.com/WordPress/WordPress.git",
+  "_target": "*",
+  "_originalSource": "WordPress/WordPress"
 }
