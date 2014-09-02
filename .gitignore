@@ -1,4 +1,4 @@
 node_modules
 .tmp
 bower_components
-*.sass-cache*
+.sass-cache*
