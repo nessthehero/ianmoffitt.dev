@@ -1,6 +1,6 @@
 #header {
 
-	padding: 0.5em 1em;
+	// padding: 0.5em 1em;
 
 	h1 {
 
@@ -17,16 +17,14 @@
 
 	@include bp("medium") {
 
-		& {
-			position: fixed;
-			padding: 1em;
-			width: 18em;
-			height: 100%;
-			display: block;
-			border-right-style: dotted;
-			border-right-width: 0.5em;
-			border-right-color: $borderGrey2;
-		}
+		position: fixed;
+		padding: 1em;
+		width: 18em;
+		height: 100%;
+		display: block;
+		border-right-style: dotted;
+		border-right-width: 0.5em;
+		border-right-color: $borderGrey2;
 
 	}
 

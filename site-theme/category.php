@@ -1,21 +1,25 @@
 <?php get_header(); ?>
-	
+
 	<!-- main -->
 	<main id="main">
-	
-		<section class="category-listing">
 
-			<h1><?php _e( 'Categories for', 'html5blank' ); the_category(); ?></h1>		
+		<div class="container">
 
-			<?php get_template_part('loop'); ?>
-			
-			<?php get_template_part('pagination'); ?>
+			<section class="category-listing">
 
-		</section>
+				<h1><?php _e( 'Categories for', 'html5blank' ); the_category(); ?></h1>
 
-		<?php get_sidebar(); ?>
-	
+				<?php get_template_part('loop'); ?>
+
+				<?php get_template_part('pagination'); ?>
+
+			</section>
+
+			<?php get_sidebar(); ?>
+
+		</div>
+
 	</main>
 	<!-- /main -->
-	
+
 <?php get_footer(); ?>

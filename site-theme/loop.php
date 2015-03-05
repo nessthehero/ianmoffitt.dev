@@ -25,13 +25,9 @@
 		<footer>
 			<span class="comments">[<?php comments_popup_link( __( 'comment', 'html5blank' ), __( '1 comment', 'html5blank' ), __( '% comments', 'html5blank' )); ?>]</span>
 
-			<?php the_tags("<div class='tag-container'><dd class='tags'><dl>", "</dl><dl>", "</dl></dd></div>"); ?>
+			<?php get_template_part('parts/_tags'); ?>
 
-			<div class="cat-container">
-				<dd class="categories">
-            		<dl><?php the_category("</dl><dl>"); ?></dl>
-            	</dd>
-            </div>
+			<?php get_template_part('parts/_categories'); ?>
 
 			<?php edit_post_link(); ?>
 
@@ -45,7 +41,7 @@
 <?php else: ?>
 
 	<!-- article -->
-	<article class="post">
+	<article class="post no-post">
 		<h1><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h1>
 	</article>
 	<!-- /article -->

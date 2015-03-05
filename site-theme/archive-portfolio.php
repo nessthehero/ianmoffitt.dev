@@ -3,95 +3,99 @@
 	<!-- main -->
 	<main id="main">
 
-		<section class="portfolio">
+		<div class="container">
 
-			<h1>Portfolio</h1>
+			<section class="portfolio">
 
-			<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+				<h1>Portfolio</h1>
 
-				<!-- article -->
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-					<?php the_content(); ?>
+					<!-- article -->
+					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-				</article>
-				<!-- /article -->
+						<?php the_content(); ?>
 
-			<?php endwhile; ?>
+					</article>
+					<!-- /article -->
 
-			<?php endif; ?>
+				<?php endwhile; ?>
 
-			<section class="collection">
+				<?php endif; ?>
 
-			<?php
+				<section class="collection">
 
-				$args = array(
-					'numberposts' => -1,
-					'post_type' => "portfolio",
-					'orderby' => "portfolio_start_date",
-					'order' => "ASC"
-				);
-				$the_query = get_posts( $args );
+				<?php
 
-				// print_r($the_query);
+					$args = array(
+						'numberposts' => -1,
+						'post_type' => "portfolio",
+						'orderby' => "portfolio_start_date",
+						'order' => "ASC"
+					);
+					$the_query = get_posts( $args );
 
-				if ( 0 != count($the_query) ) {
+					// print_r($the_query);
 
-			?>
-				<ul>
-			<?php
+					if ( 0 != count($the_query) ) {
 
-					foreach ( $the_query as $p ) {
+				?>
+					<ul>
+				<?php
 
-						$custom = get_post_custom($p->ID);
+						foreach ( $the_query as $p ) {
 
-						$img = wp_get_attachment_image($custom['portfolio_image'], 'medium');
+							$custom = get_post_custom($p->ID);
 
-			?>
-					<li>
-						<div class="image-container">
-						<?php
+							$img = wp_get_attachment_image($custom['portfolio_image'], 'medium');
 
-							if ($img != '') {
-								echo $img;
-							} else {
+				?>
+						<li>
+							<div class="image-container">
+							<?php
 
-								$day = substr($custom['portfolio_start_date'][0], 0, 2);
-								$mon = substr($custom['portfolio_start_date'][0], 3, 5);
-								$year = substr($custom['portfolio_start_date'][0], 6, 10);
+								if ($img != '') {
+									echo $img;
+								} else {
 
-						?>
-							<span class="day"><?php echo $day; ?></span>
-							<span class="month"><?php echo $mon; ?></span>
-							<span class="year"><?php echo $year; ?></span>
-						<?php
+									$day = substr($custom['portfolio_start_date'][0], 0, 2);
+									$mon = substr($custom['portfolio_start_date'][0], 3, 5);
+									$year = substr($custom['portfolio_start_date'][0], 6, 10);
 
-							}
+							?>
+								<span class="day"><?php echo $day; ?></span>
+								<span class="month"><?php echo $mon; ?></span>
+								<span class="year"><?php echo $year; ?></span>
+							<?php
 
-						?>
-						</div>
-						<div class="text-container">
-							<span class="url"><?php echo $custom['portfolio_url'][0]; ?></span>
-							<span class="title"><?php echo $custom['portfolio_title'][0]; ?></span>
-						</div>
-					</li>
+								}
 
-			<?php
+							?>
+							</div>
+							<div class="text-container">
+								<span class="url"><?php echo $custom['portfolio_url'][0]; ?></span>
+								<span class="title"><?php echo $custom['portfolio_title'][0]; ?></span>
+							</div>
+						</li>
 
-						print_r($custom);
+				<?php
+
+							print_r($custom);
+						}
+
+	            ?>
+	           		</ul>
+	            <?php
+
 					}
 
-            ?>
-           		</ul>
-            <?php
+				?>
 
-				}
-
-			?>
+				</section>
 
 			</section>
 
-		</section>
+		</div>
 
 	</main>
 	<!-- /main -->

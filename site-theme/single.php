@@ -3,72 +3,72 @@
 	<!-- main -->
 	<main id="main">
 
-		<section class="single-post">
+		<div class="container">
 
-		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+			<section class="single-post">
 
-			<!-- article -->
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-				<header>
+				<!-- article -->
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-					<!-- post title -->
-			        <h1><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
-			        <!-- /post title -->
-			        <!-- post details -->
-			        <span class="author">by <?php the_author_posts_link(); ?></span>
-			        <time datetime="<?php the_time('Y-m-d H:i'); ?>"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></time>
-					<!-- /post details -->
+					<header>
 
-			    </header>
+						<!-- post title -->
+				        <h1><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
+				        <!-- /post title -->
+				        <!-- post details -->
+				        <span class="author">by <?php the_author_posts_link(); ?></span>
+				        <time datetime="<?php the_time('Y-m-d H:i'); ?>"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></time>
+						<!-- /post details -->
 
-				<!-- post thumbnail -->
-				<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
-					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-						<?php the_post_thumbnail(); // Fullsize image for the single post ?>
-					</a>
-				<?php endif; ?>
-				<!-- /post thumbnail -->
+				    </header>
 
-				<?php the_content(); // Dynamic Content ?>
+					<!-- post thumbnail -->
+					<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
+						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+							<?php the_post_thumbnail(); // Fullsize image for the single post ?>
+						</a>
+					<?php endif; ?>
+					<!-- /post thumbnail -->
 
-				<footer>
-					<!-- <span class="comments"><?php comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span> -->
+					<?php the_content(); // Dynamic Content ?>
 
-					<?php comments_template(); ?>
+					<footer>
+						<!-- <span class="comments"><?php comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span> -->
 
-					<?php the_tags("<dd class='tags'><dl>", "</dl><dl>", "</dl></dd>"); ?>
+						<?php comments_template(); ?>
 
-		            <dd class="categories">
-		            	<dl>
-							<?php the_category("</dl><dl>"); ?>
-						</dl>
-		            </dd>
+						<?php get_template_part('parts/_tags'); ?>
 
-					<?php edit_post_link(); ?>
+						<?php get_template_part('parts/_categories'); ?>
 
-				</footer>
+						<?php edit_post_link(); ?>
 
-			</article>
-			<!-- /article -->
+					</footer>
 
-		<?php endwhile; ?>
+				</article>
+				<!-- /article -->
 
-		<?php else: ?>
+			<?php endwhile; ?>
 
-			<!-- article -->
-			<article>
+			<?php else: ?>
 
-				<h1><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h1>
+				<!-- article -->
+				<article>
 
-			</article>
-			<!-- /article -->
+					<h1><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h1>
 
-		<?php endif; ?>
+				</article>
+				<!-- /article -->
 
-		</section>
+			<?php endif; ?>
 
-	<?php get_sidebar(); ?>
+			</section>
+
+			<?php get_sidebar(); ?>
+
+		</div>
 
 	</main>
 	<!-- /main -->

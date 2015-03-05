@@ -13,6 +13,7 @@
 	h1 {
 		position: relative;
 		font-family: "Share Tech", sans-serif;
+		line-height: 1;
 		@include em_fontsize(48);
 
 		a {

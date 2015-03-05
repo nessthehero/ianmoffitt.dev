@@ -6,7 +6,10 @@
     "modernizr": "~2.6.2",
     "jquery": "~1.*",
     "normalize-css": "~2.1.2",
-    "Wordpress": "WordPress/WordPress"
+    "wordpress": "*"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "resolutions": {
+    "wordpress": "4.1"
+  }
 }

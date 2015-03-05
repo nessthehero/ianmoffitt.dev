@@ -1,9 +1,9 @@
 .search {
 	background-color: $bodyBgGrey;
 	border-right: 1px solid $pink;
+	border-bottom: 1px solid $white;
 	position: relative;
 	padding: 0;
-	// @include em_paddingbottom(8);
 
 	form {
 
@@ -13,28 +13,23 @@
 
 	}
 
+	@media only screen and (min-width: 45em) {
+		border-right: none;
+	}
+
 }
 
 #s {
 	width: 100%;
 	border: none;
 	@include em_padding(5, 6.4);
-	// @include em_marginleft(4.8);
 }
 
 #searchsubmit {
-	// margin-left: -3px;
-	// @include em_margintop(9.6);
 	font-family: $sharetech;
 	width:5em;
 	font-size:1em;
 	position:absolute;
 	right:0;
 	top:0;
-}
-
-@media only screen and (min-width: 45em) {
-
-    .search { border-right: none; }
-
 }

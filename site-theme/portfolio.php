@@ -3,50 +3,51 @@
 	<!-- main -->
 	<main id="main">
 
-		<section class="portfolio">
+		<div class="container">
 
-			<h1><?php the_title(); ?></h1>
+			<section class="portfolio">
 
-			<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+				<h1><?php the_title(); ?></h1>
 
-				<!-- article -->
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-					<?php the_content(); ?>
+					<!-- article -->
+					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-				</article>
-				<!-- /article -->
+						<?php the_content(); ?>
 
-			<?php endwhile; ?>
+					</article>
+					<!-- /article -->
 
-			<?php endif; ?>
+				<?php endwhile; ?>
 
-			<?php
+				<?php endif; ?>
 
-				$args = array(
-					'numberposts' => -1,
-					'post_type' => "portfolio",
-					'orderby' => "portfolio_start_date",
-					'order' => "ASC"
-				);
-				$the_query = get_posts( $args );
+				<?php
 
-				// print_r($the_query);
+					$args = array(
+						'numberposts' => -1,
+						'post_type' => "portfolio",
+						'orderby' => "portfolio_start_date",
+						'order' => "ASC"
+					);
+					$the_query = get_posts( $args );
 
-				if ( 0 != count($the_query) ) {
+					if ( 0 != count($the_query) ) {
 
-					foreach ( $the_query as $p ) {
+						foreach ( $the_query as $p ) {
 
-						$custom = get_post_custom($p->ID);
+							$custom = get_post_custom($p->ID);
 
-						print_r($custom);
+							print_r($custom);
+						}
 					}
-				}
 
-			?>
+				?>
 
+			</section>
 
-		</section>
+		</div>
 
 	</main>
 	<!-- /main -->

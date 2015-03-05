@@ -3,19 +3,23 @@
 	<!-- main -->
 	<main id="main">
 
-		<!-- section -->
-		<section class="archive" role="main">
+		<div class="container">
 
-			<h1><?php _e( 'Archives', 'html5blank' ); ?></h1>
+			<!-- section -->
+			<section class="archive" role="main">
 
-			<?php get_template_part('loop'); ?>
+				<h1><?php _e( 'Archives', 'html5blank' ); ?></h1>
 
-			<?php get_template_part('pagination'); ?>
+				<?php get_template_part('loop'); ?>
 
-		</section>
-		<!-- /section -->
+				<?php get_template_part('pagination'); ?>
 
-		<?php get_sidebar(); ?>
+			</section>
+			<!-- /section -->
+
+			<?php get_sidebar(); ?>
+
+		</div>
 
 	</main>
 

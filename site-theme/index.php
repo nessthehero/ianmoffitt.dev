@@ -1,18 +1,22 @@
 <?php get_header(); ?>
-	
+
 	<!-- main -->
-	<main id="main">	
-	
-		<section class="loop">
+	<main id="main">
 
-			<?php get_template_part('loop'); ?>
+		<div class="container">
 
-			<?php get_template_part('pagination'); ?>
+			<section class="loop">
 
-		</section>
+				<?php get_template_part('loop'); ?>
 
-		<?php get_sidebar(); ?>
-	
+				<?php get_template_part('pagination'); ?>
+
+			</section>
+
+			<?php get_sidebar(); ?>
+
+		</div>
+
 	</main>
 	<!-- /main -->
 
