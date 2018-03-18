@@ -8,7 +8,8 @@ var options = {
 	yeoman: {
 		app: 'app',
 		dist: 'dist',
-		deploy: brei.deploy
+		deploy: brei.deploy,
+		drupal: brei.drupal
 	}
 };
 
