@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Theme override to display a region.
+ *
+ * Available variables:
+ * - content: The content for this region, typically blocks.
+ * - attributes: HTML attributes for the region div.
+ * - region: The name of the region variable as defined in the theme's
+ *   .info.yml file.
+ *
+ * @see template_preprocess_region()
+ */
+#}
+
+<header{{ attributes }}>
+
+	<div class="row column">
+		<br>
+		<img class="thumbnail" src="http://placehold.it/550x350"/>
+		<h5>Ian Moffitt</h5>
+		<p>
+			More to this site will be coming eventually, but for now, try checking it out on a large screen and hover over the background grid! You can also click to reset pixels back to white.
+		</p>
+	</div>
+	{% if content %}
+		{{ content }}
+	{% endif %}
+</header>
+

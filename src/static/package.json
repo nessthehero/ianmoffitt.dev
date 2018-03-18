@@ -1,0 +1,40 @@
+{
+	"name": "ianmoffitt",
+	"version": "2.0.0",
+	"dependencies": {},
+	"devDependencies": {
+		"grunt": "~1.0.1",
+		"grunt-cli": "~1.2.0",
+		"grunt-assemble": "~0.6.3",
+		"grunt-autoprefixer": "~3.0.4",
+		"grunt-browser-sync": "^2.2.0",
+		"grunt-concurrent": "~2.3.1",
+		"grunt-contrib-clean": "~1.0.0",
+		"grunt-contrib-compass": "~1.1.1",
+		"grunt-contrib-concat": "~1.0.1",
+		"grunt-contrib-copy": "~1.0.0",
+		"grunt-contrib-cssmin": "~2.0.0",
+		"grunt-contrib-htmlmin": "~2.3.0",
+		"grunt-contrib-imagemin": "~1.0.1",
+		"grunt-contrib-jshint": "~1.1.0",
+		"grunt-contrib-uglify": "~2.2.0",
+		"grunt-contrib-watch": "~1.0.0",
+		"grunt-execute": "^0.2.2",
+		"grunt-modernizr": "~1.0.2",
+		"grunt-scss-lint": "~0.5.0",
+		"grunt-svgmin": "~4.0.0",
+		"grunt-usemin": "~3.1.1",
+		"load-grunt-configs": "~1.0.0",
+		"matchdep": "~1.0.1",
+		"nconf": "~0.8.4",
+		"node-dir": "0.1.16",
+		"time-grunt": "~1.4.0",
+		"yosay": "2.0.0"
+	},
+	"engines": {
+		"node": ">=4.0.0"
+	},
+	"scripts": {
+		"postinstall": "sh post.sh"
+	}
+}

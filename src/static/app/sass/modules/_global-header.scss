@@ -1,0 +1,9 @@
+.global-header {
+	// scss-lint:disable ImportantRule
+	z-index: 55 !important;
+	// scss-lint:enable ImportantRule
+
+	@include breakpoint(medium) {
+		border-right: 5px solid rgba($black, 0.4);
+	}
+}

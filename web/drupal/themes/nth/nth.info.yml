@@ -1,0 +1,25 @@
+name: IanMoffitt.co
+type: theme
+description: 'My personal portfolio website'
+core: 8.x
+screenshot: screenshot.png
+
+regions:
+  header: Header
+  page_top: Page Top
+  admin: Administration
+  content: Content
+  leftnav: Left Navigation
+  page_bottom: Page Bottom
+  footer: Footer
+
+settings:
+  twitter: 'https://twitter.com/nessthehero'
+
+libraries:
+  - nth/modernizr
+  - nth/global-styling
+
+libraries-override:
+  core/modernizr: false
+  core/html5shiv: false

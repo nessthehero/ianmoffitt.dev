@@ -1,0 +1,23 @@
+---
+title: "Global Header"
+layout: module.hbs
+module: true
+---
+
+<!-- module:global-header -->
+{{#parseFixture 'global-header.json'}}
+	<header class="global-header off-canvas position-left reveal-for-large" id="global-header" data-off-canvas
+			data-position="left">
+
+		<div class="row column">
+			<br>
+			<img class="thumbnail" src="http://placehold.it/550x350">
+			<h5>Ian Moffitt</h5>
+			<p>Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus
+				lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent
+				per conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo.</p>
+		</div>
+
+	</header>
+{{/parseFixture}}
+<!-- end module:global-header -->

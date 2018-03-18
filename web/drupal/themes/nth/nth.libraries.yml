@@ -1,0 +1,21 @@
+global-styling:
+  css:
+    base:
+      https://fonts.googleapis.com/css?family=Inconsolata|Oleo+Script|Slabo+27px: {}
+      _files/css/main.css: {}
+  js:
+    _files/js/foundation.js: {}
+    _files/js/main.js: {}
+  dependencies:
+    - core/jquery
+grid:
+  js:
+    _files/js/grid.js: {}
+modernizr:
+  header: true
+  js:
+    _files/js/plugins/modernizr.optimized.js: {}
+typekit:
+  header: true
+  js:
+    _files/js/typekit.js: {}

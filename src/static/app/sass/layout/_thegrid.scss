@@ -1,0 +1,34 @@
+.grid-base {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/grid.png');
+	background-repeat: repeat;
+	background-position: 4px -1px;
+	z-index: 50;
+
+	display: block;
+	background-color: $white;
+
+	.b {
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		outline: 1px solid $grayoutline;
+		background-color: $white;
+	}
+
+	.r {
+		display: block;
+		overflow: hidden;
+		white-space: nowrap;
+		height: 11px;
+		line-height: 10px;
+		transition: background-color 0.1s;
+
+		&:nth-child(odd) {
+			transform: translateX(-5px);
+		}
+	}
+
+}

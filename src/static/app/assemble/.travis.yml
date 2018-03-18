@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- 5.12.0
+- 6.10.1
+- 7.8.0
+deploy:
+  provider: npm
+  email: nessthehero@gmail.com
+  api_key:
+    secure: AxRzCVoJZ8qYWJwQ05R7QFfFEubrKad2gwPRsT7jleTbBiBF7U3sVrhThWCNyLUO3IyYCchNWe3QiN1v47vtaHKoD5g7lN0ZpIR2NnLN85eIfj16HJZ9agZIWHFABvzHxFXTLPWred7qsfZ/RHMjqNZAEB4yDH0hwt7OjFqCsC8=
+  on:
+    tags: true
+    repo: BarkleyREI/brei-assemble-structure
