@@ -25,7 +25,8 @@
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
-        "drupal/backup_migrate": "^4.0"
+        "drupal/backup_migrate": "^4.0",
+        "drupal/metatag": "^1.4"
     },
     "require-dev": {
         "webflo/drupal-core-require-dev": "~8.5"
