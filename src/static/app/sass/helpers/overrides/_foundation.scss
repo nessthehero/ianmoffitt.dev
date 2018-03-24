@@ -71,8 +71,19 @@ $silver: #cccccc;
 $mineshaft: #333333;
 $deepmineshaft: #222222;
 
+// Palette
+$celtic: #0f281b;
+$tropical-rain-forest: #00794e;
+$ocean-green: #4db586;
+$vista-blue: #85caa7;
+$skeptic: #bbe0d0;
+$ronchi: #e8c453;
+
+$shadow-color: $celtic;
+$border-color: $tropical-rain-forest;
+
 $body-background: $white;
-// $body-font-color: $black;
+$body-font-color: $celtic;
 $body-font-family: $copy-font; //'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 // $body-antialiased: true;
 // $global-margin: 1rem;
