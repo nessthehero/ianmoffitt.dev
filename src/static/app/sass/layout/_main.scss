@@ -1,0 +1,72 @@
+.main {
+
+	$this: &;
+
+	.article {
+		position: relative;
+		z-index: 55;
+		background-color: $white;
+		padding: 20px 20px 0;
+
+		@include breakpoint(large) {
+			border: 5px solid rgba($border-color, 0.6);
+			max-width: 700px;
+			margin-left: 2rem;
+			margin-right: 2rem;
+			margin-top: 2rem;
+		}
+
+		@include breakpoint(xlarge) {
+			max-width: 900px;
+		}
+	}
+
+	&.level {
+		position: relative;
+
+		.article {
+			@include breakpoint(large) {
+				float: right;
+				margin-left: 2rem;
+			}
+		}
+	}
+
+	.primary {
+		border-bottom: 5px solid rgba($border-color, 0.6);
+		background-color: $white;
+		position: relative;
+		z-index: 55;
+		padding-top: 1rem;
+
+		.row {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		@include breakpoint(large) {
+			border-left: 5px solid rgba($border-color, 0.6);
+			border-right: 5px solid rgba($border-color, 0.6);
+			box-shadow: 10px 10px 0 0 rgba($shadow-color, 0.4);
+			transform: translateY(-10px);
+			margin-left: 2rem;
+			margin-right: 2rem;
+			padding-top: 2rem;
+		}
+	}
+
+	h1 {
+		line-height: 32px;
+		margin-bottom: 1rem;
+
+		@include breakpoint(large) {
+			line-height: 48px;
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	.main-buttons {
+		position: relative;
+		z-index: 55;
+	}
+}

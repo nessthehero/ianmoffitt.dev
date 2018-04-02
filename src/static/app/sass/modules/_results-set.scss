@@ -1,0 +1,22 @@
+.results-set {
+
+	// Variables
+	$this: &;
+	$color: $black;
+	$background-color: $white;
+
+	// Styles
+	max-width: 900px;
+	margin-right: 0;
+	margin-top: 1rem;
+
+	@include breakpoint(large) {
+		margin-top: 2rem;
+	}
+
+	.thumbnail {
+		//border-color: rgba($border-color, 0.6);
+		border-color: transparent; //rgba($border-color, 0.6);
+	}
+
+}

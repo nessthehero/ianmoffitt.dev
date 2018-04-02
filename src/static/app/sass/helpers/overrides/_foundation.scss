@@ -101,11 +101,11 @@ $body-font-family: $copy-font; //'Helvetica Neue', Helvetica, Roboto, Arial, san
 // --------------
 
 $breakpoints: (
-		small: 0,
-		medium: 640px,
-		large: 1024px,
-		xlarge: 1200px,
-		xxlarge: 1440px,
+	small: 0,
+	medium: 640px,
+	large: 1024px,
+	xlarge: 1200px,
+	xxlarge: 1440px,
 );
 
 $print-breakpoint: large;
@@ -135,22 +135,22 @@ $font-family-monospace: $code-font; //Consolas, 'Liberation Mono', Courier, mono
 $header-lineheight: 1.2;
 // $header-margin-bottom: 0.5rem;
 $header-styles: (
-		small: (
-				'h1': ('font-size': 24),
-				'h2': ('font-size': 20),
-				'h3': ('font-size': 19),
-				'h4': ('font-size': 18),
-				'h5': ('font-size': 17),
-				'h6': ('font-size': 16),
-		),
-		medium: (
-				'h1': ('font-size': 54),
-				'h2': ('font-size': 42),
-				'h3': ('font-size': 36),
-				'h4': ('font-size': 25),
-				'h5': ('font-size': 20),
-				'h6': ('font-size': 16),
-		),
+	small: (
+		'h1': ('font-size': 24),
+		'h2': ('font-size': 20),
+		'h3': ('font-size': 19),
+		'h4': ('font-size': 18),
+		'h5': ('font-size': 17),
+		'h6': ('font-size': 16)
+	),
+	medium: (
+		'h1': ('font-size': 54),
+		'h2': ('font-size': 42),
+		'h3': ('font-size': 36),
+		'h4': ('font-size': 25),
+		'h5': ('font-size': 20),
+		'h6': ('font-size': 16)
+	)
 );
 // $header-text-rendering: optimizeLegibility;
 // $small-font-size: 80%;

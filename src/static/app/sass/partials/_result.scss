@@ -8,10 +8,28 @@
 	// Styles
 	position: relative;
 	z-index: 55;
-	margin-bottom: 3rem;
+	margin-bottom: 1rem;
+	overflow: hidden;
+
+	@include breakpoint(large) {
+		margin-bottom: 3rem;
+	}
 
 	a {
 		color: $black;
+		display: block;
+
+		&:before {
+			content: '';
+			width: 200%;
+			height: 200%;
+			background-color: rgba($black, 0.2);
+			transform: rotate(45deg);
+			position: absolute;
+			z-index: 58;
+			top: 0;
+			left: 41%;
+		}
 
 		&:after {
 			content: '';
@@ -50,10 +68,15 @@
 
 	h5 {
 		position: absolute;
-		bottom: 10px;
-		left: 10px;
+		bottom: 4px;
+		left: 4px;
 		margin: 0;
+		width: calc(100% - 8px);
 		z-index: 58;
+		padding: 5px;
+		color: $white;
+		text-shadow: 0 0 2px $black;
+		//background-color: rgba($black, 0.2);
 	}
 
 }

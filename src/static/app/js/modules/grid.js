@@ -26,25 +26,33 @@ var nth = nth || {};
 
 			if (Foundation.MediaQuery.atLeast('medium')) {
 
-				var numberOfBricksAcross = Math.ceil(
-					(_this.$base.width() + 2 * _this.brickWidth) / _this.brickWidth
-				);
-				var numberOfBricksDown = Math.ceil(_this.$base.height() / _this.brickHeight);
-
-				for (var i = 0; i < numberOfBricksDown; i+=1) {
-					var r = '<span class="r" id="r' + i + '">';
-					for (var j = 0; j < numberOfBricksAcross; j+=1) {
-						r += '<span class="b" id="b' + i + '-' + j + '"></span>';
-					}
-					r += '</span>';
-					_this.$base.append(r);
-				}
-
-				_this.bindEvents();
-
-				_this.load();
+				_this.drawGrid();
 
 			}
+
+			_this.bindEvents();
+
+		},
+
+		drawGrid: function () {
+
+			var _this = this;
+
+			var numberOfBricksAcross = Math.ceil(
+				(_this.$base.width() + 2 * _this.brickWidth) / _this.brickWidth
+			);
+			var numberOfBricksDown = Math.ceil(_this.$base.height() / _this.brickHeight);
+
+			for (var i = 0; i < numberOfBricksDown; i += 1) {
+				var r = '<span class="r" id="r' + i + '">';
+				for (var j = 0; j < numberOfBricksAcross; j += 1) {
+					r += '<span class="b" id="b' + i + '-' + j + '"></span>';
+				}
+				r += '</span>';
+				_this.$base.append(r);
+			}
+
+			_this.load();
 
 		},
 
@@ -55,43 +63,55 @@ var nth = nth || {};
 			$('.b')
 				.on('mouseover', function () {
 					var $this = $(this);
+
 					_this.gridIsActive = true;
 					_this.hoverInterval = setInterval(function () {
-						var color = $this.css('background-color');
+						if (!$this.attr('data-disabled')) {
+							var color = $this.css('background-color');
 
-						var rgb = color
-							.replace(/^(rgb|rgba)\(/, '')
-							.replace(/\)$/, '')
-							.replace(/\s/g, '')
-							.split(',');
+							var rgb = color
+								.replace(/^(rgb|rgba)\(/, '')
+								.replace(/\)$/, '')
+								.replace(/\s/g, '')
+								.split(',');
 
-						var newR = rgb[0] * 1;
-						if (newR > 0) {
-							if (newR < _this.hoverStep) {
-								newR = 0;
-							} else {
-								newR -= _this.hoverStep;
+							var newR = rgb[0] * 1;
+							if (newR > 0) {
+								if (newR < _this.hoverStep) {
+									newR = 0;
+								} else {
+									newR -= _this.hoverStep;
+								}
 							}
+
+							var newG = newR;
+							var newB = newR;
+
+							$this.css('background-color', 'rgb(' + newR.toString() + ', ' + newG.toString() + ', ' + newB.toString() + ')');
+
 						}
-
-						var newG = newR;
-						var newB = newR;
-
-						$this.css('background-color', 'rgb(' + newR.toString() + ', ' + newG.toString() + ', ' + newB.toString() + ')');
-
 					}, _this.hoverDelay);
+
 				})
 				.on('mouseout', function () {
+					var $this = $(this);
+
 					clearInterval(_this.hoverInterval);
 
 					_this.gridIsActive = false;
+					$this.attr('data-disabled', null);
 
 					setTimeout(_this.save.bind(_this), 1000);
 				})
 				.on('click', function () {
 					var $this = $(this);
 					$this.css('background-color', 'rgb(255, 255, 255)');
+					$this.attr('data-disabled', '1');
 				});
+
+			$(window).on('resize', function () {
+				_this.drawGrid();
+			});
 
 		},
 
@@ -101,19 +121,22 @@ var nth = nth || {};
 
 			var savedData = window.localStorage.getItem(key);
 
-
 			var parsedData = JSON.parse(savedData);
 
 			console.log('saved', parsedData);
 
-			for (var j in parsedData.data) {
-				if (parsedData.data.hasOwnProperty(j)) {
-					console.log(j, parsedData.data[j]);
+			if (parsedData) {
 
-					var the_id = '#' + j;
+				for (var j in parsedData.data) {
+					if (parsedData.data.hasOwnProperty(j)) {
+						console.log(j, parsedData.data[j]);
 
-					$(the_id).css('background-color', parsedData.data[j]);
+						var the_id = '#' + j;
+
+						$(the_id).css('background-color', parsedData.data[j]);
+					}
 				}
+
 			}
 
 		},
