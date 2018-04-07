@@ -1,8 +1,19 @@
 <!-- partial:result -->
 <article class="result">
 	<a href="#">
-		<img class="thumbnail" src="http://placehold.it/550x550">
-		<h5>This is not the best song in the world</h5>
+		<figure class="result__figure">
+			<span class="result__type">
+				{{svg icon}}
+				<span class="show-for-sr"></span>
+			</span>
+			<div class="result__image">
+				<img src="http://placehold.it/550x550"/>
+			</div>
+			<figcaption class="result__caption">
+				<h5 class="result__title">This is not the best song in the world</h5>
+				<p>A brief description and some more words to fill in space and stuff like that.</p>
+			</figcaption>
+		</figure>
 	</a>
 </article>
 <!-- end partial:result -->

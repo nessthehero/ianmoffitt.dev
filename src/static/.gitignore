@@ -1,7 +1,7 @@
-*node_modules*
+node_modules/
 *.sass-cache
 *.tmp*
-*bower_components*
+bower_components/
 *.log*
 *.orig*
 *_assemble-*.scss
@@ -9,3 +9,12 @@ dist
 app/*.html
 app/modules/*.html
 scss-lint-report.xml
+
+# PHP Storm
+.idea
+
+# Icomoon
+app/sass/icons/demo-files
+app/sass/icons/*.html
+app/sass/icons/Read Me.txt
+app/sass/icons/*.js

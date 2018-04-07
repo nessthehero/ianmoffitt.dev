@@ -1,3 +1,35 @@
 {
-	"title": "Results Set"
+	"items": [
+		{
+			"type": "codepen",
+			"title": "Hover over the blocks!",
+			"thumbnail": "http://placehold.it/550x550",
+			"description": "For my portfolio, I wrote a pixel-esque grid feature where your mouse can affect the background as it hovers over parts of the site.",
+			"skills": [
+				"javascript",
+				"css"
+			]
+		},
+		{
+			"type": "work",
+			"title": "Joliet Junior College",
+			"thumbnail": "http://placehold.it/550x550",
+			"description": "Coding and Integration into Drupal 8.",
+			"skills": [
+				"javascript",
+				"css",
+				"php"
+			]
+		},
+		{
+			"type": "work",
+			"title": "William Jewell College",
+			"thumbnail": "http://placehold.it/550x550",
+			"description": "Coding and Integration into Drupal 7",
+			"skills": [
+				"javascript",
+				"css"
+			]
+		}
+	]
 }

@@ -6,9 +6,11 @@ module: true
 
 <!-- module:results-set -->
 {{#parseFixture 'results-set.json'}}
-<div class="results-set">
-	Results Set
-</div>
+<section class="results-set">
+	{{#each items}}
+		{{> result }}
+	{{/each}}
+</section>
 {{/parseFixture}}
 
 <!-- end module:results-set -->
