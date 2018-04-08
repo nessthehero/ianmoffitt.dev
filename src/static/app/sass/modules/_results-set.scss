@@ -9,14 +9,18 @@
 	max-width: 900px;
 	margin-right: 0;
 	margin-top: 1rem;
+	padding: 0 20px;
 
-	@include breakpoint(large) {
+	@include breakpoint(medium) {
 		margin-top: 2rem;
-	}
+		margin-left: auto;
+		padding: 0 40px;
 
-	.thumbnail {
-		//border-color: rgba($border-color, 0.6);
-		border-color: transparent; //rgba($border-color, 0.6);
+		display: grid;
+		// scss-lint:disable PropertySpelling
+		grid-template-columns: repeat(2, 1fr);
+		grid-column-gap: 20px;
+		grid-row-gap: 20px;
+		// scss-lint:enable PropertySpelling
 	}
-
 }

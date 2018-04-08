@@ -2,11 +2,10 @@
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	//background-image: url('../img/grid.png');
+	background-image: url('../img/grid.png');
 	background-repeat: repeat;
-	background-position: 4px -1px;
+	background-position: 0 -1px;
 	z-index: 50;
-
 	display: block;
 	background-color: $white;
 
@@ -25,10 +24,5 @@
 		height: 11px;
 		line-height: 10px;
 		transition: background-color 0.1s;
-
-		//&:nth-child(odd) {
-			//transform: translateX(-5px);
-		//}
 	}
-
 }

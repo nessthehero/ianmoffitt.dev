@@ -7,6 +7,26 @@ var nth = nth || {};
 
 	'use strict';
 
+	function debounce(func, wait, immediate) {
+		var timeout;
+		return function() {
+			var context = this,
+				args = arguments;
+			var later = function() {
+				timeout = null;
+				if (!immediate) {
+					func.apply(context, args);
+				}
+			};
+			var callNow = immediate && !timeout;
+			clearTimeout(timeout);
+			timeout = setTimeout(later, wait);
+			if (callNow) {
+				func.apply(context, args);
+			}
+		};
+	}
+
 	nth.grid = {
 
 		$base: $('#base'),
@@ -65,6 +85,8 @@ var nth = nth || {};
 					var $this = $(this);
 
 					_this.gridIsActive = true;
+
+					clearInterval(_this.hoverInterval);
 					_this.hoverInterval = setInterval(function () {
 						if (!$this.attr('data-disabled')) {
 							var color = $this.css('background-color');
@@ -109,9 +131,9 @@ var nth = nth || {};
 					$this.attr('data-disabled', '1');
 				});
 
-			$(window).on('resize', function () {
+			$(window).on('resize', debounce(function () {
 				_this.drawGrid();
-			});
+			}, 300));
 
 		},
 

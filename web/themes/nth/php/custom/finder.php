@@ -2,7 +2,7 @@
 
 	use \Drupal\node\Entity\Node;
 
-	class NewsQuery
+	class FinderQuery
 	{
 
 		protected $posts = array();
@@ -10,17 +10,19 @@
 		protected $taxonomy = array();
 		protected $sort = 'date';
 		protected $mode = 'nonstrict';
-		protected $machine = array('article');
+		protected $machine = array();
+		protected $promoted = false;
 
 		const MAX_POSTS = 4;
 		const PAGE_SIZE = 10;
 
-		public function __construct($taxonomy, $sort = 'date', $mode = 'nonstrict')
+		public function __construct($taxonomy, $machine = array(), $sort = 'date', $mode = 'nonstrict')
 		{
 
 			$this->taxonomy = array_filter($taxonomy);
 			$this->sort = $sort;
 			$this->mode = $mode;
+			$this->machine = $machine;
 
 			$this->filter();
 
@@ -38,7 +40,13 @@
 				}
 			}
 
-			$cache_key = "news-" . date("Y-m-d-h", time()) . $cache_tax;
+			if (!empty($this->machine)) {
+				$cache_pre = implode('-', $this->machine);
+			} else {
+				$cache_pre = 'node';
+			}
+
+			$cache_key = $cache_pre . '-' . date('Y-m-d-h', time()) . $cache_tax;
 
 			$cache_time = '+1 hours';
 			$expire = strtotime($cache_time, time());
@@ -53,9 +61,12 @@
 
 				$query = \Drupal::entityQuery('node');
 
-				$query->condition('type', 'article');
+
+//				$query->condition('type', 'article');
 
 				$query->condition('status', 1);
+
+				$query->condition('promote', 1);
 
 				if (!empty($this->taxonomy) && is_array($this->taxonomy)) {
 					foreach ($this->taxonomy as $filter) {
@@ -81,46 +92,6 @@
 					$this->posts[] = $this->_load_data($p);
 				}
 
-//				$query = new EntityFieldQuery();
-//				$this->posts = array();
-//				$this->rawPosts = array();
-//
-//				$query->entityCondition('entity_type', 'node')
-//					->entityCondition('bundle', $this->machine)
-//					->propertyCondition('status', 1);
-//
-//				if (!empty($this->taxonomy) && is_array($this->taxonomy)) {
-//					foreach ($this->taxonomy as $filter) {
-//						if (count($filter['value']) > 0) {
-//							switch ($this->mode) {
-//								case 'strict':
-//									$query->fieldCondition($filter['field'], 'tid', $filter['value']);
-//									break;
-//
-//								default:
-//									$query->fieldCondition($filter['field'], 'tid', $filter['value'], 'IN');
-//									break;
-//							}
-//						}
-//					}
-//				}
-//
-//				$query->propertyOrderBy('sticky', 'DESC');
-//
-//				if ($this->sort == 'date') {
-//					$query->propertyOrderBy('created', 'DESC');
-//				}
-//
-//				$query->execute();
-//
-//				if (isset($query->ordered_results) && count($query->ordered_results) > 0) {
-//					foreach ($query->ordered_results as $row) {
-//						$this->posts[] = node_load($row->entity_id);
-//					}
-//				}
-
-//				cache_set($cache_key, $this->posts, 'cache', $expire);
-
 			}
 
 			$this->rawPosts = $this->posts;
@@ -141,6 +112,7 @@
 			$return = array(
 				'nid'             => $nid,
 				'sticky'          => $node->isSticky(),
+				'promoted'        => $node->isPromoted(),
 				'title'           => $title
 			);
 
@@ -184,6 +156,13 @@
 			}
 
 			return $this;
+
+		}
+
+		public function getOnlyPromoted()
+		{
+
+
 
 		}
 
@@ -272,7 +251,7 @@
 
 	}
 
-	function build_news_search($node, &$variables, &$_q)
+	function build_finder_search($node, &$variables, &$_q)
 	{
 
 		$offset = 0;

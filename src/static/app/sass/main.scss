@@ -110,7 +110,7 @@
 // @import 'helpers/lib/_animate';
 
 // Fonts
-// @import 'icons/_style';
+@import 'icons/_style';
 
 // Common content styles
 @import 'common/_body';
@@ -127,6 +127,7 @@
 // Layout
 @import 'layout/_layout';
 @import 'layout/_main';
+@import 'layout/_level';
 @import 'layout/_thegrid';
 
 // Assemble.io partials and modules.

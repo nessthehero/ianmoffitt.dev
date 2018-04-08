@@ -1,9 +1,10 @@
 {
 	"items": [
 		{
-			"type": "codepen",
+			"icon": "codepen",
+			"type": "CodePen",
 			"title": "Hover over the blocks!",
-			"thumbnail": "http://placehold.it/550x550",
+			"thumbnail": "http://placehold.it/550x350",
 			"description": "For my portfolio, I wrote a pixel-esque grid feature where your mouse can affect the background as it hovers over parts of the site.",
 			"skills": [
 				"javascript",
@@ -11,25 +12,40 @@
 			]
 		},
 		{
-			"type": "work",
+			"icon": "briefcase",
+			"type": "Work",
 			"title": "Joliet Junior College",
-			"thumbnail": "http://placehold.it/550x550",
+			"thumbnail": "http://placehold.it/550x350",
 			"description": "Coding and Integration into Drupal 8.",
 			"skills": [
 				"javascript",
 				"css",
-				"php"
+				"php",
+				"drupal 8",
+				"foo",
+				"bar",
+				"baz"
 			]
 		},
 		{
-			"type": "work",
+			"icon": "briefcase",
+			"type": "Work",
 			"title": "William Jewell College",
-			"thumbnail": "http://placehold.it/550x550",
+			"thumbnail": "http://placehold.it/550x350",
 			"description": "Coding and Integration into Drupal 7",
 			"skills": [
 				"javascript",
-				"css"
+				"css",
+				"php",
+				"drupal 7"
 			]
+		},
+		{
+			"icon": "pencil",
+			"type": "Blurb",
+			"title": "My time as a Dungeon Master",
+			"thumbnail": "http://placehold.it/550x350",
+			"description": "I DMed a campaign for some people at work, and it wasn't what I expected it to be..."
 		}
 	]
 }

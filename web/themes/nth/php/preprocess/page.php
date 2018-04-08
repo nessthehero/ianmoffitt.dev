@@ -18,6 +18,19 @@
 
 				case 'home':
 
+					$promoted = new FinderQuery(array());
+
+					$promoted_results = $promoted->results(-1);
+
+					$items = array();
+					foreach ($promoted_results as $key => $n) {
+						$items[] = collapse(load_node($n['nid'], 'result'));
+					}
+
+					$variables['results'] = $items;
+
+					echo '';
+
 					break;
 
 				default:

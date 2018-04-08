@@ -10,13 +10,23 @@
 		$_q = \Drupal::request()->request->all();
 		$_embed = array();
 
-        if ($node->hasField('field_heading')) {
-            $variables['heading'] = $node->get('field_heading')->value;
-        }
+		if ($node->hasField('field_heading')) {
+			$variables['heading'] = $node->get('field_heading')->value;
+		} else {
+			$variables['heading'] = $node->get('title')->value;
+		}
 
 		switch ($type) {
 
 			case 'home':
+
+				break;
+
+			case 'work':
+
+				$variables['icon'] = 'briefcase';
+				$variables['type'] = 'Work Project';
+				$variables['thumbnail'] = image_url($node, 'field_thumbnail', 'result');
 
 				break;
 

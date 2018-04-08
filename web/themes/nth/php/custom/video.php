@@ -3,7 +3,7 @@
 global $theme_path;
 
 // This is terrible
-if (strpos($theme_path, 'iupui') != '') {
+if (strpos($theme_path, 'nth') != '') {
 
 	set_include_path(get_include_path() . PATH_SEPARATOR . $theme_path . '/php/_lib/Google');
 

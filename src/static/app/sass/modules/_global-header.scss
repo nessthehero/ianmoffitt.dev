@@ -3,7 +3,13 @@
 	z-index: 55 !important;
 	// scss-lint:enable ImportantRule
 
+	border-right: 1px solid rgba($shadow-color, 0.4);
+
 	@include breakpoint(medium) {
 		border-right: 5px solid rgba($shadow-color, 0.4);
+	}
+
+	.logo {
+		padding: 20px;
 	}
 }

@@ -12,7 +12,8 @@
 	include_once('nodes.php');
 
 	// Finders
-    include_once('events.php');
+    include_once('finder.php');
+//    include_once('events.php');
     // include_once('directory.php');
     // include_once('projects.php');
     // include_once('programs.php');
@@ -270,3 +271,74 @@ function parse_date($date, $format = 'Y-m-d H:i:s P') {
 	return $formatted;
 
 }
+
+	function remove_html_comments($content = '') {
+		return trim(preg_replace('/<!--(.|\s)*?-->/', '', $content));
+	}
+
+	function getTagsArrayFromVocabulary($vocabulary, $checked = array()) {
+
+		$return = array();
+
+		$vids = Vocabulary::loadMultiple();
+		foreach ($vids as $vid) {
+			if ($vid->id() == $vocabulary) {
+				$container = \Drupal::getContainer();
+				$terms = $container->get('entity.manager')->getStorage('taxonomy_term')->loadTree($vid->id());
+				if (!empty($terms)) {
+					foreach($terms as $term) {
+
+						$active = false;
+						if (!empty(in_array($term->tid, $checked))) {
+							$active = true;
+						}
+
+						$return['labels'][] = $term->name;
+						$return['tids'][] = $term->tid;
+						$return['associated'][] = array(
+							'label' => $term->name,
+							'safe' => gen_slug($term->name),
+							'tid' => $term->tid,
+							'active' => $active
+						);
+					}
+				}
+				break;
+			}
+		}
+
+		return $return;
+
+	}
+
+	function getTermInfo($tid) {
+
+		$return = array();
+
+		if (!empty($tid)) {
+
+			$id = $tid;
+			$name = Term::load($tid)->get('name')->value;
+
+			$return = array(
+				'id' => $id,
+				'name' => $name
+			);
+
+		}
+
+		return $return;
+
+	}
+
+	function collapse($input) {
+		$output = str_replace(array("\r\n", "\r"), "\n", $input);
+		$lines = explode("\n", $output);
+		$new_lines = array();
+
+		foreach ($lines as $i => $line) {
+			if(!empty($line))
+				$new_lines[] = trim($line);
+		}
+		return remove_html_comments(implode($new_lines));
+	}

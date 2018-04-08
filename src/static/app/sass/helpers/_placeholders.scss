@@ -29,3 +29,13 @@
 	top: 0;
 	left: 0;
 }
+
+%font-style-green {
+	color: $tropical-rain-forest;
+	text-shadow: 1px 1px 1px $ocean-green;
+}
+
+%font-style-blue {
+	color: $jungle-green;
+	text-shadow: 1px 1px 1px $fountain-blue;
+}

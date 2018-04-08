@@ -1,0 +1,10 @@
+.level {
+	position: relative;
+
+	.article {
+		@include breakpoint(large) {
+			float: right;
+			margin-left: 2rem;
+		}
+	}
+}

@@ -51,7 +51,7 @@
 
 		{{ page.header }}
 
-		<div class="off-canvas-content" data-off-canvas-content>
+		<section class="off-canvas-content" data-off-canvas-content>
 
 			<div id="base" class="grid-base"></div>
 
@@ -67,124 +67,20 @@
 				<div class="callout primary">
 					<div class="row column">
 						<h1>Hello! My name is Ian Moffitt</h1>
-						<p class="lead">I am a Front-End Developer in Pittsburgh. I am skilled in HTML and CSS, with some JavaScript and PHP as well. <br />I work for an agency that makes websites for higher education and tourism clients. </p>
+						<p>
+							I am a Front-End Developer in Pittsburgh. I am skilled in HTML and CSS, with some JavaScript and PHP as well. <br />
+							I work for <a href="http://www.barkleyrei.com/">BarkleyREI</a>, an agency that makes websites for higher education and tourism clients.
+						</p>
+						{{ page.content }}
 					</div>
 				</div>
 
-				<div class="results-set row small-up-2 medium-up-3">
-					<div class="column">
-						<article class="result">
-							<a href="#">
-								<img class="thumbnail" src="http://placehold.it/550x550">
-								<h5>My Site</h5>
-							</a>
-						</article>
-					</div>
-					<div class="column">
-						<article class="result">
-							<a href="#">
-								<img class="thumbnail" src="http://placehold.it/550x550">
-								<h5>My Site</h5>
-							</a>
-						</article>
-					</div>
-					<div class="column">
-						<article class="result">
-							<a href="#">
-								<img class="thumbnail" src="http://placehold.it/550x550">
-								<h5>My Site</h5>
-							</a>
-						</article>
-					</div>
-					<div class="column">
-						<article class="result">
-							<a href="#">
-								<img class="thumbnail" src="http://placehold.it/550x550">
-								<h5>My Site</h5>
-							</a>
-						</article>
-					</div>
-					<div class="column">
-						<article class="result">
-							<a href="#">
-								<img class="thumbnail" src="http://placehold.it/550x550">
-								<h5>My Site</h5>
-							</a>
-						</article>
-					</div>
-					<div class="column">
-						<article class="result">
-							<a href="#">
-								<img class="thumbnail" src="http://placehold.it/550x550">
-								<h5>My Site</h5>
-							</a>
-						</article>
-					</div>
-					<div class="column">
-						<article class="result">
-							<a href="#">
-								<img class="thumbnail" src="http://placehold.it/550x550">
-								<h5>My Site</h5>
-							</a>
-						</article>
-					</div>
-					<div class="column">
-						<article class="result">
-							<a href="#">
-								<img class="thumbnail" src="http://placehold.it/550x550">
-								<h5>My Site</h5>
-							</a>
-						</article>
-					</div>
-					<div class="column">
-						<article class="result">
-							<a href="#">
-								<img class="thumbnail" src="http://placehold.it/550x550">
-								<h5>My Site</h5>
-							</a>
-						</article>
-					</div>
-					<div class="column">
-						<article class="result">
-							<a href="#">
-								<img class="thumbnail" src="http://placehold.it/550x550">
-								<h5>My Site</h5>
-							</a>
-						</article>
-					</div>
-					<div class="column">
-						<article class="result">
-							<a href="#">
-								<img class="thumbnail" src="http://placehold.it/550x550">
-								<h5>My Site</h5>
-							</a>
-						</article>
-					</div>
-					<div class="column">
-						<article class="result">
-							<a href="#">
-								<img class="thumbnail" src="http://placehold.it/550x550">
-								<h5>My Site</h5>
-							</a>
-						</article>
-					</div>
-					<div class="column">
-						<article class="result">
-							<a href="#">
-								<img class="thumbnail" src="http://placehold.it/550x550">
-								<h5>My Site</h5>
-							</a>
-						</article>
-					</div>
-					<div class="column">
-						<article class="result">
-							<a href="#">
-								<img class="thumbnail" src="http://placehold.it/550x550">
-								<h5>My Site</h5>
-							</a>
-						</article>
-					</div>
-				</div>
+				<section class="results-set">
+					{#{{ results }}#}
+					{% for item in results %}
+						{{ item | raw }}
+					{% endfor %}
+				</section>
 
 			</main>
 

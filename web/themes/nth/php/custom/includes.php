@@ -3,26 +3,13 @@
 function build_includes(&$variables) {
 
 	$icons = array(
-		'alert',
-		'plus',
-		'logo-full',
-		'close',
-		'arrow',
-		'calendar',
-		'cta-chat',
-		'cta-pencil',
-		'cta-pin',
+		'pencil',
+		'briefcase',
+		'terminal',
 		'facebook',
-		'flickr',
-		'instagram',
-		'logo-shield',
-		'menu',
-		'numberone',
-		'pinterest',
-		'search',
 		'twitter',
-		'vine',
-		'youtube'
+		'linkedin',
+		'codepen'
 	);
 
 	foreach ($icons as $key => $icon) {
