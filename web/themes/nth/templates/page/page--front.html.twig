@@ -57,7 +57,9 @@
 
 			<div class="title-bar hide-for-large">
 				<div class="title-bar-left">
-					<button class="menu-icon" type="button" data-open="global-header"></button>
+					<button class="menu-icon" type="button" data-open="global-header">
+						<span class="show-for-sr">Open Menu</span>
+					</button>
 					<span class="title-bar-title">Ian Moffitt</span>
 				</div>
 			</div>
@@ -66,17 +68,11 @@
 
 				<div class="callout primary">
 					<div class="row column">
-						<h1>Hello! My name is Ian Moffitt</h1>
-						<p>
-							I am a Front-End Developer in Pittsburgh. I am skilled in HTML and CSS, with some JavaScript and PHP as well. <br />
-							I work for <a href="http://www.barkleyrei.com/">BarkleyREI</a>, an agency that makes websites for higher education and tourism clients.
-						</p>
 						{{ page.content }}
 					</div>
 				</div>
 
 				<section class="results-set">
-					{#{{ results }}#}
 					{% for item in results %}
 						{{ item | raw }}
 					{% endfor %}
@@ -86,7 +82,7 @@
 
 			{{ page.footer }}
 
-		</div>
+		</section>
 
 	</div>
 </div>

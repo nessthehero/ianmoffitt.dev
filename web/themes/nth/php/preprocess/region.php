@@ -1,12 +1,15 @@
 <?php
 
 	// Region preprocessing
-	function nth_preprocess_region(&$variables) {
+	function nth_preprocess_region(&$variables)
+	{
 
 		$node = Drupal::request()->attributes->get('node');
 		$type = '';
 
 		$region = $variables['region'];
+
+		$variables['theme_path'] = base_path() . $variables['directory'];
 
 		if (!empty($node)) {
 

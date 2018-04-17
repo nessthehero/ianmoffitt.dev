@@ -20,4 +20,10 @@
 
 	$this: &;
 
+	@include breakpoint(large) {
+		.global-header {
+			left: 240px;
+		}
+	}
+
 }
