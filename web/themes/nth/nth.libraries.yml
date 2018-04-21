@@ -11,11 +11,11 @@ global-styling:
 grid:
   js:
     _files/js/grid.js: {}
+prism:
+  js:
+    _files/js/prism.js: {}
 modernizr:
   header: true
   js:
     _files/js/plugins/modernizr.optimized.js: {}
-typekit:
-  header: true
-  js:
-    _files/js/typekit.js: {}
+

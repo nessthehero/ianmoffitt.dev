@@ -136,5 +136,8 @@
 @import 'modules/_assemble-modules';
 @import 'partials/_assemble-partials';
 
+// Plugins
+@import 'plugins/_prism';
+
 // Accessibility Helper Classes
 @import 'helpers/_access';

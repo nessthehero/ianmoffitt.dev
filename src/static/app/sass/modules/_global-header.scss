@@ -4,6 +4,7 @@
 	// scss-lint:enable ImportantRule
 
 	border-right: 1px solid rgba($shadow-color, 0.4);
+	padding: 20px 0;
 
 	@include breakpoint(medium) {
 		border-right: 5px solid rgba($shadow-color, 0.4);
