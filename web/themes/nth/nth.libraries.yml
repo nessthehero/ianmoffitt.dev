@@ -1,7 +1,7 @@
 global-styling:
   css:
     base:
-      https://fonts.googleapis.com/css?family=Inconsolata|Oleo+Script|Slabo+27px: {}
+      https://fonts.googleapis.com/css?family=Inconsolata|Exo|PT+Sans: {}
       _files/css/main.css: {}
   js:
     _files/js/foundation.js: {}
