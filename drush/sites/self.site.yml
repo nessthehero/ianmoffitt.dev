@@ -1,11 +1,27 @@
 # Edit or remove this file as needed.
 # Docs at https://github.com/drush-ops/drush/blob/master/examples/example.site.yml
 
-#prod:
-#  host: prod.domain.com
-#  user: www-admin
-#  root: /path/to/drupal
-#  uri: http://www.example.com
+local:
+  root: /Applications/MAMP/htdocs/ianmoffitt/web
+  uri: http://local.personal
+  paths:
+  - files: sites/default/files
+
+prod:
+  host: ianmoffitt.co
+  user: ian
+  root: /var/www/ianmoffitt.co/web
+  uri: https://www.ianmoffitt.co
+  paths:
+  - files: sites/default/files
+
+prodv2:
+  host: ianmoffitt.co
+  user: ian
+  root: /var/www/v2.ianmoffitt.co/web
+  uri: https://v2.ianmoffitt.co
+  paths:
+  - files: sites/default/files
 #
 #stage:
 #  host: stage.domain.com

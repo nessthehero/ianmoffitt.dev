@@ -7,11 +7,17 @@ template: true
 {{#parseFixture 'level.json'}}
 <main id="main" class="main level row">
 
+	{{> _masthead }}
+
 	<article class="article column">
 
 		<header class="article__header">
-			<h1>This is the article title</h1>
-			<p class="introduction">This is some introduction flavor text for the article.</p>
+			<h1>William Jewell College</h1>
+			<p class="article__introduction">Website Redesign &mdash; <a href="http:///www.jewell.edu" target="_blank">www.jewell.edu</a></p>
+			<div class="article__dates">
+				<time datetime="20170911"><strong>Project Start:</strong> 9-11-2017</time>
+				<time datetime="20180307"><strong>Project Launch:</strong> 3-7-2018</time>
+			</div>
 		</header>
 
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae culpa dignissimos illo itaque nobis tenetur voluptate. Ad architecto eveniet impedit neque non quae quia sint, soluta velit voluptate. Earum, placeat.</p>

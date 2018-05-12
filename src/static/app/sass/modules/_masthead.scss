@@ -1,0 +1,29 @@
+.masthead {
+
+	// Variables
+	$this: &;
+	$color: $black;
+	$background-color: $white;
+
+	// Styles
+	position: relative;
+	z-index: 55;
+	padding: 0;
+
+	@include breakpoint(large) {
+		max-width: 700px;
+		float: right;
+		border-color: $dusty-grey;
+		border-style: solid;
+		border-width: 0 5px;
+	}
+
+	@include breakpoint(xlarge) {
+		max-width: 900px;
+	}
+
+	.image {
+		padding-bottom: 20%;
+	}
+
+}

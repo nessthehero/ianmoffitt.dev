@@ -62,15 +62,28 @@
 				</div>
 			</div>
 
-			<main id="main" class="main level">
+			<main id="main" class="main level row">
+
+				<article class="article column">
 
 				<header class="article__header">
 
 					{{ page.title }}
 
+					{% if summary %}
+					<p class="article__introduction">{{ summary }} {% if url %}&mdash; {{ url|raw }}{% endif %}</p>
+					{% endif %}
+
+					<div class="article__dates">
+						<time datetime="20170911"><strong>Project Start:</strong> 9-11-2017</time>
+						<time datetime="20180307"><strong>Project Launch:</strong> 3-7-2018</time>
+					</div>
+
 				</header>
 
 				{{ page.content }}
+
+				</article>
 
 			</main>
 
