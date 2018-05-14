@@ -40,6 +40,8 @@
 
 					}
 
+					$variables['is_active'] = $node->get('field_project_active')->value;
+
 					$variables['summary'] = $node->get('field_summary')->value;
 					$variables['teaser'] = $node->get('field_teaser')->value;
 					$variables['skills'] = $node->get('field_skills');
@@ -55,8 +57,6 @@
 
 					$variables['thumbnail'] = image_url($node, 'field_thumbnail', 'result');
 					$variables['alt'] = $node->field_thumbnail->alt;
-
-					echo '';
 
 					break;
 

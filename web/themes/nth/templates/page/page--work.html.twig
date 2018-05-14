@@ -64,24 +64,34 @@
 
 			<main id="main" class="main level row">
 
+				{% if thumbnail %}
+					<figure class="column masthead">
+						<div class="image" style="background-image: url('{{ thumbnail }}');" role="img" aria-label="{{ alt }}"></div>
+					</figure>
+				{% endif %}
+
 				<article class="article column">
 
-				<header class="article__header">
+					<header class="article__header">
 
-					{{ page.title }}
+						{{ page.title }}
 
-					{% if summary %}
-					<p class="article__introduction">{{ summary }} {% if url %}&mdash; {{ url|raw }}{% endif %}</p>
-					{% endif %}
+						{% if summary %}
+							<p class="article__introduction">{{ summary }} {% if url %}&mdash; {{ url|raw }}{% endif %}</p>
+						{% endif %}
 
-					<div class="article__dates">
-						<time datetime="20170911"><strong>Project Start:</strong> 9-11-2017</time>
-						<time datetime="20180307"><strong>Project Launch:</strong> 3-7-2018</time>
-					</div>
+						{% if not is_active %}
+							<p><em>This project is no longer live or was changed.</em></p>
+						{% endif %}
 
-				</header>
+						<div class="article__dates">
+							<time datetime="20170911"><strong>Project Start:</strong> 9-11-2017</time>
+							<time datetime="20180307"><strong>Project Launch:</strong> 3-7-2018</time>
+						</div>
 
-				{{ page.content }}
+					</header>
+
+					{{ page.content }}
 
 				</article>
 

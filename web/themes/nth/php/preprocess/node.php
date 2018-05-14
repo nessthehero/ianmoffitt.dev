@@ -28,6 +28,10 @@
 				$variables['type'] = 'Work Project';
 				$variables['thumbnail'] = image_url($node, 'field_thumbnail', 'result');
 
+				if (!$node->field_components->isEmpty()) {
+					$variables['components'] = load_paragraphs($node->field_components);
+				}
+
 				break;
 
 			default:
