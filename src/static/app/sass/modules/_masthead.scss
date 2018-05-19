@@ -11,7 +11,7 @@
 	padding: 0;
 
 	@include breakpoint(large) {
-		max-width: 700px;
+		max-width: rem-calc(700);
 		float: right;
 		border-color: $dusty-grey;
 		border-style: solid;
@@ -19,11 +19,11 @@
 	}
 
 	@include breakpoint(xlarge) {
-		max-width: 900px;
+		max-width: rem-calc(900);
 	}
 
 	.image {
-		padding-bottom: 20%;
+		padding-bottom: 30vh;
 	}
 
 }
