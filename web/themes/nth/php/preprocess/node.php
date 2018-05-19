@@ -27,12 +27,30 @@
 				$variables['icon'] = 'briefcase';
 				$variables['type'] = 'Work Project';
 				$variables['thumbnail'] = image_url($node, 'field_thumbnail', 'result');
+				$variables['masthead'] = image_url($node, 'field_thumbnail', 'masthead');
 
 				if (!$node->field_components->isEmpty()) {
 					$variables['components'] = load_paragraphs($node->field_components);
 				}
 
 				break;
+
+			case 'teammate':
+
+				$variables['website'] = '';
+
+				if (!$node->field_url->isEmpty()) {
+					$website = $node->get('field_url')->first();
+
+					$variables['website_url'] = l_url($website);
+					$variables['website_title'] = $variables['heading'];
+
+					$variables['website'] = ra(lm(
+						$variables['website_title'],
+						$variables['website_url'],
+						'',
+						array()));
+				}
 
 			default:
 

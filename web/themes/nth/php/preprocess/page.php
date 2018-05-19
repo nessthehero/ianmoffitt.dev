@@ -18,7 +18,8 @@
 
 				case 'home':
 
-					$promoted = new FinderQuery(array());
+					$promoted = new FinderQuery(array(), array());
+					$promoted->getOnlyPromoted();
 
 					$promoted_results = $promoted->results(-1);
 
@@ -56,6 +57,7 @@
 					}
 
 					$variables['thumbnail'] = image_url($node, 'field_thumbnail', 'result');
+					$variables['masthead'] = image_url($node, 'field_thumbnail', 'masthead');
 					$variables['alt'] = $node->field_thumbnail->alt;
 
 					break;

@@ -16,7 +16,7 @@
 		const MAX_POSTS = 4;
 		const PAGE_SIZE = 10;
 
-		public function __construct($taxonomy, $machine = array(), $sort = 'date', $mode = 'nonstrict')
+		public function __construct($taxonomy, $machine = array('article'), $sort = 'date', $mode = 'nonstrict')
 		{
 
 			$this->taxonomy = array_filter($taxonomy);
@@ -32,6 +32,7 @@
 		{
 
 			$cached = '';
+			$this->posts = [];
 
 			$cache_tax = '';
 			if (!empty($this->taxonomy) && is_array($this->taxonomy)) {
@@ -46,27 +47,31 @@
 				$cache_pre = 'node';
 			}
 
-			$cache_key = $cache_pre . '-' . date('Y-m-d-h', time()) . $cache_tax;
+			$cache_key = $cache_pre . '-' . (string) $this->promoted . '-' . date('Y-m-d-h', time()) . $cache_tax;
 
 			$cache_time = '+1 hours';
 			$expire = strtotime($cache_time, time());
 
-//			if ($cached = cache_get($cache_key, 'cache')) {
-//				if (isset($cached->data)) {
-//					$this->posts = $cached->data;
-//				}
-//			}
+			if ($cached = \Drupal::cache()->get($cache_key)) {
+				if (isset($cached->data) && !empty($cached->data)) {
+					$this->posts = $cached->data;
+				}
+			}
 
 			if (count($this->posts) == 0) {
 
 				$query = \Drupal::entityQuery('node');
 
-
-//				$query->condition('type', 'article');
+				if (!empty($this->machine)) {
+					$query->condition('type', $this->machine, 'IN');
+				}
 
 				$query->condition('status', 1);
 
-				$query->condition('promote', 1);
+				if ($this->promoted) {
+					echo '';
+					$query->condition('promote', 1, '=');
+				}
 
 				if (!empty($this->taxonomy) && is_array($this->taxonomy)) {
 					foreach ($this->taxonomy as $filter) {
@@ -91,6 +96,8 @@
 				foreach ($posts as $key => $p) {
 					$this->posts[] = $this->_load_data($p);
 				}
+
+				\Drupal::cache()->set($cache_key, $this->posts, $expire);
 
 			}
 
@@ -162,7 +169,9 @@
 		public function getOnlyPromoted()
 		{
 
+			$this->promoted = true;
 
+			$this->filter();
 
 		}
 
@@ -339,7 +348,7 @@
 //			$variables['searching'] = true;
 //		}
 
-		$news = new NewsQuery($taxonomy);
+		$finder = new FinderQuery($taxonomy);
 //		$project->filterByTaxonomy('field_general_tags', $q_tag);
 //		$project->filterByTaxonomy('field_faculty_tags', $q_faculty);
 //		$project->filterByTaxonomy('field_program_tags', $q_program);
@@ -349,23 +358,23 @@
 
 		$q_debug = nvl($_q, 'debug');
 
-		$variables['news_query'] = $news;
+		$variables['finder_query'] = $finder;
 
 		$count = 10;
 		if (!empty($variables['searching'])) {
-			$count = $news->count();
+			$count = $finder->count();
 			$variables['offset'] = 0;
 		}
 
-		$variables['news'] = $news->results($count, $variables['offset']);
+		$variables['founditems'] = $finder->results($count, $variables['offset']);
 		if (!empty($q_debug)) {
-			$variables['news_count'] = (int) $q_debug; //$news->count(true);
-			$variables['news_count_un'] = (int) $q_debug; //$news->count();
-			$variables['page_count'] = (int) $q_debug / 10; //$news->pageCount();
+			$variables['finder_count'] = (int) $q_debug; //$finder->count(true);
+			$variables['finder_count_un'] = (int) $q_debug; //$finder->count();
+			$variables['page_count'] = (int) $q_debug / 10; //$finder->pageCount();
 		} else {
-			$variables['news_count'] = $news->count(true);
-			$variables['news_count_un'] = $news->count();
-			$variables['page_count'] = $news->pageCount();
+			$variables['finder_count'] = $finder->count(true);
+			$variables['finder_count_un'] = $finder->count();
+			$variables['page_count'] = $finder->pageCount();
 		}
 
 	}

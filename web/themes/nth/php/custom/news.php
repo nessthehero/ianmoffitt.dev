@@ -43,11 +43,11 @@
 			$cache_time = '+1 hours';
 			$expire = strtotime($cache_time, time());
 
-//			if ($cached = cache_get($cache_key, 'cache')) {
-//				if (isset($cached->data)) {
-//					$this->posts = $cached->data;
-//				}
-//			}
+			if ($cached = \Drupal::cache()->get($cache_key)) {
+				if (isset($cached->data) && !empty($cached->data)) {
+					$this->posts = $cached->data;
+				}
+			}
 
 			if (count($this->posts) == 0) {
 
@@ -118,6 +118,8 @@
 //						$this->posts[] = node_load($row->entity_id);
 //					}
 //				}
+
+				\Drupal::cache()->set($cache_key, $this->posts, time() + (60 * 60));
 
 //				cache_set($cache_key, $this->posts, 'cache', $expire);
 

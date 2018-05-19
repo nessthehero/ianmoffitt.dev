@@ -44,6 +44,32 @@
 
 					break;
 
+				case 'team':
+
+					$teammates = $paragraph->field_teammates;
+					$variables['teammates'] = load_paragraphs($teammates);
+
+					break;
+
+				case 'team_member':
+
+					echo '';
+
+					if (!$paragraph->field_teammate->isEmpty()) {
+
+						$variables['teammate'] = '';
+
+						$variables['involvement'] = $paragraph->get('field_involvement')->value;
+						$teammate = $paragraph->get('field_teammate')->first();
+
+						if ($teammate->_loaded) {
+							$variables['teammate'] = load_node($teammate->target_id);
+						}
+
+					}
+
+					break;
+
 				default:
 
 					break;
