@@ -10,8 +10,6 @@
 
 		if (!empty($node)) {
 
-			// print_r($node->toArray());
-
 			$type = $node->getType();
 
 			switch ($type) {
@@ -37,7 +35,11 @@
 					if (!$node->field_project_dates->isEmpty()) {
 
 						$variables['project_start'] = $node->get('field_project_dates')->value;
-						$variables['project_end'] = $node->get('field_project_dates')->end_value;
+						$variables['project_start_raw'] = date('c', strtotime($variables['project_start']));
+						if (!empty($node->get('field_project_dates')->end_value)) {
+							$variables['project_end'] = $node->get('field_project_dates')->end_value;
+							$variables['project_end_raw'] = date('c', strtotime($variables['project_end']));
+						}
 
 					}
 

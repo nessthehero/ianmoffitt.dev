@@ -73,6 +73,12 @@
  */
 #}
 
-<div{{ content_attributes }}>
-	{{ content }}
+{% if display_submitted %}
+<p><time>{{ date }}</time></p>
+{% endif %}
+
+<div class="user-markup">
+	{{ content.body }}
 </div>
+
+{{ components }}

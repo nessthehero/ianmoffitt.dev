@@ -9,12 +9,12 @@
 	max-width: 900px;
 	margin-right: 0;
 	margin-top: 1rem;
-	padding: 0 20px;
+	//padding: 0 20px;
 
 	@include breakpoint(medium) {
 		margin-top: 2rem;
 		margin-left: auto;
-		padding: 0 40px;
+		//padding: 0 40px;
 
 		display: grid;
 		// scss-lint:disable PropertySpelling

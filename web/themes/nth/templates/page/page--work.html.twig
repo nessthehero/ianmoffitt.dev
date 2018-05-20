@@ -84,10 +84,16 @@
 							<p><em>This project is no longer live or was changed.</em></p>
 						{% endif %}
 
-						<div class="article__dates">
-							<time datetime="20170911"><strong>Project Start:</strong> 9-11-2017</time>
-							<time datetime="20180307"><strong>Project Launch:</strong> 3-7-2018</time>
-						</div>
+						{% if project_start %}
+							<div class="article__dates">
+								<time datetime="{{ project_start_raw }}"><strong>Project
+										Start:</strong> {{ project_start }}</time>
+								{% if project_end %}
+									<time datetime="{{ project_end_raw }}"><strong>Project
+											Launch:</strong> {{ project_end }}</time>
+								{% endif %}
+							</div>
+						{% endif %}
 
 					</header>
 

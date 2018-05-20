@@ -38,17 +38,10 @@
  * @ingroup themeable
  */
 #}
-{%
-  set classes = [
-    'paragraph',
-    'paragraph--type--' ~ paragraph.bundle|clean_class,
-    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-  ]
-%}
-{% block paragraph %}
-  <ul{{ attributes.addClass(classes) }}>
-    {% block content %}
-      {{ content }}
-    {% endblock %}
-  </ul>
-{% endblock paragraph %}
+
+<h2>Team</h2>
+<ul{{ attributes.addClass(classes) }}>
+	{% block content %}
+		{{ content }}
+	{% endblock %}
+</ul>

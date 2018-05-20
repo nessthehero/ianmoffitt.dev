@@ -38,15 +38,10 @@
  * @ingroup themeable
  */
 #}
-{% set classes = [
-	'paragraph',
-	'paragraph--type--' ~ paragraph.bundle|clean_class,
-	view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-] %}
-{% block paragraph %}
+
 	{% if content.field_teammate|render|trim %}
 		{% if teammate %}
 			<li{{ attributes.addClass(classes) }}>{{ teammate }}{% if involvement %}, {{ involvement }}{% endif %}</li>
 		{% endif %}
 	{% endif %}
-{% endblock paragraph %}
+

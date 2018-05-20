@@ -61,7 +61,7 @@
 
 		.icon {
 			font-size: rem-calc(36);
-			color: $celtic;
+			color: $ocean-green;
 			transition: transform $transition-time;
 		}
 	}
@@ -79,13 +79,12 @@
 	}
 
 	&__caption {
-		padding: rem-calc(15 20);
+		padding: rem-calc(15 20 25);
 		position: relative;
 		z-index: 60;
 
 		p {
 			color: $black;
-			margin: 0;
 			font-size: rem-calc(16);
 			line-height: rem-calc(20);
 		}
@@ -98,8 +97,8 @@
 	}
 
 	&__skills {
-		margin: 0.5rem 0;
-		padding-bottom: 0.5rem;
+		display: inline-block;
+		margin-bottom: -10px;
 	}
 
 	&__skill {

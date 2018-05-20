@@ -1,0 +1,11 @@
+term_reference_tree_js:
+  js:
+    term_reference_tree.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+
+term_reference_tree_css:
+  css:
+    theme:
+      term_reference_tree.css: {}

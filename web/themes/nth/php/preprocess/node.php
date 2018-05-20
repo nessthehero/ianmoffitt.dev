@@ -1,7 +1,8 @@
 <?php
 
 	// Node preprocessing
-	function nth_preprocess_node(&$variables) {
+	function nth_preprocess_node(&$variables)
+	{
 
 		$node = $variables['node'];
 		$type = $node->getType();
@@ -16,9 +17,24 @@
 			$variables['heading'] = $node->get('title')->value;
 		}
 
+		if ($node->hasField('field_thumbnail') && !$node->field_thumbnail->isEmpty()) {
+			$variables['thumbnail'] = image_url($node, 'field_thumbnail', 'result');
+		}
+
+		if ($node->hasField('field_components') && !$node->field_components->isEmpty()) {
+			$variables['components'] = load_paragraphs($node->field_components);
+		}
+
 		switch ($type) {
 
 			case 'home':
+
+				break;
+
+			case 'blurb':
+
+				$variables['icon'] = 'pencil';
+				$variables['type'] = 'Short Blurb or Post';
 
 				break;
 
@@ -26,7 +42,6 @@
 
 				$variables['icon'] = 'briefcase';
 				$variables['type'] = 'Work Project';
-				$variables['thumbnail'] = image_url($node, 'field_thumbnail', 'result');
 				$variables['masthead'] = image_url($node, 'field_thumbnail', 'masthead');
 
 				if (!$node->field_components->isEmpty()) {
@@ -49,8 +64,12 @@
 						$variables['website_title'],
 						$variables['website_url'],
 						'',
-						array()));
+						array(
+							'target' => '_blank'
+						)));
 				}
+
+				break;
 
 			default:
 

@@ -37,6 +37,17 @@
 					}
 					break;
 
+				case 'code_sample':
+
+					$variables['#attached']['library'][] = 'nth/prism';
+
+					$variables['heading'] = $paragraph->get('field_heading')->value;
+					$variables['language'] = $paragraph->get('field_language')->value;
+
+					$variables['code'] = $paragraph->get('field_code')->value;
+
+					break;
+
 				case 'wysiwyg':
 
 					$variables['heading'] = $paragraph->get('field_heading')->value;
@@ -52,8 +63,6 @@
 					break;
 
 				case 'team_member':
-
-					echo '';
 
 					if (!$paragraph->field_teammate->isEmpty()) {
 

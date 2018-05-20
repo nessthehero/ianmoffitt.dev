@@ -62,15 +62,25 @@
 				</div>
 			</div>
 
-			<main id="main" class="main level">
+			<main id="main" class="main level row">
 
-				<header class="article__header">
+				{% if thumbnail %}
+					<figure class="column masthead">
+						<div class="image" style="background-image: url('{{ masthead }}');" role="img" aria-label="{{ alt }}"></div>
+					</figure>
+				{% endif %}
 
-					{{ page.title }}
+				<article class="article column">
 
-				</header>
+					<header class="article__header">
 
-				{{ page.content }}
+						{{ page.title }}
+
+					</header>
+
+					{{ page.content }}
+
+				</article>
 
 			</main>
 
