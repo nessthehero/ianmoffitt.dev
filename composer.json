@@ -30,6 +30,7 @@
         "drupal/ctools": "^3.0",
         "drupal/disqus": "^1.0",
         "drupal/field_group": "^1.0",
+        "drupal/google_analytics": "^2.2",
         "drupal/honeypot": "^1.27",
         "drupal/imce": "^1.6",
         "drupal/link_attributes": "^1.2",
