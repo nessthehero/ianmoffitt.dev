@@ -1,0 +1,54 @@
+.media {
+
+	// Variables
+	$this: &;
+	$color: $black;
+	$background-color: $white;
+
+	// Styles
+	margin: rem-calc(0 -20 16);
+	position: relative;
+	z-index: 60;
+
+	.image {
+		padding-bottom: rem-calc(250);
+		background-position: top center;
+
+		@include breakpoint(medium) {
+			padding-bottom: 30vh;
+		}
+
+		&.bottom {
+			background-position: bottom center;
+		}
+	}
+
+	figcaption {
+		background-color: $black;
+		padding: rem-calc(10 20);
+
+		p {
+			color: $white;
+
+			&:last-of-type {
+				margin: 0;
+			}
+		}
+	}
+
+	.slick-arrow {
+		position: absolute;
+		top: calc(50% - 12px);
+		font-size: rem-calc(24);
+		z-index: 61;
+	}
+
+	.slick-prev {
+		left: 0;
+	}
+
+	.slick-next {
+		right: 0;
+	}
+
+}

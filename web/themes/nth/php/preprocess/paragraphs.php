@@ -48,6 +48,18 @@
 
 					break;
 
+				case 'media':
+
+					$variables['attributes']['class'][] = 'media';
+
+					$items = $paragraph->get('field_media_items');
+
+					if ($items->count() > 1) {
+						$variables['attributes']['class'][] = 'media--slider';
+					}
+
+					break;
+
 				case 'media_item':
 
 					$variables['caption'] = $paragraph->get('field_caption')->value;
