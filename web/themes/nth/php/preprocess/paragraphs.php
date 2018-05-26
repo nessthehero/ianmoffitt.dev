@@ -48,6 +48,15 @@
 
 					break;
 
+				case 'media_item':
+
+					$variables['caption'] = $paragraph->get('field_caption')->value;
+
+					$variables['image'] = image_url($paragraph, 'field_image', 'masthead');
+					$variables['alt'] = $paragraph->field_image->alt;
+
+					break;
+
 				case 'wysiwyg':
 
 					$variables['heading'] = $paragraph->get('field_heading')->value;

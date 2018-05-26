@@ -14,6 +14,9 @@ grid:
 prism:
   js:
     _files/js/prism.js: {}
+level:
+  js:
+    _files/js/level.js: {}
 modernizr:
   header: true
   js:

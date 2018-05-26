@@ -5,65 +5,88 @@ template: true
 
 <!-- template:level -->
 {{#parseFixture 'level.json'}}
-<main id="main" class="main level row">
+	<main id="main" class="main level row">
 
-	{{> _masthead }}
+		{{> _masthead }}
 
-	<article class="article column">
+		<article class="article column">
 
-		<header class="article__header">
-			<h1>William Jewell College</h1>
-			<p class="article__introduction">Website Redesign &mdash; <a href="http:///www.jewell.edu" target="_blank">www.jewell.edu</a></p>
-			<div class="article__dates">
-				<time datetime="20170911"><strong>Project Start:</strong> 9-11-2017</time>
-				<time datetime="20180307"><strong>Project Launch:</strong> 3-7-2018</time>
+			<header class="article__header">
+				<h1>William Jewell College</h1>
+				<p class="article__introduction">Website Redesign &mdash;
+					<a href="http:///www.jewell.edu" target="_blank">www.jewell.edu</a></p>
+				<div class="article__dates">
+					<time datetime="20170911"><strong>Project Start:</strong> 9-11-2017</time>
+					<time datetime="20180307"><strong>Project Launch:</strong> 3-7-2018</time>
+				</div>
+			</header>
+
+			<div class="user-markup">
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae culpa dignissimos illo itaque nobis
+					tenetur voluptate. Ad architecto eveniet impedit neque non quae quia sint, soluta velit voluptate.
+					Earum, placeat.</p>
+
+				<h2>H2 Section Heading</h2>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, totam, vitae! A ab aspernatur cum
+					doloribus, eos fugiat labore laboriosam magnam necessitatibus numquam odio quas sapiente temporibus
+					ullam veritatis voluptates.</p>
+
+				<h3>H3 Section Heading</h3>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, totam, vitae! A ab aspernatur cum
+					doloribus, eos fugiat labore laboriosam magnam necessitatibus numquam odio quas sapiente temporibus
+					ullam veritatis voluptates.</p>
+
+				<h4>H4 Section Heading</h4>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, totam, vitae! A ab aspernatur cum
+					doloribus, eos fugiat labore laboriosam magnam necessitatibus numquam odio quas sapiente temporibus
+					ullam veritatis voluptates.</p>
+
+				<h5>H5 Section Heading</h5>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, totam, vitae! A ab aspernatur cum
+					doloribus, eos fugiat labore laboriosam magnam necessitatibus numquam odio quas sapiente temporibus
+					ullam veritatis voluptates.</p>
+
 			</div>
-		</header>
 
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae culpa dignissimos illo itaque nobis tenetur voluptate. Ad architecto eveniet impedit neque non quae quia sint, soluta velit voluptate. Earum, placeat.</p>
+			{{> media }} 
 
-		<h2>H2 Section Heading</h2>
+			<div class="user-markup">
 
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, totam, vitae! A ab aspernatur cum doloribus, eos fugiat labore laboriosam magnam necessitatibus numquam odio quas sapiente temporibus ullam veritatis voluptates.</p>
+				<h6>H6 Section Heading</h6>
 
-		<h3>H3 Section Heading</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, totam, vitae! A ab aspernatur cum
+					doloribus, eos fugiat labore laboriosam magnam necessitatibus numquam odio quas sapiente temporibus
+					ullam veritatis voluptates.</p>
 
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, totam, vitae! A ab aspernatur cum doloribus, eos fugiat labore laboriosam magnam necessitatibus numquam odio quas sapiente temporibus ullam veritatis voluptates.</p>
+				<h3>Definition List</h3>
+				<dl>
+					<dt>Definition List Title</dt>
+					<dd>This is a definition list division.</dd>
+				</dl>
 
-		<h4>H4 Section Heading</h4>
+				<h3>Ordered List</h3>
+				<ol>
+					<li>List Item 1</li>
+					<li>List Item 2</li>
+					<li>List Item 3</li>
+				</ol>
 
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, totam, vitae! A ab aspernatur cum doloribus, eos fugiat labore laboriosam magnam necessitatibus numquam odio quas sapiente temporibus ullam veritatis voluptates.</p>
+				<h3>Unordered List</h3>
+				<ul>
+					<li>List Item 1</li>
+					<li>List Item 2</li>
+					<li>List Item 3</li>
+				</ul>
 
-		<h5>H5 Section Heading</h5>
+			</div>
 
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, totam, vitae! A ab aspernatur cum doloribus, eos fugiat labore laboriosam magnam necessitatibus numquam odio quas sapiente temporibus ullam veritatis voluptates.</p>
+		</article>
 
-		<h6>H6 Section Heading</h6>
-
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, totam, vitae! A ab aspernatur cum doloribus, eos fugiat labore laboriosam magnam necessitatibus numquam odio quas sapiente temporibus ullam veritatis voluptates.</p>
-
-		<h3>Definition List</h3>
-		<dl>
-			<dt>Definition List Title</dt>
-			<dd>This is a definition list division.</dd>
-		</dl>
-
-		<h3>Ordered List</h3>
-		<ol>
-			<li>List Item 1</li>
-			<li>List Item 2</li>
-			<li>List Item 3</li>
-		</ol>
-
-		<h3>Unordered List</h3>
-		<ul>
-			<li>List Item 1</li>
-			<li>List Item 2</li>
-			<li>List Item 3</li>
-		</ul>
-
-	</article>
-
-</main>
+	</main>
 {{/parseFixture}}
 <!-- end template:level -->
