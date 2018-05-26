@@ -93,13 +93,13 @@
 				</p>
 			{% endif %}
 
-			{#{#}{#if skills}}#}
-			{#<dl class="result__skills">#}
-				{#{#}{#each skills}}#}
-				{#<dt class="result__skill">{{this}}</dt>#}
-				{#{{/each}}#}
-			{#</dl>#}
-			{#{{/if}}#}
+			{% if skills %}
+			<dl class="result__skills">
+				{% for skill in skills %}
+				<dt class="result__skill">{{ skill['name'] }}</dt>
+				{% endfor %}
+			</dl>
+			{% endif %}
 		</figcaption>
 	</figure>
 </a>

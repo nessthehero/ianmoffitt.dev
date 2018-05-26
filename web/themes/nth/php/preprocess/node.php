@@ -48,6 +48,8 @@
 					$variables['components'] = load_paragraphs($node->field_components);
 				}
 
+				$variables['skills'] = getTagsArray($node->get('field_skills'));
+
 				break;
 
 			case 'teammate':

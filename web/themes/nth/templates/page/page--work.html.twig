@@ -80,7 +80,7 @@
 							<p class="article__introduction">{{ summary }} {% if url %}&mdash; {{ url|raw }}{% endif %}</p>
 						{% endif %}
 
-						{% if not is_active %}
+						{% if is_inactive %}
 							<p><em>This project is no longer live or was changed.</em></p>
 						{% endif %}
 

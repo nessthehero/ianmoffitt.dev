@@ -43,7 +43,7 @@
 
 					}
 
-					$variables['is_active'] = $node->get('field_project_active')->value;
+					$variables['is_inactive'] = !$node->get('field_project_active')->value;
 
 					$variables['summary'] = $node->get('field_summary')->value;
 					$variables['teaser'] = $node->get('field_teaser')->value;

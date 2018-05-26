@@ -416,9 +416,18 @@
 	{
 
 		$t = array();
+		$tmp = array();
 
-		foreach ($field as $key => $f) {
-			$t[] = $f->target_id;
+		$tmp = $field->referencedEntities();
+
+		foreach ($tmp as $tt) {
+
+			$t[] = array(
+				'tid' => $tt->id(),
+				'vid' => $tt->getVocabularyId(),
+				'name' => $tt->getName()
+			);
+
 		}
 
 		return $t;

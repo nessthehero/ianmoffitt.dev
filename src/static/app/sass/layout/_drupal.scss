@@ -27,3 +27,13 @@
 	}
 
 }
+
+.admin-local-tasks {
+
+	a {
+		@include button();
+	}
+
+	@include button-group('a', 4px);
+
+}
