@@ -7,14 +7,6 @@ local:
   paths:
   - files: sites/default/files
 
-prod:
-  host: ianmoffitt.co
-  user: ian
-  root: /var/www/ianmoffitt.co/web
-  uri: https://www.ianmoffitt.co
-  paths:
-  - files: sites/default/files
-
 prodv2:
   host: ianmoffitt.co
   user: ian
