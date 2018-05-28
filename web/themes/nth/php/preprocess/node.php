@@ -38,6 +38,28 @@
 
 				break;
 
+			case 'codepen':
+
+				$variables['icon'] = 'codepen';
+				$variables['type'] = 'CodePen';
+
+				$url = $node->get('field_url');
+
+				if (!empty($url->uri)) {
+					$api_url = 'http://codepen.io/api/oembed?url=' . $url->uri . '&format=json&height=600';
+					$codepen = json_decode(file_get_contents($api_url));
+				}
+
+				if (!empty($codepen)) {
+					$variables['codepen'] = $codepen;
+				}
+
+				if (!$node->field_components->isEmpty()) {
+					$variables['components'] = load_paragraphs($node->field_components);
+				}
+
+				break;
+
 			case 'work':
 
 				$variables['icon'] = 'briefcase';
