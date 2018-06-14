@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0c9338ee6de9bdde07fbf65ef0f1efdd",
+    "content-hash": "82db9988f4a7a35b3880b77a8c365c25",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3644,20 +3644,20 @@
         },
         {
             "name": "drush/drush",
-            "version": "9.3.0",
+            "version": "9.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drush-ops/drush.git",
-                "reference": "82e00a5437b5d2c21ee0f5b3090c3931db3cb71b"
+                "reference": "c07b5b4527d6fb9226adaee14a33de5d4aa93ce8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/drush/zipball/82e00a5437b5d2c21ee0f5b3090c3931db3cb71b",
-                "reference": "82e00a5437b5d2c21ee0f5b3090c3931db3cb71b",
+                "url": "https://api.github.com/repos/drush-ops/drush/zipball/c07b5b4527d6fb9226adaee14a33de5d4aa93ce8",
+                "reference": "c07b5b4527d6fb9226adaee14a33de5d4aa93ce8",
                 "shasum": ""
             },
             "require": {
-                "chi-teck/drupal-code-generator": "^1.24.0",
+                "chi-teck/drupal-code-generator": "^1.21.0",
                 "composer/semver": "^1.4",
                 "consolidation/annotated-command": "^2.8.1",
                 "consolidation/config": "^1.0.9",
@@ -3691,7 +3691,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "9.x-dev"
+                    "dev-master": "9.0.x-dev"
                 }
             },
             "autoload": {
@@ -3741,7 +3741,7 @@
             ],
             "description": "Drush is a command line shell and scripting interface for Drupal, a veritable Swiss Army knife designed to make life easier for those of us who spend some of our working hours hacking away at the command prompt.",
             "homepage": "http://www.drush.org",
-            "time": "2018-05-23T16:47:20+00:00"
+            "time": "2018-04-03T13:45:59+00:00"
         },
         {
             "name": "easyrdf/easyrdf",

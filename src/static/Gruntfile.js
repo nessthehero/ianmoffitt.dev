@@ -81,7 +81,8 @@ module.exports = function(grunt) {
 		'clean:deploy',
 		'copy:deploy',
 		'clean:drupal',
-		'copy:drupal'
+		'copy:drupal',
+		'copy:icons'
 	]);
 
 	grunt.registerTask('default', [

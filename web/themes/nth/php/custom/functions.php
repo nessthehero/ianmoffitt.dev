@@ -9,19 +9,11 @@
 
 	include_once('video.php');
 	include_once('news.php');
-	include_once('feature.php');
 	include_once('content.php');
-	// include_once('fields.php');
-	include_once('paragraphs.php');
-	include_once('nodes.php');
+	include_once('entity.php');
 
 	// Finders
 	include_once('finder.php');
-//    include_once('events.php');
-	// include_once('directory.php');
-	// include_once('projects.php');
-	// include_once('programs.php');
-	// include_once('degrees.php');
 
 	/**
 	 * Returns key of array, or default value given. Mostly used to get query strings.

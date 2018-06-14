@@ -17,18 +17,6 @@ module.exports = function(grunt, options){
 					'.tmp/concat/css/**/*.{css}', // if the css is generated into the .tmp directory
 					'modules/*'
 				]
-			}, {
-				expand: true,
-				dot: true,
-				cwd: yeoman.app + '/fonts',
-				dest: yeoman.dist + '/fonts',
-				src: ['*']
-			}, {
-				expand: true,
-				dot: true,
-				cwd: yeoman.app + 'sass/icons/fonts',
-				dest: yeoman.dist + '/fonts',
-				src: ['*']
 			}]
 		},
 		deploy: {
@@ -51,6 +39,15 @@ module.exports = function(grunt, options){
 					'./css/**/*',
 					'./img/**/*'
 				]
+			}]
+		},
+		icons: {
+			files: [{
+				expand: true,
+				dot: true,
+				cwd: yeoman.app + '/sass/icons',
+				dest: yeoman.drupal,
+				src: ['./*.json']
 			}]
 		},
 		styles: {

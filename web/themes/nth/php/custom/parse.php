@@ -8,34 +8,40 @@ class NodeParser {
 	protected $type;
 	protected $mode;
 	protected $lang;
+	public $vars;
 
 	const DEFAULT_MODE = 'full';
 
-	public function __construct($node, $mode) {
+	public function __construct($node, $mode = DEFAULT_MODE) {
 
 		$this->node = $node;
-		$this->type = $this->nvl($node->type, '');
-		$this->mode = $this->nvl($mode, DEFAULT_MODE);
-		$this->lang = $this->nvl($node->language, 'und');
+
+		if (!empty($this->node)) {
+
+			$this->type = $node->getType();
+
+			if (!empty($mode)) {
+				$this->mode = $this->nvl($mode, DEFAULT_MODE);
+			}
+
+		}
+
+		$this->vars = $this->parse();
 
 	}
 
-	// Get field name and view mode
-	public function parse($field, $mode = DEFAULT_MODE) {
+	private function parse()
+	{
 
-		$this->setMode($mode);
+		echo '';
 
-		return $this->clean($this->raw($field));
+		$fields = $this->node->fields;
 
-	}
+		foreach ($fields as $key => $field) {
 
-	// Returns raw data from field
-	public function raw($field) {
 
-	}
 
-	// Applies view mode to raw data (or returns custom object)
-	private function clean($raw) {
+		}
 
 	}
 

@@ -73,14 +73,20 @@
  */
 #}
 
-{% if display_submitted %}
-<p><time>{{ date }}</time></p>
-{% endif %}
+<div{{ attributes }}>
 
-<div class="user-markup">
-	{{ content.body }}
+	{% if display_submitted %}
+		<p>
+			<time>{{ date }}</time>
+		</p>
+	{% endif %}
+
+	<div class="user-markup">
+		{{ content.body }}
+	</div>
+
+	{{ components }}
+
+	{{ content.field_disqus }}
+
 </div>
-
-{{ components }}
-
-{{ content.field_disqus }}

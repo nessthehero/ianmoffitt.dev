@@ -23,4 +23,11 @@
 		grid-row-gap: 20px;
 		// scss-lint:enable PropertySpelling
 	}
+
+	.views-exposed-form {
+		// scss-lint:disable PropertySpelling
+		grid-column-start: 2;
+		grid-column-end: 3;
+		// scss-lint:enable PropertySpelling
+	}
 }

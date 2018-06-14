@@ -69,7 +69,6 @@
 				$query->condition('status', 1);
 
 				if ($this->promoted) {
-					echo '';
 					$query->condition('promote', 1, '=');
 				}
 

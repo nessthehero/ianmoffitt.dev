@@ -73,7 +73,7 @@
  */
 #}
 {% if codepen %}
-<a href="{{ url }}" {{ attributes.addClass('result') }}>
+<a href="{{ url }}" {{ attributes }}>
 	<figure class="result__figure">
 		{% if icon %}
 			<span class="result__type">
@@ -81,9 +81,9 @@
 				<span class="show-for-sr">{{ type }}</span>
 			</span>
 		{% endif %}
-		{% if codepen['thumbnail_url'] %}
+		{% if codepen.thumbnail_url %}
 			<div class="result__image">
-				<img src="{{ codepen['thumbnail_url'] }}" alt="{{ codepen['title'] }}"/>
+				<img src="{{ codepen.thumbnail_url }}" alt="{{ codepen.title }}"/>
 			</div>
 		{% endif %}
 		<figcaption class="result__caption">

@@ -26,6 +26,10 @@ select {
 
 }
 
+select {
+	background-position: center right;
+}
+
 // Set word-break back to normal so that text inputs don't wrap
 input[type='text'],
 input[type='password'],
@@ -93,3 +97,4 @@ fieldset {
 }
 
 // scss-lint:enable VendorPrefix
+

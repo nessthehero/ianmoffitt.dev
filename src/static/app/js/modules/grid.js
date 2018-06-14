@@ -145,13 +145,10 @@ var nth = nth || {};
 
 			var parsedData = JSON.parse(savedData);
 
-			console.log('saved', parsedData);
-
 			if (parsedData) {
 
 				for (var j in parsedData.data) {
 					if (parsedData.data.hasOwnProperty(j)) {
-						console.log(j, parsedData.data[j]);
 
 						var the_id = '#' + j;
 
@@ -191,11 +188,7 @@ var nth = nth || {};
 
 					var key = this.getStorageKey();
 
-					console.log(data);
-
 					var savedData = JSON.stringify({'data': data});
-
-					console.log(savedData);
 
 					window.localStorage.setItem(key, savedData);
 

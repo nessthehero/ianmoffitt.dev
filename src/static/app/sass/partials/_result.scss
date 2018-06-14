@@ -76,6 +76,7 @@
 		position: absolute;
 		z-index: 57;
 		margin: 0;
+		width: 100%;
 	}
 
 	&__caption {
@@ -87,6 +88,10 @@
 			color: $black;
 			font-size: rem-calc(16);
 			line-height: rem-calc(20);
+		}
+
+		#{$this}--no-image & {
+			padding-top: rem-calc(60);
 		}
 	}
 

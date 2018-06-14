@@ -14,9 +14,3 @@ prodv2:
   uri: https://v2.ianmoffitt.co
   paths:
   - files: sites/default/files
-#
-#stage:
-#  host: stage.domain.com
-#  user: www-admin
-#  root: /path/to/drupal
-#  uri: http://stage.example.com

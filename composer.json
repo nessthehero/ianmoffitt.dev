@@ -43,7 +43,7 @@
         "drupal/term_reference_tree": "^1.0@alpha",
         "drupal/twig_tweak": "^1.9",
         "drupal/webform": "^5.0@RC",
-        "drush/drush": "^9.0.0",
+        "drush/drush": "9.2.3",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3"

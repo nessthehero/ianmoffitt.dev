@@ -36,12 +36,17 @@
 				$variables['icon'] = 'pencil';
 				$variables['type'] = 'Short Blurb or Post';
 
+				if ($mode == 'result' && empty($variables['thumbnail'])) {
+					$variables['attributes']['class'][] = 'result--no-image';
+				}
+
 				break;
 
 			case 'codepen':
 
 				$variables['icon'] = 'codepen';
 				$variables['type'] = 'CodePen';
+				$variables['attributes']['class'][] = 'result';
 
 				$url = $node->get('field_url');
 
@@ -58,6 +63,21 @@
 					$variables['components'] = load_paragraphs($node->field_components);
 				}
 
+				if (empty($codepen->thumbnail_url)) {
+					$variables['attributes']['class'][] = 'result--no-image';
+				}
+
+				break;
+
+			case 'page':
+
+				$variables['icon'] = 'pencil';
+				$variables['type'] = 'A page of content';
+
+				if ($mode == 'result' && empty($variables['thumbnail'])) {
+					$variables['attributes']['class'][] = 'result--no-image';
+				}
+
 				break;
 
 			case 'work':
@@ -71,6 +91,10 @@
 				}
 
 				$variables['skills'] = getTagsArray($node->get('field_skills'));
+
+				if ($mode == 'result' && empty($variables['thumbnail'])) {
+					$variables['attributes']['class'][] = 'result--no-image';
+				}
 
 				break;
 
