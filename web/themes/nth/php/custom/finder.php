@@ -89,6 +89,8 @@
 				}
 
 				$query->sort('created', 'DESC');
+				$query->sort('sticky');
+
 
 				$posts = $query->execute();
 
@@ -101,6 +103,8 @@
 			}
 
 			$this->rawPosts = $this->posts;
+
+			echo '';
 
 		}
 

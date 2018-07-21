@@ -9,13 +9,133 @@
             "role": ""
         }
     ],
-    "repositories": [
-        {
+    "repositories": {
+        "0": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        "ckeditor.autogrow": {
+            "_webform": true,
+            "type": "package",
+            "package": {
+                "name": "ckeditor/autogrow",
+                "version": "4.8.0",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "ckeditor.autogrow"
+                },
+                "dist": {
+                    "url": "https://download.ckeditor.com/autogrow/releases/autogrow_4.8.0.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        "jquery.geocomplete": {
+            "_webform": true,
+            "type": "package",
+            "package": {
+                "name": "jquery/geocomplete",
+                "version": "1.7.0",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "jquery.geocomplete"
+                },
+                "dist": {
+                    "url": "https://github.com/ubilabs/geocomplete/archive/1.7.0.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        "jquery.image-picker": {
+            "_webform": true,
+            "type": "package",
+            "package": {
+                "name": "jquery/image-picker",
+                "version": "0.3.0",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "jquery.image-picker"
+                },
+                "dist": {
+                    "url": "https://github.com/rvera/image-picker/archive/0.3.0.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        "jquery.rateit": {
+            "_webform": true,
+            "type": "package",
+            "package": {
+                "name": "jquery/rateit",
+                "version": "1.1.1",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "jquery.rateit"
+                },
+                "dist": {
+                    "url": "https://github.com/gjunge/rateit.js/archive/1.1.1.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        "jquery.toggles": {
+            "_webform": true,
+            "type": "package",
+            "package": {
+                "name": "jquery/toggles",
+                "version": "4.0.0",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "jquery.toggles"
+                },
+                "dist": {
+                    "url": "https://github.com/simontabor/jquery-toggles/archive/v4.0.0.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        "signature_pad": {
+            "_webform": true,
+            "type": "package",
+            "package": {
+                "name": "signature_pad/signature_pad",
+                "version": "2.3.0",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "signature_pad"
+                },
+                "dist": {
+                    "url": "https://github.com/szimek/signature_pad/archive/v2.3.0.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
         }
-    ],
+    },
     "require": {
+        "ckeditor/autogrow": "4.8.0",
+        "ckeditor/codemirror": "v1.17.5",
+        "ckeditor/fakeobjects": "4.8.0",
+        "ckeditor/image": "4.8.0",
+        "ckeditor/link": "4.8.0",
+        "codemirror/codemirror": "5.36.0",
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6",
         "doctrine/annotations": "1.4.*",
@@ -44,6 +164,17 @@
         "drupal/twig_tweak": "^1.9",
         "drupal/webform": "^5.0@RC",
         "drush/drush": "9.2.3",
+        "jquery/geocomplete": "1.7.0",
+        "jquery/image-picker": "0.3.0",
+        "jquery/inputmask": "3.3.11",
+        "jquery/intl-tel-input": "12.1.12",
+        "jquery/rateit": "1.1.1",
+        "jquery/select2": "4.0.5",
+        "jquery/timepicker": "1.11.13",
+        "jquery/toggles": "4.0.0",
+        "jquery/word-and-character-counter": "2.5.1",
+        "progress-tracker/progress-tracker": "1.4.0",
+        "signature_pad/signature_pad": "2.3.0",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3"
@@ -66,7 +197,9 @@
         "classmap": [
             "scripts/composer/ScriptHandler.php"
         ],
-        "files": ["load.environment.php"]
+        "files": [
+            "load.environment.php"
+        ]
     },
     "scripts": {
         "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
@@ -85,12 +218,24 @@
     },
     "extra": {
         "installer-paths": {
-            "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library"],
-            "web/modules/contrib/{$name}": ["type:drupal-module"],
-            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "web/themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/contrib/{$name}": ["type:drupal-drush"]
+            "web/core": [
+                "type:drupal-core"
+            ],
+            "web/libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "web/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/contrib/{$name}": [
+                "type:drupal-drush"
+            ]
         }
     }
 }
