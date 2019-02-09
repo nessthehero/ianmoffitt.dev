@@ -24,7 +24,7 @@ module.exports = function(grunt, options){
 				expand: true,
 				dot: true,
 				cwd: yeoman.dist,
-				dest: yeoman.deploy,
+				dest: yeoman.deploy_main,
 				src: ['./**']
 			}]
 		},

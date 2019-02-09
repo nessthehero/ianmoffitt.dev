@@ -1,0 +1,24 @@
+global-styling:
+  css:
+    base:
+      https://fonts.googleapis.com/css?family=Inconsolata|Exo|PT+Sans: {}
+      _files/css/main.css: {}
+  js:
+    _files/js/foundation.js: {}
+    _files/js/main.js: {}
+  dependencies:
+    - core/jquery
+grid:
+  js:
+    _files/js/grid.js: {}
+prism:
+  js:
+    _files/js/prism.js: {}
+level:
+  js:
+    _files/js/level.js: {}
+modernizr:
+  header: true
+  js:
+    _files/js/plugins/modernizr.optimized.js: {}
+

@@ -5,12 +5,26 @@ local:
   root: /Applications/MAMP/htdocs/ianmoffitt/web
   uri: http://local.personal
   paths:
-  - files: sites/default/files
+  - files: sites/www.ianmoffitt.co/files
+
+outfit:
+  root: /Applications/MAMP/htdocs/ianmoffitt/web
+  uri: http://local.outfits
+  paths:
+  - files: sites/outfits.ianmoffitt.co/files
 
 prodv2:
   host: ianmoffitt.co
   user: ian
   root: /var/www/v2.ianmoffitt.co/web
-  uri: https://v2.ianmoffitt.co
+  uri: https://www.ianmoffitt.co
   paths:
-  - files: sites/default/files
+  - files: sites/www.ianmoffitt.co/files
+
+prodfit:
+  host: ianmoffitt.co
+  user: ian
+  root: /var/www/v2.ianmoffitt.co/web
+  uri: https://outfits.ianmoffitt.co
+  paths:
+  - files: sites/outfits.ianmoffitt.co/files

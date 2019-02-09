@@ -57,32 +57,3 @@
 		return $builder;
 
 	}
-
-	/**
-	 * Return array of node ids similar to finder, pulled from a node reference field
-	 * @param $node
-	 * @param $field
-	 *
-	 * @return array
-	 */
-	function get_node_references($node, $field) {
-
-		$refs = array();
-
-		if ($node->hasField($field)) {
-
-			$_refs = $node->get('field_featured_programs');
-
-			if (!empty($_refs)) {
-				foreach ($_refs as $r) {
-					$refs[] = array(
-						'nid' => $r->target_id
-					);
-				}
-			}
-
-		}
-
-		return $refs;
-
-	}

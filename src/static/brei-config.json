@@ -1,7 +1,9 @@
 {
 	"generatorVersion": "3.3.8",
-	"deploy": "../compiled",
-	"drupal": "../../web/themes/nth/_files",
+	"deploy_main": "../compiled/main",
+	"deploy_outfits": "../compiled/outfits",
+	"drupal_main": "../../web/themes/nth/_files",
+	"drupal_outfits": "../../web/themes/outfits/_files",
 	"name": "ianmoffitt",
 	"version": "2.0.0",
 	"debug": "false"

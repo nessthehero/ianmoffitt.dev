@@ -1,0 +1,1 @@
+var nth=nth||{};!function(a,b,c,d){"use strict";nth.main={init:function(){a(d).foundation()}}}(window.jQuery,window.Modernizr,window,window.document),jQuery(function(){"use strict";nth.main.init()});
