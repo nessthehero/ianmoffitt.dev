@@ -20,34 +20,19 @@
 
 	{{> _access-nav }}
 
-	<div class="off-canvas-wrapper">
-		<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+	<div class="container">
 
-			{{> _global-header }}
+		{{> _global-header }}
 
-			<div class="off-canvas-content" data-off-canvas-content>
+		{% body %}
 
-				<div id="base" class="grid-base"></div>
+		{{> _global-footer }}
 
-				<div class="title-bar hide-for-large">
-					<div class="title-bar-left">
-						<button class="menu-icon" type="button" data-open="global-header"></button>
-						<span class="title-bar-title">Ian Moffitt</span>
-					</div>
-				</div>
-
-				{{ body }}
-
-			</div>
-
-		</div>
 	</div>
 
+	<div id="base" class="grid-base"></div>
+
 	{{> _js-main}}
-
-	{{> _js-grid}}
-
-	{{> _js-level}}
 
 </body>
 </html>

@@ -1,74 +1,98 @@
 {
-	"main-nav": [
+	"primary-nav": [
 		{
 			"title": "Academics",
-			"link": "javascript:"
+			"url": "#"
+		},
+		{
+			"title": "Another link",
+			"url": "#"
+		},
+		{
+			"title": "Yet another link",
+			"url": "#"
 		}
 	],
 	"secondary-nav": [
 		{
 			"title": "Students",
-			"link": "javascript:"
+			"url": "#"
+		},
+		{
+			"title": "Another link",
+			"url": "#"
+		},
+		{
+			"title": "Yet another link",
+			"url": "#"
 		}
 	],
-	"left-nav": [
+	"sidebar-nav": [
 		{
 			"title": "Parent Link",
-			"link": "#",
+			"url": "#",
 			"children": [
 				{
 					"title": "Child 1",
-					"link": "#",
+					"url": "#",
 					"active": true,
 					"grandchildren": [
 						{
 							"title": "Grandchild 1",
-							"link": "#"
+							"url": "#"
 						}
 					]
 				},
 				{
 					"title": "Child 2",
-					"link": "#"
+					"url": "#"
 				}
 			]
+		},
+		{
+			"title": "Link with no children",
+			"url": "#"
+		},
+		{
+			"title": "Another link with no children",
+			"url": "#"
 		}
 	],
 	"breadcrumbs": [
 		{
 			"title": "Home",
-			"link": "#"
+			"url": "#"
 		},
 		{
 			"title": "Current Page",
-			"link": "#"
+			"url": "#"
 		}
 	],
 	"social-media-icons": [
 		{
 			"title": "Facebook",
-			"link": "#",
-			"icon-class": "icon-facebook"
+			"url": "#",
+			"icon": "facebook"
 		},
 		{
 			"title": "Twitter",
-			"link": "#",
-			"icon-class": "icon-twitter"
+			"url": "#",
+			"icon": "twitter"
 		},
 		{
 			"title": "Vimeo",
-			"link": "#",
-			"icon-class": "icon-vimeo"
+			"url": "#",
+			"icon": "vimeo"
 		},
 		{
 			"title": "Instagram",
-			"link": "#",
-			"icon-class": "icon-instagram"
+			"url": "#",
+			"icon": "instagram"
 		},
 		{
 			"title": "Google Plus",
-			"link": "#",
-			"icon-class": "icon-googleplus"
+			"url": "#",
+			"icon": "google-plus"
 		}
 	],
 	"user-markup": "<div class='user-markup'><h1>Heading Text</h1><h2>Heading Text</h2><h3>Heading Text</h3><h4>Heading Text</h4><h5>Heading Text</h5><h6>Heading Text</h6><h1><a href='#'>Heading Text with Link</a></h1><h2><a href='#'>Heading Text with Link</a></h2><h3><a href='#'>Heading Text with Link</a></h3><h4><a href='#'>Heading Text with Link</a></h4><h5><a href='#'>Heading Text with Link</a></h5><h6><a href='#'>Heading Text with Link</a></h6><p>This is body text. It has survived not only five centuries, but also <a href='#'>the leap into electronic typesetting</a>, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div>",

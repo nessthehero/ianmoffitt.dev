@@ -1,0 +1,53 @@
+<!doctype html>
+<html class="md-no-js" lang="en">
+<head>
+
+	{{> _meta}}
+
+	<title>{{ title }}</title>
+
+	{{> _fonts}}
+
+	{{> _css-main}}
+
+	{{> _js-modernizr}}
+
+</head>
+
+<body class="{{body-class}}">
+
+	{{> _svg }}
+
+	{{> _access-nav }}
+
+	<div class="off-canvas-wrapper">
+		<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+
+			{{> _global-header }}
+
+			<div class="off-canvas-content" data-off-canvas-content>
+
+				<div id="base" class="grid-base"></div>
+
+				<div class="title-bar hide-for-large">
+					<div class="title-bar-left">
+						<button class="menu-icon" type="button" data-open="global-header"></button>
+						<span class="title-bar-title">Ian Moffitt</span>
+					</div>
+				</div>
+
+				{{ body }}
+
+			</div>
+
+		</div>
+	</div>
+
+	{{> _js-main}}
+
+	{{> _js-grid}}
+
+	{{> _js-level}}
+
+</body>
+</html>

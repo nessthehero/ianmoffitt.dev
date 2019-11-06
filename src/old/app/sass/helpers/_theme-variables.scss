@@ -1,0 +1,21 @@
+// Use this file to store common values like
+// font size, z index, etc.
+
+
+$heading-font: 'Exo', sans-serif;
+$copy-font: 'PT Sans', sans-serif;
+$code-font: 'Inconsolata', monospace;
+
+//$heading-font: 'Oleo Script', cursive;
+//$copy-font: 'Slabo 27px', serif;
+
+// Foundation overrides
+@import 'overrides/_foundation';
+
+// Global Variables
+$transition-time: 0.425s; // Common transition time for hover states, etc.
+$header-breakpoint: 'large'; // Used for consistent mobile to desktop header style switching
+$placeholder-color: $black;
+$placeholder-line-height: normal;
+
+$grayoutline: rgb(225, 225, 225);

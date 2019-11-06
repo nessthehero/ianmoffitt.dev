@@ -1,0 +1,50 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="md-no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>         <html class="md-no-js lt-ie10 lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>         <html class="md-no-js lt-ie10 lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]>         <html class="md-no-js lt-ie10" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="md-no-js" lang="en"> <!--<![endif]-->
+<head>
+
+    {{> _meta}}
+
+    <title>Static Assets</title>
+
+    {{> _css-main}}
+
+    <style type="text/css">
+        html, body { text-align: center; }
+        .container { max-width: 768px; text-align: left; margin: 0 auto; padding: 20px; }
+        .container h1,
+        .container h2 { line-height: 1.000em; color: #333; }
+        .container h1 { text-align: center; font-size: 2em; }
+        .container h2 { font-size: 1.5em; border-bottom: 1px solid #333; padding-bottom: 5px; margin-top: 1em; }
+        .zebra-striping { list-style: none; margin: 0; padding: 0 0; }
+        .zebra-striping li:nth-child(odd) { background-color: #eee; }
+        .zebra-striping li:hover { background-color: #ccc; }
+        .zebra-striping li a:link,
+        .zebra-striping li a:visited { display: block; color: #333; text-decoration: none; padding: 5px 15px; }
+        .zebra-striping li a:hover { font-weight: bold; }
+    </style>
+
+    {{> _js-modernizr}}
+
+</head>
+<body>
+
+	{{> _svg }}
+
+    <div class="container">
+
+        {{> body}}
+
+    </div>
+
+    {{> _js-main}}
+
+	{{> _js-grid}}
+
+	{{> _js-prism}}
+
+</body>
+</html>

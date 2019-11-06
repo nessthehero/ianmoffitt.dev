@@ -1,0 +1,61 @@
+// Try modifying /helpers/overrides/_foundation.scss before setting global heading styles here
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	// font-style: italic;
+	// font-weight: 300;
+	color: $jungle-green;
+	// background-color: $black;
+	// color: $white;
+	font-family: $heading-font;
+	line-height: 1;
+	text-shadow: 1px 1px 1px $fountain-blue;
+}
+
+h1 {
+	padding: 20px;
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	display: block;
+}
+
+// Mixin that applies Foundation heading styles to heading classes dynamically
+@each $size, $headers in $header-styles {
+	@each $header, $font-size in $headers {
+		.#{$header} {
+			@include breakpoint($size) {
+				font-size: rem-calc(map-deep-get($header-styles, $size, $header, 'font-size'));
+			}
+		}
+	}
+}
