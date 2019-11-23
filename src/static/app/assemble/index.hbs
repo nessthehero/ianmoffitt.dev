@@ -1,23 +1,102 @@
 ---
-layout: index.hbs
+title: Home Page
+template: true
+template-class: home
 ---
 
-<h1>ianmoffitt</h1>
+<section class="content header">
+	<h1>Portfolio</h1>
+</section>
+<section class="work-grid">
+	<article class="work content">
+		<a class="work__link" href="https://www.cpcc.edu" rel="noopener">
+			<div class="work__content user-markup">
+				<h2>CPCC</h2>
+				<dl>
+					<dt>Involvement</dt>
+					<dd>Static coding of base templates and integration of those templates into Drupal 8.</dd>
+				</dl>
+			</div>
+		</a>
+	</article>
+	<article class="work content">
+		<a class="work__link" href="https://www.cpcc.edu" rel="noopener">
+			<div class="work__content user-markup">
+				<h2>CPCC</h2>
+				<dl>
+					<dt>Involvement</dt>
+					<dd>Static coding of base templates and integration of those templates into Drupal 8.</dd>
+				</dl>
+			</div>
+		</a>
+	</article>
+	<article class="work content">
+		<a class="work__link" href="https://www.cpcc.edu" rel="noopener">
+			<div class="work__content user-markup">
+				<h2>CPCC</h2>
+				<dl>
+					<dt>Involvement</dt>
+					<dd>Static coding of base templates and integration of those templates into Drupal 8.</dd>
+				</dl>
+			</div>
+		</a>
+	</article>
+	<article class="work content">
+		<a class="work__link" href="/about.html" rel="noopener">
+			<figure class="work__figure">
+				{{placeholderImage 700 300}}
+			</figure>
+			<div class="work__content user-markup">
+				<h2>CPCC</h2>
+				<dl>
+					<dt>Involvement</dt>
+					<dd>Static coding of base templates and integration of those templates into Drupal 8.</dd>
+				</dl>
+			</div>
+		</a>
+	</article>
+</section>
 
-<h2>Templates</h2>
-<ul class="zebra-striping">
-	{{#withSort (items "pages") 'data.title'}}
-		{{#if this.data.title}}
-			<li><a href="{{formatIndexPageUrl this }}">{{ this.data.title }}</a></li>
-		{{/if}}
-	{{/withSort}}
-</ul>
+<article class="content">
 
-<h2>Components</h2>
-<ul class="zebra-striping">
-	{{#withSort (items "organisms") 'data.title'}}
-		{{#if this.data.title}}
-			<li><a href="{{formatIndexComponentUrl this }}">{{ this.data.title }}</a></li>
-		{{/if}}
-	{{/withSort}}
-</ul>
+	<header>
+		<h2>Heading for whatever this is</h2>
+		<time>August 4th, 2019</time>
+	</header>
+
+	<div class="user-markup">
+
+		<p>A flow of content. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+		<p>More content <a href="#">with some links</a> inside it.</p>
+
+		<ul>
+			<li>Also a list</li>
+			<li>with two items</li>
+		</ul>
+
+	</div>
+
+</article>
+
+<article class="content">
+
+	<header>
+		<h1>Heading for whatever this is</h1>
+		<time>August 4th, 2019</time>
+	</header>
+
+	<div class="user-markup">
+
+		<p>A flow of content. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+		<p>More content <a href="#">with some links</a> inside it.</p>
+
+		<ul>
+			<li>Also a list</li>
+			<li>with two items</li>
+		</ul>
+
+	</div>
+
+</article>

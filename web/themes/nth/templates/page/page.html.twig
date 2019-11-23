@@ -46,50 +46,36 @@
  */
 #}
 
-<div class="off-canvas-wrapper">
-	<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+<div class="container">
 
-		{{ page.header }}
+	{% if page.header %}
+		<header class="row column" role="banner">{{ page.header }}</header>
+	{% endif %}
 
-		<div class="off-canvas-content" data-off-canvas-content>
+	<main class="main row column">
 
-			<div id="base" class="grid-base"></div>
+		{{ page.highlighted }}
 
-			<div class="title-bar hide-for-large">
-				<div class="title-bar-left">
-					<button class="menu-icon" type="button" data-open="global-header"></button>
-					<span class="title-bar-title">Ian Moffitt</span>
-				</div>
-			</div>
+		{{ page.help }}
 
-			<main id="main" class="main level row">
+		{{ page.content }}
 
-				{% if thumbnail %}
-					<figure class="column masthead">
-						<div class="image" style="background-image: url('{{ masthead }}');" role="img" aria-label="{{ alt }}"></div>
-					</figure>
-				{% endif %}
+		{% if page.footer_links or page.footer_info %}
+			<footer id="js-global-footer" class="global-footer">
 
-				<article class="article column">
+				<section class="global-footer__links">
+					{{ page.footer_links }}
+				</section>
 
-					<header class="article__header">
+				<section class="global-footer__info">
+					{{ page.footer_info }}
+				</section>
 
-						{{ page.title }}
+			</footer>
+		{% endif %}
 
-					</header>
+	</main>
 
-					<div class="sharethis-inline-share-buttons"></div>
+	<div id="base" class="grid-base"></div>
 
-					{{ page.content }}
-
-				</article>
-
-			</main>
-
-			{{ page.footer }}
-
-		</div>
-
-	</div>
 </div>
-

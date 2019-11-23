@@ -3,6 +3,7 @@
   "app": "app",
   "dist": "dist",
   "deploy": "../compiled",
+  "drupal": "../../web/themes/nth/_files",
   "brei-project-scaffold": "1.0.0",
   "brei-sass-boilerplate": "3.0.0",
   "brei-sass-mixins": "2.0.0",

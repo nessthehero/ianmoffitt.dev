@@ -1,0 +1,35 @@
+.grid-base {
+
+	// Local Variables
+	$this: &;
+	background-color: $white;
+	background-image: url('../img/grid.png');
+	background-position: 0 0;
+	background-repeat: repeat;
+	display: block;
+	height: 100%;
+	left: 0;
+
+	// Styles
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+
+	.b {
+		background-color: $white;
+		display: inline-block;
+		height: 10px;
+		outline: 1px solid $grayoutline;
+		width: 10px;
+	}
+
+	.r {
+		display: block;
+		height: 11px;
+		line-height: 10px;
+		overflow: hidden;
+		transition: background-color 0.1s;
+		white-space: nowrap;
+	}
+}

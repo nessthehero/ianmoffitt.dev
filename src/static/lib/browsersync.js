@@ -24,6 +24,7 @@ portfinder.getPort({
 			reloadThrottle: 5000,
 			reloadDelay: 1000,
 			port: serverPort,
+			minify: true,
 			server: {
 				baseDir: './app',
 				index: 'index.html'
@@ -47,20 +48,44 @@ portfinder.getPort({
 
 					if (!initFlag) {
 						console.log('building');
-						exec('npm run assemble:build');
+						exec('npm run assemble:build', (error, stdout, stderr) => {
+							if (error) {
+								console.error(`exec error: ${error}`);
+								return;
+							}
+							if (stderr) {
+								console.error(`ERROR:\n ${stderr}`);
+							}
+						});
 					}
 
 					break;
 
 				case 'change':
 
-					exec('npm run assemble:build');
+					exec('npm run assemble:build', (error, stdout, stderr) => {
+						if (error) {
+							console.error(`exec error: ${error}`);
+							return;
+						}
+						if (stderr) {
+							console.error(`ERROR:\n ${stderr}`);
+						}
+					});
 
 					break;
 
 				default:
 
-					exec('npm run assemble:build');
+					exec('npm run assemble:build', (error, stdout, stderr) => {
+						if (error) {
+							console.error(`exec error: ${error}`);
+							return;
+						}
+						if (stderr) {
+							console.error(`ERROR:\n ${stderr}`);
+						}
+					});
 
 					break;
 
@@ -81,20 +106,44 @@ portfinder.getPort({
 
 					if (!initFlag) {
 						console.log('building');
-						exec('npm run preprocess:js');
+						exec('npm run preprocess:js', (error, stdout, stderr) => {
+							if (error) {
+								console.error(`exec error: ${error}`);
+								return;
+							}
+							if (stderr) {
+								console.error(`ERROR:\n ${stderr}`);
+							}
+						});
 					}
 
 					break;
 
 				case 'change':
 
-					exec('npm run preprocess:js');
+					exec('npm run preprocess:js', (error, stdout, stderr) => {
+						if (error) {
+							console.error(`exec error: ${error}`);
+							return;
+						}
+						if (stderr) {
+							console.error(`ERROR:\n ${stderr}`);
+						}
+					});
 
 					break;
 
 				default:
 
-					exec('npm run preprocess:js');
+					exec('npm run preprocess:js', (error, stdout, stderr) => {
+						if (error) {
+							console.error(`exec error: ${error}`);
+							return;
+						}
+						if (stderr) {
+							console.error(`ERROR:\n ${stderr}`);
+						}
+					});
 
 					break;
 
@@ -115,20 +164,44 @@ portfinder.getPort({
 
 					if (!initFlag) {
 						console.log('building');
-						exec('npm run preprocess:css');
+						exec('npm run preprocess:css', (error, stdout, stderr) => {
+							if (error) {
+								console.error(`exec error: ${error}`);
+								return;
+							}
+							if (stderr) {
+								console.error(`ERROR:\n ${stderr}`);
+							}
+						});
 					}
 
 					break;
 
 				case 'change':
 
-					exec('npm run preprocess:css');
+					exec('npm run preprocess:css', (error, stdout, stderr) => {
+						if (error) {
+							console.error(`exec error: ${error}`);
+							return;
+						}
+						if (stderr) {
+							console.error(`ERROR:\n ${stderr}`);
+						}
+					});
 
 					break;
 
 				default:
 
-					exec('npm run preprocess:css');
+					exec('npm run preprocess:css', (error, stdout, stderr) => {
+						if (error) {
+							console.error(`exec error: ${error}`);
+							return;
+						}
+						if (stderr) {
+							console.error(`ERROR:\n ${stderr}`);
+						}
+					});
 
 					break;
 

@@ -15,7 +15,7 @@
         "no-eval": ["error", { "allowIndirect": true }],
         "strict": ["error", "function"],
         "no-undefined": ["off", true],
-        "no-unused-vars": ["error", { "argsIgnorePattern":  "Foundation" }],
+        "no-unused-vars": ["error", "all"],
         "camelcase": ["error", { "properties": "always" }],
         "indent": ["error", "tab"],
         "no-plusplus": ["error", { "allowForLoopAfterthoughts": false }],

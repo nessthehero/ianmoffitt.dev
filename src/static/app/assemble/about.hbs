@@ -1,0 +1,43 @@
+---
+title: "About Me"
+template: true
+template-class: level
+tags:
+- footer
+---
+
+<!-- template:about -->
+{{#parseFixture 'about.json'}}
+	<article class="masthead content">
+		{{placeholderImage 700 300}}
+	</article>
+
+	<article class="content">
+
+		<div class="user-markup">
+			<h1>CPCC</h1>
+
+			<dl>
+				<dt>Team</dt>
+				<dd>BarkleyREI</dd>
+
+				<dt>Client</dt>
+				<dd>Central Piedmont Community College</dd>
+
+				<dt>Involvement</dt>
+				<dd>Static coding of base templates and integration of those templates into Drupal 8.</dd>
+
+				<dt>Technology</dt>
+				<dd>Drupal 8</dd>
+			</dl>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error hic mollitia quaerat quo quos saepe voluptas voluptates. Ad aperiam at iusto odio quas quos tempora?</p>
+
+			<p><a href="https://www.cpcc.edu/" rel="noopener">Visit this project</a></p>
+
+			<p><em>This website/project is no longer live or accessible.</em></p>
+		</div>
+
+	</article>
+{{/parseFixture}}
+<!-- end template:about -->

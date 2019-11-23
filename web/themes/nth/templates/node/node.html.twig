@@ -72,21 +72,33 @@
  * @ingroup themeable
  */
 #}
+{%
+	set classes = [
+	'node',
+	'node--type-' ~ node.bundle|clean_class,
+	node.isPromoted() ? 'node--promoted',
+	node.isSticky() ? 'node--sticky',
+	not node.isPublished() ? 'node--unpublished',
+	view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+]
+%}
+<article{{ attributes.addClass(classes) }}>
 
-<div{{ attributes }}>
+	{{ title_prefix }}
+	{% if not page %}
+		<h2{{ title_attributes }}>
+			<a href="{{ url }}" rel="bookmark">{{ label }}</a>
+		</h2>
+	{% endif %}
+	{{ title_suffix }}
 
 	{% if display_submitted %}
-		<p>
-			<time>{{ date }}</time>
-		</p>
+		<time>{{ date }}</time>
+		{{ metadata }}
 	{% endif %}
 
-	<div class="user-markup">
-		{{ content.body }}
+	<div{{ content_attributes.addClass('content__content') }}>
+		{{ content }}
 	</div>
 
-	{{ components }}
-
-	{{ content.field_disqus }}
-
-</div>
+</article>

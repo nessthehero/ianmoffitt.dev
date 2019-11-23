@@ -2,8 +2,10 @@
  * Grid component.
  * @module components/grid
  */
-import '../lib/jquery.js';
 import {Foundation} from 'foundation-sites';
+import debounce from './debounce';
+
+const $ = window.$ || window.jQuery || {};
 
 const grid = {
 
@@ -18,6 +20,8 @@ const grid = {
 
 	gridIsActive: false,
 
+	software: 'ianmoffitt.dev',
+
 	init() {
 
 		if (Foundation.MediaQuery.atLeast('medium')) {
@@ -31,11 +35,15 @@ const grid = {
 	},
 
 	drawGrid: function () {
+		
+		console.log('running draw');
 
 		let numberOfBricksAcross = Math.ceil(
 			(this.$base.width() + 2 * this.brickWidth) / this.brickWidth
 		);
 		let numberOfBricksDown = Math.ceil(this.$base.height() / this.brickHeight);
+
+		this.$base.html('');
 
 		for (let i = 0; i < numberOfBricksDown; i += 1) {
 			let r = '<span class="r" id="r' + i + '">';
@@ -54,8 +62,8 @@ const grid = {
 
 		let _this = this;
 
-		$('.b')
-			.on('mouseover', function () {
+		$('#base')
+			.on('mouseover', '.b', function () {
 				let $this = $(this);
 
 				_this.gridIsActive = true;
@@ -89,7 +97,7 @@ const grid = {
 				}, _this.hoverDelay);
 
 			})
-			.on('mouseout', function () {
+			.on('mouseout', '.b', function () {
 				let $this = $(this);
 
 				clearInterval(_this.hoverInterval);
@@ -99,7 +107,7 @@ const grid = {
 
 				setTimeout(_this.save.bind(_this), 1000);
 			})
-			.on('click', function () {
+			.on('click', '.b', function () {
 				let $this = $(this);
 				$this.css('background-color', 'rgb(255, 255, 255)');
 				$this.attr('data-disabled', '1');
@@ -118,6 +126,9 @@ const grid = {
 		let parsedData = JSON.parse(savedData);
 
 		if (parsedData) {
+			
+			// let pxon = this.coordsToPxon(parsedData);
+			// let pdata = this.pxonToCoords(pxon);
 
 			for (let j in parsedData.data) {
 				if (parsedData.data.hasOwnProperty(j)) {
@@ -180,6 +191,71 @@ const grid = {
 		let key = hostname + '-' + pathname + '-grid';
 
 		return key;
+
+	},
+
+	coordsToPxon: function (coords) {
+
+		let pxon = {
+			'exif': {
+				'software': grid.software,
+				'artist': '',
+				'imageDescription': '',
+				'userComment': '',
+				'copyright': '',
+				'dateTime': ''
+			},
+			'pxif': {
+				'pixels': []
+			}
+		};
+
+		let data = {};
+		if (typeof coords.data !== 'undefined') {
+			data = coords.data;
+		} else {
+			data = coords;
+		}
+
+		let odata = Object.entries(data);
+
+		for (const [yx, color] of odata) {
+
+			let clean = yx.replace('b', '').split('-');
+			let yy = clean[0];
+			let xx = clean[1];
+
+			pxon.pxif.pixels.push({
+				'x': xx,
+				'y': yy,
+				'color': color
+			});
+
+		}
+
+		return pxon;
+
+	},
+
+	pxonToCoords: function (pxon) {
+
+		let data = {};
+		
+		if (typeof pxon.pxif !== 'undefined') {
+			if (typeof pxon.pxif.pixels !== 'undefined') {
+
+				for (let pixel in pxon.pxif.pixels) {
+					if (pxon.pxif.pixels.hasOwnProperty(pixel)) {
+						let p = pxon.pxif.pixels[pixel];
+						let key = 'b' + p.y + '-' + p.x;
+						data[key] = p.color;
+					}
+				}
+				
+			}
+		}
+		
+		return data;
 
 	}
 

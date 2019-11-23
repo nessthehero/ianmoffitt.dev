@@ -1,3 +1,9 @@
 {
-	"title": "Global Footer"
+	"links": [
+		{
+			"title": "Twitter",
+			"url": "https://www.twitter.com/nessthehero",
+			"style": "global-footer__link"
+		}
+	]
 }

@@ -22,15 +22,17 @@
 
 	<div class="container">
 
-		{{> _global-header }}
+		<main class="main {{template-class}} row column">
 
-		{% body %}
+			{% body %}
 
-		{{> _global-footer }}
+			{{> _global-footer }}
+
+		</main>
+
+		{{> grid-base }}
 
 	</div>
-
-	<div id="base" class="grid-base"></div>
 
 	{{> _js-main}}
 

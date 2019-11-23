@@ -5,6 +5,7 @@ const root = __dirname + '/..';
 const app = root + '/' + config.app;
 const dist = root + '/' + config.dist;
 const deploy = root + '/' + config.deploy;
+const drupal = root + '/' + config.drupal;
 
 exports = module.exports = {
 	'css': [
@@ -60,6 +61,16 @@ exports = module.exports = {
 				'**'
 			],
 			'dest': deploy
+		},
+		{
+			'cwd': dist,
+			'dot': true,
+			'src': [
+				'css/**/*',
+				'js/**/*',
+				'img/**/*'
+			],
+			'dest': drupal
 		}
 	]
 };

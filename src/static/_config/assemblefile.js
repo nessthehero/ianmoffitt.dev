@@ -44,13 +44,13 @@ app.task('default', ['load'], function () {
 
 });
 
-app.task('organisms', ['load'], function () {
-
-	return app.toStream('organisms')
-		.pipe(app.renderFile())
-		.pipe(extname({ext: '.html'}))
-		.pipe(app.dest('app/components'));
-
-});
+// app.task('organisms', ['load'], function () {
+//
+// 	return app.toStream('organisms')
+// 		.pipe(app.renderFile())
+// 		.pipe(extname({ext: '.html'}))
+// 		.pipe(app.dest('app/components'));
+//
+// });
 
 module.exports = app;

@@ -4,8 +4,10 @@ module.exports = (file, options, env) => {
 	let config = {
 		plugins: {}
 	};
-	
+
 	if (typeof file.env !== 'undefined' && file.env === 'scss') {
+
+		// Scss Processing
 
 		config.syntax = 'postcss-scss';
 
@@ -27,7 +29,9 @@ module.exports = (file, options, env) => {
 			}
 		};
 
-	} else if (typeof file.env !== 'undefined' && file.env === 'css-pre') {
+	} else if (typeof file.env !== 'undefined' && file.env === 'csspre') {
+
+		// CSS Pre-processing
 
 		config.plugins = {
 			'autoprefixer': {
@@ -43,6 +47,8 @@ module.exports = (file, options, env) => {
 		};
 
 	} else {
+
+		// CSS Post-processing
 
 		config.plugins = {
 			'postcss-pxtorem': {

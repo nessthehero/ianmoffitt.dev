@@ -28,6 +28,15 @@ exports = module.exports = {
 				'components/*.html',
 				'*.html'
 			]
+		},
+		{
+			'cwd': config.drupal,
+			'src': [
+				'css/**/*',
+				'js/**/*',
+				'img/**/*',
+				'selection.json'
+			]
 		}
 	]
 };

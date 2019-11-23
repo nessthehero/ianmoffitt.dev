@@ -1,13 +1,8 @@
-import './lib/jquery.js';
 import grid from './modules/grid';
 
 const ready = () => {
 
-
+	grid.init();
 
 };
 window.addEventListener('DOMContentLoaded', ready, false);
-
-grid.init();
-
-// $(document).foundation();

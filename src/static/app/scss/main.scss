@@ -3,7 +3,7 @@
 
 // Global styles
 @include foundation-global-styles ();
-// @include foundation-forms ();
+@include foundation-forms ();
 @include foundation-typography ();
 
 // Grids (choose one)
@@ -85,3 +85,9 @@
 @import 'molecules/_assemble-molecules';
 @import 'organisms/_assemble-organisms';
 @import 'templates/_assemble-templates';
+
+// User markup
+@import 'helpers/_user-markup';
+
+// Temporary SCSS Staging
+@import '_scratch';

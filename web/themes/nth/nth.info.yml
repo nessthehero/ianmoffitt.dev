@@ -7,12 +7,10 @@ screenshot: screenshot.png
 regions:
   header: Header
   page_top: Page Top
-  admin: Administration
-  title: Title
   content: Content
-  leftnav: Left Navigation
   page_bottom: Page Bottom
-  footer: Footer
+  footer_links: Footer Links
+  footer_info: Footer Info
 
 settings:
   twitter: 'https://twitter.com/nessthehero'

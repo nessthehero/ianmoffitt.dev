@@ -61,7 +61,9 @@ module.exports = {
 
 	},
 
-	log: (data) => console.log(data),
+	log: (data) => {
+		console.log(data)
+	},
 
 	stringCompare: (a, b, opts) => {
 
@@ -119,14 +121,16 @@ module.exports = {
 		let title = (isValidString(link.title)) ? link.title : '';
 		let style = (isValidString(link.style)) ? ' class="' + link.style + '"' : '';
 		let alt = (isValidString(link.alt)) ? ' title="' + link.alt + '"' : ' title="' + title + '"';
+		let noop = link.noop ? ' rel="noopener"' : '';
 
 		let formatted_link = '';
 
 		if (url !== '' && title !== '') {
-			formatted_link = '<a href="' + url + '"{0}{1}>{2}' + new Handlebars.SafeString(title) + '</a>';
+			formatted_link = '<a href="' + url + '"{0}{1}{3}>{2}' + new Handlebars.SafeString(title) + '</a>';
 			formatted_link = formatted_link.replace('{0}', alt);
 			formatted_link = formatted_link.replace('{1}', style);
 			formatted_link = formatted_link.replace('{2}', Handlebars.compile(icon));
+			formatted_link = formatted_link.replace('{3}', noop);
 		}
 
 		return new Handlebars.SafeString(formatted_link);
@@ -173,14 +177,25 @@ module.exports = {
 
 	},
 
-	placeholderImage: (w, h, text) => {
+	placeholderImage: (w, h, text, options) => {
+
+		if (!options || typeof options === 'undefined') {
+			if (!text || typeof text === 'undefined') {
+				options = h;
+				h = w;
+				text = '';
+			} else {
+				options = text;
+				text = '';
+			}
+		}
 
 		let width = (isValidString(w)) ? w : '300';
-		let height = (isValidString(h)) ? 'x' + h : '';
-		let caption = (isValidString(text)) ? '?text=' + encodeURI(text) : '';
-		let url = 'http://via.placeholder.com/' + width + height + caption;
+		let height = (isValidString(h)) ? h : w;
+		let caption = (isValidString(text)) ? '?text=' + encodeURI(text) : '?text=' + encodeURI(width.toString() + 'x' + height.toString());
+		let url = 'http://via.placeholder.com/' + width.toString() + 'x' + height.toString() + caption.toString();
 
-		return new Handlebars.SafeString('<img src="' + url + '" alt="Placeholder Image" />')
+		return new Handlebars.SafeString('<img src="' + url.toString() + '" alt="Placeholder Image" />')
 
 	},
 
