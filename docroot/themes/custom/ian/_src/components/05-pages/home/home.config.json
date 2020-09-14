@@ -1,0 +1,12 @@
+{
+	"title": "Home Page",
+	"status": "wip",
+	"preview": "@template",
+	"context": {
+		"style": "main home row column",
+		"scripts": [
+			"vendor",
+			"main"
+		]
+	}
+}

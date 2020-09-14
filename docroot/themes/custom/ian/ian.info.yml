@@ -1,0 +1,23 @@
+name: IanMoffitt.dev
+type: theme
+description: 'IanMoffitt.dev Theme'
+core_version_requirement: ^8.8 || ^9
+screenshot: screenshot.png
+
+regions:
+  header: Header
+  page_top: Page Top
+  admin: Administration
+  page_title: Page Title
+  breadcrumbs: Breadcrumbs
+  content: Content
+  page_bottom: Page Bottom
+  footer: Footer
+
+libraries:
+  - ian/modernizr
+  - ian/global-styling
+
+libraries-override:
+  core/modernizr: false
+  core/html5shiv: false

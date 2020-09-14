@@ -1,0 +1,17 @@
+<?php
+
+include_once('php/custom/includes.php');
+
+// Preprocess
+include_once('php/preprocess/_global.php');
+include_once('php/preprocess/html.php');
+include_once('php/preprocess/page.php');
+include_once('php/preprocess/region.php');
+include_once('php/preprocess/menu.php');
+include_once('php/preprocess/node.php');
+include_once('php/preprocess/block.php');
+include_once('php/preprocess/paragraphs.php');
+include_once('php/alter/form.php');
+
+// Custom
+include_once('php/custom/functions.php');

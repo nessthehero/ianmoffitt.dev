@@ -1,0 +1,13 @@
+global-styling:
+  css:
+    base:
+      _files/css/main.css: {}
+  js:
+    _files/js/vendor.js: {}
+    _files/js/main.js: {}
+  dependencies:
+    - core/jquery
+modernizr:
+  header: true
+  js:
+    _files/js/plugins/modernizr.js: {}

@@ -1,0 +1,14 @@
+.work-grid {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: 1fr;
+	justify-items: center;
+
+	@include breakpoint(medium) {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	@include breakpoint(large) {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}

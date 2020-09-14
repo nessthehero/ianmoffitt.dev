@@ -1,0 +1,13 @@
+{
+	"title": "Detail Page",
+	"status": "wip",
+	"preview": "@template",
+	"context": {
+		"heading": "Lorem ipsum dolor sit amet",
+		"style": "main level row column",
+		"scripts": [
+			"vendor",
+			"main"
+		]
+	}
+}

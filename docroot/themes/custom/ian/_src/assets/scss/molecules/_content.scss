@@ -1,0 +1,16 @@
+.content {
+	$this: &;
+	background-color: $white;
+	border-radius: 3px;
+	box-shadow: 0 0 3px $black;
+	padding: 20px;
+	position: relative;
+	z-index: 10;
+
+	time {
+		color: $dusty-grey;
+		display: block;
+		font-style: italic;
+		font-weight: bold;
+	}
+}

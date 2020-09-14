@@ -1,0 +1,10 @@
+{
+	"title": "Logo",
+	"status": "ready",
+	"context": {
+		"url": "/",
+		"title": "Home Page",
+		"img": "/img/logo.svg",
+		"alt": "Ian Moffitt"
+	}
+}

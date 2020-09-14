@@ -1,241 +1,80 @@
 {
-    "name": "nessthehero/ianmoffitt_dot_co",
-    "description": "Personal portfolio website for Ian Moffitt",
-    "type": "project",
-    "license": "GPL-2.0-or-later",
-    "authors": [
-        {
-            "name": "",
-            "role": ""
-        }
-    ],
-    "repositories": {
-        "0": {
+	"name": "barkleyrei/drupal-8",
+	"description": "Drupal Test",
+	"type": "project",
+	"require-dev": {
+        "drush/drush": "^9.0"
+	},
+	"require": {
+		"composer/installers": "^1.6",
+		"drupal-composer/drupal-scaffold": "^2.5",
+		"drupal/anchor_link": "^2.0",
+		"drupal/backup_migrate": "^4.0",
+		"drupal/content_browser": "^1.0",
+		"drupal/core": "^8.7",
+		"drupal/date_recur": "^2.0",
+		"drupal/field_group": "^3.0",
+		"drupal/layout_builder_modal": "^1.1",
+		"drupal/link_attributes": "^1.8",
+		"drupal/link_field_autocomplete_filter": "^1.7",
+		"drupal/maxlength": "^1.0",
+		"drupal/paragraphs": "^1.8",
+		"drupal/pathauto": "^1.5",
+		"drupal/quick_node_clone": "^1.12",
+		"drupal/redirect": "^1.4",
+		"drupal/smart_trim": "^1.1",
+		"drupal/twig_tweak": "^2.4",
+		"drupal/webform": "^5.2"
+	},
+	"license": "MIT",
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"config": {
+		"process-timeout": 0,
+		"sort-packages": true,
+		"platform": {
+			"php": "7.2.9"
+		}
+	},
+	"repositories": {
+        "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
-        },
-        "ckeditor.autogrow": {
-            "_webform": true,
-            "type": "package",
-            "package": {
-                "name": "ckeditor/autogrow",
-                "version": "4.8.0",
-                "type": "drupal-library",
-                "extra": {
-                    "installer-name": "ckeditor.autogrow"
-                },
-                "dist": {
-                    "url": "https://download.ckeditor.com/autogrow/releases/autogrow_4.8.0.zip",
-                    "type": "zip"
-                },
-                "require": {
-                    "composer/installers": "~1.0"
-                }
-            }
-        },
-        "jquery.geocomplete": {
-            "_webform": true,
-            "type": "package",
-            "package": {
-                "name": "jquery/geocomplete",
-                "version": "1.7.0",
-                "type": "drupal-library",
-                "extra": {
-                    "installer-name": "jquery.geocomplete"
-                },
-                "dist": {
-                    "url": "https://github.com/ubilabs/geocomplete/archive/1.7.0.zip",
-                    "type": "zip"
-                },
-                "require": {
-                    "composer/installers": "~1.0"
-                }
-            }
-        },
-        "jquery.image-picker": {
-            "_webform": true,
-            "type": "package",
-            "package": {
-                "name": "jquery/image-picker",
-                "version": "0.3.0",
-                "type": "drupal-library",
-                "extra": {
-                    "installer-name": "jquery.image-picker"
-                },
-                "dist": {
-                    "url": "https://github.com/rvera/image-picker/archive/0.3.0.zip",
-                    "type": "zip"
-                },
-                "require": {
-                    "composer/installers": "~1.0"
-                }
-            }
-        },
-        "jquery.rateit": {
-            "_webform": true,
-            "type": "package",
-            "package": {
-                "name": "jquery/rateit",
-                "version": "1.1.1",
-                "type": "drupal-library",
-                "extra": {
-                    "installer-name": "jquery.rateit"
-                },
-                "dist": {
-                    "url": "https://github.com/gjunge/rateit.js/archive/1.1.1.zip",
-                    "type": "zip"
-                },
-                "require": {
-                    "composer/installers": "~1.0"
-                }
-            }
-        },
-        "jquery.toggles": {
-            "_webform": true,
-            "type": "package",
-            "package": {
-                "name": "jquery/toggles",
-                "version": "4.0.0",
-                "type": "drupal-library",
-                "extra": {
-                    "installer-name": "jquery.toggles"
-                },
-                "dist": {
-                    "url": "https://github.com/simontabor/jquery-toggles/archive/v4.0.0.zip",
-                    "type": "zip"
-                },
-                "require": {
-                    "composer/installers": "~1.0"
-                }
-            }
-        },
-        "signature_pad": {
-            "_webform": true,
-            "type": "package",
-            "package": {
-                "name": "signature_pad/signature_pad",
-                "version": "2.3.0",
-                "type": "drupal-library",
-                "extra": {
-                    "installer-name": "signature_pad"
-                },
-                "dist": {
-                    "url": "https://github.com/szimek/signature_pad/archive/v2.3.0.zip",
-                    "type": "zip"
-                },
-                "require": {
-                    "composer/installers": "~1.0"
-                }
-            }
         }
-    },
-    "require": {
-        "ckeditor/autogrow": "4.8.0",
-        "ckeditor/codemirror": "v1.17.5",
-        "ckeditor/fakeobjects": "4.8.0",
-        "ckeditor/image": "4.8.0",
-        "ckeditor/link": "4.8.0",
-        "codemirror/codemirror": "5.36.0",
-        "composer/installers": "^1.2",
-        "cweagans/composer-patches": "^1.6",
-        "doctrine/annotations": "1.4.*",
-        "doctrine/dbal": "2.5.4",
-        "doctrine/doctrine-bundle": "^1.6",
-        "doctrine/doctrine-orm-module": "^1.1",
-        "doctrine/orm": "2.5.6",
-        "drupal-composer/drupal-scaffold": "^2.2",
-        "drupal/backup_migrate": "^4.0",
-        "drupal/console": "^1.0.2",
-        "drupal/core": "~8.5",
-        "drupal/ctools": "^3.0",
-        "drupal/disqus": "^1.0",
-        "drupal/field_group": "^1.0",
-        "drupal/google_analytics": "^2.2",
-        "drupal/honeypot": "^1.27",
-        "drupal/imce": "^1.6",
-        "drupal/link_attributes": "^1.2",
-        "drupal/linkit": "^4.3",
-        "drupal/metatag": "^1.4",
-        "drupal/paragraphs": "^1.2",
-        "drupal/pathauto": "^1.1",
-        "drupal/redirect": "^1.1",
-        "drupal/smart_trim": "^1.1",
-        "drupal/term_reference_tree": "^1.0@alpha",
-        "drupal/twig_tweak": "^1.9",
-        "drupal/webform": "^5.0@RC",
-        "drush/drush": "9.2.3",
-        "jquery/geocomplete": "1.7.0",
-        "jquery/image-picker": "0.3.0",
-        "jquery/inputmask": "3.3.11",
-        "jquery/intl-tel-input": "12.1.12",
-        "jquery/rateit": "1.1.1",
-        "jquery/select2": "4.0.5",
-        "jquery/timepicker": "1.11.13",
-        "jquery/toggles": "4.0.0",
-        "jquery/word-and-character-counter": "2.5.1",
-        "progress-tracker/progress-tracker": "1.4.0",
-        "signature_pad/signature_pad": "2.3.0",
-        "vlucas/phpdotenv": "^2.4",
-        "webflo/drupal-finder": "^1.0.0",
-        "webmozart/path-util": "^2.3"
-    },
-    "require-dev": {
-        "webflo/drupal-core-require-dev": "~8.5"
-    },
-    "conflict": {
-        "drupal/drupal": "*"
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "config": {
-        "sort-packages": true,
-        "platform": {
-            "php": "7.1.12"
-        }
-    },
-    "autoload": {
-        "classmap": [
-            "scripts/composer/ScriptHandler.php"
-        ],
-        "files": [
-            "load.environment.php"
-        ]
-    },
-    "scripts": {
-        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-        "pre-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-        ],
-        "pre-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-        ],
-        "post-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ],
-        "post-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ]
-    },
-    "extra": {
-        "installer-paths": {
-            "web/core": [
-                "type:drupal-core"
-            ],
-            "web/libraries/{$name}": [
-                "type:drupal-library"
-            ],
-            "web/modules/contrib/{$name}": [
-                "type:drupal-module"
-            ],
-            "web/profiles/contrib/{$name}": [
-                "type:drupal-profile"
-            ],
-            "web/themes/contrib/{$name}": [
-                "type:drupal-theme"
-            ],
-            "drush/contrib/{$name}": [
-                "type:drupal-drush"
-            ]
-        }
-    }
+	},
+	"extra": {
+		"installer-types": [
+			"npm-asset"
+		],
+		"installer-paths": {
+			"docroot/core": [
+				"type:drupal-core"
+			],
+			"docroot/libraries/{$name}": [
+				"type:drupal-library",
+				"type:bower-asset",
+				"type:npm-asset"
+			],
+			"docroot/modules/contrib/{$name}": [
+				"type:drupal-module"
+			],
+			"docroot/profiles/contrib/{$name}": [
+				"type:drupal-profile"
+			],
+			"docroot/themes/contrib/{$name}": [
+				"type:drupal-theme"
+			],
+			"drush/contrib/{$name}": [
+				"type:drupal-drush"
+			]
+		},
+        "enable-patching": true,
+		"drupal-scaffold": {
+			"initial": {
+				".htaccess": ".htaccess",
+				"robots.txt": "robots.txt",
+				"sites/development.services.yml": "sites/development.services.yml"
+			}
+		}
+	}
 }

@@ -1,0 +1,33 @@
+// For all WYSIWYG powered text
+.user-markup {
+	p {
+		overflow: auto; // Clears any floated content, like images
+	}
+
+	p,
+	dt,
+	dd,
+	li {
+		font-size: 1.1rem;
+		line-height: 1.6;
+	}
+
+	dd {
+		margin-bottom: 1rem;
+	}
+
+	a {
+		text-shadow: 0 0 0 rgba($jungle-green, 0), 0 0 0 rgba($blue-stone, 0);
+		transition: text-shadow 0.4s;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			text-shadow: 1px 1px 0 rgba($jungle-green, 0.4), 3px 3px 0 rgba($blue-stone, 0.2);
+		}
+	}
+
+	header {
+		padding: 0 0 1rem;
+	}
+}
