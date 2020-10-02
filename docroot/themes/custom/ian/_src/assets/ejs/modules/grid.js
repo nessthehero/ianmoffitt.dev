@@ -2,7 +2,7 @@
  * Grid component.
  * @module components/grid
  */
-import {Foundation} from 'foundation-sites';
+import { Foundation } from 'foundation-sites';
 import debounce from './debounce';
 
 const $ = window.$ || window.jQuery || {};
@@ -35,7 +35,7 @@ const grid = {
 	},
 
 	drawGrid: function () {
-		
+
 		console.log('running draw');
 
 		let numberOfBricksAcross = Math.ceil(
@@ -126,7 +126,7 @@ const grid = {
 		let parsedData = JSON.parse(savedData);
 
 		if (parsedData) {
-			
+
 			// let pxon = this.coordsToPxon(parsedData);
 			// let pdata = this.pxonToCoords(pxon);
 
@@ -240,7 +240,7 @@ const grid = {
 	pxonToCoords: function (pxon) {
 
 		let data = {};
-		
+
 		if (typeof pxon.pxif !== 'undefined') {
 			if (typeof pxon.pxif.pixels !== 'undefined') {
 
@@ -251,10 +251,10 @@ const grid = {
 						data[key] = p.color;
 					}
 				}
-				
+
 			}
 		}
-		
+
 		return data;
 
 	}

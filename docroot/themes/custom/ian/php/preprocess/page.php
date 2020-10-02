@@ -39,7 +39,7 @@
 
 			$variables['nid'] = $node->get('nid')->value;
 
-			$alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/' . $variables['nid']);
+			$alias = \Drupal::service('path_alias.manager')->getAliasByPath('/node/' . $variables['nid']);
 
 			$type = $node->getType();
 

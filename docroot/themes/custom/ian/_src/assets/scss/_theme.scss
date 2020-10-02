@@ -43,4 +43,6 @@ $flow-space: rem-calc(40);
 
 :root {
 	--flow-space: #{$flow-space};
+	--heading-color: #{$jungle-green};
+	--heading-shadow-color: #{$fountain-blue};
 }

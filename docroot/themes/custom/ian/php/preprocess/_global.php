@@ -14,10 +14,12 @@
 	function ian_preprocess(&$variables, $hook)
 	{
 
-		build_includes($variables);
+//		build_includes($variables);
 
 		// Sometimes the preprocess_html hook doesn't work correctly,
 		// So we do stuff here instead.
+
+		echo '';
 
 		if ($hook == 'html') {
 
@@ -31,8 +33,8 @@
 				}
 			}
 
-			$variables['partial_svg'] = contents('svg');
-			$variables['partial_access'] = contents('accessnav');
+//			$variables['partial_svg'] = contents('svg');
+//			$variables['partial_access'] = contents('accessnav');
 
 			if (!empty($node)) {
 
@@ -52,7 +54,7 @@
 
 //						$variables['#attached']['library'][] = 'ian/level';
 
-						$variables['attributes']['class'][] = "level";
+//						$variables['attributes']['class'][] = "level";
 
 						break;
 
@@ -60,7 +62,7 @@
 
 			} else {
 
-				$variables['attributes']['class'][] = "level";
+//				$variables['attributes']['class'][] = "level";
 
 			}
 
@@ -71,6 +73,31 @@
 			$account = $variables['elements']['#user'];
 
 			$variables['username'] = $account->getDisplayName();
+
+		}
+
+		if ($hook === 'block') {
+
+
+
+		}
+
+	}
+
+	function ian_preprocess_field(&$variables) {
+
+		$bundle = $variables['element']['#bundle'];
+
+		switch ($bundle) {
+
+			case 'accordion':
+
+				$variables['attributes']['data-allow-all-closed'] = 'true';
+
+				break;
+
+			default:
+				break;
 
 		}
 

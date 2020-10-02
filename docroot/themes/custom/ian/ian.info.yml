@@ -1,8 +1,9 @@
-name: IanMoffitt.dev
+name: IanMoffitt
 type: theme
 description: 'IanMoffitt.dev Theme'
 core_version_requirement: ^8.8 || ^9
 screenshot: screenshot.png
+base theme: stable
 
 regions:
   header: Header
@@ -15,9 +16,8 @@ regions:
   footer: Footer
 
 libraries:
-  - ian/modernizr
   - ian/global-styling
+  - ian/global-scripts
 
 libraries-override:
-  core/modernizr: false
   core/html5shiv: false

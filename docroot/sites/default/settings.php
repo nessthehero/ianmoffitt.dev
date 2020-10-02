@@ -730,6 +730,16 @@
 	 * example.org, with all subdomains included.
 	 */
 
+	$settings['trusted_host_patterns'] = array(
+		'^local\.personal$',
+		'^ianmoffitt\.dev$',
+		'^www\.ianmoffitt\.dev$',
+		'^ianmoffitt\.co$',
+		'^www\.ianmoffitt\.co$',
+		'^nessthehero\.com$',
+		'^www\.nessthehero\.com$',
+	);
+
 	/**
 	 * The default list of directories that will be ignored by Drupal's file API.
 	 *

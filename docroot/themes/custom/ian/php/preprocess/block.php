@@ -20,6 +20,8 @@
 			}
 		}
 
+		$content = $variables["content"];
+
 	}
 
 	function ian_theme_suggestions_block_alter(&$suggestions, $variables) {

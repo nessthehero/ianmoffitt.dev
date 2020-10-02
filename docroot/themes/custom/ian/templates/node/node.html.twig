@@ -72,10 +72,20 @@
  * @ingroup themeable
  */
 #}
-<div{{ attributes.addClass('user-markup') }}>
-	{{ title_prefix }}
-	<h1>{{ heading }}</h1>
-	{{ title_suffix }}
+<section {{ attributes.addClass('content__section') }}>
 
-	{{ content.body }}
-</div>
+    {{ title_prefix }}
+    {{ title_suffix }}
+
+    {% if display_submitted %}
+        <div{{ author_attributes }}>
+            <time>{{ date }}</time>
+            {{ metadata }}
+        </div>
+    {% endif %}
+
+    <div{{ content_attributes }}>
+        {{ content }}
+    </div>
+
+</section>

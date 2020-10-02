@@ -13,8 +13,8 @@ h6 {
 	.user-markup &,
 	header &,
 	.header & {
-		color: $jungle-green;
-		text-shadow: 1px 1px 1px $fountain-blue;
+		color: var(--heading-color);
+		text-shadow: 1px 1px 1px var(--heading-shadow-color);
 	}
 }
 

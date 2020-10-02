@@ -3,9 +3,13 @@
 	background-color: $white;
 	border-radius: 3px;
 	box-shadow: 0 0 3px $black;
-	padding: 20px;
+	padding: var(--flow-space, $flow-space);
 	position: relative;
 	z-index: 10;
+
+	&__heading {
+		padding-bottom: $flow-space;
+	}
 
 	time {
 		color: $dusty-grey;

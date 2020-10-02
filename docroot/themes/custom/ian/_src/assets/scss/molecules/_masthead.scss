@@ -1,8 +1,22 @@
 .masthead {
+	border-radius: $global-radius;
+	display: block;
+	height: 100px;
 	overflow: hidden;
-	padding: 0;
+	position: relative;
+	z-index: 2;
 
 	img {
+		height: 100%;
+		object-fit: cover;
 		width: 100%;
+	}
+
+	@include breakpoint(medium) {
+		height: 200px;
+	}
+
+	@include breakpoint(large) {
+		height: 400px;
 	}
 }

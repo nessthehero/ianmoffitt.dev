@@ -7,6 +7,8 @@
 	function ian_preprocess_node(&$variables)
 	{
 
+		echo '';
+
 		// Reference to node object
 		$node = $variables['node'];
 
@@ -38,7 +40,7 @@
 
 		$variables['is_current_node'] = is_current_node($nid);
 
-		$alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/' . $variables['nid']);
+		$alias = \Drupal::service('path_alias.manager')->getAliasByPath('/node/' . $variables['nid']);
 
 		$variables['title'] = $node->get('title')->value;
 

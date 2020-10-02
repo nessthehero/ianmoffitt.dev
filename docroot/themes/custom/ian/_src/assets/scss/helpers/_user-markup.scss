@@ -1,5 +1,8 @@
 // For all WYSIWYG powered text
 .user-markup {
+	--heading-color: #{$white};
+	// --heading-shadow-color: #{$powder-blue};
+
 	p {
 		overflow: auto; // Clears any floated content, like images
 	}
@@ -29,5 +32,9 @@
 
 	header {
 		padding: 0 0 1rem;
+	}
+
+	.links {
+		@extend %list-reset;
 	}
 }
