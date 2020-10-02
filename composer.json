@@ -3,7 +3,7 @@
 	"description": "Drupal Test",
 	"type": "project",
 	"require-dev": {
-        "drush/drush": "^9.0"
+        "drush/drush": "^10.0"
 	},
 	"require": {
 		"composer/installers": "^1.6",
@@ -11,20 +11,19 @@
 		"drupal/anchor_link": "^2.0",
 		"drupal/backup_migrate": "^4.0",
 		"drupal/content_browser": "^1.0",
-		"drupal/core": "^8.7",
+		"drupal/core": "^8.9",
 		"drupal/date_recur": "^2.0",
 		"drupal/field_group": "^3.0",
 		"drupal/layout_builder_modal": "^1.1",
 		"drupal/link_attributes": "^1.8",
 		"drupal/link_field_autocomplete_filter": "^1.7",
 		"drupal/maxlength": "^1.0",
-		"drupal/paragraphs": "^1.8",
+		"drupal/paragraphs": "1.x-dev",
 		"drupal/pathauto": "^1.5",
 		"drupal/quick_node_clone": "^1.12",
 		"drupal/redirect": "^1.4",
 		"drupal/smart_trim": "^1.1",
-		"drupal/twig_tweak": "^2.4",
-		"drupal/webform": "^5.2"
+		"drupal/twig_tweak": "^2.4"
 	},
 	"license": "MIT",
 	"minimum-stability": "dev",
@@ -33,7 +32,7 @@
 		"process-timeout": 0,
 		"sort-packages": true,
 		"platform": {
-			"php": "7.2.9"
+			"php": "7.4.2"
 		}
 	},
 	"repositories": {
@@ -74,6 +73,11 @@
 				".htaccess": ".htaccess",
 				"robots.txt": "robots.txt",
 				"sites/development.services.yml": "sites/development.services.yml"
+			}
+		},
+		"patches": {
+			"drupal/paragraphs": {
+				"Integrity constraint violation: 1048 Column 'langcode' cannot be null": "https://www.drupal.org/files/issues/2020-06-25/paragraphs-2901390-51.patch"
 			}
 		}
 	}

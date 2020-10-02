@@ -1,7 +1,7 @@
 name: 'Ian Preferred'
 type: profile
 description: 'My preferred settings profile'
-core: 8.x
+core_version_requirement: ^8 || ^9
 
 install:
   - automated_cron

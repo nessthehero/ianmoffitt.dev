@@ -5,6 +5,6 @@ description: Adds an HTML field formatter. Forked by BarkleyREI for CPCC.
 package: BarkleyREI
 # Information added by Drupal.org packaging script on 2017-03-15
 version: '8.x-1.0-alpha1'
-core: '8.x'
+core_version_requirement: ^8 || ^9
 project: 'brei_html_field_formatter'
 datestamp: 1489598285
