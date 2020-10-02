@@ -17,3 +17,5 @@ docroot/sites/*/settings.local.php
 
 # Private files
 /private
+/.editorconfig
+/.gitattributes

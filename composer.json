@@ -7,11 +7,12 @@
 	},
 	"require": {
 		"composer/installers": "^1.6",
-		"drupal-composer/drupal-scaffold": "^2.5",
+		"cweagans/composer-patches": "^1.6",
 		"drupal/anchor_link": "^2.0",
 		"drupal/backup_migrate": "^4.0",
 		"drupal/content_browser": "^1.0",
 		"drupal/core": "^8.9",
+		"drupal/core-composer-scaffold": "^9.0",
 		"drupal/date_recur": "^2.0",
 		"drupal/field_group": "^3.0",
 		"drupal/layout_builder_modal": "^1.1",
@@ -69,15 +70,17 @@
 		},
         "enable-patching": true,
 		"drupal-scaffold": {
-			"initial": {
-				".htaccess": ".htaccess",
-				"robots.txt": "robots.txt",
-				"sites/development.services.yml": "sites/development.services.yml"
+			"locations": {
+				"web-root": "./docroot"
+			},
+			"file-mapping": {
+				"[project-root]/.editorconfig": false,
+				"[web-root]/sites/development.services.yml": false
 			}
 		},
 		"patches": {
 			"drupal/paragraphs": {
-				"Integrity constraint violation: 1048 Column 'langcode' cannot be null": "https://www.drupal.org/files/issues/2020-06-25/paragraphs-2901390-51.patch"
+				"Integrity constraint violation": "./patches/paragraphs-2901390-51.patch"
 			}
 		}
 	}
