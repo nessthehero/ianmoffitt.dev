@@ -74,7 +74,7 @@
 #}
 <article{{ attributes.addClass('content') }}>
 
-    <header>
+    <header class="content__header">
         {{ title_prefix }}
         {% if not page %}
             <h2{{ title_attributes }}>
@@ -91,8 +91,8 @@
         {% endif %}
     </header>
 
-    <div{{ content_attributes.addClass('user-markup') }}>
+    <section{{ content_attributes.addClass('content__section') }}>
         {{ content }}
-    </div>
+    </section>
 
 </article>

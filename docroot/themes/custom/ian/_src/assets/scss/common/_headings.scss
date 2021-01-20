@@ -12,7 +12,8 @@ h6 {
 
 	.user-markup &,
 	header &,
-	.header & {
+	.header &,
+	.layout & {
 		color: var(--heading-color);
 		text-shadow: 1px 1px 1px var(--heading-shadow-color);
 	}

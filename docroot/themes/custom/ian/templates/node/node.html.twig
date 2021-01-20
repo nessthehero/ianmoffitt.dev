@@ -77,15 +77,15 @@
     {{ title_prefix }}
     {{ title_suffix }}
 
+    <div{{ content_attributes }}>
+        {{ content }}
+    </div>
+
     {% if display_submitted %}
         <div{{ author_attributes }}>
             <time>{{ date }}</time>
             {{ metadata }}
         </div>
     {% endif %}
-
-    <div{{ content_attributes }}>
-        {{ content }}
-    </div>
 
 </section>

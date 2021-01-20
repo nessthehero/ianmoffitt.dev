@@ -64,8 +64,8 @@
 
 // 1. Global
 // ---------
-$global-font-size: 100%;
-$global-width: rem-calc(1200);
+$global-font-size: 105%;
+$global-width: rem-calc(900);
 $global-lineheight: 1.5;
 $foundation-palette: (
 	primary: #1779ba,
@@ -309,8 +309,8 @@ $button-responsive-expanded: false;
 // 12. Button Group
 // ----------------
 $buttongroup-margin: 1rem;
-$buttongroup-spacing: 1px;
-$buttongroup-child-selector: '.button';
+$buttongroup-spacing: 8px;
+$buttongroup-child-selector: 'a, .button';
 $buttongroup-expand-max: 6;
 $buttongroup-radius-on-each: true;
 
