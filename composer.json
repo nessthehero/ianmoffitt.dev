@@ -77,9 +77,11 @@
 			"file-mapping": {
 				"[project-root]/.editorconfig": false,
 				"[web-root]/.htaccess": {
+					"mode": "append",
 					"append": "assets/htaccess-append.txt"
 				},
 				"[web-root]/robots.txt": {
+					"mode": "append",
 					"prepend": "assets/robots-prequel.txt",
 					"append": "assets/robots-append.txt"
 				},
