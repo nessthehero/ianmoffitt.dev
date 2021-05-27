@@ -1,6 +1,6 @@
 {
-	"name": "barkleyrei/drupal-8",
-	"description": "Drupal Test",
+	"name": "ianmoffitt.dev/website",
+	"description": "My personal website",
 	"type": "project",
 	"require-dev": {
         "drush/drush": "^10.0"
@@ -76,6 +76,13 @@
 			},
 			"file-mapping": {
 				"[project-root]/.editorconfig": false,
+				"[web-root]/.htaccess": {
+					"append": "assets/htaccess-append.txt"
+				},
+				"[web-root]/robots.txt": {
+					"prepend": "assets/robots-prequel.txt",
+					"append": "assets/robots-append.txt"
+				},
 				"[web-root]/sites/development.services.yml": false
 			}
 		},
