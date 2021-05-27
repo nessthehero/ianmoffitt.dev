@@ -10,10 +10,17 @@
     </script>
     <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
     <link rel="shortcut icon" href="../favicon.ico" type="image/ico">
+<style>
+    :root {
+        
+        
+        
+    }
+</style>
 
-<link rel="stylesheet" href="../themes/mandelbrot/css/black.css?cachebust=1.4.0" type="text/css">
+<link rel="stylesheet" href="../themes/mandelbrot/css/black.css?cachebust=1.9.2" type="text/css">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css?cachebust=1.4.0" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css?cachebust=1.9.2" type="text/css">
 
 
 <title>Supported Markdown | IanMoffitt.dev</title>
@@ -110,26 +117,26 @@
 <li>or asterisks</li>
 <li>for unordered lists</li>
 </ul>
-<pre><code class="hljs language-markdown"><span class="hljs-bullet">1. </span>First item
-<span class="hljs-bullet">2. </span>Second item
-<span class="hljs-bullet">2. </span>Number used doesn't matter
-<span class="hljs-bullet">2. </span>It auto increments the number
-<span class="hljs-bullet">
-- </span>Unordered list
-<span class="hljs-bullet">- </span>Item
-<span class="hljs-bullet">- </span>Item
-<span class="hljs-bullet">
-* </span>You can use dashes
-<span class="hljs-bullet">* </span>or asterisks
-<span class="hljs-bullet">* </span>for unordered lists</code></pre><h2 id="code-or-unformatted-text">Code (or unformatted text)</h2>
+<pre><code class="hljs language-markdown"><span class="hljs-bullet">1.</span> First item
+<span class="hljs-bullet">2.</span> Second item
+<span class="hljs-bullet">2.</span> Number used doesn&#x27;t matter
+<span class="hljs-bullet">2.</span> It auto increments the number
+
+<span class="hljs-bullet">-</span> Unordered list
+<span class="hljs-bullet">-</span> Item
+<span class="hljs-bullet">-</span> Item
+
+<span class="hljs-bullet">*</span> You can use dashes
+<span class="hljs-bullet">*</span> or asterisks
+<span class="hljs-bullet">*</span> for unordered lists</code></pre><h2 id="code-or-unformatted-text">Code (or unformatted text)</h2>
 <p>Code in a <code>Single line</code> sentence.</p>
 <pre><code class="hljs language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">test</span>(<span class="hljs-params"></span>) </span>{
-    <span class="hljs-keyword">return</span> <span class="hljs-string">'Fenced code block'</span>
-}</code></pre><pre><code class="hljs language-markdown">Code in a <span class="hljs-code">`Single line`</span> sentence.</code></pre><pre><code class="hljs language-markdown"><span class="hljs-code">```</span>javascript   [optional highlighting support using highlight.js]
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;Fenced code block&#x27;</span>
+}</code></pre><pre><code class="hljs language-markdown">Code in a <span class="hljs-code">`Single line`</span> sentence.</code></pre><pre><code class="hljs language-markdown"><span class="hljs-code">```javascript   [optional highlighting support using highlight.js]
 function test() {
-<span class="hljs-code">    return 'Fenced code block'</span>
+    return &#x27;Fenced code block&#x27;
 }
-\<span class="hljs-code">```</span>   [without slash]</code></pre><h2 id="horizontal-rule">Horizontal Rule</h2>
+\```   </span>[without slash]</code></pre><h2 id="horizontal-rule">Horizontal Rule</h2>
 <hr>
 <pre><code class="hljs language-markdown">---</code></pre><h2 id="links">Links</h2>
 <p><a href="https://barkleyrei.com">Our Website</a></p>
@@ -161,9 +168,9 @@ function test() {
 <li><input disabled="" type="checkbox"> Update the website</li>
 <li><input disabled="" type="checkbox"> Contact the media</li>
 </ul>
-<pre><code class="hljs language-markdown"><span class="hljs-bullet">- </span>[x] Write the press release
-<span class="hljs-bullet">- </span>[ ] Update the website
-<span class="hljs-bullet">- </span>[ ] Contact the media</code></pre><h2 id="markdown-cheat-sheet">Markdown Cheat Sheet</h2>
+<pre><code class="hljs language-markdown"><span class="hljs-bullet">-</span> [x] Write the press release
+<span class="hljs-bullet">-</span> [ ] Update the website
+<span class="hljs-bullet">-</span> [ ] Contact the media</code></pre><h2 id="markdown-cheat-sheet">Markdown Cheat Sheet</h2>
 <p>Not all syntax on this sheet may be supported in Fractal.</p>
 <p><a href="https://www.markdownguide.org/cheat-sheet/">Cheat Sheet</a></p>
 
@@ -182,10 +189,12 @@ function test() {
             </div>
         </div>
 
-        <div class="Frame-handle" data-role="frame-resize-handle"></div>
-
         <div class="Frame-panel Frame-panel--sidebar" data-role="sidebar">
-            <nav class="Navigation">
+            
+
+
+<nav class="Navigation" data-behaviour="navigation">
+    <div class="Navigation-panel Navigation-panel--main" data-role="main-panel">
     
         <div class="Navigation-group Navigation-search">
     <form action="" class="Search" data-behaviour="search">
@@ -203,8 +212,11 @@ function test() {
 
     
         
-<div class="Navigation-group">
 
+    
+    
+    <div class="Navigation-group">
+        
 <div class="Tree" data-behaviour="tree" id="tree-components">
     <div class="Tree-header">
         <h3 class="Tree-title">components</h3>
@@ -218,20 +230,25 @@ function test() {
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-typography">
-            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-typography-items">
-                Typography
-            </button>
-            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-typography-items">
+        
             
             
-            
-            
+            <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-typography">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-typography-items">
+                    Typography
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-typography-items">
+                
+                
+                
+                
     
         
         
+        
+        
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/all.html" data-pjax>
+            <a class="Tree-entityLink" href="../components/detail/all.html" data-role="tree-link" data-pjax data-handle="all">
                 <span>All</span>
                 
 
@@ -254,8 +271,10 @@ function test() {
     
         
         
+        
+        
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/headings.html" data-pjax>
+            <a class="Tree-entityLink" href="../components/detail/headings.html" data-role="tree-link" data-pjax data-handle="headings">
                 <span>Headings</span>
                 
 
@@ -278,8 +297,10 @@ function test() {
     
         
         
+        
+        
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/icons.html" data-pjax>
+            <a class="Tree-entityLink" href="../components/detail/icons.html" data-role="tree-link" data-pjax data-handle="icons">
                 <span>Icons</span>
                 
 
@@ -302,8 +323,10 @@ function test() {
     
         
         
+        
+        
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/lists.html" data-pjax>
+            <a class="Tree-entityLink" href="../components/detail/lists.html" data-role="tree-link" data-pjax data-handle="lists">
                 <span>Lists</span>
                 
 
@@ -326,8 +349,10 @@ function test() {
     
         
         
+        
+        
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/paragraph.html" data-pjax>
+            <a class="Tree-entityLink" href="../components/detail/paragraph.html" data-role="tree-link" data-pjax data-handle="paragraph">
                 <span>Paragraph</span>
                 
 
@@ -349,25 +374,31 @@ function test() {
         
     
 
-            </ul>
-        </li>
+                </ul>
+            </li>
+            
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-atoms">
-            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-atoms-items">
-                Atoms
-            </button>
-            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-atoms-items">
+        
             
             
-            
-            
+            <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-atoms">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-atoms-items">
+                    Atoms
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-atoms-items">
+                
+                
+                
+                
     
+        
+        
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/logo.html" data-pjax>
+            <a class="Tree-entityLink" href="../components/detail/logo.html" data-role="tree-link" data-pjax data-handle="logo">
                 <span>Logo</span>
                 
 
@@ -389,25 +420,31 @@ function test() {
         
     
 
-            </ul>
-        </li>
+                </ul>
+            </li>
+            
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-molecules">
-            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-molecules-items">
-                Molecules
-            </button>
-            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-molecules-items">
+        
             
             
-            
-            
+            <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-molecules">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-molecules-items">
+                    Molecules
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-molecules-items">
+                
+                
+                
+                
     
+        
+        
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/masthead.html" data-pjax>
+            <a class="Tree-entityLink" href="../components/detail/masthead.html" data-role="tree-link" data-pjax data-handle="masthead">
                 <span>Masthead</span>
                 
 
@@ -430,8 +467,10 @@ function test() {
     
         
         
+        
+        
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/rundown.html" data-pjax>
+            <a class="Tree-entityLink" href="../components/detail/rundown.html" data-role="tree-link" data-pjax data-handle="rundown">
                 <span>Rundown</span>
                 
 
@@ -454,8 +493,10 @@ function test() {
     
         
         
+        
+        
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/work.html" data-pjax>
+            <a class="Tree-entityLink" href="../components/detail/work.html" data-role="tree-link" data-pjax data-handle="work">
                 <span>Work</span>
                 
 
@@ -477,25 +518,31 @@ function test() {
         
     
 
-            </ul>
-        </li>
+                </ul>
+            </li>
+            
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-organisms">
-            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-organisms-items">
-                Organisms
-            </button>
-            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-organisms-items">
+        
             
             
-            
-            
+            <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-organisms">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-organisms-items">
+                    Organisms
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-organisms-items">
+                
+                
+                
+                
     
+        
+        
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/global-footer.html" data-pjax>
+            <a class="Tree-entityLink" href="../components/detail/global-footer.html" data-role="tree-link" data-pjax data-handle="global-footer">
                 <span>Global Footer</span>
                 
 
@@ -518,8 +565,10 @@ function test() {
     
         
         
+        
+        
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/grid-base.html" data-pjax>
+            <a class="Tree-entityLink" href="../components/detail/grid-base.html" data-role="tree-link" data-pjax data-handle="grid-base">
                 <span>Grid Base</span>
                 
 
@@ -542,8 +591,10 @@ function test() {
     
         
         
+        
+        
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/work-grid.html" data-pjax>
+            <a class="Tree-entityLink" href="../components/detail/work-grid.html" data-role="tree-link" data-pjax data-handle="work-grid">
                 <span>Work Grid</span>
                 
 
@@ -565,25 +616,31 @@ function test() {
         
     
 
-            </ul>
-        </li>
+                </ul>
+            </li>
+            
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-pages">
-            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-pages-items">
-                Pages
-            </button>
-            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-pages-items">
+        
             
             
-            
-            
+            <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-pages">
+                <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-pages-items">
+                    Pages
+                </button>
+                <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-pages-items">
+                
+                
+                
+                
     
+        
+        
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/detail.html" data-pjax>
+            <a class="Tree-entityLink" href="../components/detail/detail.html" data-role="tree-link" data-pjax data-handle="detail">
                 <span>Detail</span>
                 
 
@@ -606,8 +663,10 @@ function test() {
     
         
         
+        
+        
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/home.html" data-pjax>
+            <a class="Tree-entityLink" href="../components/detail/home.html" data-role="tree-link" data-pjax data-handle="home">
                 <span>Home</span>
                 
 
@@ -629,15 +688,17 @@ function test() {
         
     
 
-            </ul>
-        </li>
+                </ul>
+            </li>
+            
         
     
 
     </ul>
 </div>
 
-</div>
+    </div>
+    
 
 
     
@@ -658,8 +719,10 @@ function test() {
     
         
         
+        
+        
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../index.html" data-pjax>
+            <a class="Tree-entityLink" href="../index.html" data-role="tree-link" data-pjax data-handle="">
                 <span>Overview</span>
                 
             </a>
@@ -668,8 +731,10 @@ function test() {
     
         
         
+        
+        
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="how-to.html" data-pjax>
+            <a class="Tree-entityLink" href="how-to.html" data-role="tree-link" data-pjax data-handle="">
                 <span>How To</span>
                 
             </a>
@@ -678,8 +743,10 @@ function test() {
     
         
         
+        
+        
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="glossary.html" data-pjax>
+            <a class="Tree-entityLink" href="glossary.html" data-role="tree-link" data-pjax data-handle="">
                 <span>Glossary</span>
                 
             </a>
@@ -688,8 +755,10 @@ function test() {
     
         
         
+        
+        
         <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
-            <a class="Tree-entityLink" href="" data-pjax>
+            <a class="Tree-entityLink" href="" data-role="tree-link" data-pjax data-handle="">
                 <span>Markdown</span>
                 
             </a>
@@ -707,23 +776,91 @@ function test() {
         
 
     
-        <div class="Navigation-group">
+        
+<div class="Navigation-group">
     <div class="Tree">
         <div class="Tree-header">
-            <div class="Tree-title">
+            <h3 class="Tree-title">
                 Information
-            </div>
+            </h3>
         </div>
-        <div class="Tree-aside">
-            Built on:
-            <time datetime="2020-10-20T13:54:19.352Z">
-                10/20/2020
-            </time>
-        </div>
+        <dl class="Tree-aside">
+            
+                <div>
+                    <dt class="Tree-asideTerm">Built on:</dt>
+                    <dd class="Tree-asideDescription">
+                        
+                            <time datetime="2021-05-27T17:27:50.225Z">
+                                5/27/2021
+                            </time>
+                        
+                    </dd>
+                </div>
+            
+        </dl>
     </div>
 </div>
 
+
     
+    </div>
+
+    <div class="Navigation-panel Navigation-panel--variants" data-role="variant-panel">
+        <div class="Navigation-backButtonWrapper">
+            <button class="Navigation-backButton" data-role="back" type="button">
+                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4 12C4 11.4477 4.44772 11 5 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H5C4.44772 13 4 12.5523 4 12Z"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.7071 4.29289C13.0976 4.68342 13.0976 5.31658 12.7071 5.70711L6.41421 12L12.7071 18.2929C13.0976 18.6834 13.0976 19.3166 12.7071 19.7071C12.3166 20.0976 11.6834 20.0976 11.2929 19.7071L4.29289 12.7071C3.90237 12.3166 3.90237 11.6834 4.29289 11.2929L11.2929 4.29289C11.6834 3.90237 12.3166 3.90237 12.7071 4.29289Z"/>
+</svg>
+
+                Back
+            </button>
+        </div>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    </div>
 </nav>
 
         </div>
@@ -733,7 +870,7 @@ function test() {
 
 
 
-<script src="../themes/mandelbrot/js/mandelbrot.js?cachebust=1.4.0"></script>
+<script src="../themes/mandelbrot/js/mandelbrot.js?cachebust=1.9.2"></script>
 
 
 
