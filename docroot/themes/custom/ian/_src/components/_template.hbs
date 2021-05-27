@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	<!-- http://microformats.org/wiki/hcard-cheatsheet -->
+	<link rel="profile" href="http://microformats.org/profile/hcard"/>
+
+	<link media="all" rel="stylesheet" href="{{ path '/css/main.css' }}">
+
+	<title>{{ _target.title }}</title>
+
+	<script type="text/javascript" src="{{ path '/js/plugins/modernizr.js' }}"></script>
+
+</head>
+<body>
+	{{ render '@svg' }}
+
+	<div class="container">
+		<main{{#if _target.context.style}} class="{{_target.context.style}}"{{/if}}>
+			{{{ yield }}}
+
+			{{ render '@global-footer' }}
+		</main>
+	</div>
+
+	{{ render '@grid-base' }}
+
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+	{{#if _target.context.scripts}}
+		{{#each _target.context.scripts}}
+			<script type="text/javascript" src="{{ scriptPath this }}"></script>
+		{{/each}}
+	{{else}}
+		<script type="text/javascript" src="{{ path '/js/vendor.js' }}"></script>
+		<script type="text/javascript" src="{{ path '/js/main.js' }}"></script>
+	{{/if}}
+
+</body>
+</html>

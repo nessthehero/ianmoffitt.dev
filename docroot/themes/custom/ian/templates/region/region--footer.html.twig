@@ -1,0 +1,40 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a region.
+ *
+ * Available variables:
+ * - content: The content for this region, typically blocks.
+ * - attributes: HTML attributes for the region <div>.
+ * - region: The name of the region variable as defined in the theme's
+ *   .info.yml file.
+ *
+ * @see template_preprocess_region()
+ *
+ * @ingroup themeable
+ */
+#}
+
+<footer id="js-global-footer" data-region="{{ region }}" {{ attributes.addClass('global-footer') }}>
+
+    <section class="global-footer__info">
+        {{ content }}
+    </section>
+
+    <section class="global-footer__links">
+{#        {{ drupal_menu('footer-ctas') }}#}
+{#        {{ drupal_menu('footer') }}#}
+
+{#        <ul class="global-footer__list">#}
+{#            <li><a href="https://www.twitter.com/nessthehero" title="Twitter" class="global-footer__link">Twitter</a></li>#}
+{#        </ul>#}
+
+{#        <ul class="global-footer__list">#}
+{#            <li><a class="global-footer__link" href="/about.html">About Me</a></li>#}
+{#        </ul>#}
+    </section>
+
+</footer>
+
+<canvas id="base" class="grid-base"></canvas>
+

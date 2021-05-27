@@ -1,0 +1,17 @@
+{
+	"title": "Detail Page",
+	"status": "wip",
+	"preview": "@template",
+	"context": {
+		"heading": "Lorem ipsum dolor sit amet",
+		"masthead": {
+			"img": "/img/18425572_1394198397307705_7479956252613203044_n.jpg",
+			"alt": "Photo of something"
+		},
+		"style": "main level row column",
+		"scripts": [
+			"vendor",
+			"main"
+		]
+	}
+}

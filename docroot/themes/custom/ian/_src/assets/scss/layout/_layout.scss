@@ -1,0 +1,17 @@
+.container {
+	position: relative;
+}
+
+.main {
+	padding-top: var(--flow-space, $flow-space);
+
+	> * + * {
+		margin-top: var(--flow-space, $flow-space);
+	}
+}
+
+.flow {
+	> * + * {
+		margin-top: var(--flow-space, $flow-space);
+	}
+}

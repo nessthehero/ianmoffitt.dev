@@ -1,0 +1,13 @@
+{
+  "title": "ianmoffitt.dev",
+  "generatorVersion": "4.0.2",
+  "type": "pattern",
+  "app": "app",
+  "dist": "dist",
+  "deploy": "../../../../../web",
+  "drupal": "../_files",
+  "brei-pattern-scaffold": "0.0.5",
+  "brei-sass-boilerplate": "3.0.9",
+  "brei-sass-mixins": "2.0.4",
+  "brei-handlebars-helpers": "2.0.7"
+}

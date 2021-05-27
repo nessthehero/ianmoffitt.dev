@@ -1,0 +1,16 @@
+global-styling:
+  version: 1.0.1
+  css:
+    theme:
+      _files/css/main.css: {}
+global-scripts:
+  version: 1.0.1
+  js:
+    _files/js/vendor.js: {}
+    _files/js/main.js: {}
+  dependencies:
+    - core/jquery
+modernizr:
+  header: true
+  js:
+    _files/js/plugins/modernizr.js: {}

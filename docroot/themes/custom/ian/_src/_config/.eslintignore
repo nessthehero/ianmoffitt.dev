@@ -1,0 +1,3 @@
+assets/ejs/lib/*.js
+assets/ejs/vendor/*.js
+assets/ejs/plugins/*.js

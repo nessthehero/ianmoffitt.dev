@@ -1,0 +1,10 @@
+uuid: ac0c8333-7a2f-4b96-b09c-10cbd60134aa
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sapEi2YDGoI9yQIT_WgIV2vUdQ6DScH0V3fAyTadAL0
+id: admin
+label: Administration
+description: 'INTERNAL MENU. Administrative task links.'
+locked: true

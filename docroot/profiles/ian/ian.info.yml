@@ -1,0 +1,48 @@
+name: 'Ian Preferred'
+type: profile
+description: 'My preferred settings profile'
+core_version_requirement: ^8 || ^9
+
+install:
+  - automated_cron
+  - block
+  - block_content
+  - breakpoint
+  - ckeditor
+  - config
+  - content_moderation
+  - contextual
+  - datetime
+  - datetime_range
+  - dblog
+  - dynamic_page_cache
+  - editor
+  - field
+  - field_ui
+  - file
+  - filter
+  - help
+  - image
+  - inline_form_errors
+  - link
+  - menu_link_content
+  - menu_ui
+  - node
+  - options
+  - page_cache
+  - path
+  - shortcut
+  - system
+  - taxonomy
+  - telephone
+  - text
+  - toolbar
+  - update
+  - user
+  - views
+  - views_ui
+  - workflows
+
+themes:
+  - seven
+  - stark

@@ -1,0 +1,30 @@
+.work {
+	&.content {
+		margin: 0 20px;
+		padding: 0;
+	}
+
+	&__figure {
+		margin: -20px -20px 16px;
+		position: relative;
+		z-index: 5;
+	}
+
+	.work-grid & {
+		margin: 0;
+	}
+
+	&__link {
+		color: $black;
+		display: block;
+		padding: 20px;
+		transition: background-color #{$transition-time / 2};
+
+		&:hover,
+		&:focus {
+			background-color: rgba(245, 245, 245, 1);
+			color: $black;
+			text-decoration: none;
+		}
+	}
+}
