@@ -1,0 +1,21 @@
+prod:
+  host: v3.ianmoffitt.dev
+  user: ian
+  root: /var/www/ianmoffitt.dev/docroot
+  uri: https://v3.ianmoffitt.dev
+  paths:
+    - files: sites/default/files
+  command:
+    sql:
+      sync:
+        options:
+          skip-tables-list: cache,cache_*
+
+self:
+  paths:
+    - files: sites/default/files
+  command:
+    sql:
+      sync:
+        options:
+          skip-tables-list: cache,cache_*

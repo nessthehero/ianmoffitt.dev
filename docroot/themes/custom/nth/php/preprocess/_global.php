@@ -11,15 +11,13 @@
 	 * @param $variables
 	 * @param $hook
 	 */
-	function ian_preprocess(&$variables, $hook)
+	function nth_preprocess(&$variables, $hook)
 	{
 
 //		build_includes($variables);
 
 		// Sometimes the preprocess_html hook doesn't work correctly,
 		// So we do stuff here instead.
-
-		echo '';
 
 		if ($hook == 'html') {
 
@@ -47,6 +45,8 @@
 				}
 
 				$type = $node->getType();
+
+        $variables['#attached']['library'][] = 'ian/global-styling';
 
 				switch ($type) {
 
@@ -84,7 +84,7 @@
 
 	}
 
-	function ian_preprocess_field(&$variables) {
+	function nth_preprocess_field(&$variables) {
 
 		$bundle = $variables['element']['#bundle'];
 
@@ -108,7 +108,7 @@
 	 *
 	 * @param $variables
 	 */
-	function ian_preprocess_page_title(&$variables)
+	function nth_preprocess_page_title(&$variables)
 	{
 
 		// Get node from request
@@ -132,7 +132,7 @@
 	 *
 	 * @param $variables
 	 */
-	function ian_preprocess_breadcrumb(&$variables)
+	function nth_preprocess_breadcrumb(&$variables)
 	{
 
 		// The breadcrumbs are cached, and this can cause breadcrumbs to "stick" across pages, so we provide a
@@ -203,7 +203,7 @@
 	 * @param $variables
 	 * @param $hook
 	 */
-	function ian_theme_suggestions_alter(&$suggestions, $variables, $hook)
+	function nth_theme_suggestions_alter(&$suggestions, $variables, $hook)
 	{
 
 		// Grab all query strings
@@ -380,3 +380,11 @@
 		}
 
 	}
+
+	function nth_page_attachments_alter(&$page) {
+
+    $array_libraries = $page['#attached']['library'];
+
+	  echo '';
+
+  }

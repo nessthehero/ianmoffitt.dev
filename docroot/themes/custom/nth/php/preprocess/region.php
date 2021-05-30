@@ -3,9 +3,9 @@
 	use Drupal\node\Entity\Node;
 
 	// Region preprocessing
-	function ian_preprocess_region(&$variables) {
+	function nth_preprocess_region(&$variables) {
 
-		$ianconfig = \Drupal::service('config.factory')->getEditable('barkleyrei.settings');
+		$nthconfig = \Drupal::service('config.factory')->getEditable('barkleyrei.settings');
 
 		$node = Drupal::request()->attributes->get('node');
 		$revision =  Drupal::request()->attributes->get('node_revision');
@@ -62,7 +62,7 @@
 
 				}
 
-				$menu_already_rendered = $ianconfig->get('menu_already_rendered');
+				$menu_already_rendered = $nthconfig->get('menu_already_rendered');
 				if (empty($menu_already_rendered)) {
 					$menu_already_rendered = false;
 				}

@@ -5,14 +5,14 @@
 	use Drupal\core\template\Attribute;
 	use Drupal\Core\Render\Markup;
 
-	function ian_preprocess_menu(&$variables)
+	function nth_preprocess_menu(&$variables)
 	{
 
 		build_includes($variables);
 
 		// This config servic can store values to be used across preprocessing, when passing variables between them is
 		// difficult or impossible.
-		$ianconfig = \Drupal::service('config.factory')->getEditable('barkleyrei.settings');
+		$nthconfig = \Drupal::service('config.factory')->getEditable('barkleyrei.settings');
 
 		$variables['uniqueid'] = uniqid();
 
@@ -26,10 +26,10 @@
 		// This flag determines if any menu in the sidebar was already rendered. This prevents two menus that may contain
 		// the current page from both rendering at the same time. We also check if this flag was never set in order to display
 		// the current page by itself if no menu was ever rendered.
-		$menu_already_rendered = $ianconfig->get('menu_already_rendered');
+		$menu_already_rendered = $nthconfig->get('menu_already_rendered');
 		if (empty($menu_already_rendered)) {
 			$menu_already_rendered = false;
-			$ianconfig->set('menu_already_rendered', false);
+			$nthconfig->set('menu_already_rendered', false);
 		}
 
 		// Add classes or attributes to menus
@@ -161,7 +161,7 @@
 							// If we found the parent page or current page...
 							if (!empty($parent_or_current)) {
 
-								$ianconfig->set('menu_already_rendered', true)->save();
+								$nthconfig->set('menu_already_rendered', true)->save();
 
 								// and it has children...
 								if (!empty($parent_or_current['below'])) {
@@ -200,7 +200,7 @@
 					}
 
 				} else {
-					$ianconfig->set('menu_already_rendered', false)->save();
+					$nthconfig->set('menu_already_rendered', false)->save();
 				}
 
 				break;
@@ -219,7 +219,7 @@
 	 * @param array $suggestions
 	 * @param array $variables
 	 */
-	function ian_theme_suggestions_menu_alter(array &$suggestions, array $variables) {
+	function nth_theme_suggestions_menu_alter(array &$suggestions, array $variables) {
 		if (isset($variables["attributes"]["region"])) {
 			$suggestions[] = $variables["theme_hook_original"] . "__" . $variables["attributes"]["region"];
 		}

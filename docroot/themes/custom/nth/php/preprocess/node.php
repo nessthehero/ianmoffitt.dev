@@ -4,7 +4,7 @@
 	use Drupal\taxonomy\Entity\Term;
 
 // Node preprocessing
-	function ian_preprocess_node(&$variables)
+	function nth_preprocess_node(&$variables)
 	{
 
 		echo '';

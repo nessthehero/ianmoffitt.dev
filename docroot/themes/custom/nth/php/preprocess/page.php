@@ -5,10 +5,10 @@
 	use Drupal\taxonomy\Entity\Term;
 
 	// Page preprocessing
-	function ian_preprocess_page(&$variables)
+	function nth_preprocess_page(&$variables)
 	{
 
-		$ianconfig = \Drupal::service('config.factory')->getEditable('barkleyrei.settings');
+		$nthconfig = \Drupal::service('config.factory')->getEditable('barkleyrei.settings');
 		$_q = \Drupal::request()->query->all();
 
 		$route_provider = \Drupal::service('router.route_provider');

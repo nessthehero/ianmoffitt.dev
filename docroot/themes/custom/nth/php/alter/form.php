@@ -2,7 +2,7 @@
 
 	use Drupal\taxonomy\Entity\Term;
 
-	function ian_form_alter(&$form, &$form_state, $form_id)
+	function nth_form_alter(&$form, &$form_state, $form_id)
 	{
 
 		// Simple detect for webforms

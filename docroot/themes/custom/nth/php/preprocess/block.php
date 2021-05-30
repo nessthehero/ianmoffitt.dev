@@ -6,7 +6,7 @@
 	 * Time: 13:34
 	 */
 
-	function ian_preprocess_block(&$variables)
+	function nth_preprocess_block(&$variables)
 	{
 
 		// Add a region variable to a block.
@@ -24,7 +24,7 @@
 
 	}
 
-	function ian_theme_suggestions_block_alter(&$suggestions, $variables) {
+	function nth_theme_suggestions_block_alter(&$suggestions, $variables) {
 
 		if (isset($variables["elements"]["#id"])) {
 			$block_id = $variables["elements"]["#id"];

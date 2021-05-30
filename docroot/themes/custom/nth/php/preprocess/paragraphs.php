@@ -4,16 +4,16 @@
 	use Drupal\file\Entity\File;
 
 	// Paragraph component preprocessing
-	function ian_preprocess_paragraph(&$variables)
+	function nth_preprocess_paragraph(&$variables)
 	{
 
 		// Custom configuration value helper, useful for temporarily storing data across different preprocessors.
 		//
-		// $ianconfig->set('variable', value)->save();
+		// $nthconfig->set('variable', value)->save();
 		//
-		// $ianconfig->get('variable');
+		// $nthconfig->get('variable');
 		//
-		$ianconfig = \Drupal::service('config.factory')->getEditable('barkleyrei.settings');
+		$nthconfig = \Drupal::service('config.factory')->getEditable('barkleyrei.settings');
 
 		// Store query strings in $_q
 		$_q = \Drupal::request()->query->all();

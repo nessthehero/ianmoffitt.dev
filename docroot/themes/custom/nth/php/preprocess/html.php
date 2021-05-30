@@ -1,7 +1,7 @@
 <?php
 
 	// Html preprocessing
-	function ian_preprocess_html(&$variables)
+	function nth_preprocess_html(&$variables)
 	{
 
 		// Moved to _global

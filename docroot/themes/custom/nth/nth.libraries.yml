@@ -1,10 +1,7 @@
 global-styling:
-  version: 1.0.1
   css:
-    theme:
+    base:
       _files/css/main.css: {}
-global-scripts:
-  version: 1.0.1
   js:
     _files/js/vendor.js: {}
     _files/js/main.js: {}
