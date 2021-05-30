@@ -11,7 +11,7 @@ prod:
         options:
           skip-tables-list: cache,cache_*
 
-self:
+local:
   paths:
     - files: sites/default/files
   command:

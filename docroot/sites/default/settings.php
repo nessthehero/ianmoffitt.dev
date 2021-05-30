@@ -733,6 +733,7 @@
 	$settings['trusted_host_patterns'] = array(
 		'^local\.personal$',
 		'^ianmoffitt\.dev$',
+		'^.+\.ianmoffitt\.dev$',
 		'^www\.ianmoffitt\.dev$',
 		'^ianmoffitt\.co$',
 		'^www\.ianmoffitt\.co$',
