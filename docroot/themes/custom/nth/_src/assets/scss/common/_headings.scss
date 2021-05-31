@@ -1,21 +1,31 @@
 // Try modifying /helpers/overrides/_foundation.scss before setting global heading styles here
 
+%heading-style {
+	font-family: $heading-font;
+	line-height: 1;
+	margin: 0 0 1rem;
+}
+
+%heading-color {
+	color: var(--heading-color);
+	text-shadow: 1px 1px 1px var(--heading-shadow-color);
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-	font-family: $heading-font;
-	line-height: 1;
-	margin: 0;
+	@extend %heading-style;
 
+	&:not([class]),
 	.user-markup &,
 	header &,
 	.header &,
-	.layout & {
-		color: var(--heading-color);
-		text-shadow: 1px 1px 1px var(--heading-shadow-color);
+	.layout & &:not([class]),
+	a {
+		@extend %heading-color;
 	}
 }
 

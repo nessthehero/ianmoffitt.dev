@@ -4,7 +4,7 @@
   "type": "pattern",
   "app": "app",
   "dist": "dist",
-  "deploy": "../../../../../web",
+  "deploy": "../../../../web",
   "drupal": "../_files",
   "brei-pattern-scaffold": "0.0.5",
   "brei-sass-boilerplate": "3.0.9",
