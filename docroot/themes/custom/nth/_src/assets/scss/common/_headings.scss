@@ -3,7 +3,6 @@
 %heading-style {
 	font-family: $heading-font;
 	line-height: 1;
-	margin: 0 0 1rem;
 }
 
 %heading-color {
@@ -26,6 +25,10 @@ h6 {
 	.layout & &:not([class]),
 	a {
 		@extend %heading-color;
+	}
+
+	.user-markup & {
+		margin: 0 0 1rem;
 	}
 }
 
