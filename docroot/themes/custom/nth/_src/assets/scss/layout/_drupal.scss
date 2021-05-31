@@ -58,6 +58,7 @@
 }
 
 [data-drupal-messages] {
+	color: $black;
 	margin-bottom: 1rem;
 	@include callout(map-get($foundation-palette, 'warning'));
 }
