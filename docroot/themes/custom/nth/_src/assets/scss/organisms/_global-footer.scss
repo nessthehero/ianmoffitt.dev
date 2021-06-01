@@ -48,6 +48,15 @@
 		}
 	}
 
+	&__copyright {
+		@include breakpoint(medium) {
+			bottom: 0;
+			font-size: 14px;
+			position: absolute;
+			right: 20px;
+		}
+	}
+
 	@include breakpoint(medium) {
 		display: flex;
 		flex-direction: row;

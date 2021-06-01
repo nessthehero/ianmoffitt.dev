@@ -18,6 +18,7 @@
 <footer id="js-global-footer" data-region="{{ region }}" {{ attributes.addClass('global-footer') }}>
     <section class="global-footer__info">
         {{ content }}
+        <p class="global-footer__copyright">&copy; Ian Moffitt {{ "now"|date("Y") }}</p>
     </section>
     <section class="global-footer__links">
         {{ drupal_menu('footer') }}
