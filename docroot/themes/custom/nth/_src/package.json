@@ -20,6 +20,7 @@
     "foundation-sites": "~6.6.2",
     "jquery": "~3.5.0",
     "modernizr": "~3.11.0",
+    "underscore": "^1.13.2",
     "what-input": "~5.2.7"
   },
   "devDependencies": {
@@ -50,7 +51,7 @@
     "imagemin-webp": "~5.1.0",
     "mkdirp": "^1.0.4",
     "mocha": "^8.1.1",
-    "node-sass": "~4.14.1",
+    "node-sass": "~6.0.1",
     "postcss": "~7.0.6",
     "postcss-cli": "~7.1.0",
     "postcss-loader": "~3.0.0",
@@ -84,7 +85,7 @@
     "preprocess:css:server": "npm run sass:build && npm run postcss:preprocess",
     "preprocess:js": "npx webpack --config ./_config/webpack.config.js",
     "preprocess:server": "npm run preprocess:css:server && npm run preprocess:js && npm run modernizr",
-    "sass:build": "node lib/nodesass.js",
+    "sass:build": "npm rebuild node-sass && node lib/nodesass.js",
     "sass:index": "node lib/updateScss.js",
     "sass:lint": "npm run postcss:fixsass && stylelint \"assets/scss/**/*.scss\" --fix --cache --cache-location \"./.stylelintcache/\" --config \"./_config/.stylelintrc.json\" --ignore-path \"./_config/.stylelintignore\"",
     "scaffold": "npm run modernizr && npm run preprocess",

@@ -24,6 +24,8 @@ const grid = {
 
 	software: 'ianmoffitt.dev',
 
+	mode: 'gray',
+
 	init() {
 
 		this.load();
@@ -213,26 +215,42 @@ const grid = {
 						foundCoord = true;
 
 						color = this.coords[i].color;
+						let rgb = this.parseRgb(color);
 
-						let rgb = color
-							.replace(/^(rgb|rgba)\(/, '')
-							.replace(/\)$/, '')
-							.replace(/\s/g, '')
-							.split(',');
+						if (this.mode === 'color') {
 
-						let newR = rgb[0] * 1;
-						if (newR > 0) {
-							if (newR < 5) {
-								newR = 0;
-							} else {
-								newR -= this.shadeStep;
+							// let _key = this.randomKey(rgb);
+							//
+							// if (rgb[_key] > 0) {
+							// 	if (rgb[_key] < 5) {
+							// 		rgb[_key] = 0;
+							// 	} else {
+							// 		rgb[_key] -= this.shadeStep;
+							// 	}
+							// }
+
+							rgb = this.randomRgb();
+
+							this.coords[i].color = 'rgb(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ')';
+
+						} else {
+
+							let newR = rgb.r * 1;
+							if (newR > 0) {
+								if (newR < 5) {
+									newR = 0;
+								} else {
+									newR -= this.shadeStep;
+								}
 							}
+
+							let newG = newR;
+							let newB = newR;
+
+							this.coords[i].color = 'rgb(' + newR + ',' + newG + ',' + newB + ')';
+
 						}
 
-						let newG = newR;
-						let newB = newR;
-
-						this.coords[i].color = 'rgb(' + newR + ',' + newG + ',' + newB + ')';
 						this.coords[i].changed = 1;
 
 						break;
@@ -351,6 +369,39 @@ const grid = {
 		}
 
 		return data;
+
+	},
+
+	parseRgb(rgb) {
+
+		let _rgb = rgb
+			.replace(/^(rgb|rgba)\(/, '')
+			.replace(/\)$/, '')
+			.replace(/\s/g, '')
+			.split(',');
+
+		return {
+			'r': _rgb[0],
+			'g': _rgb[1],
+			'b': _rgb[2]
+		}
+
+	},
+
+	randomRgb() {
+
+		return {
+			'r': Math.floor(Math.random() * 255),
+			'g': Math.floor(Math.random() * 255),
+			'b': Math.floor(Math.random() * 255),
+		};
+
+	},
+
+	randomKey(arr) {
+
+		let keys = Object.keys(arr);
+		return keys[Math.floor(keys.length * Math.random())];
 
 	}
 

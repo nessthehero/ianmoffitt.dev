@@ -19,6 +19,7 @@
 	}
 
 	&__info {
+		--heading-color: #{$white};
 		color: $white;
 
 		@include breakpoint(medium) {

@@ -3,7 +3,7 @@
 	background-color: $white;
 	border-radius: 3px;
 	box-shadow: 0 0 3px $black;
-	padding: var(--flow-space, $flow-space);
+	padding: 0;
 	position: relative;
 	z-index: 10;
 
@@ -12,5 +12,70 @@
 		display: block;
 		font-style: italic;
 		font-weight: bold;
+	}
+
+	.links a {
+		background-color: $jungle-green;
+		font-weight: 700;
+	}
+
+	&__footer,
+	&__body {
+		padding: 0 20px;
+
+		p {
+			padding: 0;
+		}
+	}
+
+	&__figure {
+		margin: 20px -20px;
+		position: relative;
+		z-index: 11;
+
+		img,
+		picture {
+			width: 100%;
+		}
+
+		figcaption {
+			background-color: $blue-stone;
+			color: $white;
+			font-size: 14px;
+			padding: 8px 10px;
+			width: 100%;
+			z-index: 12;
+
+			@include breakpoint(medium) {
+				border-radius: 3px;
+				bottom: 16px;
+				font-size: 16px;
+				left: 25px;
+				padding: 8px 21px;
+				position: absolute;
+				width: calc(100% - 50px);
+			}
+		}
+
+		@include breakpoint(medium) {
+			margin: 20px -46px;
+
+			img,
+			picture {
+				border-radius: 3px;
+			}
+		}
+	}
+
+	&__footer {
+		margin-bottom: -1rem;
+	}
+
+	&--snippet {
+		padding: 20px 0;
+
+		h1 {
+			@extend %font-h3;
+		}
 	}
 }
