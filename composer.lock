@@ -809,8 +809,8 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Doctrine\\Common\\Inflector\\": "lib/Doctrine/Common/Inflector",
-                    "Doctrine\\Inflector\\": "lib/Doctrine/Inflector"
+                    "Doctrine\\Inflector\\": "lib/Doctrine/Inflector",
+                    "Doctrine\\Common\\Inflector\\": "lib/Doctrine/Common/Inflector"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1453,16 +1453,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "9.3.6",
+            "version": "9.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "2c0c89a0f49fab56f8322721888cdfa28fe98c3a"
+                "reference": "a768174b00fa088027d460a80a13550e624b9bf8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/2c0c89a0f49fab56f8322721888cdfa28fe98c3a",
-                "reference": "2c0c89a0f49fab56f8322721888cdfa28fe98c3a",
+                "url": "https://api.github.com/repos/drupal/core/zipball/a768174b00fa088027d460a80a13550e624b9bf8",
+                "reference": "a768174b00fa088027d460a80a13550e624b9bf8",
                 "shasum": ""
             },
             "require": {
@@ -1704,9 +1704,9 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-                "source": "https://github.com/drupal/core/tree/9.3.6"
+                "source": "https://github.com/drupal/core/tree/9.3.7"
             },
-            "time": "2022-02-15T20:26:28+00:00"
+            "time": "2022-03-03T09:23:53+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
@@ -1760,16 +1760,16 @@
         },
         {
             "name": "drupal/core-recommended",
-            "version": "9.3.6",
+            "version": "9.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "1b24d3f87b55510f85d8495a63e141e601e32a88"
+                "reference": "29f6f29672861a5719701a59aae26aafbb4c9495"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/1b24d3f87b55510f85d8495a63e141e601e32a88",
-                "reference": "1b24d3f87b55510f85d8495a63e141e601e32a88",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/29f6f29672861a5719701a59aae26aafbb4c9495",
+                "reference": "29f6f29672861a5719701a59aae26aafbb4c9495",
                 "shasum": ""
             },
             "require": {
@@ -1778,7 +1778,7 @@
                 "doctrine/annotations": "1.13.2",
                 "doctrine/lexer": "1.2.1",
                 "doctrine/reflection": "1.2.2",
-                "drupal/core": "9.3.6",
+                "drupal/core": "9.3.7",
                 "egulias/email-validator": "3.1.2",
                 "guzzlehttp/guzzle": "6.5.5",
                 "guzzlehttp/promises": "1.5.1",
@@ -1840,9 +1840,9 @@
             ],
             "description": "Locked core dependencies; require this project INSTEAD OF drupal/core.",
             "support": {
-                "source": "https://github.com/drupal/core-recommended/tree/9.3.6"
+                "source": "https://github.com/drupal/core-recommended/tree/9.3.7"
             },
-            "time": "2022-02-15T20:26:28+00:00"
+            "time": "2022-03-03T09:23:53+00:00"
         },
         {
             "name": "drupal/ctools",
@@ -3525,12 +3525,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Promise\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\Promise\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -5666,12 +5666,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Ctype\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -6047,7 +6047,7 @@
         },
         {
             "name": "symfony/polyfill-php72",
-            "version": "v1.24.0",
+            "version": "v1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php72.git",
@@ -6103,7 +6103,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php72/tree/v1.24.0"
+                "source": "https://github.com/symfony/polyfill-php72/tree/v1.25.0"
             },
             "funding": [
                 {
@@ -6123,7 +6123,7 @@
         },
         {
             "name": "symfony/polyfill-php73",
-            "version": "v1.24.0",
+            "version": "v1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php73.git",
@@ -6182,7 +6182,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php73/tree/v1.24.0"
+                "source": "https://github.com/symfony/polyfill-php73/tree/v1.25.0"
             },
             "funding": [
                 {
