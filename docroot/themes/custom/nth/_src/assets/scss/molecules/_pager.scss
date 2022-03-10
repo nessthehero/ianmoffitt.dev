@@ -1,0 +1,34 @@
+.js-pager {
+	height: 45px;
+	position: relative;
+	text-align: center;
+	width: 100%;
+
+	li {
+		background-color: $white;
+		border-radius: 3px;
+		box-shadow: 0 0 3px $black;
+		color: $tropical-rain-forest;
+		display: inline-block;
+		font-weight: bold;
+		padding: 2px 8px;
+
+		a {
+			color: $tropical-rain-forest;
+		}
+	}
+
+	&__prev,
+	&__next {
+		position: absolute;
+		top: 0;
+	}
+
+	&__prev {
+		left: 0;
+	}
+
+	&__next {
+		right: 0;
+	}
+}
