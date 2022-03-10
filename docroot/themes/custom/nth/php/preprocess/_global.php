@@ -19,6 +19,8 @@
 		// Sometimes the preprocess_html hook doesn't work correctly,
 		// So we do stuff here instead.
 
+		echo '';
+
 		if ($hook == 'html') {
 
 			$node = Drupal::request()->attributes->get('node');
@@ -73,6 +75,8 @@
 			$account = $variables['elements']['#user'];
 
 			$variables['username'] = $account->getDisplayName();
+
+			$variables['attributes']['class'][] = 'content__body';
 
 		}
 

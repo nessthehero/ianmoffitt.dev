@@ -72,4 +72,45 @@
  * @ingroup themeable
  */
 #}
-<!-- Home page -->
+{% block content %}
+
+    <div class="content__body">
+
+        {% block heading %}
+            {% if not page %}
+                <header class="content__header">
+                    {{ title_prefix }}
+                    <h2{{ title_attributes }}>
+                        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+                    </h2>
+                    {{ title_suffix }}
+
+                    {% if display_submitted %}
+                        <div{{ author_attributes }}>
+                            <time>{{ date }}</time>
+                            {{ metadata }}
+                        </div>
+                    {% endif %}
+                </header>
+            {% else %}
+                {% if display_submitted %}
+                    <div{{ author_attributes }}>
+                        <time>{{ date }}</time>
+                        {{ metadata }}
+                    </div>
+                {% endif %}
+            {% endif %}
+        {% endblock %}
+
+        {% block precopy %}{% endblock %}
+
+        {% block copy %}
+            {{ content|without('links') }}
+        {% endblock %}
+
+        {% block postcopy %}{% endblock %}
+    </div>
+
+    {% block footer %}{% endblock %}
+
+{% endblock %}

@@ -19,13 +19,35 @@
 		font-weight: 700;
 	}
 
+	&__header {
+		padding: 20px 20px 0;
+
+		.views-row & {
+			padding: 20px 0 0;
+		}
+
+		&.view-header {
+			background-color: $white;
+			border-radius: 3px;
+			box-shadow: 0 0 3px $black;
+			padding: 10px 20px 3px;
+		}
+	}
+
 	&__footer,
 	&__body {
+		display: inline-block;
+		overflow: auto;
 		padding: 0 20px;
+		width: 100%;
 
 		p {
 			padding: 0;
 		}
+	}
+
+	&__body {
+		margin-bottom: 1rem;
 	}
 
 	&__figure {
@@ -69,13 +91,22 @@
 
 	&__footer {
 		margin-bottom: -1rem;
+		overflow: auto;
 	}
 
 	&--snippet {
 		padding: 20px 0;
 
+		#{$this}__header {
+			padding: 0;
+		}
+
 		h1 {
 			@extend %font-h3;
 		}
+	}
+
+	.user-login-form {
+		padding: 0 20px 10px;
 	}
 }

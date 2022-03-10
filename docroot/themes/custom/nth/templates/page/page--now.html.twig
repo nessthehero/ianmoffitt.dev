@@ -54,20 +54,18 @@
 
         {% include '@nth/_includes/masthead.twig' %}
 
-        <article class="content">
 
-            {% if page.page_title or page.admin %}
-                <header class="content__header">
 
-                    {{ page.page_title }}
-                    {{ page.admin }}
+        {% if page.page_title or page.admin %}
+            <header class="content__header view-header">
+                {{ page.page_title }}
+                {{ page.admin }}
+            </header>
+        {% endif %}
 
-                </header>
-            {% endif %}
+        {{ page.content }}
 
-            {{ page.content }}
 
-        </article>
 
         {% if page.footer %}
             {{ page.footer }}

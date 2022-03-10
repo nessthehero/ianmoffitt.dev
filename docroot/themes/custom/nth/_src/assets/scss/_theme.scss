@@ -37,6 +37,56 @@ $placeholder-color: $black;
 $standard-padding: rem-calc(20);
 $radio-checkbox-size: rem-calc(24);
 $flow-space: rem-calc(40);
+$global-font-size: 105%;
+$global-width: rem-calc(960);
+$foundation-palette: (
+	primary: #0f281b,
+	secondary: #00794e,
+	success: #3adb76,
+	warning: #ffae00,
+	alert: #cc4b37,
+);
+$body-background: transparent;
+$global-radius: 3px;
+$breakpoints: (
+	small: 0,
+	medium: 640px,
+	large: 1024px,
+	xlarge: 1200px,
+	xxlarge: 1440px,
+);
+$breakpoints-hidpi: (
+	hidpi-1: 1,
+	hidpi-1-5: 1.5,
+	hidpi-2: 2,
+	retina: 2,
+	hidpi-3: 3
+);
+$print-breakpoint: large;
+$breakpoint-classes: (small medium large);
+$grid-column-gutter: (
+	small: 20px,
+	medium: 30px,
+);
+$header-lineheight: 1.4;
+$header-styles: (
+	small: (
+		'h1': ('font-size': 24),
+		'h2': ('font-size': 20),
+		'h3': ('font-size': 19),
+		'h4': ('font-size': 18),
+		'h5': ('font-size': 17),
+		'h6': ('font-size': 16),
+	),
+	medium: (
+		'h1': ('font-size': 36),
+		'h2': ('font-size': 32),
+		'h3': ('font-size': 28),
+		'h4': ('font-size': 21),
+		'h5': ('font-size': 18),
+		'h6': ('font-size': 16),
+	),
+);
 
 :root {
 	--flow-space: #{$flow-space};
