@@ -58,9 +58,14 @@
 }
 
 [data-drupal-messages] {
+	background-color: map-get($foundation-palette, 'warning');
+	border-radius: 3px;
+	box-shadow: 0 0 3px $black;
 	color: $black;
 	margin-bottom: 1rem;
-	@include callout(map-get($foundation-palette, 'warning'));
+	padding: 10px 20px;
+	position: relative;
+	z-index: 10;
 }
 
 .views-row {
