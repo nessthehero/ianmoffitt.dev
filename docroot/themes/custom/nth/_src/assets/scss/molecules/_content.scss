@@ -8,6 +8,12 @@
 	position: relative;
 	z-index: 10;
 
+	.content {
+		background-color: transparent;
+		border-radius: 0;
+		box-shadow: none;
+	}
+
 	time {
 		color: $dusty-grey;
 		display: block;

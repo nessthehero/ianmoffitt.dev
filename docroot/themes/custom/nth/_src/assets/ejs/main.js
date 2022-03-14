@@ -11,4 +11,5 @@ const ready = () => {
 	$(document).foundation();
 
 };
+
 window.addEventListener('DOMContentLoaded', ready, false);
