@@ -4,6 +4,7 @@
 
 .main {
 	padding-top: var(--flow-space, $flow-space);
+	pointer-events: none;
 	position: relative;
 	z-index: 2;
 

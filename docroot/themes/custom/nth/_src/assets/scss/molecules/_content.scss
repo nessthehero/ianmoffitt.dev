@@ -4,6 +4,7 @@
 	border-radius: 3px;
 	box-shadow: 0 0 3px $black;
 	padding: 0;
+	pointer-events: all;
 	position: relative;
 	z-index: 10;
 
@@ -37,7 +38,7 @@
 	&__footer,
 	&__body {
 		display: inline-block;
-		overflow: auto;
+		overflow: visible;
 		padding: 0 20px;
 		width: 100%;
 
@@ -51,12 +52,13 @@
 	}
 
 	&__figure {
-		margin: 20px -20px;
+		margin: 20px -20px 32px;
 		position: relative;
 		z-index: 11;
 
 		img,
 		picture {
+			margin: 0;
 			width: 100%;
 		}
 
@@ -70,17 +72,18 @@
 
 			@include breakpoint(medium) {
 				border-radius: 3px;
-				bottom: 16px;
+				// bottom: 16px;
 				font-size: 16px;
-				left: 25px;
+				left: 50px;
 				padding: 8px 21px;
 				position: absolute;
-				width: calc(100% - 50px);
+				top: calc(100% - 16px);
+				width: calc(100% - 100px);
 			}
 		}
 
 		@include breakpoint(medium) {
-			margin: 20px -46px;
+			margin: 20px -46px 48px;
 
 			img,
 			picture {
