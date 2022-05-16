@@ -21,4 +21,5 @@ cd /var/www/ianmoffitt.dev
 composer install
 drush cr
 drush cim --yes
+drush updb --yes
 drush cr
