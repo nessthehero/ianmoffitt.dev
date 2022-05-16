@@ -1,0 +1,22 @@
+uuid: 9d8e87f3-5bfc-41f5-8cb4-2c699b374dd6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - nth
+_core:
+  default_config_hash: XHqCCFSM2SoluaS_MJv-iIfYPqYPxAahmR4eyi-BaGQ
+id: nth_breadcrumbs
+theme: nth
+region: header
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

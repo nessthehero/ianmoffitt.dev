@@ -1,0 +1,25 @@
+uuid: 182c26d1-2c94-49b0-8466-4937502d48c3
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:markup:a78bd982-0822-4030-95a0-c002be6200bd'
+  module:
+    - block_content
+  theme:
+    - nth
+id: footerintr
+theme: nth
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:a78bd982-0822-4030-95a0-c002be6200bd'
+settings:
+  id: 'block_content:a78bd982-0822-4030-95a0-c002be6200bd'
+  label: 'Footer Intro'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

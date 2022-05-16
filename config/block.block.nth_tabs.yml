@@ -1,0 +1,22 @@
+uuid: d06dd95c-6a5f-42c1-9f97-0af7bef8ee52
+langcode: en
+status: true
+dependencies:
+  theme:
+    - nth
+_core:
+  default_config_hash: QYzpqlJMjnpjB6mdHGakaHyO_zVLqMIKRZWpjxwzgwQ
+id: nth_tabs
+theme: nth
+region: admin
+weight: -3
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

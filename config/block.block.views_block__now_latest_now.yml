@@ -1,0 +1,29 @@
+uuid: af7b258c-592f-4e77-9182-48b5a0136b96
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.now
+  module:
+    - system
+    - views
+  theme:
+    - nth
+id: views_block__now_latest_now
+theme: nth
+region: content
+weight: -3
+provider: null
+plugin: 'views_block:now-latest_now'
+settings:
+  id: 'views_block:now-latest_now'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

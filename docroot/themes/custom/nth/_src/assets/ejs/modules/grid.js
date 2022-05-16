@@ -141,8 +141,8 @@ const grid = {
 
 				canvas.fillStyle = colorFill;
 
-				canvas.fill();
 				canvas.stroke();
+				canvas.fill();
 			}
 		}
 	},

@@ -2,3 +2,6 @@ assets/scss/plugins/
 assets/scss/helpers/lib/
 assets/scss/overrides
 assets/scss/vendor
+_assemble-*
+_mixins.scss
+_all.scss

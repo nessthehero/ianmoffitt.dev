@@ -1,0 +1,20 @@
+uuid: 49dff22a-c5b2-4411-9cde-b4f442920c1e
+langcode: en
+status: true
+dependencies:
+  theme:
+    - nth
+_core:
+  default_config_hash: vRJnDnR1DD_kJN068c5RuQH0MuVNUJzxRtgMAvg70iA
+id: nth_primaryadminactions
+theme: nth
+region: admin
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

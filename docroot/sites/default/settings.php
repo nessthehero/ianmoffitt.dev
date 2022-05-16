@@ -806,14 +806,14 @@
 		include $app_root . '/' . $site_path . '/settings.local.php';
 	}
 
-	$databases['default']['default'] = array(
-		'database'  => 'personal',
-		'username'  => 'personal',
-		'password'  => 'personal',
-		'prefix'    => '',
-		'host'      => '127.0.0.1',
-		'port'      => '3306',
-		'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-		'driver'    => 'mysql',
-	);
-	$settings['config_sync_directory'] = 'sites/default/files/config/sync';
+  $databases['default']['default'] = array (
+    'database' => 'personal',
+    'username' => 'personal',
+    'password' => '_LJNnEwgb]MevJvG',
+    'prefix' => '',
+    'host' => '127.0.0.1',
+    'port' => '8889',
+    'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+    'driver' => 'mysql',
+  );
+	$settings['config_sync_directory'] = '../config';

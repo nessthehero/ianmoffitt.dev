@@ -14,15 +14,27 @@ const config = require('./_config/_brei.json');
  */
 const fractal = module.exports = require('@frctl/fractal').create();
 
+
+/*
+ * Adjust settings if we are in a server versus a fully built library
+ */
+let pargs = process.argv;
+let isStart = pargs.includes('start');
+
 /*
  * Give your project a title.
  */
-fractal.set('project.title', 'IanMoffitt.dev');
+fractal.set('project.title', config.title);
 
 /*
- * Call all the stuff "Patterns"
+ * Change nav from Components to Library
  */
-fractal.components.set('title', 'Patterns');
+fractal.components.set('label', 'Library');
+
+/*
+ * Call all the stuff "Components"
+ */
+fractal.components.set('title', 'Components');
 
 /*
  * Tell Fractal where to look for components.
@@ -33,6 +45,13 @@ fractal.components.set('path', path.join(__dirname, 'components'));
  * Tell Fractal where to look for documentation pages.
  */
 fractal.docs.set('path', path.join(__dirname, 'docs'));
+
+/*
+ * If we're running a full build, we do not want the development section of docs.
+ */
+if (!isStart) {
+	fractal.docs.set('exclude', '**/development/**');
+}
 
 /*
  * Tell the Fractal web preview plugin where to look for static assets.

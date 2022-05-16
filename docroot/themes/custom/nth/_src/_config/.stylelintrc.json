@@ -1,6 +1,12 @@
 {
+	"customSyntax": "postcss-scss",
 	"plugins": [
 		"stylelint-scss"
+	],
+	"reporters": [
+		{
+			"formatter": "stylelint-mocha-formatter"
+		}
 	],
 	"rules": {
 		"at-rule-name-case": "lower",

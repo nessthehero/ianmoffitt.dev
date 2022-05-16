@@ -1,20 +1,24 @@
 .container {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAIAAACQKrqGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPklEQVQokd3MsQ0AMAgDwdgyEpTsPxyjkCY96SLl69Ojqkia2ZoSSUnuPlNJEZGZIyWAER3a3bf0+fXS/Us3lcIJWaJk9Y8AAAAASUVORK5CYII=);
+	background-position: -1px -1px;
+	background-repeat: repeat;
 	position: relative;
+	z-index: 2;
 }
 
 .main {
-	padding-top: var(--flow-space, $flow-space);
+	padding-top: var(--flow-space, #{$flow-space});
 	pointer-events: none;
 	position: relative;
 	z-index: 2;
 
 	> * + * {
-		margin-top: var(--flow-space, $flow-space);
+		margin-top: var(--flow-space, #{$flow-space});
 	}
 }
 
 .flow {
 	> * + * {
-		margin-top: var(--flow-space, $flow-space);
+		margin-top: var(--flow-space, #{$flow-space});
 	}
 }

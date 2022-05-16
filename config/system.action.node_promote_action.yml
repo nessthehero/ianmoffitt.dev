@@ -1,0 +1,13 @@
+uuid: dab457de-fabb-4651-a7fa-2378f4dcd05e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: rzR_kjg8iD-eJyrJG-nYoPlWBH27tKuIBJaj_kJotKo
+id: node_promote_action
+label: 'Promote content to front page'
+type: node
+plugin: node_promote_action
+configuration: {  }

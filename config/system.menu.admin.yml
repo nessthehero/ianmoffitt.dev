@@ -1,0 +1,10 @@
+uuid: 61a2495a-58c4-40b1-b1cf-1cfd8698d43d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: wuuh9Hw3ghMLApSJFchwN3fB-jPJ3V_Of-7BWhl36TY
+id: admin
+label: Administration
+description: 'INTERNAL MENU. Administrative task links.'
+locked: true

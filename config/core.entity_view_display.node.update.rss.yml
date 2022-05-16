@@ -1,0 +1,42 @@
+uuid: a85b105f-e3f2-4235-95c3-a695246f2adc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.rss
+    - field.field.node.update.body
+    - node.type.update
+  module:
+    - layout_builder
+    - smart_trim
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.update.rss
+targetEntityType: node
+bundle: update
+mode: rss
+content:
+  body:
+    type: smart_trim
+    label: hidden
+    settings:
+      trim_length: 120
+      trim_type: chars
+      trim_suffix: ''
+      wrap_output: false
+      wrap_class: trimmed
+      more_link: false
+      more_class: more-link
+      more_text: More
+      summary_handler: trim
+      trim_options:
+        text: true
+        trim_zero: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  links: true

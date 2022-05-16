@@ -1,0 +1,15 @@
+uuid: d4ee0f4f-e64a-4b6a-ab6d-6ec2efe61abe
+langcode: en
+status: true
+dependencies: {  }
+name: wide_mobile
+label: 'Wide Mobile (320x180)'
+effects:
+  91b772cd-159d-4cca-9588-4d790e58ced4:
+    uuid: 91b772cd-159d-4cca-9588-4d790e58ced4
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 320
+      height: 180
+      anchor: center-center

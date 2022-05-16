@@ -1,0 +1,22 @@
+uuid: 850b4084-15a8-48c4-ac5f-9ed1624cbbfe
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.markup
+    - field.field.block_content.markup.body
+  module:
+    - text
+id: block_content.markup.default
+targetEntityType: block_content
+bundle: markup
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

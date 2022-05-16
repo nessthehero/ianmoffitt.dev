@@ -1,0 +1,18 @@
+uuid: c5137f51-6407-45d0-9468-c91d60586afa
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.update
+id: node.update.title
+field_name: title
+entity_type: node
+bundle: update
+label: 'Date of Post'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

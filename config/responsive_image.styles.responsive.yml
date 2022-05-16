@@ -1,0 +1,62 @@
+uuid: c1f0340b-487e-46bc-bb2d-ad7e181744b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.full
+    - image.style.wide_large
+    - image.style.wide_medium
+    - image.style.wide_mobile
+    - image.style.wide_small
+  theme:
+    - nth
+id: responsive
+label: Responsive
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: wide_large
+    breakpoint_id: nth.large
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: full
+    breakpoint_id: nth.large
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: wide_large
+    breakpoint_id: nth.medium
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: wide_medium
+    breakpoint_id: nth.medium
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: wide_medium
+    breakpoint_id: nth.tablet
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: wide_small
+    breakpoint_id: nth.tablet
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: wide_mobile
+    breakpoint_id: nth.small2x
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: wide_small
+    breakpoint_id: nth.small2x
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: wide_mobile
+    breakpoint_id: nth.small
+    multiplier: 1x
+breakpoint_group: nth
+fallback_image_style: wide_small

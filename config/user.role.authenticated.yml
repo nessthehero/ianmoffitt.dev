@@ -1,0 +1,30 @@
+uuid: 82361be5-69de-4e9c-9f3a-45434457a393
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.filtered_text
+    - filter.format.full_text
+  module:
+    - comment
+    - filter
+    - honeypot
+    - media
+    - system
+_core:
+  default_config_hash: gBuNnRWSuykoNEvoNH6fh-pVQt1Mmy9GfovLfD_mY5k
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'bypass honeypot protection'
+  - 'change own username'
+  - 'edit own comments'
+  - 'post comments'
+  - 'skip comment approval'
+  - 'use text format filtered_text'
+  - 'use text format full_text'
+  - 'view media'

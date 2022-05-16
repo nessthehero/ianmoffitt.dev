@@ -1,0 +1,15 @@
+uuid: 755bc2c2-b08d-41ec-a453-8574e111dc58
+langcode: en
+status: true
+dependencies: {  }
+name: wide_small
+label: 'Wide Small (640x360)'
+effects:
+  bb338867-c342-4de4-a905-d68e6de717bb:
+    uuid: bb338867-c342-4de4-a905-d68e6de717bb
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 640
+      height: 360
+      anchor: center-center

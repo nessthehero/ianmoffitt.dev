@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: fnphwmCgfLAWN43jxKXNonjNol1VQ74yF2JJKrmEdSg
+langcode: en
+uuid: 3deae700-773b-4cc9-b6ad-3a3775550925
+name: ianmoffitt.dev
+mail: cms@ianmoffitt.dev
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: ''

@@ -2,7 +2,7 @@ module.exports = (file, options, env) => {
 	'use strict';
 
 	let config = {
-		plugins: {}
+		plugins: []
 	};
 
 	if (typeof file.env !== 'undefined' && file.env === 'scss') {
@@ -11,8 +11,8 @@ module.exports = (file, options, env) => {
 
 		config.syntax = 'postcss-scss';
 
-		config.plugins = {
-			'postcss-sorting': {
+		config.plugins = [
+			require('postcss-sorting')({
 				'order': [
 					'custom-properties',
 					'dollar-variables',
@@ -26,25 +26,25 @@ module.exports = (file, options, env) => {
 					'at-rules'
 				],
 				'properties-order': 'alphabetical'
-			}
-		};
+			})
+		];
 
 	} else if (typeof file.env !== 'undefined' && file.env === 'csspre') {
 
 		// CSS Pre-processing
 
-		config.plugins = {
-			'autoprefixer': {
+		config.plugins = [
+			require('autoprefixer')({
 				remove: false
-			}
-		};
+			})
+		];
 
 	} else {
 
 		// CSS Post-processing
 
-		config.plugins = {
-			'postcss-pxtorem': {
+		config.plugins = [
+			require('postcss-pxtorem')({
 				mediaQuery: true,
 				propList: [
 					'bottom',
@@ -60,9 +60,9 @@ module.exports = (file, options, env) => {
 					'top',
 					'width'
 				]
-			},
-			'cssnano': true
-		};
+			}),
+			require('cssnano')
+		];
 
 	}
 

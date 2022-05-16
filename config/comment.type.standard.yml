@@ -1,0 +1,8 @@
+uuid: 37e5e5f3-33ac-4a6a-8ce5-534c24b8de6f
+langcode: en
+status: true
+dependencies: {  }
+id: standard
+label: Standard
+target_entity_type_id: node
+description: ''
