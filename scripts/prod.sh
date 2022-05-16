@@ -5,6 +5,7 @@ rsync \
     --exclude=docroot/core \
     --exclude=vendor \
     --exclude=docroot/modules/contrib \
+    --exclude=docroot/themes/contrib \
     --exclude=docroot/libraries \
     --exclude=docroot/sites/development.services.yml \
     --exclude=docroot/sites/default/files \
@@ -19,5 +20,5 @@ rsync \
 cd /var/www/ianmoffitt.dev
 composer install
 drush cr
-drush cim
+drush cim --yes
 drush cr
