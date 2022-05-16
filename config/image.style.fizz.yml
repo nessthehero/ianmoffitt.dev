@@ -1,0 +1,12 @@
+uuid: 433502c3-e6ce-4a7a-b93f-498101f90482
+langcode: en
+status: true
+dependencies: {  }
+name: fizz
+label: Fizz
+effects:
+  f83ed7b7-8770-4102-a6cb-08a62d4dd9e5:
+    uuid: f83ed7b7-8770-4102-a6cb-08a62d4dd9e5
+    id: image_desaturate
+    weight: 1
+    data: {  }
