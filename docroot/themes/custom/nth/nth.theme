@@ -10,7 +10,6 @@ include_once('php/preprocess/region.php');
 include_once('php/preprocess/menu.php');
 include_once('php/preprocess/node.php');
 include_once('php/preprocess/block.php');
-//include_once('php/preprocess/paragraphs.php');
 include_once('php/alter/form.php');
 
 // Custom
