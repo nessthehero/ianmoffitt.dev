@@ -12,12 +12,21 @@
 		"at-rule-name-case": "lower",
 		"at-rule-name-newline-after": "always-multi-line",
 		"at-rule-name-space-after": "always-single-line",
-		"at-rule-no-unknown": [true, { "ignoreAtRules": ["/^include|each|extend|mixin|if|for|function|return/", "custom"] }],
+		"at-rule-no-unknown": [true, { "ignoreAtRules": ["/^include|each|extend|mixin|if|else|for|function|return/", "custom"] }],
 		"at-rule-semicolon-newline-after": "always",
 		"at-rule-semicolon-space-before": "never",
+		"at-rule-empty-line-before": [
+			"always", {
+				"ignoreAtRules": [ "else" ]
+			}
+		],
 
 		"block-closing-brace-empty-line-before": "never",
-		"block-closing-brace-newline-after": "always",
+		"block-closing-brace-newline-after": [
+			"always", {
+				"ignoreAtRules": [ "if", "else" ]
+			}
+		],
 		"block-closing-brace-newline-before": "always",
 		"block-closing-brace-space-after": "always-single-line",
 

@@ -1,18 +1,26 @@
+// TODO: Refactor
+
 'use strict';
 
 const fs = require('fs');
 const _ = require('lodash');
 const collection = [
 	{
-		'name': 'atoms',
-		'searchName': 'atoms',
-		'dir': './assets/scss/atoms',
+		'name': 'common',
+		'searchName': 'common',
+		'dir': './assets/scss/base/common',
 		'recursive': true
 	},
 	{
-		'name': 'common',
-		'searchName': 'common',
-		'dir': './assets/scss/common',
+		'name': 'forms',
+		'searchName': 'forms',
+		'dir': './assets/scss/base/forms',
+		'recursive': true
+	},
+	{
+		'name': 'mixins',
+		'searchName': 'mixins',
+		'dir': './assets/scss/base/helpers/mixins',
 		'recursive': true
 	},
 	{
@@ -22,21 +30,33 @@ const collection = [
 		'recursive': true
 	},
 	{
+		'name': 'atoms',
+		'searchName': 'atoms',
+		'dir': './assets/scss/module/atoms',
+		'recursive': true
+	},
+	{
 		'name': 'molecules',
 		'searchName': 'molecules',
-		'dir': './assets/scss/molecules',
+		'dir': './assets/scss/module/molecules',
 		'recursive': true
 	},
 	{
 		'name': 'organisms',
 		'searchName': 'organisms',
-		'dir': './assets/scss/organisms',
+		'dir': './assets/scss/module/organisms',
 		'recursive': true
 	},
 	{
 		'name': 'templates',
 		'searchName': 'templates',
-		'dir': './assets/scss/templates',
+		'dir': './assets/scss/module/templates',
+		'recursive': true
+	},
+	{
+		'name': 'theme',
+		'searchName': 'theme',
+		'dir': './assets/scss/theme',
 		'recursive': true
 	}
 ];
@@ -67,7 +87,7 @@ collection.forEach(function (data) {
 
 	var names = [];
 	var finalScssFile = '';
-	var finalPath = './assets/scss/' + data.name + '/_all.scss';
+	var finalPath = data.dir + '/_all.scss';
 
 	ff.forEach(function (entry) {
 		// Add names to be added to .scss file
@@ -83,12 +103,12 @@ collection.forEach(function (data) {
 	names.sort();
 
 	names.forEach(function (name) {
-		var importPath = '@import \'';
+		var importPath = '@import "';
 
 		name = name.replace('.scss', '');
 
 		importPath = importPath + name;
-		finalScssFile = finalScssFile + importPath + '\';\n';
+		finalScssFile = finalScssFile + importPath + '";\n';
 	});
 
 	if (finalScssFile !== '') {

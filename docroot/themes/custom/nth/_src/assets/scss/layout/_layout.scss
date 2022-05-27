@@ -1,9 +1,15 @@
-.container {
+body {
 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAIAAACQKrqGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPklEQVQokd3MsQ0AMAgDwdgyEpTsPxyjkCY96SLl69Ojqkia2ZoSSUnuPlNJEZGZIyWAER3a3bf0+fXS/Us3lcIJWaJk9Y8AAAAASUVORK5CYII=);
 	background-position: -1px -1px;
 	background-repeat: repeat;
-	position: relative;
-	z-index: 2;
+}
+
+.container {
+	// position: relative;
+	// z-index: 1;
+	pointer-events: none;
+
+	@include layer(base);
 }
 
 .main {

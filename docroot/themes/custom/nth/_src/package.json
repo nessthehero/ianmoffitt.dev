@@ -68,7 +68,7 @@
 		"webpack-cli": "~4.9.2"
 	},
 	"scripts": {
-		"build": "npm run check && npm run clean:dist && npm run scaffold && npm run build:css && npm run build:js && fractal build",
+		"build": "npm run check && npm run clean:dist && npm run scaffold && npm run build:js && fractal build",
 		"build:css": "npm run sass:build && npm run postcss:preprocess && npm run postcss:postprocess",
 		"build:img": "node lib/imagemin.js",
 		"build:js": "npx webpack --config ./_config/webpack.config.js --mode=production",

@@ -1,6 +1,6 @@
 // Use this file to store common values like
 // font size, z index, etc.
-$grayoutline: rgb(225, 225, 225);
+$color-grayoutline: rgb(225, 225, 225);
 
 // Colors
 $black: #0a0a0a;
@@ -28,6 +28,16 @@ $powder-blue: #b7e3e8;
 
 // Yellow
 $ronchi: #e8c453;
+
+// Layers
+$layers: (
+	base: 1,
+	grid: 99,
+	low: 100,
+	mid: 200,
+	max: 300,
+	modal: 301
+);
 
 // Global Variables
 $transition-time: 0.425s; // Common transition time for hover states, etc.

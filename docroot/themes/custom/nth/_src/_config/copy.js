@@ -9,7 +9,7 @@ const drupal = root + '/' + config.drupal;
 exports = module.exports = {
 	'deploy': [
 		{
-			'cwd': app + '/scss/icons',
+			'cwd': app + '/scss/base/icons',
 			'dot': true,
 			'src': [
 				'selection.json'

@@ -1,0 +1,51 @@
+input[type='text'],
+input[type='password'],
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='month'],
+input[type='week'],
+input[type='email'],
+input[type='number'],
+input[type='tel'],
+input[type='time'],
+input[type='url'],
+input[type='color'],
+input[type='file'] {
+	@extend %form-element;
+	// padding: 14px 0 16px 20px;
+	// width: 100%;
+	// word-break: normal;
+	// appearance: none;
+	// -webkit-appearance: none;
+	// border-radius: 0;
+
+	~ label {
+		// background-color: $white;
+		// font-weight: 600;
+		// left: 23px;
+		// padding: 0 2px;
+		// position: absolute;
+		// top: 21px;
+		// transition: transform $transition-time;
+	}
+
+	&:hover {
+		// border: 2px solid $brand-primary;
+		// outline: 2px solid $brand-primary;
+	}
+
+	&:focus {
+		// border: 2px solid $brand-secondary;
+		// outline: 2px solid $brand-secondary;
+	}
+
+	&[required]:valid,
+	.form__field--is-valid &,
+	&:focus {
+		~ label {
+			// transform: translate(-17px, -32px) scale(0.8);
+			// transform-origin: 70px 11px;
+		}
+	}
+}

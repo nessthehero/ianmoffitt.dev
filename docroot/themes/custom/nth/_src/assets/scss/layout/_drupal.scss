@@ -1,3 +1,9 @@
+.dialog-off-canvas-main-canvas {
+	position: static;
+	z-index: 1;
+	@include layer(base);
+}
+
 .admin-local-tasks {
 	a {
 		@include button();

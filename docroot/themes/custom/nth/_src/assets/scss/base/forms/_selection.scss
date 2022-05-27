@@ -1,0 +1,198 @@
+input[type='checkbox'],
+input[type='radio'] {
+	// left: -9999px;
+	// opacity: 0;
+	// position: absolute;
+
+	+ label {
+		// cursor: pointer;
+		// font-weight: 600;
+		// overflow: visible;
+		// padding-left: ((20px + 17px) + 14px);
+		// position: relative;
+
+		@include layer(bottom);
+	}
+
+	&:focus + label {
+		&:before {
+			// opacity: 1;
+		}
+	}
+}
+
+input[type='checkbox'] {
+
+	+ label {
+		// align-items: center;
+		// display: flex;
+		// flex-direction: row;
+		// line-height: 1;
+		// margin-bottom: 0;
+		// min-height: 34px;
+		// white-space: normal;
+
+		&:hover {
+
+			.checkbox {
+
+				&:after {
+					// border-color: $brand-primary;
+					// opacity: 1;
+				}
+			}
+		}
+
+		.checkbox {
+			// left: 0;
+			// pointer-events: none;
+			// position: absolute;
+			// top: 0;
+			// @include layer(bottom);
+		}
+	}
+
+	&:focus + label {
+		// color: $brand-primary;
+
+		.checkbox {
+			// background-color: $brand-primary;
+
+			&:after {
+				// border: 4px solid $brand-secondary;
+				// height: calc(100% + 16px);
+				// left: -8px;
+				// opacity: 1;
+				// top: -8px;
+				// width: calc(100% + 16px);
+			}
+
+			&:before {
+				// border-color: $brand-primary;
+			}
+		}
+	}
+
+	&:checked + label {
+		// color: $brand-secondary;
+
+		.checkbox {
+			// background-color: $brand-tertiary;
+
+			&:before {
+				// opacity: 1;
+			}
+
+			&:after {
+				// opacity: 0;
+			}
+		}
+	}
+
+	&:checked:focus + label {
+		// color: $brand-secondary;
+
+		.checkbox {
+			&:after {
+				// opacity: 1;
+			}
+		}
+	}
+
+	&:disabled + label {
+		// color: $dark-gray;
+		// cursor: not-allowed;
+		// pointer-events: none;
+
+		.checkbox {
+
+			&:before {
+				// background-color: $light-gray;
+				// border-width: 0;
+			}
+		}
+	}
+}
+
+input[type='radio'] {
+
+	+ label {
+
+		&:hover {
+
+			.radio-button {
+
+				&:after {
+					// opacity: 1;
+				}
+
+				&:before {
+					// border-color: $brand-primary;
+				}
+			}
+		}
+
+		.radio-button {
+			// left: 2px;
+			// pointer-events: none;
+			// position: absolute;
+			// top: -6px;
+			// @include layer(bottom);
+		}
+	}
+
+	&:focus + label {
+
+		.radio-button {
+			// background-color: $brand-primary;
+
+			&:after {
+				// border: 4px solid $brand-secondary;
+				// height: calc(100% + 16px);
+				// left: -8px;
+				// opacity: 1;
+				// top: -8px;
+				// width: calc(100% + 16px);
+			}
+
+			&:before {
+				// border-color: $brand-primary;
+			}
+		}
+	}
+
+	&:checked + label {
+		// color: $brand-primary;
+
+		.radio-button {
+			// background-color: $brand-tertiary;
+
+			&:before {
+				// opacity: 0;
+			}
+
+			&:after {
+				// border-width: 2px;
+			}
+
+			&:after,
+			&__center {
+				// opacity: 1;
+			}
+		}
+	}
+
+	&:disabled + label {
+		// color: $dark-gray;
+		// cursor: not-allowed;
+		// pointer-events: none;
+
+		.radio-button {
+			&:before {
+				// background-color: $light-gray;
+				// border-width: 0;
+				// box-shadow: none;
+			}
+		}
+	}
+}

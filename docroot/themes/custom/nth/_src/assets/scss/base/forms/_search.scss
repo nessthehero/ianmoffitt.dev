@@ -1,0 +1,14 @@
+input[type='search'] {
+	@extend %form-element;
+	// padding: 14px 0 16px 20px;
+	// appearance: none;
+	// -webkit-appearance: none;
+	// border-radius: 0;
+
+	&[required]:valid,
+	&:focus {
+		~ label {
+			// transform: translate(-17px, -30px) scale(0.8);
+		}
+	}
+}

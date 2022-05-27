@@ -132,6 +132,8 @@ const grid = {
 
 				canvas.strokeStyle = 'rgba(221, 221, 221)';
 
+				canvas.stroke();
+
 				canvas.beginPath();
 				canvas.moveTo(left, top);
 				canvas.lineTo(right, top);
@@ -141,7 +143,6 @@ const grid = {
 
 				canvas.fillStyle = colorFill;
 
-				canvas.stroke();
 				canvas.fill();
 			}
 		}
