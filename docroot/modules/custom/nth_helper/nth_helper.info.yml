@@ -1,0 +1,5 @@
+name: IanMoffitt.dev Helper
+type: module
+description: Custom hooks or helper functions to aid in site development.
+package: Custom
+core_version_requirement: ^8 || ^9
