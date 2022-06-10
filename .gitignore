@@ -20,3 +20,6 @@ docroot/sites/*/settings.remote.php
 /private
 /.editorconfig
 /.gitattributes
+
+# Drush config
+/drush/drush.yml
