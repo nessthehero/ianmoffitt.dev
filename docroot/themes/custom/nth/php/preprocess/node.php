@@ -2,12 +2,12 @@
 
 	use Drupal\node\Entity\Node;
 	use Drupal\taxonomy\Entity\Term;
+  use Nth\Helpers\Nodes;
+  use Nth\Helpers\Paragraphs;
 
 // Node preprocessing
 	function nth_preprocess_node(&$variables)
 	{
-
-		echo '';
 
 		// Reference to node object
 		$node = $variables['node'];
@@ -38,7 +38,7 @@
 
 		$variables['nid'] = $nid;
 
-		$variables['is_current_node'] = is_current_node($nid);
+    $variables['is_current_node'] = Nodes::is_current_node($nid);
 
 		$alias = \Drupal::service('path_alias.manager')->getAliasByPath('/node/' . $variables['nid']);
 
@@ -54,7 +54,7 @@
 			$variables['teaser'] = $node->get('field_teaser')->value;
 		}
 		if ($node->hasField('field_components') && !$node->field_components->isEmpty()) {
-			$variables['components'] = load_paragraphs($node->field_components);
+      $variables['components'] = Paragraphs::load_paragraphs($node->field_components);
 		}
 
 		if ($node->hasField('field_introduction') && !$node->field_introduction->isEmpty()) {

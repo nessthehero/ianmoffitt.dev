@@ -13,7 +13,7 @@
 		//
 		// $nthconfig->get('variable');
 		//
-		$nthconfig = \Drupal::service('config.factory')->getEditable('barkleyrei.settings');
+//		$nthconfig = \Drupal::service('config.factory')->getEditable('barkleyrei.settings');
 
 		// Store query strings in $_q
 		$_q = \Drupal::request()->query->all();

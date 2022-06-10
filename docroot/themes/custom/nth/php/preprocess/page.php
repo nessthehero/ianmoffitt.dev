@@ -8,13 +8,6 @@
 	function nth_preprocess_page(&$variables)
 	{
 
-		$nthconfig = \Drupal::service('config.factory')->getEditable('barkleyrei.settings');
-		$_q = \Drupal::request()->query->all();
-
-		$route_provider = \Drupal::service('router.route_provider');
-
-		$attributes = Drupal::request()->attributes;
-
 		$node = Drupal::request()->attributes->get('node');
 		$revision =  Drupal::request()->attributes->get('node_revision');
 		$preview = Drupal::request()->attributes->get('node_preview');
@@ -24,8 +17,6 @@
 				$node = $preview;
 			}
 		}
-
-		$type = '';
 
 		if (!empty($node)) {
 
@@ -52,12 +43,9 @@
 				$variables['heading'] = $node->get('title')->value;
 			}
 
-			build_masthead($node, $variables);
 			switch ($type) {
 
 				case 'home':
-
-
 
 					break;
 
