@@ -73,3 +73,9 @@
  */
 #}
 {% extends '@nth/_base/standard.html.twig' %}
+
+    {% block content %}
+	    <div {{ attributes }}>
+		    {{ parent() }}
+	    </div>
+	{% endblock %}
