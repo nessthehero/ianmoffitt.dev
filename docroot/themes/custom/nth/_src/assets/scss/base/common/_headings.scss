@@ -1,12 +1,14 @@
 // Try modifying /helpers/overrides/_foundation.scss before setting global heading styles here
 
 %heading-style {
+	font-weight: 700;
 	line-height: 1;
 }
 
 %heading-color {
 	color: var(--heading-color);
 	text-shadow: 1px 1px 1px var(--heading-shadow-color);
+	transition: color $transition-time, text-shadow $transition-time;
 }
 
 h1,
@@ -15,6 +17,7 @@ h3,
 h4,
 h5,
 h6 {
+
 	@extend %heading-style;
 
 	&:not([class]),
@@ -23,6 +26,7 @@ h6 {
 	.header &,
 	.layout & &:not([class]),
 	a {
+
 		@extend %heading-color;
 	}
 
@@ -32,7 +36,7 @@ h6 {
 }
 
 h1 {
-	font-weight: 700;
+
 }
 
 h2 {
@@ -65,10 +69,13 @@ h6 {
 }
 
 // Mixin that applies Foundation heading styles to heading classes dynamically
+
 @each $size, $headers in $header-styles {
+
 	@each $header, $font-size in $headers {
 		%font-#{$header},
 		.font-#{$header} {
+
 			@include breakpoint($size) {
 				font-size: rem-calc(map-deep-get($header-styles, $size, $header, 'font-size'));
 			}
