@@ -3,15 +3,11 @@
 	"version": "1.0.0",
 	"description": "Pattern library client project by BarkleyREI",
 	"author": {
-		"name": "BarkleyREI"
+		"name": "Ian Moffitt"
 	},
 	"license": "ISC",
 	"browserslist": [
-		"> 5% in US",
-		"last 2 versions",
-		"Firefox ESR",
-		"IE >= 11",
-		"iOS >= 12"
+		"last 2 versions"
 	],
 	"eslintConfig": {
 		"root": true
