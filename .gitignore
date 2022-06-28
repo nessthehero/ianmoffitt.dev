@@ -22,7 +22,7 @@ docroot/sites/*/settings.remote.php
 /.gitattributes
 
 # Drush config
-/drush/drush.yml
+drush/drush.yml
 
 # Node modules
 node_modules
