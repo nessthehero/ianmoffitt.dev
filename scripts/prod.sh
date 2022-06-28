@@ -13,13 +13,18 @@ rsync \
     --exclude=docroot/sites/default/settings.local.php \
     --exclude=docroot/sites/default/settings.remote.php \
     --exclude=docroot/themes/custom/nth/_src \
+    --exclude=drush/drush.yml \
     --delete \
     --progress \
     /home/ian/ianmoffitt.dev/current/ \
     /var/www/ianmoffitt.dev/
 cd /var/www/ianmoffitt.dev
+
 composer install
+
 drush cr
+
 drush cim --yes
 drush updb --yes
+
 drush cr

@@ -23,3 +23,6 @@ docroot/sites/*/settings.remote.php
 
 # Drush config
 /drush/drush.yml
+
+# Node modules
+node_modules
