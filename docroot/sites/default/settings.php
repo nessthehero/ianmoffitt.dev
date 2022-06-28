@@ -739,6 +739,7 @@
 		'^www\.ianmoffitt\.co$',
 		'^nessthehero\.com$',
 		'^www\.nessthehero\.com$',
+    '^ianmoffitt\.lndo\.site$'
 	);
 
 	/**
