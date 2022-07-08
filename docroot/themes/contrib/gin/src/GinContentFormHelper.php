@@ -135,6 +135,13 @@ class GinContentFormHelper implements ContainerInjectionInterface {
         $form['actions']['preview']['#weight'] = $save_weight - 1;
       }
 
+      // Add sidebar toggle.
+      $form['actions']['gin_sidebar_toggle'] = [
+        '#markup' => '<a href="#toggle-sidebar" class="meta-sidebar__trigger trigger" role="button" title="' . t('Hide sidebar panel') . '" aria-controls="gin_sidebar"><span class="visually-hidden">' . t('Hide sidebar panel') . '</span></a>',
+        '#weight' => '999',
+      ];
+      $form['#attached']['library'][] = 'gin/sidebar';
+
       // Create gin_actions group.
       $form['gin_actions'] = [
         '#type' => 'container',
@@ -155,6 +162,7 @@ class GinContentFormHelper implements ContainerInjectionInterface {
 
       // Now let's just remove delete, as we'll move that over to gin_sidebar.
       unset($form['gin_actions']['actions']['delete']);
+      unset($form['gin_actions']['actions']['delete_translation']);
 
       // Create gin_sidebar group.
       $form['gin_sidebar'] = [
@@ -170,10 +178,26 @@ class GinContentFormHelper implements ContainerInjectionInterface {
       ];
       // Copy footer over.
       $form['gin_sidebar']['footer'] = ($form['footer']) ?? [];
-      // Copy delete action.
+      // Copy actions.
       $form['gin_sidebar']['actions'] = [];
       $form['gin_sidebar']['actions']['#type'] = ($form['actions']['#type']) ?? [];
+      // Copy delete action.
       $form['gin_sidebar']['actions']['delete'] = ($form['actions']['delete']) ?? [];
+      // Copy delete_translation action.
+      if (isset($form['actions']['delete_translation'])) {
+        $form['gin_sidebar']['actions']['delete_translation'] = ($form['actions']['delete_translation']) ?? [];
+        $form['gin_sidebar']['actions']['delete_translation']['#attributes']['class'][] = 'button--danger';
+        $form['gin_sidebar']['actions']['delete_translation']['#attributes']['class'][] = 'action-link';
+      }
+
+      // Add sidebar toggle.
+      $form['gin_sidebar']['gin_sidebar_close'] = [
+        '#markup' => '<a href="#close-sidebar" class="meta-sidebar__close trigger" role="button" title="' . t('Close sidebar panel') . '"><span class="visually-hidden">' . t('Close sidebar panel') . '</span></a>',
+      ];
+
+      $form['gin_sidebar_overlay'] = [
+        '#markup' => '<div class="meta-sidebar__overlay trigger"></div>',
+      ];
     }
 
     // Specify necessary node form theme and library.
@@ -207,7 +231,7 @@ class GinContentFormHelper implements ContainerInjectionInterface {
    * @param string $form_id
    *   The form id.
    */
-  public function isContentForm(array $form = NULL, FormStateInterface $form_state = NULL, $form_id = NULL) {
+  public function isContentForm(array $form = NULL, FormStateInterface $form_state = NULL, $form_id = '') {
     $is_content_form = FALSE;
 
     // Get route name.
@@ -217,6 +241,7 @@ class GinContentFormHelper implements ContainerInjectionInterface {
     $route_names = [
       'node.add',
       'entity.node.content_translation_add',
+      'entity.node.content_translation_edit',
       'quick_node_clone.node.quick_clone',
       'entity.node.edit_form',
     ];

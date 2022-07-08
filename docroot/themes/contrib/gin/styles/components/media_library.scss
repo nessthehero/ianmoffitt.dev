@@ -50,8 +50,12 @@
 .media-library-item {
   background: none;
 
+  img {
+    @include color-pattern;
+  }
+
   &--grid {
-    border-radius: var(--ginBorderBig);
+    border-radius: var(--ginBorderLarge);
 
     &::before,
     &.is-hover::before,
@@ -115,7 +119,7 @@
     position: relative;
     padding-bottom: 100%;
     border: 1px solid var(--colorGinBorder);
-    border-radius: var(--ginBorderBig);
+    border-radius: var(--ginBorderLarge);
     overflow: hidden;
 
     .field {
@@ -355,13 +359,24 @@ fieldset.media-library-widget {
 }
 
 .media-library-widget-modal .media-library-item--grid {
-  @include mq($breakpointBig) {
+  @include mq(ultra) {
     width: 20%;
   }
 }
 
+.media-library-widget-modal .ui-dialog-buttonpane {
+  .form-actions {
+    flex-grow: 0;
+    white-space: nowrap;
+  }
+
+  .media-library-selected-count {
+    flex-grow: 1;
+  }
+}
+
 .media-library-selection .media-library-item--grid {
-  @include mq($breakpointWide) {
+  @include mq(wide) {
     width: 20%;
   }
 }

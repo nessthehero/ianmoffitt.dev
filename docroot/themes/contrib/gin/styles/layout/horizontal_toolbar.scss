@@ -5,12 +5,14 @@
   --ginScrollOffset: 72px;
   --ginHorizontalToolbarOffset: var(--ginToolbarHeight);
   --ginVerticalToolbarOffset: 0px; // Needs px to work in calc() functions.
+  --ginStickyOffset: 0px; // Needs px to work in calc() functions.
 
-  @include mq($breakpointMedium) {
+  @include mq(medium) {
     --ginToolbarSecondaryHeight: 60px;
     --ginToolbarHeight: 53px;
     --ginScrollOffset: 180px;
     --iconGinToolbar: 18px;
+    --ginStickyOffset: var(--ginStickyHeight);
   }
 }
 
@@ -24,12 +26,12 @@
     background: #100f10;
     box-shadow: none;
 
-    @include mq($breakpointMedium) {
+    @include mq(medium) {
       display: flex;
       background: none;
     }
 
-    @include mq($breakpointMedium) {
+    @include mq(medium) {
       height: 0;
     }
 
@@ -74,7 +76,7 @@
 }
 
 .toolbar .toolbar-menu,
-.toolbar-horizontal .toolbar-tray .menu-item--expanded,
+.toolbar-horizontal .toolbar-tray .menu-item--expanded.menu-item--expanded,
 .toolbar .toolbar-tray {
   background-color: var(--colorGinLayerBackground);
 }
@@ -138,7 +140,7 @@
 
 .gin--classic-toolbar {
   table.sticky-header {
-    @include mq($breakpointLarge) {
+    @include mq(large) {
       margin-top: 0;
     }
   }
@@ -173,7 +175,7 @@
 }
 
 .gin--horizontal-toolbar.gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary {
-  @include mq($breakpointLarge) {
+  @include mq(large) {
     top: var(--ginToolbarHeight);
     height: calc(100% - var(--ginToolbarHeight));
   }
@@ -181,7 +183,7 @@
 
 // Main horizontal nav
 .gin--horizontal-toolbar #toolbar-administration {
-  @include mq($breakpointMedium) {
+  @include mq(medium) {
     z-index: 502;
     position: fixed;
     top: 0;
@@ -196,7 +198,7 @@
 
   // align with content nicely
   .toolbar-lining {
-    @include mq($breakpointMedium) {
+    @include mq(medium) {
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
       padding-right: 0;
@@ -206,7 +208,7 @@
   // home tab
   .menu-item__tools,
   .menu-item__admin_toolbar_tools-help {
-    @include mq($breakpointMedium) {
+    @include mq(medium) {
       margin-left: -16px;
     }
   }
@@ -221,7 +223,7 @@
       mask-size: 20px 20px;
     }
 
-    @include mq($breakpointMedium) {
+    @include mq(medium) {
       padding-left: 2.875em;
 
       &:before {
@@ -240,7 +242,7 @@
 
   // target fist level only
   .toolbar-menu-administration {
-    @include mq($breakpointMedium) {
+    @include mq(medium) {
       margin-left: m#{i}n(5vw, 48px);
       margin-right: m#{i}n(5vw, 48px);
 

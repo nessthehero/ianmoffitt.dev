@@ -4,8 +4,9 @@
   /* on top of the Drupal world */
   position: sticky;
   top: 0;
-  width: 100%;
   padding: 0;
+  width: 100%;
+  height: var(--ginToolbarSecondaryHeight);
   background: rgba(255, 255, 255, .98);
   border-bottom: 1px solid var(--colorGinLayerBorder);
 }
@@ -43,8 +44,15 @@
 
 .node-preview-container .node-preview-backlink {
   position: relative;
-  padding-left: 2em;
   text-decoration: none;
+}
+
+[dir="ltr"] .node-preview-container .node-preview-backlink {
+  padding-left: 2em;
+}
+
+[dir="rtl"] .node-preview-container .node-preview-backlink {
+  padding-right: 2em;
 }
 
 .node-preview-container .node-preview-backlink::before {
@@ -52,7 +60,6 @@
   display: inline-block;
   position: absolute;
   top: 50%;
-  left: 0;
   width: var(--iconGinSecondaryToolbar);
   height: var(--iconGinSecondaryToolbar);
   transform: translateY(-50%);
@@ -65,22 +72,42 @@
           mask-position: center center;
 }
 
+[dir="ltr"] .node-preview-container .node-preview-backlink::before {
+  left: 0;
+}
+
+[dir="rtl"] .node-preview-container .node-preview-backlink::before {
+  right: 0;
+}
+
 .node-preview-container .node-preview-form-select {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: auto;
   padding: 1rem 0;
+  margin: 0 1rem;
+  height: 100%;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 48em) {
   .node-preview-container .node-preview-form-select {
-    padding: 1.25rem 0;
+    margin: 0 2rem;
   }
 }
 
-.node-preview-container .node-preview-form-select label {
+@media (min-width: 61em) {
+  .node-preview-container .node-preview-form-select {
+    margin: 0 min(5vw, 48px);
+  }
+}
+
+[dir="ltr"] .node-preview-container .node-preview-form-select label {
   padding-right: .5em;
+}
+
+[dir="rtl"] .node-preview-container .node-preview-form-select label {
+  padding-left: .5em;
 }
 
 .node-preview-container .js-hide {

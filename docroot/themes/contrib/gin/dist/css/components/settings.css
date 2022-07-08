@@ -12,8 +12,15 @@
   cursor: pointer;
   width: 32px;
   height: 32px;
-  margin-right: .5rem;
   border-color: transparent;
+}
+
+[dir="ltr"] [data-drupal-selector=edit-preset-accent-color] .form-radios .form-item--preset-accent-color input {
+  margin-right: .5rem;
+}
+
+[dir="rtl"] [data-drupal-selector=edit-preset-accent-color] .form-radios .form-item--preset-accent-color input {
+  margin-left: .5rem;
 }
 
 [data-drupal-selector=edit-preset-accent-color] .form-radios .form-item--preset-accent-color input, .gin--dark-mode [data-drupal-selector=edit-preset-accent-color] .form-radios .form-item--preset-accent-color input {
@@ -29,11 +36,7 @@
 }
 
 [data-drupal-selector=edit-preset-accent-color] .form-radios .form-item--preset-accent-color input:focus, [data-drupal-selector=edit-preset-accent-color] .form-radios .form-item--preset-accent-color input:checked {
-  box-shadow: 0 0 0 2px var(--colorGinLayerBackground), 0 0 0 4px var(--colorGinPrimary);
-}
-
-[data-drupal-selector=edit-preset-accent-color] .form-radios .form-item--preset-accent-color input:checked {
-  border-width: 16px;
+  box-shadow: inset 0 0 0 2px var(--colorGinLayerBackground), inset 0 0 0 4px var(--colorGinPrimary);
 }
 
 [data-drupal-selector=edit-preset-accent-color] .form-radios .form-item--preset-accent-color input[data-gin-accent=custom] {
@@ -56,12 +59,20 @@
   z-index: 1;
   position: absolute;
   top: 100%;
-  left: -10px;
   padding: .5rem;
   color: var(--colorGinContextualText);
   background: var(--colorGinContextual);
   border-radius: var(--ginBorderXSmall);
+}
+
+[dir="ltr"] [data-drupal-selector=edit-preset-accent-color] .form-radios .form-item--preset-accent-color .form-item__label {
+  left: -10px;
   transform: translateX(-50%);
+}
+
+[dir="rtl"] [data-drupal-selector=edit-preset-accent-color] .form-radios .form-item--preset-accent-color .form-item__label {
+  right: -10px;
+  transform: translateX(50%);
 }
 
 [data-drupal-selector=edit-preset-accent-color] .form-radios .form-item--preset-accent-color:hover .form-item__label,
@@ -75,13 +86,31 @@
 [data-drupal-selector=edit-accent-group] .form-type--textfield,
 [data-drupal-selector=edit-focus-group] .form-type--color,
 [data-drupal-selector=edit-focus-group] .form-type--textfield {
-  float: left;
   margin: 0 0 .5rem 0;
 }
 
-[data-drupal-selector=edit-accent-group] .form-type--color,
-[data-drupal-selector=edit-focus-group] .form-type--color {
+[dir="ltr"] [data-drupal-selector=edit-accent-group] .form-type--color,
+[dir="ltr"] [data-drupal-selector=edit-accent-group] .form-type--textfield,
+[dir="ltr"] [data-drupal-selector=edit-focus-group] .form-type--color,
+[dir="ltr"] [data-drupal-selector=edit-focus-group] .form-type--textfield {
+  float: left;
+}
+
+[dir="rtl"] [data-drupal-selector=edit-accent-group] .form-type--color,
+[dir="rtl"] [data-drupal-selector=edit-accent-group] .form-type--textfield,
+[dir="rtl"] [data-drupal-selector=edit-focus-group] .form-type--color,
+[dir="rtl"] [data-drupal-selector=edit-focus-group] .form-type--textfield {
+  float: right;
+}
+
+[dir="ltr"] [data-drupal-selector=edit-accent-group] .form-type--color,
+[dir="ltr"] [data-drupal-selector=edit-focus-group] .form-type--color {
   margin-right: .5rem;
+}
+
+[dir="rtl"] [data-drupal-selector=edit-accent-group] .form-type--color,
+[dir="rtl"] [data-drupal-selector=edit-focus-group] .form-type--color {
+  margin-left: .5rem;
 }
 
 [data-drupal-selector=edit-accent-group] .fieldset__description,
@@ -103,13 +132,23 @@
 }
 
 [data-drupal-selector=edit-enable-darkmode] .form-radios .form-type--radio {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+[dir="ltr"] [data-drupal-selector=edit-enable-darkmode] .form-radios .form-type--radio {
   margin-left: 0;
 }
 
+[dir="rtl"] [data-drupal-selector=edit-enable-darkmode] .form-radios .form-type--radio {
+  margin-right: 0;
+}
+
 [data-drupal-selector=edit-enable-darkmode] .form-radios .form-item__label {
+  display: inline-block;
   padding: .375rem 1rem;
   border: 2px solid transparent;
-  border-radius: var(--ginBorderBig);
+  border-radius: var(--ginBorderLarge);
   box-sizing: border-box;
 }
 
@@ -137,75 +176,130 @@
   background: var(--colorGinPrimaryLightActive);
 }
 
-[data-drupal-selector=edit-classic-toolbar] .form-radios {
+[data-drupal-selector=edit-classic-toolbar] .form-radios,
+[data-drupal-selector=edit-layout-density] .form-radios {
   display: flex;
   flex-wrap: wrap;
   margin-top: .5rem;
 }
 
-[data-drupal-selector=edit-classic-toolbar] .form-radios .form-item--classic-toolbar {
+[data-drupal-selector=edit-classic-toolbar] .form-radios .form-item,
+[data-drupal-selector=edit-layout-density] .form-radios .form-item {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   width: 140px;
+}
+
+[dir="ltr"] [data-drupal-selector=edit-classic-toolbar] .form-radios .form-item,
+[dir="ltr"] [data-drupal-selector=edit-layout-density] .form-radios .form-item {
   margin: 0 .75rem 0 0;
 }
 
-[data-drupal-selector=edit-classic-toolbar] .form-radios .form-item--classic-toolbar input {
+[dir="rtl"] [data-drupal-selector=edit-classic-toolbar] .form-radios .form-item,
+[dir="rtl"] [data-drupal-selector=edit-layout-density] .form-radios .form-item {
+  margin: 0 0 0 .75rem;
+}
+
+[data-drupal-selector=edit-classic-toolbar] .form-radios .form-item input,
+[data-drupal-selector=edit-layout-density] .form-radios .form-item input {
   cursor: pointer;
   position: static;
   width: 140px;
   height: 100px;
-  margin-left: 0;
   border-radius: var(--ginBorderMedium);
   transform: none;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 
-[data-drupal-selector=edit-classic-toolbar] .form-radios .form-item--classic-toolbar input [data-drupal-selector=edit-classic-toolbar] .form-radios .form-item--classic-toolbar input:focus {
+[dir="ltr"] [data-drupal-selector=edit-classic-toolbar] .form-radios .form-item input,
+[dir="ltr"] [data-drupal-selector=edit-layout-density] .form-radios .form-item input {
+  margin-left: 0;
+}
+
+[dir="rtl"] [data-drupal-selector=edit-classic-toolbar] .form-radios .form-item input,
+[dir="rtl"] [data-drupal-selector=edit-layout-density] .form-radios .form-item input {
+  margin-right: 0;
+}
+
+[data-drupal-selector=edit-classic-toolbar] .form-radios .form-item input [data-drupal-selector=edit-classic-toolbar] .form-radios .form-item input:focus,
+[data-drupal-selector=edit-classic-toolbar] .form-radios .form-item input [data-drupal-selector=edit-layout-density] .form-radios .form-item input:focus,
+[data-drupal-selector=edit-layout-density] .form-radios .form-item input [data-drupal-selector=edit-classic-toolbar] .form-radios .form-item input:focus,
+[data-drupal-selector=edit-layout-density] .form-radios .form-item input [data-drupal-selector=edit-layout-density] .form-radios .form-item input:focus {
   border-color: var(--colorGinText);
   box-shadow: none;
 }
 
-[data-drupal-selector=edit-classic-toolbar] .form-radios .form-item--classic-toolbar input:checked, [data-drupal-selector=edit-classic-toolbar] .form-radios .form-item--classic-toolbar input:hover:checked {
-  border-color: transparent;
-  box-shadow: 0 0 0 2px var(--colorGinLayerBackground), 0 0 0 4px var(--colorGinPrimary);
+[data-drupal-selector=edit-classic-toolbar] .form-radios .form-item input:checked,
+[data-drupal-selector=edit-layout-density] .form-radios .form-item input:checked {
+  border-color: var(--colorGinPrimary);
+  box-shadow: inset 0 0 0 1px var(--colorGinPrimary);
 }
 
-[data-drupal-selector=edit-classic-toolbar] .form-radios .form-item--classic-toolbar input:focus {
-  border-color: transparent;
-  box-shadow: 0 0 0 1px var(--colorGinFocusBorder), 0 0 0 4px var(--colorGinFocus);
+[data-drupal-selector=edit-classic-toolbar] .form-radios .form-item input:focus,
+[data-drupal-selector=edit-layout-density] .form-radios .form-item input:focus {
+  box-shadow: 0 0 0 3px var(--colorGinFocus);
 }
 
-[data-drupal-selector=edit-classic-toolbar] .form-radios .form-item--classic-toolbar input[data-gin-toolbar=vertical] {
-  background-image: url(../../media/settings/toolbar_sidebar.png);
+[data-drupal-selector=edit-classic-toolbar] .form-radios .form-item input:checked:focus,
+[data-drupal-selector=edit-layout-density] .form-radios .form-item input:checked:focus {
+  box-shadow: inset 0 0 0 1px var(--colorGinPrimary), 0 0 0 3px var(--colorGinFocus);
 }
 
-.gin--dark-mode [data-drupal-selector=edit-classic-toolbar] .form-radios .form-item--classic-toolbar input[data-gin-toolbar=vertical] {
-  background-image: url(../../media/settings/toolbar_sidebar_darkmode.png);
-}
-
-[data-drupal-selector=edit-classic-toolbar] .form-radios .form-item--classic-toolbar input[data-gin-toolbar=horizontal] {
-  background-image: url(../../media/settings/toolbar_minimal.png);
-}
-
-.gin--dark-mode [data-drupal-selector=edit-classic-toolbar] .form-radios .form-item--classic-toolbar input[data-gin-toolbar=horizontal] {
-  background-image: url(../../media/settings/toolbar_minimal_darkmode.png);
-}
-
-[data-drupal-selector=edit-classic-toolbar] .form-radios .form-item--classic-toolbar input[data-gin-toolbar=classic] {
-  background-image: url(../../media/settings/toolbar_legacy.png);
-}
-
-.gin--dark-mode [data-drupal-selector=edit-classic-toolbar] .form-radios .form-item--classic-toolbar input[data-gin-toolbar=classic] {
-  background-image: url(../../media/settings/toolbar_legacy_darkmode.png);
-}
-
-[data-drupal-selector=edit-classic-toolbar] .form-radios .form-item--classic-toolbar .form-item__label {
+[data-drupal-selector=edit-classic-toolbar] .form-radios .form-item .form-item__label,
+[data-drupal-selector=edit-layout-density] .form-radios .form-item .form-item__label {
   font-size: .75rem;
   display: block;
   margin-top: .5rem;
   margin-bottom: 1rem;
+}
+
+[data-drupal-selector=edit-classic-toolbar] .form-radios .form-item input[data-gin-toolbar=vertical] {
+  background-image: url(../../media/settings/toolbar_sidebar.png);
+}
+
+.gin--dark-mode [data-drupal-selector=edit-classic-toolbar] .form-radios .form-item input[data-gin-toolbar=vertical] {
+  background-image: url(../../media/settings/toolbar_sidebar_darkmode.png);
+}
+
+[data-drupal-selector=edit-classic-toolbar] .form-radios .form-item input[data-gin-toolbar=horizontal] {
+  background-image: url(../../media/settings/toolbar_minimal.png);
+}
+
+.gin--dark-mode [data-drupal-selector=edit-classic-toolbar] .form-radios .form-item input[data-gin-toolbar=horizontal] {
+  background-image: url(../../media/settings/toolbar_minimal_darkmode.png);
+}
+
+[data-drupal-selector=edit-classic-toolbar] .form-radios .form-item input[data-gin-toolbar=classic] {
+  background-image: url(../../media/settings/toolbar_legacy.png);
+}
+
+.gin--dark-mode [data-drupal-selector=edit-classic-toolbar] .form-radios .form-item input[data-gin-toolbar=classic] {
+  background-image: url(../../media/settings/toolbar_legacy_darkmode.png);
+}
+
+[data-drupal-selector=edit-layout-density] .form-radios .form-item input[data-drupal-selector=edit-layout-density-default] {
+  background-image: url(../../media/settings/layout_density_default.png);
+}
+
+.gin--dark-mode [data-drupal-selector=edit-layout-density] .form-radios .form-item input[data-drupal-selector=edit-layout-density-default] {
+  background-image: url(../../media/settings/layout_density_default_darkmode.png);
+}
+
+[data-drupal-selector=edit-layout-density] .form-radios .form-item input[data-drupal-selector=edit-layout-density-medium] {
+  background-image: url(../../media/settings/layout_density_medium.png);
+}
+
+.gin--dark-mode [data-drupal-selector=edit-layout-density] .form-radios .form-item input[data-drupal-selector=edit-layout-density-medium] {
+  background-image: url(../../media/settings/layout_density_default_darkmode.png);
+}
+
+[data-drupal-selector=edit-layout-density] .form-radios .form-item input[data-drupal-selector=edit-layout-density-small] {
+  background-image: url(../../media/settings/layout_density_small.png);
+}
+
+.gin--dark-mode [data-drupal-selector=edit-layout-density] .form-radios .form-item input[data-drupal-selector=edit-layout-density-small] {
+  background-image: url(../../media/settings/layout_density_small_darkmode.png);
 }
 

@@ -1,8 +1,27 @@
 name: ianmoffitt
 recipe: drupal9
 config:
+  database: mysql
   webroot: docroot
 
 services:
   database:
     type: mysql
+  node:
+    type: node:14
+  pma:
+    type: phpmyadmin
+tooling:
+  drush:
+    service: appserver
+    cmd:
+      - drush
+  pull:
+    service: appserver
+    cmd:
+      - drush sql:sync @self.prod @self --yes
+  static:
+    service: node
+    cwd: docroot/
+    cmd:
+      -

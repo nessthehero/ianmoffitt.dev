@@ -31,7 +31,6 @@ module:
   filter: 0
   gin_login: 0
   gin_toolbar: 0
-  hal: 0
   help: 0
   honeypot: 0
   image: 0
@@ -45,6 +44,7 @@ module:
   media_library: 0
   menu_link_content: 0
   menu_ui: 0
+  mysql: 0
   node: 0
   nth_helper: 0
   options: 0
