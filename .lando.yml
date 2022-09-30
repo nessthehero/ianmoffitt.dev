@@ -1,16 +1,26 @@
 name: ianmoffitt
-recipe: drupal9
+recipe: lamp
 config:
-  database: mysql
+  php: '8.1'
+  database: mysql:5.7
   webroot: docroot
+  composer_version: '2.3.10'
+  xdebug: debug
+  config:
+    php: config/php.ini
 
 services:
   database:
-    type: mysql
+    type: mysql:5.7
+    creds:
+      database: drupal9
+      user: drupal9
+      password: drupal9
   node:
     type: node:14
   pma:
     type: phpmyadmin
+
 tooling:
   drush:
     service: appserver
@@ -22,6 +32,6 @@ tooling:
       - drush sql:sync @self.prod @self --yes
   static:
     service: node
-    cwd: docroot/
+    cwd: /app/docroot/themes/custom/nth/_src
     cmd:
-      -
+      - npm run server
