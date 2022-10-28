@@ -9,6 +9,15 @@ config:
   config:
     php: config/php.ini
 
+excludes:
+  - vendor
+  - node_modules
+  - '!vendor/drush!'
+
+events:
+  pre-start:
+    - appserver: composer install
+
 services:
   database:
     type: mysql:5.7
@@ -26,7 +35,7 @@ tooling:
     service: appserver
     cmd:
       - drush
-  pull:
+  sync:
     service: appserver
     cmd:
       - drush sql:sync @self.prod @self --yes
@@ -35,3 +44,10 @@ tooling:
     cwd: /app/docroot/themes/custom/nth/_src
     cmd:
       - npm run server
+  install:
+    service: node
+    cwd: /app/docroot/themes/custom/nth/_src
+    cmd:
+      - cd /app/docroot/themes/custom/nth/_src
+      - npm install
+
