@@ -9,6 +9,9 @@ config:
   config:
     php: config/php.ini
 
+keys:
+  - id_rsa
+
 excludes:
   - vendor
   - node_modules
