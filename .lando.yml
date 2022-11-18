@@ -1,7 +1,7 @@
 name: ianmoffitt
 recipe: lamp
 config:
-  php: '8.1'
+  php: '8.0'
   database: mysql:5.7
   webroot: docroot
   composer_version: '2.3.10'
