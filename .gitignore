@@ -5,6 +5,7 @@
 vendor
 docroot/core
 docroot/modules/contrib
+docroot/themes/contrib
 
 # Ignore paths that contain user-generated content.
 docroot/files
