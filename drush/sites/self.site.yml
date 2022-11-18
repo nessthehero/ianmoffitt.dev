@@ -10,14 +10,3 @@ prod:
       sync:
         options:
           skip-tables-list: cache,cache_*
-
-local:
-  uri: https://local.personal:8890
-  root: /Users/ianmoffitt/Sites/ianmoffitt.dev/docroot/
-  paths:
-    - files: sites/default/files
-  command:
-    sql:
-      sync:
-        options:
-          skip-tables-list: cache,cache_*

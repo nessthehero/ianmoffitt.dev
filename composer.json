@@ -8,7 +8,7 @@
 	"require": {
 		"composer/installers": "^1.6",
 		"cweagans/composer-patches": "^1.7",
-		"drupal/admin_toolbar": "^2.0",
+		"drupal/admin_toolbar": "^3.2",
 		"drupal/anchor_link": "^2.0",
 		"drupal/auto_entitylabel": "^3.0@beta",
 		"drupal/backup_migrate": "^5.0",
@@ -33,7 +33,7 @@
 		"drupal/quick_node_clone": "^1.14",
 		"drupal/redirect": "^1.6",
 		"drupal/simple_sitemap": "^4.1",
-		"drupal/smart_trim": "^1.1",
+		"drupal/smart_trim": "^2.0",
 		"drupal/twig_tweak": "^3.0"
 	},
 	"license": "MIT",
