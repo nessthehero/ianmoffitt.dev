@@ -3,15 +3,26 @@
 	background-color: $white;
 	border-radius: 3px;
 	box-shadow: 0 0 3px $black;
-	padding: 0;
+	padding: 0 0 16px;
 	pointer-events: all;
 	position: relative;
 	z-index: 10;
 
-	.content {
-		background-color: transparent;
-		border-radius: 0;
-		box-shadow: none;
+	&__expander {
+
+	}
+
+	&__header,
+	&__body,
+	&__expander,
+	&__footer {
+		display: block;
+		margin: 16px 0;
+		padding: 0 20px;
+		overflow: visible;
+		width: 100%;
+		position: relative;
+		z-index: 11;
 	}
 
 	time {
@@ -27,34 +38,41 @@
 	}
 
 	&__header {
-		padding: 20px 20px 0;
 
-		.views-row & {
-			padding: 20px 0 0;
-		}
 
-		&.view-header {
-			background-color: $white;
-			border-radius: 3px;
-			box-shadow: 0 0 3px $black;
-			padding: 10px 20px 3px;
-		}
+		//.views-row & {
+		//	padding: 20px 0 0;
+		//}
+		//
+		//&.view-header {
+		//	background-color: $white;
+		//	border-radius: 3px;
+		//	box-shadow: 0 0 3px $black;
+		//	padding: 10px 20px 3px;
+		//}
 	}
 
 	&__footer,
 	&__body {
-		display: inline-block;
-		overflow: visible;
-		padding: 0 20px;
-		width: 100%;
 
 		p {
 			padding: 0;
 		}
 	}
 
+	&__expander,
 	&__body {
 		margin-bottom: 1rem;
+
+		.user-markup {
+			padding: 0 20px;
+		}
+	}
+
+	&__trigger {
+		position: absolute;
+		width: 40px;
+		height: 40px;
 	}
 
 	&__figure {
@@ -117,5 +135,11 @@
 
 	.user-login-form {
 		padding: 0 20px 10px;
+	}
+
+	.content {
+		background-color: transparent;
+		border-radius: 0;
+		box-shadow: none;
 	}
 }

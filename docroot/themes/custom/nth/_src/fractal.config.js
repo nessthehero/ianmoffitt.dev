@@ -96,6 +96,7 @@ const myCustomisedTheme = mandelbrot({
 	format: 'json',
 	panels: ['info', 'notes', 'html', 'resources'],
 	favicon: '/favicon.ico',
+	navigation: 'split',
 	highlightStyles: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css'
 });
 
