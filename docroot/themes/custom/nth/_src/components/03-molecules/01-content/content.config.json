@@ -1,0 +1,56 @@
+{
+	"title": "Content",
+	"status": "ready",
+	"context": {
+		"heading": "Lorem heading dolor sit amet",
+		"copy": "<p>Lorem dolor sit amet.</p>",
+		"time": "01.23.2023",
+		"links": [
+			{
+				"url": "#"
+			}
+		],
+		"scripts": [
+			"vendor",
+			"main"
+		]
+	},
+	"variants": [
+		{
+			"name": "Expand",
+			"context": {
+				"style": "content--with-expand expand expand--closed",
+				"copy": false,
+				"expand": true,
+				"links": false,
+				"time": false
+			}
+		},
+		{
+			"name": "Posts",
+			"context": {
+				"style": "content--with-posts posts",
+				"copy": false,
+				"time": false,
+				"posts": [
+					{
+						"url": "#",
+						"title": "Sample post title for stuff on my site."
+					},
+					{
+						"url": "#",
+						"title": "Yet another post about things."
+					},
+					{
+						"url": "#",
+						"title": "2023-01-03"
+					},
+					{
+						"url": "#",
+						"title": "Sample post title for stuff on my site."
+					}
+				]
+			}
+		}
+	]
+}

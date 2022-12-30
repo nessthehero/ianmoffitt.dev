@@ -96,10 +96,14 @@ const myCustomisedTheme = mandelbrot({
 	format: 'json',
 	panels: ['info', 'notes', 'html', 'resources'],
 	favicon: '/favicon.ico',
+	navigation: 'split',
 	highlightStyles: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css'
 });
 
 fractal.web.theme(myCustomisedTheme);
+
+// SVG Class Name
+fractal.set('project.svgClass', 'ian-icon');
 
 /*
  * BrowserSync options. What should we do when various static assets update?

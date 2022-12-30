@@ -76,9 +76,7 @@
 
     {% block content %}
         <article{{ attributes.addClass(['content', 'content--snippet']) }}>
-            <div class="content__wrapper">
-                {{ parent() }}
-            </div>
+	        {{ parent() }}
         </article>
     {% endblock %}
 

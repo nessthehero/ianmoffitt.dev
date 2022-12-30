@@ -1,0 +1,27 @@
+uuid: 360b0087-6896-4128-a1a0-982fe928823d
+langcode: en
+status: true
+dependencies:
+  module:
+    - nth_twitter_block
+    - system
+  theme:
+    - nth
+id: twitterexpander
+theme: nth
+region: content
+weight: 0
+provider: null
+plugin: nth_twitter
+settings:
+  id: nth_twitter
+  label: 'Twitter Expander'
+  label_display: '0'
+  provider: nth_twitter_block
+  heading: Tweets
+  twitter_widget: '<a class="twitter-timeline" href="https://twitter.com/nessthehero?ref_src=twsrc%5Etfw">Tweets by nessthehero</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

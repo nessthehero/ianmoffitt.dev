@@ -5,6 +5,7 @@ const path = require('path');
 const webpack = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
+const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
 
 const projectDir = __dirname + '/..';
 const srcDir = projectDir + '/assets/ejs';
@@ -78,7 +79,32 @@ let config = {
 		new webpack.SourceMapDevToolPlugin({
 			filename: '[name].js.map',
 			exclude: ['vendor.js', 'lib/**.js']
-		})
+		}),
+		// new SVGSpritemapPlugin(`../assets/scss/base/icons/**/*.svg`, {
+		// 	output: {
+		// 		filename: `web/themes/${themeName}/images/sprite.svg`
+		// 	},
+		// 	sprite: {
+		// 		prefix: function (file) {
+		// 			// find the index of where sprite_svgs is in the filename path
+		// 			const indexOfSubdirectory = file.indexOf('sprite_svgs');
+		// 			// slice up the string at that index
+		// 			const innerDirFileName = file.slice(indexOfSubdirectory);
+		// 			// remove the subdirectory
+		// 			const newPrefix = innerDirFileName
+		// 				// replace the filename since we're just returing the prefix
+		// 				.replace(/[a-zA-Z\-]+\.svg/g, '')
+		// 				// remove the directory we're watching
+		// 				.replace('sprite_svgs', '')
+		// 				// remove the first forward slash
+		// 				.replace('/', '')
+		// 				// now replace all forward slashes with a dash
+		// 				.replace(/\//g, '--');
+		//
+		// 			return newPrefix;
+		// 		}
+		// 	}
+		// }),
 	]
 };
 

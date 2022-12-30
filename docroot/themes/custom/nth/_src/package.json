@@ -22,7 +22,7 @@
 	"devDependencies": {
 		"@babel/core": "~7.17.9",
 		"@babel/preset-env": "~7.16.11",
-		"@frctl/fractal": "~1.5.13",
+		"@frctl/fractal": "~1.5.14",
 		"autoprefixer": "~10.4.5",
 		"babel-loader": "~8.2.5",
 		"copy": "~0.3.2",
@@ -59,6 +59,7 @@
 		"stylelint": "~14.8.0",
 		"stylelint-scss": "~4.2.0",
 		"stylelint-selector-bem-pattern": "~2.1.1",
+		"svg-spritemap-webpack-plugin": "^4.5.0",
 		"terser-webpack-plugin": "~5.3.1",
 		"webpack": "~5.72.0",
 		"webpack-cli": "~4.9.2"

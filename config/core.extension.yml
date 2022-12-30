@@ -49,6 +49,7 @@ module:
   mysql: 0
   node: 0
   nth_helper: 0
+  nth_twitter_block: 0
   options: 0
   page_cache: 0
   paragraphs_library: 0

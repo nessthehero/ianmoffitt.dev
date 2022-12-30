@@ -1,15 +1,21 @@
 // Global styles
+
 @include foundation-global-styles();
+
 @include foundation-forms();
+
 @include foundation-typography();
 
 // Grids (choose one)
 // @include foundation-xy-grid-classes ();
+
 @include foundation-grid();
 // @include foundation-flex-grid;
 
 // Generic components
+
 @include foundation-button();
+
 @include foundation-button-group();
 // @include foundation-close-button ();
 // @include foundation-label ();
@@ -28,6 +34,7 @@
 // @include foundation-tooltip ();
 
 // Containers
+
 @include foundation-accordion();
 // @include foundation-media-object ();
 // @include foundation-orbit ();
@@ -50,7 +57,9 @@
 // @include foundation-top-bar ();
 
 // Helpers
+
 @include foundation-float-classes();
 // @include foundation-flex-classes ();
+
 @include foundation-visibility-classes();
 // @include foundation-prototype-classes ();

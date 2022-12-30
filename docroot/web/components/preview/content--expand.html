@@ -1,0 +1,74 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link media="all" rel="stylesheet" href="../../css/main.css">
+	<title>Content: Expand - Preview</title>
+
+	<script type="text/javascript" src="../../js/plugins/modernizr.js"></script>
+
+	<style type="text/css">
+		body {
+			margin: 16px;
+		}
+
+		.f-component-wrapper {
+			display: grid;
+		}
+	</style>
+</head>
+<body>
+
+	<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<symbol id="ian-icon-plus" viewBox="0 0 32 32">
+			<path d="M31 12h-11v-11c0-0.552-0.448-1-1-1h-6c-0.552 0-1 0.448-1 1v11h-11c-0.552 0-1 0.448-1 1v6c0 0.552 0.448 1 1 1h11v11c0 0.552 0.448 1 1 1h6c0.552 0 1-0.448 1-1v-11h11c0.552 0 1-0.448 1-1v-6c0-0.552-0.448-1-1-1z"></path>
+		</symbol>
+		<symbol id="ian-icon-minus" viewBox="0 0 32 32">
+			<path d="M0 13v6c0 0.552 0.448 1 1 1h30c0.552 0 1-0.448 1-1v-6c0-0.552-0.448-1-1-1h-30c-0.552 0-1 0.448-1 1z"></path>
+		</symbol>
+	</defs>
+</svg>
+
+
+	<div class="f-component-wrapper">
+		<article class="content content--with-expand expand expand--closed">
+
+		<header class="content__header">
+			<h1>Lorem heading dolor sit amet</h1>
+		</header>
+
+		<a href="#" class="content__trigger">
+			<span class="show-for-sr">Toggle Expander</span>
+			
+			<svg class="ian-icon ian-icon-plus" focusable="false">
+				<use xlink:href="#ian-icon-plus"></use>
+			</svg>
+		
+			
+			<svg class="ian-icon ian-icon-minus" focusable="false">
+				<use xlink:href="#ian-icon-minus"></use>
+			</svg>
+		
+		</a>
+		<div class="content__expander content__expander--closed expand__content">
+<div class="user-markup">
+  				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur eligendi impedit inventore laudantium nesciunt nihil pariatur similique soluta unde voluptas. Accusamus, adipisci assumenda autem enim ex optio quam quis quisquam.</p>
+  				<p>Iit inventore laudantium nesciunt nihil pariatur similique soluta unde voluptas. Accusamus, assumenda autem enim ex optio quam quis quisquam.</p>
+</div>
+		</div>
+
+</article>
+
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+			<script type="text/javascript" src="/js/vendor.js"></script>
+			<script type="text/javascript" src="/js/main.js"></script>
+
+</body>
+</html>
+

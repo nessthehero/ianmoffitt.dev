@@ -1,16 +1,19 @@
 .dialog-off-canvas-main-canvas {
 	position: static;
 	z-index: 1;
+
 	@include layer(base);
 }
 
 .admin-local-tasks {
 	a {
+
 		@include button();
 	}
 }
 
 .links.inline {
+
 	@extend %inline-list;
 
 	li {
@@ -18,12 +21,14 @@
 	}
 
 	a {
+
 		@include button();
 	}
 }
 
 .field--name-comment-body {
 	label {
+
 		@include hide-for(small);
 	}
 }
@@ -38,6 +43,7 @@
 	padding: 16px 0;
 
 	h3 {
+
 		@include hide-for(small);
 	}
 
@@ -76,6 +82,10 @@
 
 .views-row {
 	margin-bottom: 2rem;
+
+	&.content {
+		margin-bottom: 0;
+	}
 
 	.content & {
 

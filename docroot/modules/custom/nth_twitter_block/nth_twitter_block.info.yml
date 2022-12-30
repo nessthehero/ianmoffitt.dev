@@ -1,0 +1,7 @@
+name: IanMoffitt.dev Twitter Block
+type: module
+description: Twitter widget inside an expander.
+dependencies:
+    - nth_helper
+package: Custom
+core_version_requirement: ^9 || ^10

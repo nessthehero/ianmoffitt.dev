@@ -28,9 +28,13 @@ const grid = {
 
 	init() {
 
+		this.$base = document.getElementById('base');
+
 		this.load();
 
-		this.drawGrid(true);
+		if (this.$base && this.$base.length > 0) {
+			this.drawGrid(true);
+		}
 
 		window.addEventListener('resize', debounce(this.testDeb, this.resizeDelay).bind(this));
 
@@ -42,7 +46,9 @@ const grid = {
 
 		this.resetCoords();
 
-		this.drawGrid(true);
+		if (this.$base && this.$base.length > 0) {
+			this.drawGrid(true);
+		}
 
 	},
 

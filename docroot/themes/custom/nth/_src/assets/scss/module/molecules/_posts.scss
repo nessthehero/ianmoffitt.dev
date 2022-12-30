@@ -1,0 +1,43 @@
+.posts {
+	$this: &;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: auto auto;
+	grid-gap: 16px;
+	padding: 16px 0;
+
+	.content__header,
+	.content__footer {
+		margin: 0;
+		padding-right: 0;
+	}
+
+	.content__footer {
+		padding-top: 16px;
+		padding-left: 0;
+	}
+
+	@include breakpoint(medium) {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto;
+	}
+
+	&__posts {
+
+		@include breakpoint(medium) {
+			padding-left: 20px;
+		}
+	}
+
+	ul {
+
+		@extend %list-reset;
+	}
+
+	&__link,
+	li a {
+
+		@extend %default-link;
+		font-weight: 600;
+	}
+}
