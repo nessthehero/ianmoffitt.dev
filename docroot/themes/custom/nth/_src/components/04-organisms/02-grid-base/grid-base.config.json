@@ -1,0 +1,10 @@
+{
+	"title": "Base Grid",
+	"status": "ready",
+	"context": {
+		"scripts": [
+			"vendor",
+			"main"
+		]
+	}
+}

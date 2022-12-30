@@ -1,0 +1,70 @@
+<article class="content{{#if style}} {{style}}{{/if}}">
+
+	{{#if img}}
+		<aside class="content__aside">
+			<figure class="content__figure">
+				{{render '@image' img }}
+
+				<picture>
+					<source srcset="https://via.placeholder.com/500 1x" media="screen and (min-width: 1920px)" type="image/jpeg">
+
+					<img src="https://via.placeholder.com/400x320" alt="Cat with headphones">
+				</picture>
+			</figure>
+		</aside>
+	{{/if}}
+
+	{{#if heading}}
+		<header class="content__header">
+			<h1>{{ heading }}</h1>
+			{{#if time}}
+				<time>{{time}}</time>
+			{{/if}}
+		</header>
+	{{/if}}
+
+	{{#if copy}}
+		<div class="content__body">
+			{{#> @user-markup }}
+				{{{copy}}}
+
+				<h2>Sample Header Level Two</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate iste iure magni minima minus nemo officia perspiciatis unde? Delectus dolore ducimus eum neque, omnis provident quas quod reiciendis sed vitae.</p>
+
+				<h3>Sample Header Level Three</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate iste iure magni minima minus nemo officia perspiciatis unde? Delectus dolore ducimus eum neque, omnis provident quas quod reiciendis sed vitae.</p>
+
+				<h4>Sample Header Level Four</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate iste iure magni minima minus nemo officia perspiciatis unde? Delectus dolore ducimus eum neque, omnis provident quas quod reiciendis sed vitae.</p>
+
+				<h5>Sample Header Level Five</h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate iste iure magni minima minus nemo officia perspiciatis unde? Delectus dolore ducimus eum neque, omnis provident quas quod reiciendis sed vitae.</p>
+
+				<h6>Sample Header Level Six</h6>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate iste iure magni minima minus nemo officia perspiciatis unde? Delectus dolore ducimus eum neque, omnis provident quas quod reiciendis sed vitae.</p>
+
+
+			{{/@user-markup}}
+		</div>
+	{{/if}}
+
+	{{#if expand}}
+		<a href="#" class="content__trigger">Toggle Expander</a>
+		<div class="content__expander content__expander--closed">
+
+		</div>
+	{{/if}}
+
+	{{#if links}}
+		<footer class="content__footer">
+			<ul class="links inline">
+				{{#each links}}
+				<li class="node-readmore">
+					<a href="/hello-world" rel="tag" title="Hello World" hreflang="en">Read more<span class="visually-hidden"> about Hello World</span></a>
+				</li>
+				{{/each}}
+			</ul>
+		</footer>
+	{{/if}}
+
+</article>

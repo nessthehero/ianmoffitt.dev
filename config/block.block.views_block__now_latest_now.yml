@@ -1,6 +1,6 @@
 uuid: af7b258c-592f-4e77-9182-48b5a0136b96
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.now

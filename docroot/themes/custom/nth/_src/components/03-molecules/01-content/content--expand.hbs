@@ -1,0 +1,23 @@
+<article class="content{{#if style}} {{style}}{{/if}}">
+
+	{{#if heading}}
+		<header class="content__header">
+			<h1>{{ heading }}</h1>
+		</header>
+	{{/if}}
+
+	{{#if expand}}
+		<a href="#" class="content__trigger">
+			<span class="show-for-sr">Toggle Expander</span>
+			{{svg "plus"}}
+			{{svg "minus"}}
+		</a>
+		<div class="content__expander content__expander--closed expand__content">
+			{{#> @user-markup }}
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur eligendi impedit inventore laudantium nesciunt nihil pariatur similique soluta unde voluptas. Accusamus, adipisci assumenda autem enim ex optio quam quis quisquam.</p>
+				<p>Iit inventore laudantium nesciunt nihil pariatur similique soluta unde voluptas. Accusamus, assumenda autem enim ex optio quam quis quisquam.</p>
+			{{/@user-markup}}
+		</div>
+	{{/if}}
+
+</article>

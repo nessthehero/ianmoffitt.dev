@@ -3,6 +3,7 @@
 	use Drupal\Core\Url;
 	use Drupal\Core\Link;
 	use Drupal\node\Entity\Node;
+	use Nth\Utils;
 	use Symfony\Component\HttpFoundation\RedirectResponse;
 
 	/**
@@ -28,6 +29,9 @@
 					$node = $preview;
 				}
 			}
+
+			$variables['partial_svg'] = Utils\Markup::contents('svg');
+			$variables['partial_access'] = Utils\Markup::contents('accessnav');
 
 			if (!empty($node)) {
 

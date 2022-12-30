@@ -1,40 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    window.frctl = {
+        env: 'static'
+    };
+    </script>
+    <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/ico">
+<style>
+    :root {
+        
+        
+        
+    }
+</style>
+
+<link rel="stylesheet" href="../../themes/mandelbrot/css/black.css?cachebust=1.10.2" type="text/css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css?cachebust=1.10.2" type="text/css">
 
 
-<figure class="masthead">
-	<img src="/img/18425572_1394198397307705_7479956252613203044_n.jpg" alt="Photo of something"/>
+<title>Error rendering component detail | ianmoffitt.dev</title>
 
-</figure>
+</head>
+<body>
 
-<article class="content">
 
-	<header class="content__header">
-		<h1>Lorem ipsum dolor sit amet</h1>
-		<time>August 4th, 2019</time>
-	</header>
 
-	<section class="content__section">
-<div class="user-markup">
-  
-  				<dl class="rundown">
-			<dt class="rundown__term">Team</dt>
-			<dd class="rundown__definition">BarkleyREI</dd>
-			<dt class="rundown__term">Client</dt>
-			<dd class="rundown__definition">Central Piedmont Community College</dd>
-			<dt class="rundown__term">Involvement</dt>
-			<dd class="rundown__definition">Static coding of base templates and integration of those templates into Drupal 8.</dd>
-			<dt class="rundown__term">Technology</dt>
-			<dd class="rundown__definition">Drupal 8</dd>
-	</dl>
+<div class="Frame Frame--full" id="frame">
 
-  
-  			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consectetur enim est expedita fuga maiores necessitatibus obcaecati quae quibusdam, ut! Deserunt dignissimos dolores molestias mollitia nostrum quaerat repudiandae rerum veritatis.</p>
-  
-  			<p><a href="https://www.cpcc.edu/" rel="noopener">Visit this project</a></p>
-  
-  			<p><em>This website/project is no longer live or accessible.</em></p>
-  
+
+<div class="Error Error--render">
+    <h4 class="Error-title">Error rendering component</h4>
+    <div class="Error-message Prose">
+        <p>Could not render component &#39;@rundown&#39; - component not found.</p>
+
+    </div>
+    
+    <code class="Error-stack">
+        <pre>Error: Could not render component '@rundown' - component not found.
+    at Object.render (/Users/imoffitt/Sites/ianmoffitt.dev/docroot/themes/custom/nth/_src/node_modules/@frctl/handlebars/src/helpers/render.js:23:19)
+    at Object.helperWrapper (/Users/imoffitt/Sites/ianmoffitt.dev/docroot/themes/custom/nth/_src/node_modules/promised-handlebars/index.js:130:23)
+    at Object.<anonymous> (/Users/imoffitt/Sites/ianmoffitt.dev/docroot/themes/custom/nth/_src/node_modules/promised-handlebars/lib/utils.js:29:28)
+    at Object.wrapper (/Users/imoffitt/Sites/ianmoffitt.dev/docroot/themes/custom/nth/_src/node_modules/handlebars/dist/cjs/handlebars/internal/wrapHelper.js:15:19)
+    at eval (eval at createFunctionContext (/Users/imoffitt/Sites/ianmoffitt.dev/docroot/themes/custom/nth/_src/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:262:23), <anonymous>:11:145)
+    at prog (/Users/imoffitt/Sites/ianmoffitt.dev/docroot/themes/custom/nth/_src/node_modules/handlebars/dist/cjs/handlebars/runtime.js:268:12)
+    at partialBlockWrapper (/Users/imoffitt/Sites/ianmoffitt.dev/docroot/themes/custom/nth/_src/node_modules/handlebars/dist/cjs/handlebars/runtime.js:319:16)
+    at Object.invokePartial (/Users/imoffitt/Sites/ianmoffitt.dev/docroot/themes/custom/nth/_src/node_modules/handlebars/dist/cjs/handlebars/runtime.js:334:12)
+    at Object.hbs.VM.invokePartial (/Users/imoffitt/Sites/ianmoffitt.dev/docroot/themes/custom/nth/_src/node_modules/@frctl/handlebars/src/adapter.js:76:38)
+    at Object.hbs.VM.invokePartial (/Users/imoffitt/Sites/ianmoffitt.dev/docroot/themes/custom/nth/_src/node_modules/@frctl/handlebars/src/adapter.js:76:38)
+    at Object.invokePartialWrapper [as invokePartial] (/Users/imoffitt/Sites/ianmoffitt.dev/docroot/themes/custom/nth/_src/node_modules/handlebars/dist/cjs/handlebars/runtime.js:84:39)
+    at Object.eval [as main] (eval at createFunctionContext (/Users/imoffitt/Sites/ianmoffitt.dev/docroot/themes/custom/nth/_src/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:262:23), <anonymous>:11:28)
+    at main (/Users/imoffitt/Sites/ianmoffitt.dev/docroot/themes/custom/nth/_src/node_modules/handlebars/dist/cjs/handlebars/runtime.js:208:32)
+    at ret (/Users/imoffitt/Sites/ianmoffitt.dev/docroot/themes/custom/nth/_src/node_modules/handlebars/dist/cjs/handlebars/runtime.js:212:12)
+    at ret (/Users/imoffitt/Sites/ianmoffitt.dev/docroot/themes/custom/nth/_src/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:519:21)
+    at prepareAndResolveMarkers (/Users/imoffitt/Sites/ianmoffitt.dev/docroot/themes/custom/nth/_src/node_modules/promised-handlebars/index.js:92:17)</pre>
+    </code>
+    
 </div>
-	</section>
 
-</article>
 
+</div>
+
+
+
+
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.10.2"></script>
+
+
+
+</body>
+</html>

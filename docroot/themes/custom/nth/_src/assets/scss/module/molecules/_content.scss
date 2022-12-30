@@ -7,6 +7,8 @@
 	pointer-events: all;
 	position: relative;
 	z-index: 10;
+	display: inline-block;
+	width: 100%;
 
 	&__expander {
 
@@ -35,21 +37,12 @@
 	.links a {
 		background-color: $jungle-green;
 		font-weight: 700;
+		margin-bottom: 16px;
 	}
 
 	&__header {
 
 
-		//.views-row & {
-		//	padding: 20px 0 0;
-		//}
-		//
-		//&.view-header {
-		//	background-color: $white;
-		//	border-radius: 3px;
-		//	box-shadow: 0 0 3px $black;
-		//	padding: 10px 20px 3px;
-		//}
 	}
 
 	&__footer,
@@ -67,12 +60,6 @@
 		.user-markup {
 			padding: 0 20px;
 		}
-	}
-
-	&__trigger {
-		position: absolute;
-		width: 40px;
-		height: 40px;
 	}
 
 	&__figure {
@@ -117,18 +104,19 @@
 	}
 
 	&__footer {
-		margin-bottom: -1rem;
+		margin-bottom: -16px;
 		overflow: auto;
 	}
 
 	&--snippet {
-		padding: 20px 0;
+		// padding: 20px 0;
 
 		#{$this}__header {
 			padding: 0;
 		}
 
 		h1 {
+
 			@extend %font-h3;
 		}
 	}
@@ -141,5 +129,24 @@
 		background-color: transparent;
 		border-radius: 0;
 		box-shadow: none;
+		padding-bottom: 0;
+
+		.links a {
+			margin-bottom: -1px;
+		}
+	}
+
+	&--with-expand {
+		h1 {
+			margin-right: 16px + 16px;
+
+			@include breakpoint(medium) {
+				margin-right: 24px + 16px;
+			}
+
+			@include breakpoint(large) {
+				margin-right: 40px + 16px;
+			}
+		}
 	}
 }

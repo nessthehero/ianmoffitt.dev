@@ -1,121 +1,76 @@
-
-
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr" class="no-js">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    window.frctl = {
+        env: 'static'
+    };
+    </script>
+    <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/ico">
+<style>
+    :root {
+        
+        
+        
+    }
+</style>
 
-	<!-- http://microformats.org/wiki/hcard-cheatsheet -->
-	<link rel="profile" href="http://microformats.org/profile/hcard"/>
+<link rel="stylesheet" href="../../themes/mandelbrot/css/black.css?cachebust=1.10.2" type="text/css">
 
-	<link media="all" rel="stylesheet" href="../../css/main.css">
-
-	<title>Detail Page: Default</title>
-
-	<script type="text/javascript" src="../../js/plugins/modernizr.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css?cachebust=1.10.2" type="text/css">
 
 
+<title>Error rendering component detail | ianmoffitt.dev</title>
 
 </head>
 <body>
-	<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"></svg>
 
 
-	<div class="container">
-		<main class="main level row column">
-			<figure class="masthead">
-	<img src="/img/18425572_1394198397307705_7479956252613203044_n.jpg" alt="Photo of something"/>
 
-</figure>
+<div class="Frame Frame--full" id="frame">
 
-<article class="content">
 
-	<header class="content__header">
-		<h1>Lorem ipsum dolor sit amet</h1>
-		<time>August 4th, 2019</time>
-	</header>
+<div class="Error Error--render">
+    <h4 class="Error-title">Error rendering component</h4>
+    <div class="Error-message Prose">
+        <p>Could not render component &#39;@rundown&#39; - component not found.</p>
 
-	<section class="content__section">
-<div class="user-markup">
-  
-  				<dl class="rundown">
-			<dt class="rundown__term">Team</dt>
-			<dd class="rundown__definition">BarkleyREI</dd>
-			<dt class="rundown__term">Client</dt>
-			<dd class="rundown__definition">Central Piedmont Community College</dd>
-			<dt class="rundown__term">Involvement</dt>
-			<dd class="rundown__definition">Static coding of base templates and integration of those templates into Drupal 8.</dd>
-			<dt class="rundown__term">Technology</dt>
-			<dd class="rundown__definition">Drupal 8</dd>
-	</dl>
-
-  
-  			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consectetur enim est expedita fuga maiores necessitatibus obcaecati quae quibusdam, ut! Deserunt dignissimos dolores molestias mollitia nostrum quaerat repudiandae rerum veritatis.</p>
-  
-  			<p><a href="https://www.cpcc.edu/" rel="noopener">Visit this project</a></p>
-  
-  			<p><em>This website/project is no longer live or accessible.</em></p>
-  
+    </div>
+    
+    <code class="Error-stack">
+        <pre>Error: Could not render component '@rundown' - component not found.
+    at Object.render (/Users/imoffitt/Sites/ianmoffitt.dev/docroot/themes/custom/nth/_src/node_modules/@frctl/handlebars/src/helpers/render.js:23:19)
+    at Object.helperWrapper (/Users/imoffitt/Sites/ianmoffitt.dev/docroot/themes/custom/nth/_src/node_modules/promised-handlebars/index.js:130:23)
+    at Object.<anonymous> (/Users/imoffitt/Sites/ianmoffitt.dev/docroot/themes/custom/nth/_src/node_modules/promised-handlebars/lib/utils.js:29:28)
+    at Object.wrapper (/Users/imoffitt/Sites/ianmoffitt.dev/docroot/themes/custom/nth/_src/node_modules/handlebars/dist/cjs/handlebars/internal/wrapHelper.js:15:19)
+    at eval (eval at createFunctionContext (/Users/imoffitt/Sites/ianmoffitt.dev/docroot/themes/custom/nth/_src/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:262:23), <anonymous>:11:145)
+    at prog (/Users/imoffitt/Sites/ianmoffitt.dev/docroot/themes/custom/nth/_src/node_modules/handlebars/dist/cjs/handlebars/runtime.js:268:12)
+    at partialBlockWrapper (/Users/imoffitt/Sites/ianmoffitt.dev/docroot/themes/custom/nth/_src/node_modules/handlebars/dist/cjs/handlebars/runtime.js:319:16)
+    at Object.invokePartial (/Users/imoffitt/Sites/ianmoffitt.dev/docroot/themes/custom/nth/_src/node_modules/handlebars/dist/cjs/handlebars/runtime.js:334:12)
+    at Object.hbs.VM.invokePartial (/Users/imoffitt/Sites/ianmoffitt.dev/docroot/themes/custom/nth/_src/node_modules/@frctl/handlebars/src/adapter.js:76:38)
+    at Object.hbs.VM.invokePartial (/Users/imoffitt/Sites/ianmoffitt.dev/docroot/themes/custom/nth/_src/node_modules/@frctl/handlebars/src/adapter.js:76:38)
+    at Object.invokePartialWrapper [as invokePartial] (/Users/imoffitt/Sites/ianmoffitt.dev/docroot/themes/custom/nth/_src/node_modules/handlebars/dist/cjs/handlebars/runtime.js:84:39)
+    at Object.eval [as main] (eval at createFunctionContext (/Users/imoffitt/Sites/ianmoffitt.dev/docroot/themes/custom/nth/_src/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:262:23), <anonymous>:11:28)
+    at main (/Users/imoffitt/Sites/ianmoffitt.dev/docroot/themes/custom/nth/_src/node_modules/handlebars/dist/cjs/handlebars/runtime.js:208:32)
+    at ret (/Users/imoffitt/Sites/ianmoffitt.dev/docroot/themes/custom/nth/_src/node_modules/handlebars/dist/cjs/handlebars/runtime.js:212:12)
+    at ret (/Users/imoffitt/Sites/ianmoffitt.dev/docroot/themes/custom/nth/_src/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:519:21)
+    at prepareAndResolveMarkers (/Users/imoffitt/Sites/ianmoffitt.dev/docroot/themes/custom/nth/_src/node_modules/promised-handlebars/index.js:92:17)</pre>
+    </code>
+    
 </div>
-	</section>
-
-</article>
 
 
-			<footer id="js-global-footer" class="global-footer">
-
-	<section class="global-footer__info">
-
-		<div class="user-markup">
-			<h2>Hi! I'm Ian Moffitt.</h2>
-
-			<p>I'm a
-				<a href="https://css-tricks.com/poll-results-front-end-front-end/" title="front-end" rel="noopener">front-end</a>
-				developer working in Pittsburgh, PA.</p>
-		</div>
-
-		<a class="logo" href="/" title="Home Page">
-	<!--  <img src="/img/logo.svg" alt="Ian Moffitt" />-->
-	<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-		 viewBox="0 0 85.4 89.5" style="enable-background:new 0 0 85.4 89.5;" xml:space="preserve">
-		<path class="letter_m" d="M70.1,21.7l-15,26.1L38.7,7.9c-0.2-0.4-0.5-0.7-0.8-0.8L20.6,0v72l16.3,4.4c0.8,0.2,1.6-0.4,1.6-1.2V42.1 l15.9,37.5c0.3,0.7,1.4,0.8,1.7,0.1l14.7-26.6v31.5c0,0.6,0.4,1.2,1,1.3l12.7,3.5c0.5,0.1,1-0.2,1-0.7V27.6c0-0.6-0.4-1.2-1-1.5	L72,21C71.3,20.7,70.4,21,70.1,21.7z"/>
-		<path class="letter_i" d="M16.2,72L2.1,76.2c-1,0.3-2.1-0.5-2.1-1.6V8.6c0-0.8,0.5-1.5,1.2-1.9l15-6.8L16.2,72C16.2,72,16.2,72,16.2,72z"/>
-	</svg>
-</a>
+</div>
 
 
-		<p class="global-footer__copyright">&copy; Ian Moffitt 2021</p>
-
-	</section>
-
-	<section class="global-footer__links">
-
-		<ul class="global-footer__list">
-			<li><a href="https://www.twitter.com/nessthehero" title="Twitter" class="global-footer__link">Twitter</a>
-			</li>
-		</ul>
-
-		<ul class="global-footer__list">
-			<li><a class="global-footer__link" href="/about.html">About Me</a></li>
-		</ul>
-
-	</section>
-
-</footer>
-
-		</main>
-	</div>
-
-	<canvas id="base" class="grid-base"></canvas>
 
 
-	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.10.2"></script>
 
-			<script type="text/javascript" src="/js/vendor.js"></script>
-			<script type="text/javascript" src="/js/main.js"></script>
+
 
 </body>
 </html>
-

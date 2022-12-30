@@ -30,6 +30,7 @@
 	}
 
 	&__list {
+
 		@extend %list-reset;
 		padding: 0 16px 0 0;
 
@@ -51,6 +52,7 @@
 	}
 
 	&__copyright {
+
 		@include breakpoint(medium) {
 			bottom: 0;
 			font-size: 14px;

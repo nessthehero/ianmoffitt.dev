@@ -1,0 +1,75 @@
+.expand {
+	$this: &;
+	padding-bottom: 0;
+
+	header {
+		cursor: pointer;
+		user-select: none;
+	}
+
+	.ian-icon {
+		color: var(--heading-color);
+		font-size: 16px;
+
+		@include breakpoint(medium) {
+			font-size: 24px;
+		}
+
+		@include breakpoint(large) {
+			font-size: 40px;
+		}
+	}
+
+	.content__trigger {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		cursor: pointer;
+		width: 16px;
+		height: 16px;
+
+		@include breakpoint(medium) {
+			width: 24px;
+			height: 24px;
+			top: 22px;
+			right: 16px;
+		}
+
+		@include breakpoint(large) {
+			width: 40px;
+			height: 40px;
+			top: 22px;
+			right: 20px;
+		}
+	}
+
+	.content__expander {
+		overflow: hidden;
+		will-change: max-height;
+		max-height: 0;
+		transition: all $transition-time ease-out;
+		margin: 0;
+		opacity: 0;
+	}
+
+	&--closed {
+		.ian-icon-minus {
+			display: none;
+		}
+	}
+
+	&--open {
+		.content__expander {
+			opacity: 1;
+			margin-bottom: 16px;
+		}
+
+		.ian-icon-plus {
+			display: none;
+		}
+
+		.ian-icon-minus {
+			display: block;
+		}
+	}
+}

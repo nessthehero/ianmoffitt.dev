@@ -1,0 +1,10 @@
+block.settings.nth_twitter:
+    type: block_settings
+    label: 'Twitter Expand Widget'
+    mapping:
+        heading:
+            type: text
+            label: 'Heading'
+        twitter_widget:
+            type: text
+            label: 'Twitter Widget'

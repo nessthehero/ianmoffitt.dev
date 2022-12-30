@@ -12,6 +12,7 @@ input[type='time'],
 input[type='url'],
 input[type='color'],
 input[type='file'] {
+
 	@extend %form-element;
 	// padding: 14px 0 16px 20px;
 	// width: 100%;
