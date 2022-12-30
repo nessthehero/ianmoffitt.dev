@@ -34,7 +34,8 @@
 		@extend %list-reset;
 	}
 
-	&__link {
+	&__link,
+	li a {
 
 		@extend %default-link;
 		font-weight: 600;

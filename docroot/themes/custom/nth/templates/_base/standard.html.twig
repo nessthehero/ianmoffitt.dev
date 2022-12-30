@@ -82,19 +82,13 @@
                         <a href="{{ url }}" rel="bookmark">{{ label }}</a>
                     </h2>
                     {{ title_suffix }}
-
-                    {% if display_submitted %}
-                        <div{{ author_attributes }}>
-                            <time>{{ date }}</time>
-                            {{ metadata }}
-                        </div>
-                    {% endif %}
                 </header>
             {% else %}
                 {% if display_submitted %}
                     <div{{ author_attributes }}>
                         <time>{{ date }}</time>
                         {{ metadata }}
+	                    <hr />
                     </div>
                 {% endif %}
             {% endif %}
