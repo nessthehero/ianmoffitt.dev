@@ -34,7 +34,8 @@
 		"drupal/redirect": "^1.6",
 		"drupal/simple_sitemap": "^4.1",
 		"drupal/smart_trim": "^2.0",
-		"drupal/twig_tweak": "^3.0"
+		"drupal/twig_tweak": "^3.0",
+		"drupal/views_conditional": "^1.5"
 	},
 	"license": "MIT",
 	"minimum-stability": "dev",

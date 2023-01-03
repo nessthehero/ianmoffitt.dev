@@ -2,6 +2,8 @@ uuid: 017303d2-83b7-447d-b996-8e3177e7df1d
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
   module:
     - node
     - user
@@ -180,9 +182,20 @@ display:
             default_group_multiple: {  }
             group_items: {  }
       style:
-        type: html_list
+        type: default
+        options:
+          grouping:
+            -
+              field: title
+              rendered: true
+              rendered_strip: false
+          row_class: ''
+          default_row_class: true
       row:
-        type: fields
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: teaser
       query:
         type: views_query
         options:
@@ -192,6 +205,11 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
+      use_more: false
+      use_more_always: true
+      use_more_text: more
+      link_display: page_1
+      link_url: ''
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -209,8 +227,44 @@ display:
     display_plugin: block
     position: 1
     display_options:
+      style:
+        type: html_list
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+          type: ul
+          wrapper_class: item-list
+          class: ''
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline:
+            title: title
+          separator: ''
+          hide_empty: false
+      defaults:
+        style: false
+        row: false
       display_extenders: {  }
       block_description: 'Home Posts'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  page_1:
+    id: page_1
+    display_title: Page
+    display_plugin: page
+    position: 2
+    display_options:
+      display_extenders: {  }
+      path: archive
     cache_metadata:
       max-age: -1
       contexts:
