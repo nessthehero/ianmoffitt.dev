@@ -715,9 +715,9 @@ display:
       tags:
         - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_heading'
-  feed_1:
-    id: feed_1
-    display_title: Feed
+  feed_2:
+    id: feed_2
+    display_title: 'RSS Feed'
     display_plugin: feed
     position: 3
     display_options:
@@ -732,8 +732,9 @@ display:
           guid_field_options:
             guid_field: view_node
             guid_field_is_permalink: true
+      display_description: ''
       display_extenders: {  }
-      path: rss/%
+      path: rss
     cache_metadata:
       max-age: -1
       contexts:
@@ -849,10 +850,11 @@ display:
       tags: {  }
   page_1:
     id: page_1
-    display_title: Page
+    display_title: 'Archive Page'
     display_plugin: page
     position: 2
     display_options:
+      display_description: ''
       display_extenders: {  }
       path: archive
     cache_metadata:
