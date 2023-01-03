@@ -85,6 +85,10 @@
 
 	&.content {
 		margin-bottom: 0;
+
+		+ .content {
+			margin-top: var(--flow-space);
+		}
 	}
 
 	.content & {
