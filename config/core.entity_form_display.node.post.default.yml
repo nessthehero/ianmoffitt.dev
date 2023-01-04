@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.post.body
+    - field.field.node.post.field_disqus
     - field.field.node.post.field_heading
     - node.type.post
   module:
+    - disqus
     - path
     - text
 id: node.post.default
@@ -30,6 +32,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_disqus:
+    type: disqus_comment
+    weight: 51
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_heading:
     type: string_textfield
     weight: 1
@@ -50,6 +58,11 @@ content:
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox

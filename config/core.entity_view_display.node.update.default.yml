@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.update.body
+    - field.field.node.update.field_disqus
     - node.type.update
   module:
+    - disqus
     - text
     - user
 id: node.update.default
@@ -19,6 +21,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_disqus:
+    type: disqus_comment
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
     region: content
   links:
     settings: {  }

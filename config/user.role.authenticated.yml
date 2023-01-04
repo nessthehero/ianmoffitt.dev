@@ -7,6 +7,7 @@ dependencies:
     - filter.format.full_text
   module:
     - comment
+    - disqus
     - filter
     - honeypot
     - media
@@ -27,4 +28,5 @@ permissions:
   - 'skip comment approval'
   - 'use text format filtered_text'
   - 'use text format full_text'
+  - 'view disqus comments'
   - 'view media'

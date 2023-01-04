@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.rss
     - field.field.node.update.body
+    - field.field.node.update.field_disqus
     - node.type.update
   module:
     - layout_builder
@@ -39,4 +40,5 @@ content:
     weight: 0
     region: content
 hidden:
+  field_disqus: true
   links: true
