@@ -31,8 +31,8 @@ const grid = {
 		this.$base = document.getElementById('base');
 
 		this.load();
-
-		if (this.$base && this.$base.length > 0) {
+		
+		if (this.$base) {
 			this.drawGrid(true);
 		}
 
@@ -46,7 +46,7 @@ const grid = {
 
 		this.resetCoords();
 
-		if (this.$base && this.$base.length > 0) {
+		if (this.$base) {
 			this.drawGrid(true);
 		}
 

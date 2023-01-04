@@ -16,12 +16,9 @@ const expand = {
 	bindActions() {
 
 		document.addEventListener('click', (e) => {
-
-			console.log(e);
 			
 			if (e.target.matches(this.trigger)) {
 				this.toggle(e.target);
-				console.log('hi!');
 			}
 			
 		});
@@ -32,8 +29,6 @@ const expand = {
 
 		const $parent = $el.closest('.expand');
 
-		console.log($parent);
-
 		if ($parent) {
 
 			const $content = $parent.querySelector('.expand__content');
@@ -41,19 +36,15 @@ const expand = {
 
 			if ($parent.matches('.expand--open')) {
 				$content.style.maxHeight = null;
-				console.log(1);
 				$parent.classList.remove('expand--open');
 				$parent.classList.add('expand--closed');
 			} else if ($parent.matches('.expand--closed')) {
-				console.log(2);
 				$content.style.maxHeight = ($el.scrollHeight + $copy.scrollHeight) + 'px';
 				$parent.classList.remove('expand--closed');
 				$parent.classList.add('expand--open');
 			}
 
 		}
-
-		// if ($el.matches('.'))
 
 	},
 
