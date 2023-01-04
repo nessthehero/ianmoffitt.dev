@@ -25,3 +25,6 @@ drush/drush.yml
 
 # Node modules
 node_modules
+
+# Compiled
+/docroot/web

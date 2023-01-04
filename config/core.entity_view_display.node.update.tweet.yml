@@ -1,9 +1,9 @@
-uuid: a85b105f-e3f2-4235-95c3-a695246f2adc
+uuid: 8cff42a9-529e-415b-8657-e0f8d8f41544
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.rss
+    - core.entity_view_mode.node.tweet
     - field.field.node.update.body
     - field.field.node.update.field_disqus
     - node.type.update
@@ -15,27 +15,29 @@ third_party_settings:
   layout_builder:
     enabled: false
     allow_custom: false
-id: node.update.rss
+id: node.update.tweet
 targetEntityType: node
 bundle: update
-mode: rss
+mode: tweet
 content:
   body:
     type: smart_trim
     label: hidden
     settings:
-      trim_length: 120
+      trim_length: 250
       trim_type: chars
-      trim_suffix: ''
+      trim_suffix: ...
       wrap_output: false
       wrap_class: trimmed
-      more_link: false
+      more_link: true
       more_class: more-link
       more_text: More
+      more_aria_label: 'Read more about [node:title]'
       summary_handler: trim
       trim_options:
         text: true
-        trim_zero: false
+        trim_zero: true
+        replace_tokens: true
     third_party_settings: {  }
     weight: 0
     region: content

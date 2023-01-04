@@ -85,6 +85,10 @@
 
 	&.content {
 		margin-bottom: 0;
+
+		+ .content {
+			margin-top: var(--flow-space);
+		}
 	}
 
 	.content & {
@@ -99,4 +103,8 @@
 	right: 0;
 	z-index: 25;
 	// TODO: Replace with RSS Icon.
+}
+
+#disqus_thread {
+	margin-top: var(--flow-space);
 }

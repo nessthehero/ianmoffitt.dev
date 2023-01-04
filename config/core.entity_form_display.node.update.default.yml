@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.update.body
+    - field.field.node.update.field_disqus
     - node.type.update
   module:
+    - disqus
     - path
     - text
 id: node.update.default
@@ -29,6 +31,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_disqus:
+    type: disqus_comment
+    weight: 122
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   path:
     type: path
     weight: 30
@@ -41,6 +49,11 @@ content:
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox

@@ -6,6 +6,7 @@ dependencies:
     - filter.format.filtered_text
   module:
     - comment
+    - disqus
     - filter
     - media
     - system
@@ -20,4 +21,5 @@ permissions:
   - 'access content'
   - 'post comments'
   - 'use text format filtered_text'
+  - 'view disqus comments'
   - 'view media'
