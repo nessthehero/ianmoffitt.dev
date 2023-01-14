@@ -11,6 +11,7 @@ editor: ckeditor5
 settings:
   toolbar:
     items:
+      - heading
       - bold
       - italic
       - '|'
@@ -22,8 +23,18 @@ settings:
       - blockQuote
       - drupalMedia
       - '|'
+      - codeBlock
+      - insertTable
+      - '|'
       - sourceEditing
   plugins:
+    ckeditor5_heading:
+      enabled_headings:
+        - heading2
+        - heading3
+        - heading4
+        - heading5
+        - heading6
     ckeditor5_sourceEditing:
       allowed_tags: {  }
     ckeditor5_list:
