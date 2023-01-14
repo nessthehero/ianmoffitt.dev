@@ -1,50 +1,41 @@
-uuid: a08581a2-1419-49da-bf59-acc82d6967a0
+uuid: 68a1a83f-42d8-4924-80aa-c9ab1b18fce7
 langcode: en
 status: true
 dependencies:
   config:
     - filter.format.full_text
   module:
-    - ckeditor
-_core:
-  default_config_hash: sz_CvyhX9wm0z9i0jdrtcrcgNWFd6svOLGZ0gKxPn9s
+    - ckeditor5
 format: full_text
-editor: ckeditor
+editor: ckeditor5
 settings:
   toolbar:
-    rows:
-      -
-        -
-          name: Formatting
-          items:
-            - Bold
-            - Italic
-        -
-          name: Links
-          items:
-            - DrupalLink
-            - DrupalUnlink
-        -
-          name: Lists
-          items:
-            - BulletedList
-            - NumberedList
-        -
-          name: Media
-          items:
-            - Blockquote
-            - DrupalImage
-            - DrupalMediaLibrary
-        -
-          name: Tools
-          items:
-            - Source
-  plugins: {  }
+    items:
+      - bold
+      - italic
+      - '|'
+      - link
+      - '|'
+      - bulletedList
+      - numberedList
+      - '|'
+      - blockQuote
+      - drupalMedia
+      - '|'
+      - sourceEditing
+  plugins:
+    ckeditor5_sourceEditing:
+      allowed_tags: {  }
+    ckeditor5_list:
+      reversed: true
+      startIndex: true
+    media_media:
+      allow_view_mode_override: false
 image_upload:
   status: true
   scheme: public
   directory: inline-images
   max_size: ''
   max_dimensions:
-    width: null
-    height: null
+    width: 0
+    height: 0
