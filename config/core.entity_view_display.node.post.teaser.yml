@@ -6,7 +6,6 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.post.body
     - field.field.node.post.field_disqus
-    - field.field.node.post.field_heading
     - node.type.post
   module:
     - text
@@ -31,4 +30,3 @@ content:
     region: content
 hidden:
   field_disqus: true
-  field_heading: true
