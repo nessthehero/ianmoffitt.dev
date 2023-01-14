@@ -60,6 +60,12 @@ filters:
       default_view_mode: default
       allowed_view_modes: {  }
       allowed_media_types: {  }
+  filter_html_escape:
+    id: filter_html_escape
+    provider: filter
+    status: false
+    weight: -43
+    settings: {  }
   filter_caption:
     id: filter_caption
     provider: filter
@@ -71,10 +77,4 @@ filters:
     provider: filter
     status: false
     weight: -41
-    settings: {  }
-  filter_html_escape:
-    id: filter_html_escape
-    provider: filter
-    status: false
-    weight: -43
     settings: {  }

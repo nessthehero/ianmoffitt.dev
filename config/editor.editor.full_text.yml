@@ -14,6 +14,7 @@ settings:
       - heading
       - bold
       - italic
+      - alignment
       - '|'
       - link
       - '|'
@@ -23,8 +24,10 @@ settings:
       - blockQuote
       - drupalMedia
       - '|'
+      - code
       - codeBlock
       - insertTable
+      - horizontalLine
       - '|'
       - sourceEditing
   plugins:
@@ -40,6 +43,12 @@ settings:
     ckeditor5_list:
       reversed: true
       startIndex: true
+    ckeditor5_alignment:
+      enabled_alignments:
+        - left
+        - center
+        - right
+        - justify
     media_media:
       allow_view_mode_override: false
 image_upload:
