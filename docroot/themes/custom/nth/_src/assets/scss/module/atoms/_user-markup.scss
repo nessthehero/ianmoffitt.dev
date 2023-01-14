@@ -28,6 +28,10 @@
 		padding: 0 0 1rem;
 	}
 
+	pre {
+		padding-bottom: $code-block-padding;
+	}
+
 	.links {
 
 		@extend %list-reset;
