@@ -38,6 +38,9 @@
 	.links a {
 		background-color: $jungle-green;
 		font-weight: 700;
+	}
+
+	.links a {
 		margin-bottom: 16px;
 	}
 
@@ -110,8 +113,6 @@
 	}
 
 	&--snippet {
-		// padding: 20px 0;
-
 		#{$this}__header {
 			padding: 0;
 		}

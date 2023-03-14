@@ -92,7 +92,9 @@
 	}
 
 	.content & {
-
+		background-color: transparent;
+		margin-bottom: 0;
+		padding-bottom: 2rem;
 	}
 }
 
@@ -107,4 +109,10 @@
 
 #disqus_thread {
 	margin-top: var(--flow-space);
+}
+
+.more-link a {
+	$button-margin: 16px 0 0 0;
+
+	@include button();
 }

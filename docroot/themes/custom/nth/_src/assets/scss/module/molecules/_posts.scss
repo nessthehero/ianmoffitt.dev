@@ -23,9 +23,9 @@
 	}
 
 	&__posts {
+		padding-left: 20px;
 
 		@include breakpoint(medium) {
-			padding-left: 20px;
 		}
 	}
 
@@ -39,5 +39,13 @@
 
 		@extend %default-link;
 		font-weight: 600;
+	}
+
+	.more-link {
+		padding-top: 16px;
+
+		a {
+			margin-bottom: 0;
+		}
 	}
 }
