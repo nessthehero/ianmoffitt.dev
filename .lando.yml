@@ -1,8 +1,8 @@
 name: ianmoffitt
 recipe: lamp
 config:
-  php: '8.0'
-  database: mysql:5.7
+  php: '8.2'
+  database: mysql:8.0
   webroot: docroot
   composer_version: '2.3.10'
   xdebug: debug
@@ -12,18 +12,13 @@ config:
 keys:
   - id_rsa
 
-excludes:
-  - vendor
-  - node_modules
-  - '!vendor/drush!'
-
 events:
   pre-start:
     - appserver: composer install
 
 services:
   database:
-    type: mysql:5.7
+    type: mysql:8.0
     creds:
       database: drupal9
       user: drupal9
