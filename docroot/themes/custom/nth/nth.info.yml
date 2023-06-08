@@ -3,7 +3,7 @@ type: theme
 description: 'IanMoffitt.dev Theme'
 core_version_requirement: ^8.8 || ^9
 screenshot: screenshot.png
-base theme: stable
+base theme: false
 
 regions:
   header: Header
