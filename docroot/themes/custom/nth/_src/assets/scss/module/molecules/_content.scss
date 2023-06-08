@@ -1,8 +1,7 @@
 .content {
 	$this: &;
 	background-color: $white;
-	border-radius: 3px;
-	box-shadow: 0 0 3px $black;
+	border: 2px solid rgba(10, 10, 10, 0.2);
 	padding: 0 0 16px;
 	pointer-events: all;
 	position: relative;
