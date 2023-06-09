@@ -108,7 +108,7 @@
 		global $base_url;
 		global $theme;
 
-		$theme_path = drupal_get_path('theme', $theme);
+		$theme_path = \Drupal::service('extension.path.resolver')->getPath('theme', $theme);
 
 		include(dirname(__DIR__) . '/partials/' . $filename . '.php');
 
