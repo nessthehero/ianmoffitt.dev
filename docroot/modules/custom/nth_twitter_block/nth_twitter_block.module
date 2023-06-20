@@ -1,6 +1,8 @@
 <?php
 
-
+	/**
+	 * Register theme implementations.
+	 */
 	function nth_twitter_block_theme($existing, $type, $theme, $path)
 	{
 

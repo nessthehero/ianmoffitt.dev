@@ -1,5 +1,5 @@
 services:
-  nth_helper.function:
-    class: Drupal\nth_helper\MenuTree
+  nth_helper.twig:
+    class: Drupal\nth_helper\TwigExtension
     tags:
       - { name: twig.extension }

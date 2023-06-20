@@ -55,7 +55,7 @@
 
 			$form['nth_twitter'] = [
 				'#type'  => 'fieldset',
-				'#title' => t('RAVE Feed settings'),
+				'#title' => t('Twitter Expand Widget settings'),
 				'#tree'  => TRUE,
 			];
 
@@ -109,8 +109,7 @@
 
 			return [
 				'#cache'   => [
-					'nth:twitter',
-					'max-age' => 60,
+					'nth:twitter'
 				],
 				'#theme'   => 'nth_twitter',
 				'#heading' => $heading,

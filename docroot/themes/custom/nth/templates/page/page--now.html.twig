@@ -52,10 +52,6 @@
 
     <main class="main level row column">
 
-        {% include '@nth/_includes/masthead.twig' %}
-
-
-
         {% if page.page_title or page.admin %}
             <header class="content__header view-header">
                 {{ page.page_title }}
@@ -64,8 +60,6 @@
         {% endif %}
 
         {{ page.content }}
-
-
 
         {% if page.footer %}
             {{ page.footer }}

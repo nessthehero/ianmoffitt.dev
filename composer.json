@@ -94,11 +94,6 @@
 				},
 				"[web-root]/sites/development.services.yml": false
 			}
-		},
-		"patches": {
-			"drupal/paragraphs": {
-				"Integrity constraint violation": "./patches/paragraphs-2901390-51.patch"
-			}
 		}
 	}
 }
