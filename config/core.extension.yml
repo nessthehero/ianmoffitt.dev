@@ -7,7 +7,6 @@ module:
   admin_toolbar_tools: 0
   auto_entitylabel: 0
   automated_cron: 0
-  basic_auth: 0
   block: 0
   block_content: 0
   breakpoint: 0
@@ -18,7 +17,6 @@ module:
   contextual: 0
   ctools: 0
   datetime: 0
-  datetime_range: 0
   dblog: 0
   disqus: 0
   dynamic_page_cache: 0
@@ -32,17 +30,12 @@ module:
   filter: 0
   gin_login: 0
   gin_toolbar: 0
-  hal: 0
   help: 0
-  honeypot: 0
   image: 0
   inline_form_errors: 0
-  jsonapi: 0
-  layout_builder: 0
   layout_discovery: 0
   link: 0
   link_attributes: 0
-  maxlength: 0
   media: 0
   media_library: 0
   menu_link_content: 0
@@ -56,11 +49,10 @@ module:
   paragraphs_library: 0
   path: 0
   path_alias: 0
-  quickedit: 0
+  phpass: 0
   redirect: 0
   redirect_404: 0
   responsive_image: 0
-  rest: 0
   serialization: 0
   settings_tray: 0
   shortcut: 0
@@ -74,6 +66,7 @@ module:
   toolbar: 0
   twig_tweak: 0
   update: 0
+  upgrade_status: 0
   user: 0
   views_conditional: 0
   views_ui: 0

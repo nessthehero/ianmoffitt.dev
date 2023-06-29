@@ -8,8 +8,8 @@ dependencies:
   module:
     - comment
     - disqus
+    - file
     - filter
-    - honeypot
     - media
     - system
 _core:
@@ -21,8 +21,8 @@ is_admin: false
 permissions:
   - 'access comments'
   - 'access content'
-  - 'bypass honeypot protection'
   - 'change own username'
+  - 'delete own files'
   - 'edit own comments'
   - 'post comments'
   - 'skip comment approval'

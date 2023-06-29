@@ -4,6 +4,7 @@ behavior:
   disqus_inherit_login: true
   disqus_disable_mobile: false
   disqus_track_newcomment_ga: false
+  disqus_notify_newcomment: false
 advanced:
   disqus_useraccesstoken: ''
   disqus_publickey: ''

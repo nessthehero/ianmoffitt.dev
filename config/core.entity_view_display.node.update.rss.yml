@@ -8,13 +8,8 @@ dependencies:
     - field.field.node.update.field_disqus
     - node.type.update
   module:
-    - layout_builder
     - smart_trim
     - user
-third_party_settings:
-  layout_builder:
-    enabled: false
-    allow_custom: false
 id: node.update.rss
 targetEntityType: node
 bundle: update
