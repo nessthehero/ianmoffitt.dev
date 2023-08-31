@@ -1,7 +1,7 @@
 name: IanMoffitt
 type: theme
 description: 'IanMoffitt.dev Theme'
-core_version_requirement: ^8 || ^9 || ^10
+core_version_requirement: ^9 || ^10
 screenshot: screenshot.png
 base theme: false
 

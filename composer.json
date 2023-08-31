@@ -26,6 +26,7 @@
 		"drupal/redirect": "^1.6",
 		"drupal/simple_sitemap": "^4.1",
 		"drupal/smart_trim": "^2.1",
+		"drupal/stable": "^2.0",
 		"drupal/twig_tweak": "^3.2",
 		"drupal/upgrade_status": "^4.0",
 		"drupal/views_conditional": "^1.5"
