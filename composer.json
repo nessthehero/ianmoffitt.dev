@@ -6,6 +6,7 @@
 		"drush/drush": "^12"
 	},
 	"require": {
+		"ext-intl": "*",
 		"composer/installers": "^1.6",
 		"cweagans/composer-patches": "^1.7",
 		"drupal/admin_toolbar": "^3.4",
