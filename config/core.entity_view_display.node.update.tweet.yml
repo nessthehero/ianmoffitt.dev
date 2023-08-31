@@ -8,13 +8,8 @@ dependencies:
     - field.field.node.update.field_disqus
     - node.type.update
   module:
-    - layout_builder
     - smart_trim
     - user
-third_party_settings:
-  layout_builder:
-    enabled: false
-    allow_custom: false
 id: node.update.tweet
 targetEntityType: node
 bundle: update
@@ -29,10 +24,13 @@ content:
       trim_suffix: ...
       wrap_output: false
       wrap_class: trimmed
-      more_link: true
-      more_class: more-link
-      more_text: More
-      more_aria_label: 'Read more about [node:title]'
+      more:
+        display_link: true
+        target_blank: false
+        link_trim_only: false
+        class: more-link
+        text: More
+        aria_label: 'Read more about [node:title]'
       summary_handler: trim
       trim_options:
         text: true

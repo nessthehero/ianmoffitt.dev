@@ -1,6 +1,0 @@
-name: BarkleyREI Link Filter
-description: Custom text filter to add rel="noopener nofollow" to external links in WYSIWYGs.
-type: module
-version: 0.1
-package: Custom
-core_version_requirement: ^8.8 || ^9

@@ -36,12 +36,8 @@
 
 	<a href="#" class="content__trigger">
 		<span class="show-for-sr">Toggle Expander</span>
-		<svg class="ian-icon ian-icon-plus" focusable="false">
-			<use xlink:href="#ian-icon-plus"></use>
-		</svg>
-		<svg class="ian-icon ian-icon-minus" focusable="false">
-			<use xlink:href="#ian-icon-minus"></use>
-		</svg>
+		{{ svg("plus") }}
+		{{ svg("minus") }}
 	</a>
 	<div class="content__expander content__expander--closed expand__content">
 		<div class="user-markup">
