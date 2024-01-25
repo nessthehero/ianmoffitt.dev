@@ -2,7 +2,8 @@ ls -la
 
 git status
 
-git clean -xdf
+#git clean -xdf
+git reset
 
 npm cache clean
 npm install
