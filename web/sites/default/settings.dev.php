@@ -3,7 +3,7 @@
 	// @codingStandardsIgnoreFile
 
 	$databases['default']['default'] = array (
-		'database' => $_SERVER['IANMOFFITT_DATABASE_DBNAME'],
+		'database' => 'dev',
 		'username' => $_SERVER['IANMOFFITT_DATABASE_USERNAME'],
 		'password' => $_SERVER['IANMOFFITT_DATABASE_PASSWORD'],
 		'prefix' => $_SERVER['IANMOFFITT_DATABASE_PREFIX'],
