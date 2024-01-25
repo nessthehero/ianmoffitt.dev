@@ -28,6 +28,10 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa.pub
 
+      - name: SSH 4
+        run: |
+          ssh-keyscan -T 300 -H ${{ secrets.IP }} >> ~/.ssh/known_hosts
+
       - name: Test out SSH connection
         run: |
           ssh ${{ secrets.USER_IP }} "cd /var/www/dev.ianmoffitt.dev; git fetch origin; git checkout ${{ github.sha }}; sh scripts/dev.sh;"
