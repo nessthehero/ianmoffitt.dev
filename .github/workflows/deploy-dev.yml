@@ -16,12 +16,20 @@ jobs:
 
       - name: Set up SSH
         run: |
-          echo "Hello Ian"
           mkdir -p ~/.ssh/
+
+      - name: SSH 2
+        run: |
           echo "${{ secrets.SSH_PRIV_KEY }}" > ~/.ssh/id_rsa
           echo "${{ secrets.SSH_PUB_KEY }}" > ~/.ssh/id_rsa.pub
+
+      - name: SSH 3
+        run: |
           chmod 600 ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa.pub
+
+      - name: SSH 4
+        run: |
           ssh-keyscan -H ${{ secrets.IP }} >> ~/.ssh/known_hosts
 
       - name: Test out SSH connection
