@@ -25,7 +25,7 @@ jobs:
 
       - name: Test out SSH connection
         run: |
-          ssh ${{ secrets.USER_IP }} "cd /var/www/dev.ianmoffitt.dev; sh scripts/dev.sh;"
+          ssh ${{ secrets.USER_IP }} "cd /var/www/dev.ianmoffitt.dev; git pull; sh scripts/dev.sh;"
           
         
     
