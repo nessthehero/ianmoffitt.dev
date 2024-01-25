@@ -4,6 +4,7 @@ git status
 
 git clean -xdf
 
-npm ci
+npm cache clean
+npm install
 
 composer install
