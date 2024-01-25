@@ -177,7 +177,7 @@
 		include __DIR__ . "/settings.lando.php";
 	}
 
-	if (isset($_SERVER['IANMOFFITT_ENV']) && $_SERVER['IANMOFFITT_ENV'] === 'production') {
-		include __DIR__ . "/settings.remote.php";
+	if (isset($_SERVER['IANMOFFITT_ENV'])) {
+		include __DIR__ . "/settings." . $_SERVER['IANMOFFITT_ENV'] . ".php";
 	}
 
