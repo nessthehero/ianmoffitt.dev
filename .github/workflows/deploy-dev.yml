@@ -16,6 +16,7 @@ jobs:
 
       - name: Set up SSH
         run: |
+          mkdir -p ~/.ssh/
           echo "${{ secrets.SSH_PRIV_KEY }}" > ~/.ssh/id_rsa
           echo "${{ secrets.SSH_PUB_KEY }}" > ~/.ssh/id_rsa.pub
           chmod 600 ~/.ssh/id_rsa
