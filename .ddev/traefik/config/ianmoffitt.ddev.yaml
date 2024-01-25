@@ -1,0 +1,86 @@
+#ddev-generated
+
+http:
+  routers:
+    
+    
+    ianmoffitt.ddev-web-80-http:
+      
+      rule: HostRegexp(`ianmoffitt.ddev.ddev.site`)
+      
+      service: "ianmoffitt.ddev-web-80-http"
+      tls: false
+      entrypoints:
+        - http-80
+    
+    
+    ianmoffitt.ddev-web-8025-http:
+      
+      rule: HostRegexp(`ianmoffitt.ddev.ddev.site`)
+      
+      service: "ianmoffitt.ddev-web-8025-http"
+      tls: false
+      entrypoints:
+        - http-8025
+    
+    
+    
+    
+    
+    
+    ianmoffitt.ddev-web-80-https:
+      
+      rule: HostRegexp(`ianmoffitt.ddev.ddev.site`)
+      
+      service: "ianmoffitt.ddev-web-80-https"
+      
+      tls: true
+      
+      entrypoints:
+        - http-443
+    
+    
+    ianmoffitt.ddev-web-8025-https:
+      
+      rule: HostRegexp(`ianmoffitt.ddev.ddev.site`)
+      
+      service: "ianmoffitt.ddev-web-8025-https"
+      
+      tls: true
+      
+      entrypoints:
+        - http-8026
+    
+    
+
+  services:
+    
+    ianmoffitt.ddev-web-80-http:
+      loadbalancer:
+        servers:
+          - url: http://ddev-ianmoffitt.ddev-web:80
+    
+    ianmoffitt.ddev-web-8025-http:
+      loadbalancer:
+        servers:
+          - url: http://ddev-ianmoffitt.ddev-web:8025
+    
+    ianmoffitt.ddev-web-80-https:
+    
+      loadbalancer:
+        servers:
+          - url: http://ddev-ianmoffitt.ddev-web:80
+    
+    ianmoffitt.ddev-web-8025-https:
+    
+      loadbalancer:
+        servers:
+          - url: http://ddev-ianmoffitt.ddev-web:8025
+    
+
+
+tls:
+  certificates:
+    - certFile: /mnt/ddev-global-cache/traefik/certs/ianmoffitt.ddev.crt
+      keyFile: /mnt/ddev-global-cache/traefik/certs/ianmoffitt.ddev.key
+

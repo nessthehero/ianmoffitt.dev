@@ -3,14 +3,14 @@
 
 # Composer installed
 vendor
-docroot/core
-docroot/modules/contrib
-docroot/themes/contrib
+web/core
+web/modules/contrib
+web/themes/contrib
 
 # Ignore paths that contain user-generated content.
-docroot/files
-docroot/sites/*/files
-docroot/sites/*/private
+web/files
+web/sites/*/files
+web/sites/*/private
 
 # OS X
 .DS_Store
@@ -27,4 +27,10 @@ drush/drush.yml
 node_modules
 
 # Compiled
-/docroot/web
+/html
+
+# Cache
+.stylelintcache
+
+# DDEV
+settings.ddev.php
