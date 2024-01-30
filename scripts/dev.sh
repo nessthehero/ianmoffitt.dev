@@ -14,3 +14,6 @@ npm install
 
 # Composer
 composer install
+
+# Drush deploy
+drush deploy
