@@ -186,8 +186,6 @@
 		include __DIR__ . "/settings.lando.php";
 	}
 
-	//	if (isset($_SERVER['IANMOFFITT_ENV'])) {
-	//		include __DIR__ . "/settings." . $_SERVER['IANMOFFITT_ENV'] . ".php";
-	//	}
-
-	include __DIR__ . "/settings.dev.php";
+	if (isset($_SERVER['IANMOFFITT_ENV']) && $_SERVER['IANMOFFITT_ENV'] === 'dev') {
+		include __DIR__ . "/settings.dev.php";
+	}
