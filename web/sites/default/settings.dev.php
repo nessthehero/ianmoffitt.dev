@@ -16,8 +16,6 @@
 	// Allow use of localhost or any other domains for local development.
 	unset($settings['trusted_host_patterns']);
 
-	assert_options(ASSERT_ACTIVE, TRUE);
-	\Drupal\Component\Assertion\Handle::register();
 	$config['system.logging']['error_level'] = 'verbose';
 	$config['system.performance']['css']['preprocess'] = FALSE;
 	$config['system.performance']['js']['preprocess'] = FALSE;
