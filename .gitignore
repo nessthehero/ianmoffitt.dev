@@ -34,3 +34,5 @@ node_modules
 
 # DDEV
 settings.ddev.php
+
+.env
