@@ -3,7 +3,7 @@
 	// @codingStandardsIgnoreFile
 	// Allow use of localhost or any other domains for local development.
 	unset($settings['trusted_host_patterns']);
-
+	$databases['default']['default']['database'] = 'dev';
 	$config['system.logging']['error_level'] = 'verbose';
 	$config['system.performance']['css']['preprocess'] = FALSE;
 	$config['system.performance']['js']['preprocess'] = FALSE;
