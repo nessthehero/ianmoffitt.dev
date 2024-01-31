@@ -1,5 +1,7 @@
+# Show me all the files
 ls -la
 
+# View Git status
 git status
 
 # Remove all unknown, non-ignored files
@@ -9,11 +11,11 @@ git clean -df
 git reset --hard
 
 # NPM
-npm cache clean
+npm cache verify
 npm install
 
 # Composer
 composer install
 
 # Drush deploy
-drush deploy
+# drush deploy
