@@ -4,7 +4,7 @@
 	// Allow use of localhost or any other domains for local development.
 	unset($settings['trusted_host_patterns']);
 
-	$databases['default']['default']['database'] = array (
+	$databases['default']['default'] = array (
 		'database' => 'dev',
 		'username' => $_SERVER['IANMOFFITT_DATABASE_USERNAME'],
 		'password' => $_SERVER['IANMOFFITT_DATABASE_PASSWORD'],
