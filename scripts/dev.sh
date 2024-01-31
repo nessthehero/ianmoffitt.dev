@@ -5,7 +5,7 @@ ls -la
 git status
 
 # NPM
-npm cache verify
+#npm cache verify
 npm install
 
 # Composer
