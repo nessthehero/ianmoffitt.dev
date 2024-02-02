@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 export PATH="$PATH"
 export NVM_DIR=$HOME/.nvm;
