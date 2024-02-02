@@ -1,3 +1,5 @@
+#!/bin/sh
+
 export PATH="$PATH"
 
 # Versions of tools
