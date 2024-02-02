@@ -1,3 +1,8 @@
+# Versions of tools
+node --version
+npm --version
+composer --version
+
 # Show me all the files
 ls -la
 
@@ -5,7 +10,6 @@ ls -la
 git status
 
 # NPM
-npm cache verify
 npm install
 
 # Build static assets
