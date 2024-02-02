@@ -1,6 +1,8 @@
 #!/bin/sh
 
 export PATH="$PATH"
+export NVM_DIR=$HOME/.nvm;
+source $NVM_DIR/nvm.sh;
 
 # Versions of tools
 whoami
@@ -24,6 +26,9 @@ npm install
 
 # Build static assets
 npm run build
+
+# Deploy static assets
+npm run deploy
 
 # Composer
 composer install
