@@ -1,4 +1,8 @@
 # Versions of tools
+whoami
+
+which nvm
+
 nvm use 18
 
 node --version
