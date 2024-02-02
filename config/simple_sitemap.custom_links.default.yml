@@ -1,9 +1,0 @@
-links:
-  -
-    path: /
-    priority: '1.0'
-    changefreq: weekly
-  -
-    path: /now
-    priority: '0.9'
-    changefreq: weekly
