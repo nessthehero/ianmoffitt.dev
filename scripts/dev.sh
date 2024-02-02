@@ -1,3 +1,5 @@
+export PATH="$PATH"
+
 # Versions of tools
 whoami
 
