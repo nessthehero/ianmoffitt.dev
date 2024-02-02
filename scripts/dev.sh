@@ -1,4 +1,6 @@
 # Versions of tools
+nvm use 18
+
 node --version
 npm --version
 composer --version
