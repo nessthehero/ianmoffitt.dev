@@ -8,6 +8,6 @@ git -C /var/www/dev.ianmoffitt.dev reset --hard
 
 git -C /var/www/dev.ianmoffitt.dev checkout "$1"
 
-cwd
+pwd
 
 /usr/bin/bash ./scripts/dev.sh
