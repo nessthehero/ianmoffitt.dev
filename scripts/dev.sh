@@ -1,15 +1,15 @@
 #!/bin/bash
 
-export PATH="$PATH"
-export NVM_DIR=$HOME/.nvm;
-source $NVM_DIR/nvm.sh;
+#export PATH="$PATH"
+#export NVM_DIR=$HOME/.nvm;
+#source $NVM_DIR/nvm.sh;
 
 # Versions of tools
 whoami
 
 which nvm
 
-nvm use 18
+#nvm use 18
 
 node --version
 npm --version

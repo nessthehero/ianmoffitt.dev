@@ -27,13 +27,6 @@ jobs:
           chmod 600 ~/.ssh/id_rsa.pub
           ssh-keyscan -T 45 -H ${{ secrets.IP }} >> ~/.ssh/known_hosts
 
-      - name: Testing bash with params
+      - name: Deployment
         run: |
-          ssh ${{ secrets.USER_IP }} "bash -s ${{ github.sha }}" < scripts/test.sh
-
-
-          
-        
-    
-
-
+          ssh ${{ secrets.USER_IP }} "bash -s ${{ github.sha }}" < scripts/prepare.sh
