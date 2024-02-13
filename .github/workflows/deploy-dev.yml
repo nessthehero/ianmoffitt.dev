@@ -27,9 +27,11 @@ jobs:
           chmod 600 ~/.ssh/id_rsa.pub
           ssh-keyscan -T 45 -H ${{ secrets.IP }} >> ~/.ssh/known_hosts
 
-      - name: Test out SSH connection
+      - name: Testing bash with params
         run: |
-          ssh ${{ secrets.USER_IP }} "cd /var/www/dev.ianmoffitt.dev; git fetch origin; git clean -df; git reset --hard; git checkout ${{ github.sha }}; /usr/bin/bash scripts/dev.sh;"
+          ssh ${{ secrets.USER_IP }} "bash -s ${{ github.sha }}" < scripts/test.sh
+
+
           
         
     
