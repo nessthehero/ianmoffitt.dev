@@ -34,4 +34,4 @@ npm run deploy
 composer install
 
 # Drush deploy
-# drush deploy
+drush deploy
