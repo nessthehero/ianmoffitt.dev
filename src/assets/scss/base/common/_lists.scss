@@ -1,5 +1,7 @@
-ul {
-	nav & {
+ul,
+ol {
+	nav &,
+	&[class] {
 
 		@extend %list-reset;
 	}

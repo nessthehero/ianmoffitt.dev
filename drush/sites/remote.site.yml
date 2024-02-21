@@ -20,10 +20,11 @@ dev:
   paths:
     drush-script: /var/www/dev.ianmoffitt.dev/vendor/bin/drush
     files: sites/default/files
+  env-vars:
+    IS_DEV: TRUE
   command:
     sql:
       sync:
         options:
           skip-tables-list: cache,cache_*
-
 

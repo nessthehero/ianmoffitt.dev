@@ -1,0 +1,20 @@
+uuid: dc21abbe-a838-4973-8be9-fd23a692112e
+langcode: en
+status: true
+dependencies:
+  theme:
+    - nth
+_core:
+  default_config_hash: Oh72CHUkp6cj6dbrXMK2hzCsM05w9cHVoD22rMLQUfk
+id: nth_page_title
+theme: nth
+region: content
+weight: -30
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

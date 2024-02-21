@@ -9,20 +9,20 @@ db_pull_command:
     command: |
         # set -x   # You can enable bash debugging output by uncommenting
         set -eu -o pipefail
-        drush sql:sync @dev @self
+        drush sql:sync @remote.dev @self -y
 
 files_import_command:
     command: |
         #set -x   # You can enable bash debugging output by uncommenting
         set -eu -o pipefail
-        echo "Not implemented yet"
+        drush rsync @remote.dev:%files @self:%files -y
 
 # push is a dangerous command. If not absolutely needed it's better to delete these lines.
 db_push_command:
     command: |
         # set -x   # You can enable bash debugging output by uncommenting
         set -eu -o pipefail
-        echo "Not implemented yet"
+        echo "No"
 
 # push is a dangerous command. If not absolutely needed it's better to delete these lines.
 # TODO: This is a naive, Drupal-centric push, which needs adjustment for the mount to be pushed.
@@ -30,4 +30,4 @@ files_push_command:
     command: |
         # set -x   # You can enable bash debugging output by uncommenting
         set -eu -o pipefail
-        echo "Not implemented yet"
+        echo "No"
