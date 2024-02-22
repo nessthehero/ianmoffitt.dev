@@ -12,10 +12,12 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  ssh:
+  build:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v2
+
       - name: Set up SSH
         run: |
           mkdir -p ~/.ssh/
@@ -25,24 +27,6 @@ jobs:
           chmod 600 ~/.ssh/id_rsa.pub
           ssh-keyscan -T 45 -H ${{ secrets.IP }} >> ~/.ssh/known_hosts
 
-  prepare:
-    runs-on: ubuntu-latest
-
-    needs: ssh
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Prepare
+      - name: Deployment
         run: |
           ssh ${{ secrets.USER_IP }} "bash -s ${{ github.sha }}" < scripts/prepare.sh
-
-  build:
-    runs-on: ubuntu-latest
-
-    needs: [ssh, prepare]
-
-    steps:
-      - name: Build
-        run: |
-          ssh ${{ secrets.USER_IP }} "cd /var/www/dev.ianmoffitt.dev && /usr/bin/bash scripts/dev.sh"
