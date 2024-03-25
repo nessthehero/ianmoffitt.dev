@@ -35,4 +35,9 @@ node_modules
 # DDEV
 settings.ddev.php
 
+# ENV
 .env
+
+# Eleventy
+.cache
+/dist
