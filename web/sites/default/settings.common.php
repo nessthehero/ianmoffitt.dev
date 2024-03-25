@@ -181,10 +181,6 @@
 
 	$settings['config_sync_directory'] = '../config';
 	$config['system.logging']['error_level'] = 'verbose';
-	// Settings specific to Lando local development environments.
-	if (getenv('LANDO')) {
-		include __DIR__ . "/settings.lando.php";
-	}
 
 	if (isset($_SERVER['IS_DEV'])) {
 		include __DIR__ . "/settings.dev.php";

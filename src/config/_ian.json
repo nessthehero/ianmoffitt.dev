@@ -1,7 +1,0 @@
-{
-  "title": "ianmoffitt.dev",
-  "app": "assets",
-  "dist": "public",
-  "deploy": "../html",
-  "drupal": "../web/themes/custom/nth/_files"
-}

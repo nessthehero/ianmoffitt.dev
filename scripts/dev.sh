@@ -24,11 +24,8 @@ git status
 # NPM
 npm install
 
-# Build static assets
+# Build static site
 npm run build
-
-# Deploy static assets
-npm run deploy
 
 # Composer
 composer install

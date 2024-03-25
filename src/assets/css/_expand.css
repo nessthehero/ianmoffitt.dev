@@ -1,0 +1,71 @@
+
+.expand {
+    padding-bottom: 0;
+}
+.expand header {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.expand .ian-icon {
+    color: var(--heading-color);
+    font-size: 16px;
+}
+@media print, screen and (min-width: 40em) {
+    .expand .ian-icon {
+        font-size: 24px;
+    }
+}
+@media print, screen and (min-width: 64em) {
+    .expand .ian-icon {
+        font-size: 40px;
+    }
+}
+.expand .content__trigger {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+@media print, screen and (min-width: 40em) {
+    .expand .content__trigger {
+        width: 24px;
+        height: 24px;
+        top: 22px;
+        right: 16px;
+    }
+}
+@media print, screen and (min-width: 64em) {
+    .expand .content__trigger {
+        width: 40px;
+        height: 40px;
+        top: 22px;
+        right: 20px;
+    }
+}
+.expand .content__expander {
+    overflow: hidden;
+    will-change: max-height;
+    max-height: 0;
+    -webkit-transition: all 0.425s ease-out;
+    transition: all 0.425s ease-out;
+    margin: 0;
+    opacity: 0;
+}
+.expand--closed .ian-icon-minus {
+    display: none;
+}
+.expand--open .content__expander {
+    opacity: 1;
+    margin-bottom: 16px;
+}
+.expand--open .ian-icon-plus {
+    display: none;
+}
+.expand--open .ian-icon-minus {
+    display: block;
+}

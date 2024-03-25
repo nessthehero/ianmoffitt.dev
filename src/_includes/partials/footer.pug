@@ -1,0 +1,13 @@
+footer#js-global-footer.global-footer.grid-x.cell
+    section.global-footer__info
+        .user-markup
+            h2 Hi! I'm Ian Moffitt
+            p I'm a #[a(href="https://css-tricks.com/poll-results-front-end-front-end/") front-end] developer working in Pittsburgh, PA. #[br]Some have said that #[a(href="https://www.threads.net/@nessthehero/post/Cy4TT3KMua0") I'm the best at websites].
+        a.logo(href="/" title="Home Page")
+            include ../svg/logo.svg
+        p.global-footer__copyright &copy; Ian Moffitt #{getYear}
+    section.global-footer__links
+        ul.global-footer__list
+            each val in site.social
+                li
+                    +link(val.url, val.name)

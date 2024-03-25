@@ -1,0 +1,58 @@
+.user-markup {
+
+    :is(h1, h2, h3, h4, h5, h6) {
+        margin: 0 0 1rem;
+    }
+
+    img {
+        /*margin: 0.375em 0.75em 1.5em 0;*/
+    }
+
+    img[align=right],
+    img[style*="float: right"] {
+        /*margin: 0.375em 0 1.5em 0.75em;*/
+    }
+
+    img[align=right] {
+        float: right;
+    }
+
+    p {
+        overflow: auto;
+
+        img { float: left; margin-bottom: 0.375em; }
+
+        img[align=right],
+        img[style*="float: right"] {
+            margin-block-start: 0.375em;
+            margin-inline: 0 0.75em;
+        }
+    }
+
+    :is(p, dt, dd, li) {
+		font-size: 1.1rem;
+        line-height: 1.6;
+        font-weight: 400;
+
+		@media screen and (min-width: 768px) {
+			font-size: 21px;
+		}
+    }
+
+    dd {
+        margin-bottom: 1rem;
+    }
+
+    header {
+        padding: 0 0 1rem;
+    }
+
+    pre {
+        padding-bottom: 1rem;
+    }
+
+    > :last-child {
+        margin-block-end: 0;
+    }
+
+}

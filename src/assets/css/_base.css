@@ -1,0 +1,26 @@
+[class] :is(h1, h2, h3, h4, h5, h6) {
+    color: var(--heading-color);
+    text-shadow: 1px 1px 1px var(--heading-shadow-color);
+    -webkit-transition: color 0.425s, text-shadow 0.425s;
+    transition: color 0.425s, text-shadow 0.425s;
+}
+
+:is(.h1, .h2, .h3, .h4, .h5, .h6) {
+    display: block;
+}
+
+h1 {
+	font-size: 38px;
+}
+
+@media screen and (min-width: 768px) {
+	h1 {
+		font-size: 56px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	h1 {
+		font-size: 72px;
+	}
+}

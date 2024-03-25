@@ -1,0 +1,14 @@
+:root {
+    --flow-space: 2.5rem;
+    --primary-font: "Gill Sans";
+    --color-black: #0a0a0a;
+    --color-white: #cacaca;
+    --color-primary: #00665c;
+    --color-secondary: #259a92;
+    --color-secondary-light: #5cc5c3;
+}
+
+:root {
+    --heading-color: var(--color-primary);
+    --heading-shadow-color: var(--color-secondary);
+}

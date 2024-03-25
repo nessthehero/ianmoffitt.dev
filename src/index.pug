@@ -1,0 +1,25 @@
+---
+title: IanMoffitt.dev
+---
+extends _includes/layouts/default.pug
+
+block content
+  article.content
+    header
+      h1 Hello there!
+    .user-markup
+      include:markdown-it _includes/copy/intro.md
+  - let postSlice = posts.data.slice(0,5)
+  each post in postSlice
+    - const p = post.attributes;
+    article.content.content--snippet
+      header
+        h2 #{p.title}
+      .user-markup
+        if p.body.summary
+          p #{p.body.summary}
+        a(href=p.path.alias).small.button Read More
+  if postSlice.length < posts.data.length
+    article.content
+      .user-markup
+        a(href="/posts").expanded.button View More Posts

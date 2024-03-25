@@ -1,0 +1,92 @@
+.global-footer {
+    background-color: #00665c;
+    border-radius: 3px;
+    margin: 100px 0;
+    padding: 20px;
+    pointer-events: all;
+    position: relative;
+    z-index: 10;
+}
+
+.global-footer__links {
+    padding-bottom: 16px;
+}
+
+@media print, screen and (min-width: 40em) {
+    .global-footer__links {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+        padding-bottom: 0;
+        width: 50%;
+    }
+}
+
+.global-footer__info {
+    --heading-color: #ffffff;
+    color: #ffffff;
+}
+
+@media print, screen and (min-width: 40em) {
+    .global-footer__info {
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2;
+        width: 50%;
+    }
+}
+
+.global-footer__list {
+    padding: 0 16px 0 0;
+    list-style: none;
+}
+
+@media print, screen and (min-width: 40em) {
+    .global-footer__list {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
+    }
+}
+
+.global-footer a,
+.global-footer__link {
+    color: #ffffff;
+    text-decoration: underline;
+    -webkit-transition: color 0.425s;
+    transition: color 0.425s;
+}
+
+.global-footer a:hover,
+.global-footer a:focus,
+.global-footer__link:hover,
+.global-footer__link:focus {
+    color: #e8c453;
+}
+
+@media print, screen and (min-width: 40em) {
+    .global-footer__copyright {
+        bottom: 0;
+        font-size: 14px;
+        position: absolute;
+        right: 20px;
+    }
+}
+@media print, screen and (min-width: 40em) {
+    .global-footer {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+}
