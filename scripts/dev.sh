@@ -28,7 +28,7 @@ npm install
 npm run build
 
 # Composer
-composer install
+composer -vvv install
 
 # Drush deploy
 drush deploy
