@@ -1,27 +1,34 @@
-#!/bin/sh
+#!/bin/bash
 
-rsync \
-    -vrlD \
-    --exclude=docroot/core \
-    --exclude=vendor \
-    --exclude=docroot/modules/contrib \
-    --exclude=docroot/themes/contrib \
-    --exclude=docroot/libraries \
-    --exclude=docroot/sites/development.services.yml \
-    --exclude=docroot/sites/default/files \
-    --exclude=docroot/themes/custom/nth/_src \
-    --exclude=drush/drush.yml \
-    --delete \
-    --progress \
-    /home/ian/ianmoffitt.dev/current/ \
-    /var/www/ianmoffitt.dev/
-cd /var/www/ianmoffitt.dev
+export PATH="$PATH"
+export NVM_DIR=$HOME/.nvm;
+source $NVM_DIR/nvm.sh;
 
+# Versions of tools
+whoami
+
+which nvm
+
+nvm use 18
+
+node --version
+npm --version
+composer --version
+
+# Show me all the files
+ls -la
+
+# View Git status
+git status
+
+# NPM
+npm install
+
+# Build static site
+npm run build
+
+# Composer
 composer install
 
-drush cr
-
-drush cim --yes
-drush updb --yes
-
-drush cr
+# Drush deploy
+drush deploy

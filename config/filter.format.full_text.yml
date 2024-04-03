@@ -5,6 +5,7 @@ dependencies:
   module:
     - editor
     - media
+    - pathologic
 name: 'Full Text'
 format: full_text
 weight: 0
@@ -54,6 +55,16 @@ filters:
     status: true
     weight: 15
     settings: {  }
+  filter_pathologic:
+    id: filter_pathologic
+    provider: pathologic
+    status: true
+    weight: 50
+    settings:
+      settings_source: global
+      local_settings:
+        protocol_style: full
+        local_paths: ''
   filter_url:
     id: filter_url
     provider: filter
@@ -69,4 +80,5 @@ filters:
     settings:
       default_view_mode: default
       allowed_view_modes: {  }
-      allowed_media_types: {  }
+      allowed_media_types:
+        image: image

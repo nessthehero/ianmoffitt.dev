@@ -1,0 +1,17 @@
+uuid: e6f2efc6-c02c-417e-b431-8d0f7fe32494
+langcode: en
+status: true
+dependencies: {  }
+id: development
+label: Development
+description: 'Localhost specific settings'
+weight: 0
+stackable: false
+no_patching: false
+storage: collection
+folder: ''
+module:
+  stage_file_proxy: 0
+theme: {  }
+complete_list: {  }
+partial_list: {  }

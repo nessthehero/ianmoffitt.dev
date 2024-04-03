@@ -1,15 +1,15 @@
-uuid: bf163bc7-2fe5-40b2-b60f-b3cc947ccdc6
+uuid: 2f91cb26-74ad-4713-8b84-99cddf108be9
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - nth
+    - olivero
 _core:
-  default_config_hash: sG8t_FghbUscJ-GrnQ8zs_vx5YM4bJCfntrK-J5HcAY
-id: nth_branding
-theme: nth
+  default_config_hash: n_nlgjggHVfQt2H__zvLOKB2YtjPDbQ5tHijF9LE1aM
+id: olivero_site_branding
+theme: olivero
 region: header
 weight: 0
 provider: null
@@ -21,5 +21,5 @@ settings:
   provider: system
   use_site_logo: true
   use_site_name: true
-  use_site_slogan: true
+  use_site_slogan: false
 visibility: {  }
