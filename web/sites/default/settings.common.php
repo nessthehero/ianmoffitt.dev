@@ -182,6 +182,6 @@
 	$settings['config_sync_directory'] = '../config';
 	$config['system.logging']['error_level'] = 'verbose';
 
-	if (isset($_SERVER['IS_DEV'])) {
+	if (isset($_SERVER['IS_DEV']) || str_contains(__DIR__, 'dev.ianmoffitt.dev')) {
 		include __DIR__ . "/settings.dev.php";
 	}
