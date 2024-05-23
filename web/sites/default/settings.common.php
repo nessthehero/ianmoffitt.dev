@@ -185,3 +185,7 @@
 	if (isset($_SERVER['IS_DEV']) || str_contains(__DIR__, 'dev.ianmoffitt.dev')) {
 		include __DIR__ . "/settings.dev.php";
 	}
+
+	if (str_contains(__DIR__, 'ianmoffitt.dev') && !str_contains(__DIR__, 'dev.ianmoffitt.dev')) {
+		include __DIR__ . "/settings.production.php";
+	}
