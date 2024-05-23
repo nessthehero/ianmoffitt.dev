@@ -1,14 +1,13 @@
-uuid: 95982c8d-dd0f-40c1-be46-46a73f623160
+uuid: 722523ed-6f92-4a31-b1fc-eb8dfb98ee67
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraphs_library_item.summary
   module:
-    - paragraphs
     - paragraphs_library
 _core:
-  default_config_hash: 298FcPciNgWk7pojyH1AA-0apcAkJulU6N3PO89ZXIk
+  default_config_hash: XstmA6WDBHCnXqwpkJ4hDHdn8ELRpS3gIl9yxbsjIyM
 id: paragraphs_library_item.paragraphs_library_item.summary
 targetEntityType: paragraphs_library_item
 bundle: paragraphs_library_item
@@ -16,18 +15,17 @@ mode: summary
 content:
   label:
     type: string
+    weight: 0
     label: hidden
+    region: content
     settings:
       link_to_entity: false
     third_party_settings: {  }
+  paragraphs:
+    label: hidden
+    type: library_item_summary
     weight: 0
     region: content
-  paragraphs:
-    type: paragraph_summary
-    label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 0
-    region: content
-hidden:
-  content_moderation_control: true
+hidden: {  }

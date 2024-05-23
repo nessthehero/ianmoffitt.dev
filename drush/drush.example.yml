@@ -1,7 +1,7 @@
 options:
   uri: 'https://default'
   paths:
-    - files: /docroot/sites/default/files
+    - files: /web/sites/default/files
   command:
     sql:
       sync:

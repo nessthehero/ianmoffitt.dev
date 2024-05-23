@@ -1,10 +1,10 @@
-uuid: 27bfd325-a042-4395-bddd-cd4ca047773b
+uuid: f1adc135-8b28-4cf5-ad3b-37ab00858608
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: XjDRfUjnEkjhfs83DpbP9M7msr41bBrJcvMdl9VW38o
+  default_config_hash: BCM-vV1zzRaLHN18dqAR_CuGOj8AFJvTx7BKl_8Gcxc
 id: tools
 label: Tools
-description: 'INTERNAL MENU. User tool links, often added by modules.'
+description: 'User tool links, often added by modules'
 locked: true

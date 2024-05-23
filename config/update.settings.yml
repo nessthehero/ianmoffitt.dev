@@ -1,13 +1,13 @@
 _core:
-  default_config_hash: prq8GGIB4GmZHFqCiqumrycqgdEEpexh50L-gLfuQkg
+  default_config_hash: 2QzULf0zovJQx3J06Y9rufzzfi-CY2CTTlEfJJh2Qyw
 check:
   disabled_extensions: false
-  interval_days: 7
+  interval_days: 1
 fetch:
-  url: ''
+  url: null
   max_attempts: 2
   timeout: 30
 notification:
   emails:
-    - siteadmin@ianmoffitt.dev
-  threshold: security
+    - dev@ianmoffitt.dev
+  threshold: all

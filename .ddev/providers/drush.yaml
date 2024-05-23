@@ -1,0 +1,33 @@
+
+auth_command:
+    command: |
+        set -eu -o pipefail
+        if ! command -v drush >/dev/null ; then echo "Please make sure your project contains drush, ddev composer require drush/drush" && exit 1; fi
+        ssh-add -l >/dev/null || ( echo "Please 'ddev auth ssh' before running this command." && exit 1 )
+
+db_pull_command:
+    command: |
+        # set -x   # You can enable bash debugging output by uncommenting
+        set -eu -o pipefail
+        drush sql:sync @remote.dev @self -y
+
+files_import_command:
+    command: |
+        #set -x   # You can enable bash debugging output by uncommenting
+        set -eu -o pipefail
+        drush rsync @remote.dev:%files @self:%files -y
+
+# push is a dangerous command. If not absolutely needed it's better to delete these lines.
+db_push_command:
+    command: |
+        # set -x   # You can enable bash debugging output by uncommenting
+        set -eu -o pipefail
+        echo "No"
+
+# push is a dangerous command. If not absolutely needed it's better to delete these lines.
+# TODO: This is a naive, Drupal-centric push, which needs adjustment for the mount to be pushed.
+files_push_command:
+    command: |
+        # set -x   # You can enable bash debugging output by uncommenting
+        set -eu -o pipefail
+        echo "No"

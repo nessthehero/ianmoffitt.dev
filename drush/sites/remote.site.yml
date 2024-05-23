@@ -1,0 +1,30 @@
+prod:
+  host: ianmoffitt.dev
+  user: ian
+  root: /var/www/ianmoffitt.dev
+  uri: https://ianmoffitt.dev
+  paths:
+    drush-script: /var/www/ianmoffitt.dev/vendor/bin/drush
+    files: sites/default/files
+  command:
+    sql:
+      sync:
+        options:
+          skip-tables-list: cache,cache_*
+
+dev:
+  host: ianmoffitt.dev
+  user: ian
+  root: /var/www/dev.ianmoffitt.dev
+  uri: https://dev.ianmoffitt.dev
+  paths:
+    drush-script: /var/www/dev.ianmoffitt.dev/vendor/bin/drush
+    files: sites/default/files
+  env-vars:
+    IS_DEV: TRUE
+  command:
+    sql:
+      sync:
+        options:
+          skip-tables-list: cache,cache_*
+

@@ -1,13 +1,12 @@
-uuid: 14453380-cfde-43dd-98d7-150b740e3563
+uuid: 76a4b823-e3c8-432c-9323-73b85397a8e2
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.post.body
-    - field.field.node.post.field_disqus
+    - field.field.node.post.layout_builder__layout
     - node.type.post
   module:
-    - disqus
     - path
     - text
 id: node.post.default
@@ -17,7 +16,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 2
+    weight: 121
     region: content
     settings:
       rows: 9
@@ -27,51 +26,40 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 4
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_disqus:
-    type: disqus_comment
-    weight: 51
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 7
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 5
+    weight: 15
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
-  simple_sitemap:
-    weight: 10
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 8
+    weight: 120
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 6
+    weight: 16
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: -5
     region: content
     settings:
       size: 60
@@ -79,7 +67,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 5
     region: content
     settings:
       match_operator: CONTAINS
@@ -87,9 +75,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  url_redirects:
-    weight: 50
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  layout_builder__layout: true

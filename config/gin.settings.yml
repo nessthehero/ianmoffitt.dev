@@ -1,5 +1,5 @@
 _core:
-  default_config_hash: nRysvGldi9bVjwAPJlKXm9C8exWIT4hQhVYJPgYTCWI
+  default_config_hash: UvSCt3S_NldJPFzvhSNOy9vWoPPFhmsmTC12vtVss9s
 favicon:
   use_default: true
 features:
@@ -12,13 +12,14 @@ logo:
 third_party_settings:
   shortcut:
     module_link: true
-preset_accent_color: custom
+preset_accent_color: teal
 preset_focus_color: gin
 enable_darkmode: '0'
 classic_toolbar: vertical
 secondary_toolbar_frontend: true
 high_contrast_mode: false
-accent_color: '#00665c'
+accent_color: ''
 focus_color: ''
+layout_density: small
 show_description_toggle: false
 show_user_theme_settings: false

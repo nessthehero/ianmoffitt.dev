@@ -1,4 +1,4 @@
-uuid: 80cb1e20-5589-4e5a-9d9f-20619b69b349
+uuid: ef61aa9b-27b4-49e2-861a-78c1b6665925
 langcode: en
 status: true
 dependencies:
@@ -21,7 +21,7 @@ settings:
   handler: 'default:file'
   handler_settings: {  }
   file_directory: '[date:custom:Y]-[date:custom:m]'
-  file_extensions: 'png gif jpg jpeg'
+  file_extensions: 'png gif jpg jpeg webp'
   max_filesize: ''
   max_resolution: ''
   min_resolution: ''

@@ -1,0 +1,8 @@
+.grid-base {
+  left: 0;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background: url("grid.png") repeat 0 0;
+}

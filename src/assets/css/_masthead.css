@@ -1,0 +1,24 @@
+.masthead {
+    border-radius: 3px;
+    display: block;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+.masthead img {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+}
+@media print, screen and (min-width: 40em) {
+    .masthead {
+        height: 200px;
+    }
+}
+@media print, screen and (min-width: 64em) {
+    .masthead {
+        height: 400px;
+    }
+}

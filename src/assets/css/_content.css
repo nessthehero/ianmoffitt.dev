@@ -1,0 +1,22 @@
+.content {
+    background-color: #ffffff;
+    border: 2px solid rgba(10, 10, 10, 0.2);
+    padding: 0 16px;
+    pointer-events: all;
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    width: 100%;
+
+    header {
+        margin-top: 16px;
+    }
+
+    time {
+        font-weight: 600;
+    }
+
+    .user-markup {
+        margin: 16px 0;
+    }
+}

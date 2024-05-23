@@ -1,25 +1,16 @@
-uuid: 6bce4274-9327-4d7b-a0c1-026cefdd75b0
+uuid: a91af00e-ce6a-4146-8db9-b0b229ac343d
 langcode: en
 status: true
 dependencies:
-  config:
-    - filter.format.filtered_text
   module:
-    - comment
-    - disqus
-    - filter
     - media
     - system
 _core:
-  default_config_hash: D4OT9s5ftAJyC584S-T4F5NmCIg-xMs7lnbyXRtbhow
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
 id: anonymous
 label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:
-  - 'access comments'
   - 'access content'
-  - 'post comments'
-  - 'use text format filtered_text'
-  - 'view disqus comments'
   - 'view media'

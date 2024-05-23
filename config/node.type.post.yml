@@ -1,4 +1,4 @@
-uuid: 92ad3267-c07e-4d95-915c-9a7ddf3d9540
+uuid: 82ee897a-616d-416d-8bb4-fd29b6e6c055
 langcode: en
 status: true
 dependencies:
@@ -11,8 +11,8 @@ third_party_settings:
     parent: 'main:'
 name: Post
 type: post
-description: Test
+description: ''
 help: ''
 new_revision: true
 preview_mode: 1
-display_submitted: true
+display_submitted: false

@@ -1,11 +1,11 @@
-uuid: 17b6b1c8-6e05-4e72-81fe-c15bdab6296d
+uuid: f540650d-4ab2-498a-aa0b-2e3165664b17
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - user
 _core:
-  default_config_hash: YZX-25ndIbQhUy_BDmQbW7yLCcu_9UR3md6006LIZvY
+  default_config_hash: zji0_13MyVGK7Bn1lUMDeZyyOIZedWvqpYUeM_SioPI
 id: who_s_new
 label: "Who's new"
 module: user
@@ -16,7 +16,7 @@ base_field: uid
 display:
   default:
     id: default
-    display_title: Master
+    display_title: Default
     display_plugin: default
     position: 0
     display_options:

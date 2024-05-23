@@ -1,9 +1,9 @@
-uuid: d2c06f16-894f-4aa0-b23c-e0f99d3f4bde
+uuid: 12d1204f-69d7-45a3-92f0-b65003fb594d
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: h7tG_VclsYslYm85Yx3GmTd_YF9v0odzXOdWklO_H6U
+  default_config_hash: J2n0RpFzS0-bgSyxjs6rSdgxB1rb-bTAgqywNx_964M
 name: large
 label: 'Large (480×480)'
 effects:

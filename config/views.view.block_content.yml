@@ -1,4 +1,4 @@
-uuid: 0390b406-bf59-43cd-9b77-7e66f9deecbb
+uuid: 085da6c1-a5d1-4ce7-ad46-e786726088d0
 langcode: en
 status: true
 dependencies:
@@ -6,22 +6,22 @@ dependencies:
     - block_content
     - user
 _core:
-  default_config_hash: N9Iin3_IqrVFn_gKokukSrP7Em4Sr4MnnOvNFmRnFbg
+  default_config_hash: AcOE_1RLjX4okjWSOk7Pen1IdtPsY0Nbn0HXWG3zMqc
 id: block_content
 label: 'Content blocks'
 module: views
-description: 'Find and manage custom blocks.'
+description: 'Find and manage content blocks.'
 tag: default
 base_table: block_content_field_data
 base_field: id
 display:
   default:
     id: default
-    display_title: Master
+    display_title: Default
     display_plugin: default
     position: 0
     display_options:
-      title: 'Custom block library'
+      title: 'Content blocks'
       fields:
         info:
           id: info
@@ -210,7 +210,7 @@ display:
             custom_date_format: ''
             timezone: ''
             tooltip:
-              date_format: ''
+              date_format: long
               custom_date_format: ''
             time_diff:
               enabled: false
@@ -291,7 +291,7 @@ display:
         type: basic
         options:
           submit_button: Apply
-          reset_button: false
+          reset_button: true
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
@@ -314,7 +314,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: 'There are no custom blocks available.'
+          content: 'There are no content blocks available.'
           tokenize: false
         block_content_listing_empty:
           id: block_content_listing_empty
@@ -536,9 +536,8 @@ display:
       menu:
         type: tab
         title: Blocks
-        description: 'Create and edit block content.'
+        description: 'Create and edit content blocks.'
         weight: 0
-        expanded: false
         menu_name: admin
         parent: system.admin_content
         context: '0'

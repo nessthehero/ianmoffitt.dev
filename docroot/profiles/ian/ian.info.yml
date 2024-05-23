@@ -1,5 +1,0 @@
-name: 'Ian Preferred'
-type: profile
-description: 'My preferred settings profile'
-core_version_requirement: ^9 || ^10
-
