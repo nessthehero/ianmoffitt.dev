@@ -8,5 +8,5 @@ git -C /var/www/ianmoffitt.dev reset --hard
 
 git -C /var/www/ianmoffitt.dev pull
 
-cd /var/www/dev.ianmoffitt.dev && /usr/bin/bash scripts/prod.sh
+cd /var/www/ianmoffitt.dev && /usr/bin/bash scripts/prod.sh
 
