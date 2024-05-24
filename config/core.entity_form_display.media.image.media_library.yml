@@ -1,4 +1,4 @@
-uuid: b4388ea0-7045-4cd5-97be-78a2d759ad34
+uuid: 7873af8c-22be-48ae-ac53-bbfbb4d5c73f
 langcode: en
 status: true
 dependencies:
@@ -9,6 +9,8 @@ dependencies:
     - media.type.image
   module:
     - image
+_core:
+  default_config_hash: BMLrK4zKp8-FFnMseBdT_6h6YipUsKRfbDf_3WUB5HA
 id: media.image.media_library
 targetEntityType: media
 bundle: image
@@ -16,7 +18,7 @@ mode: media_library
 content:
   field_media_image:
     type: image_image
-    weight: -50
+    weight: 1
     region: content
     settings:
       progress_indicator: throbber

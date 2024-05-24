@@ -1,4 +1,4 @@
-uuid: b24875a9-00e2-49d5-a2dd-96f253e37df3
+uuid: 7c344ce5-6539-4ca7-81f3-839df5eb1e53
 langcode: en
 status: true
 dependencies:
@@ -6,45 +6,8 @@ dependencies:
     - field.field.node.post.body
     - node.type.post
   module:
-    - layout_builder
     - text
     - user
-third_party_settings:
-  layout_builder:
-    enabled: true
-    allow_custom: true
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: ''
-        components:
-          aa929caf-8f1e-4585-ab1f-0fe5b53b3f92:
-            uuid: aa929caf-8f1e-4585-ab1f-0fe5b53b3f92
-            region: content
-            configuration:
-              id: 'extra_field_block:node:post:links'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-            weight: 0
-            additional: {  }
-          4ec65a36-61e0-46ea-acb8-2eebf38a5160:
-            uuid: 4ec65a36-61e0-46ea-acb8-2eebf38a5160
-            region: content
-            configuration:
-              id: 'field_block:node:post:body'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: text_default
-                label: hidden
-                settings: {  }
-                third_party_settings: {  }
-            weight: 1
-            additional: {  }
-        third_party_settings: {  }
 id: node.post.default
 targetEntityType: node
 bundle: post

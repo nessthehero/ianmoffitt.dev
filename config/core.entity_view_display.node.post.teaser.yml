@@ -1,11 +1,10 @@
-uuid: 0d7466de-be4d-4b85-bb75-bbf786095ede
+uuid: 6876ccb6-87eb-433a-b568-16445709b17d
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.post.body
-    - field.field.node.post.layout_builder__layout
     - node.type.post
   module:
     - text
@@ -28,5 +27,4 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-hidden:
-  layout_builder__layout: true
+hidden: {  }

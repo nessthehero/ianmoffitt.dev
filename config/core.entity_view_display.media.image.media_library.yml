@@ -1,4 +1,4 @@
-uuid: 3c158e6d-7c00-48b0-8404-4d1b920ef4e5
+uuid: 1822d701-ae30-468f-9454-78407e9b67c8
 langcode: en
 status: true
 dependencies:
@@ -9,6 +9,8 @@ dependencies:
     - media.type.image
   module:
     - image
+_core:
+  default_config_hash: ILLWu5KFvbsX6J7sh2Itd4w8-lBBRhR_H8ZrmQiN2yo
 id: media.image.media_library
 targetEntityType: media
 bundle: image
@@ -18,8 +20,8 @@ content:
     type: image
     label: hidden
     settings:
-      image_link: ''
       image_style: medium
+      image_link: ''
       image_loading:
         attribute: lazy
     third_party_settings: {  }

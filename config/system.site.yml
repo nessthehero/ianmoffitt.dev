@@ -1,14 +1,14 @@
 _core:
-  default_config_hash: l58O_yEXSo-SeJi19LXdzTU1tNJG3lmnIhCitRkM1tk
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
 langcode: en
-uuid: 2e26a803-0f1e-4b70-b597-025bc06b2684
+uuid: 96e6baa9-f1c3-4fe9-90d0-9d2eb756ab4d
 name: IanMoffitt.dev
-mail: dev@ianmoffitt.dev
+mail: admin@ianmoffitt.dev
 slogan: ''
 page:
   403: ''
   404: ''
-  front: /user/login
+  front: /node
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en

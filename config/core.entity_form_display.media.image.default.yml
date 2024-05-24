@@ -1,4 +1,4 @@
-uuid: bc68aa3c-a50e-4c21-8405-89db9dca6e82
+uuid: 381fa254-bca7-40f3-bb9e-83f750109cf3
 langcode: en
 status: true
 dependencies:
@@ -9,6 +9,8 @@ dependencies:
   module:
     - image
     - path
+_core:
+  default_config_hash: JSY4-JPyNZBiYYo6imdRYF6_SdtWQexPndrLvn3-vw4
 id: media.image.default
 targetEntityType: media
 bundle: image
@@ -27,14 +29,6 @@ content:
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
-    third_party_settings: {  }
-  name:
-    type: string_textfield
-    weight: -5
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   path:
     type: path
@@ -59,4 +53,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  name: true

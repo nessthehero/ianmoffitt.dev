@@ -1,10 +1,9 @@
-uuid: 76a4b823-e3c8-432c-9323-73b85397a8e2
+uuid: dc16551d-d382-41f8-888a-1c54b5eaac45
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.post.body
-    - field.field.node.post.layout_builder__layout
     - node.type.post
   module:
     - path
@@ -75,5 +74,4 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden:
-  layout_builder__layout: true
+hidden: {  }
