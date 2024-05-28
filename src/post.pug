@@ -5,7 +5,8 @@ pagination:
   alias: post
   resolve: values
 permalink: "| #{ post.attributes.path.alias }/index.html"
-title: "IanMoffitt.dev - #{post.attributes.title}"
+eleventyComputed:
+  title: "| IanMoffitt.dev - #{ post.attributes.title }"
 ---
 extends _includes/layouts/default.pug
 
