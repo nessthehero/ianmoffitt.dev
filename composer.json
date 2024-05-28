@@ -8,6 +8,8 @@
 		"cweagans/composer-patches": "^1.7",
 		"drupal/admin_toolbar": "^3.4",
 		"drupal/auto_entitylabel": "^3.0@beta",
+		"drupal/cdn": "^4.1",
+		"drupal/config_ignore": "^3.3",
 		"drupal/config_split": "^2.0",
 		"drupal/content_browser": "^1.0",
 		"drupal/core-composer-scaffold": "^10",

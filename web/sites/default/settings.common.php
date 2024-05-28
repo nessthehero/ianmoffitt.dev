@@ -179,7 +179,7 @@
 	 * Keep this code block at the end of this file to take full effect.
 	 */
 
-	$settings['config_sync_directory'] = '../config';
+	$settings['config_sync_directory'] = '../config/default';
 	$config['system.logging']['error_level'] = 'verbose';
 
 	if (isset($_SERVER['IS_DEV']) || str_contains(__DIR__, 'dev.ianmoffitt.dev')) {

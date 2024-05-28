@@ -9,8 +9,11 @@ module:
   block: 0
   block_content: 0
   breakpoint: 0
+  cdn: 0
+  cdn_ui: 0
   ckeditor5: 0
   config: 0
+  config_ignore: 0
   config_split: 0
   contextual: 0
   datetime: 0

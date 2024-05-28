@@ -6,7 +6,7 @@ async function getPosts() {
 
     if (postSource !== '' && postSource !== null && typeof postSource !== 'undefined') {
 		let json = await EleventyFetch(postSource, {
-			duration: "15m", // 15 mins
+			duration: "4m", // 15 mins
 			type: "json" // also supports "text" or "buffer"
 		});
 
