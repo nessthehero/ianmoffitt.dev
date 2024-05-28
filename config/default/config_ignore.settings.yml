@@ -1,6 +1,4 @@
 _core:
   default_config_hash: IgOVnECx6lbVt6JVFnadoEEugneDf3UblPZnOzov43Q
-mode: intermediate
-ignored_config_entities:
-  import: {  }
-  export: {  }
+mode: simple
+ignored_config_entities: {  }
