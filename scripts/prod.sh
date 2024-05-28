@@ -22,13 +22,13 @@ ls -la
 git status
 
 # NPM
-npm install
+npm install --production
 
 # Build static site
-npm run build
+npm run prod
 
 # Composer
-composer install
+composer install -q
 
 # Drush deploy
 drush deploy
