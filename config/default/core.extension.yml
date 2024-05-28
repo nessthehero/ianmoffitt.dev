@@ -9,7 +9,6 @@ module:
   block: 0
   block_content: 0
   breakpoint: 0
-  cdn: 0
   cdn_ui: 0
   ckeditor5: 0
   config: 0
@@ -44,7 +43,6 @@ module:
   sdc: 0
   serialization: 0
   shortcut: 0
-  smtp: 0
   system: 0
   taxonomy: 0
   text: 0
