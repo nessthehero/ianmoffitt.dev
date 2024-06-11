@@ -12,13 +12,7 @@ block content
   - let postSlice = posts.data.slice(0,5)
   each post in postSlice
     - const p = post.attributes;
-    article.content.content--snippet
-      header
-        h2 #{p.title}
-      .user-markup
-        if p.body.summary
-          p #{p.body.summary}
-        a(href=p.path.alias).small.button Read More
+    +post(p)
   if postSlice.length < posts.data.length
     article.content
       .user-markup
