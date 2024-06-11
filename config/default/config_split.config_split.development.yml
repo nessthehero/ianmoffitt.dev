@@ -1,0 +1,18 @@
+uuid: 949a4b29-79c9-4dcd-bf7a-f2b26234f5fc
+langcode: en
+status: false
+dependencies: {  }
+id: development
+label: Development
+description: 'Development local settings and configuration'
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/development
+module:
+  upgrade_status: 0
+theme: {  }
+complete_list: {  }
+partial_list:
+  - cdn.settings

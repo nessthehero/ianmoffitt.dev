@@ -5,7 +5,7 @@ prod:
   uri: https://ianmoffitt.dev
   paths:
     drush-script: /var/www/ianmoffitt.dev/vendor/bin/drush
-    files: sites/default/files
+    files: web/sites/default/files
   command:
     sql:
       sync:
@@ -19,7 +19,7 @@ dev:
   uri: https://dev.ianmoffitt.dev
   paths:
     drush-script: /var/www/dev.ianmoffitt.dev/vendor/bin/drush
-    files: sites/default/files
+    files: web/sites/default/files
   env-vars:
     IS_DEV: TRUE
   command:

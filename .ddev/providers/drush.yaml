@@ -9,13 +9,13 @@ db_pull_command:
     command: |
         # set -x   # You can enable bash debugging output by uncommenting
         set -eu -o pipefail
-        drush sql:sync @remote.dev @self -y
+        drush sql:sync @remote.prod @self -y
 
 files_import_command:
     command: |
         #set -x   # You can enable bash debugging output by uncommenting
         set -eu -o pipefail
-        drush rsync @remote.dev:%files @self:%files -y
+        drush rsync @remote.prod:%files @self:%files -y
 
 # push is a dangerous command. If not absolutely needed it's better to delete these lines.
 db_push_command:
