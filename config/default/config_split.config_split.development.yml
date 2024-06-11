@@ -13,6 +13,5 @@ folder: ../config/development
 module:
   upgrade_status: 0
 theme: {  }
-complete_list:
-  - cdn.settings
+complete_list: {  }
 partial_list: {  }

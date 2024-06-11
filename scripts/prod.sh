@@ -24,10 +24,6 @@ git status
 # NPM
 npm install --production
 
-# Directory ownership
-chown -R ian dist
-chgrp -R ian dist
-
 # Build static site
 npm run prod
 
