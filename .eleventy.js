@@ -6,7 +6,7 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.setTemplateFormats("html,njk,pug");
 
     // Pug
-    eleventyConfig.setPugOptions({ debug: true });
+    // eleventyConfig.setPugOptions({ debug: true });
 
     // Assets
     eleventyConfig.addPassthroughCopy("src/assets/**/*.*");
