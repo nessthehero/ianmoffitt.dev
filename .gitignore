@@ -40,4 +40,3 @@ settings.ddev.php
 
 # Eleventy
 .cache
-/dist
