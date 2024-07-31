@@ -25,7 +25,7 @@ git status
 npm install --production
 
 # Build static site
-npm run prod
+node --run prod
 
 # Composer
 composer install -q
