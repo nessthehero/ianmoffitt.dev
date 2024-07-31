@@ -25,7 +25,7 @@ git status
 npm install
 
 # Build static site
-node --run build
+npm run build
 
 # Composer
 composer -vvv install
