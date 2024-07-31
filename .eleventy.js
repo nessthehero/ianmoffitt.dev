@@ -12,6 +12,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/assets/**/*.*");
 
     // Watch
+    eleventyConfig.addWatchTarget("./src/_includes/**/*.njk");
     eleventyConfig.addWatchTarget("./src/_includes/**/*.pug");
     eleventyConfig.addWatchTarget("./src/assets/css/**/*.css");
 
@@ -26,6 +27,14 @@ module.exports = function(eleventyConfig) {
     };
 
     eleventyConfig.setLibrary("md", markdownIt(mdOptions));
+
+	const md = new markdownIt({
+		html: true
+	});
+
+	eleventyConfig.addPairedShortcode("markdown", (content) => {
+		return md.render(content);
+	});
 
     return {
         dir: {
