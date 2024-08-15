@@ -24,11 +24,13 @@ git status
 # NPM
 npm install --production
 
-# Build static site
-npm run prod
-
 # Composer
 composer install -q
 
 # Drush deploy
 drush deploy
+
+# Build static site
+npm run prod
+
+

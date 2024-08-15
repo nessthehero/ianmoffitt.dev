@@ -24,11 +24,11 @@ git status
 # NPM
 npm install
 
-# Build static site
-npm run build
-
 # Composer
 composer -vvv install
 
 # Drush deploy
 drush deploy
+
+# Build static site
+npm run build
