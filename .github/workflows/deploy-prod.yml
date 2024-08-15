@@ -20,7 +20,7 @@ jobs:
         with:
           host: ${{ secrets.IP }}
           username: ian
-          key: ${{ secrets.SSH_PUB_KEY }}
+          key: ${{ secrets.SSH_PRIV_KEY }}
           script: |
             bash scripts/prepare-prod.sh
 
