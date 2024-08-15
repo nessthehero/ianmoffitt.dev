@@ -22,7 +22,9 @@ jobs:
           username: ian
           key: ${{ secrets.SSH_PRIV_KEY }}
           script: |
-            bash scripts/prepare-prod.sh
+            cwd
+            whoami
+            ls -la
 
 #      - uses: actions/checkout@v2
 #
