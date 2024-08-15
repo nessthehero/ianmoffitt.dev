@@ -28,6 +28,8 @@ npm install --omit=dev
 composer install -q
 
 # Drush deploy
+drush status
+
 drush cr
 
 drush cim -v -y
