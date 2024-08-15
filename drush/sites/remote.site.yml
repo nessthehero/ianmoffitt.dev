@@ -27,4 +27,3 @@ dev:
       sync:
         options:
           skip-tables-list: cache,cache_*
-
