@@ -30,11 +30,11 @@ composer install -q
 # Drush deploy
 drush cr
 
-drush cim
+drush cim -v -y
 
 drush cr
 
-drush updb
+drush updb -v -y
 
 drush deploy:hook
 
