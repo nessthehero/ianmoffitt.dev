@@ -22,9 +22,8 @@ jobs:
           username: ian
           key: ${{ secrets.SSH_PRIV_KEY }}
           script: |
-            cwd
-            whoami
-            ls -la
+            cd /var/www/ianmoffitt.dev
+            bash scripts/prepare-prod.sh
 
 #      - uses: actions/checkout@v2
 #
