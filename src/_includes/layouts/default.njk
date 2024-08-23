@@ -1,5 +1,3 @@
-{% include "../mixins/_all.njk" %}
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -26,6 +24,7 @@
 	{% block bodytop %}{% endblock %}
 	<main class="main grid-container">
 		{% block content %}{% endblock %}
+		{% include "partials/footer.njk" ignore missing %}
 	</main>
 	<canvas id="base" class="grid-base"></canvas>
 	<script src="/assets/js/main.js" type="module"></script>

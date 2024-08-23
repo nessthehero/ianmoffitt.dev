@@ -1,4 +1,5 @@
 const markdownIt = require("markdown-it");
+const inspect = require("util").inspect;
 
 module.exports = function(eleventyConfig) {
 
@@ -31,12 +32,18 @@ module.exports = function(eleventyConfig) {
 	const md = new markdownIt({
 		html: true
 	});
-
+11
 	eleventyConfig.addPairedShortcode("markdown", (content) => {
 		return md.render(content);
 	});
 
+	eleventyConfig.addFilter("debug", (content) => `<pre>${inspect(content)}</pre>`);
+	eleventyConfig.addFilter("date", require("./src/filters/date.js"));
+
     return {
+		markdownTemplateEngine: 'njk',
+		dataTemplateEngine: 'njk',
+		htmlTemplateEngine: 'njk',
         dir: {
 			input: "src",
             output: "dist"

@@ -1,0 +1,25 @@
+---
+pagination:
+  data: posts.data
+  size: 1
+  alias: post
+  resolve: values
+permalink: "{{ post.attributes.path.alias }}/index.html"
+eleventyComputed:
+  title: "IanMoffitt.dev - {{ post.attributes.title }}"
+---
+{% extends "layouts/default.njk" %}
+
+{% block content %}
+
+	<article class="content">
+{#		{{ post | debug | safe }}#}
+		<header>
+			<time>{{ post.attributes.created | date('MMM d, yyyy') }}</time>
+			<h1>{{ post.attributes.title }}</h1>
+		</header>
+		<div class="user-markup">
+			{{ post.attributes.body.processed | safe }}
+		</div>
+	</article>
+{% endblock %}
