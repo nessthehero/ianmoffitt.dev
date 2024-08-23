@@ -1,0 +1,13 @@
+{% macro post(p) %}
+	<article class="content content--snippet">
+		<header>
+			<h2>{{ p.title }}</h2>
+		</header>
+		<div class="user-markup">
+			{% if p.body.summary %}
+				<p>{{ p.body.summary }}</p>
+			{% endif %}
+			<a href="{{ p.path.alias }}" class="small button">Read More</a>
+		</div>
+	</article>
+{% endmacro %}
