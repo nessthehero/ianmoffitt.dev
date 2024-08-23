@@ -12,7 +12,14 @@
 			{% include "../svg/logo.svg" %}
 		</a>
 		<p class="global-footer__copyright">
-			&copy; Ian Moffitt {{ getYear() }}
+			&copy; Ian Moffitt {{ getYear }}
 		</p>
+	</section>
+	<section class="global-footer__links">
+		<ul class="global-footer__list">
+			{% for val in site.social %}
+				<li><a href="{{ val.url }}">{{ val.name }}</a></li>
+			{% endfor %}
+		</ul>
 	</section>
 </footer>

@@ -1,0 +1,26 @@
+---
+title: "IanMoffitt.dev - Archive"
+permalink: "posts/index.html"
+dynamicPermalink: false
+---
+{% extends "layouts/default.njk" %}
+
+{% block content %}
+	<article class="content">
+		<div class="user-markup">
+			<h1>Archive</h1>
+			{% set displayYear = 0 %}
+			{% if posts %}
+				{% for post in posts.data %}
+					{% set p = post.attributes %}
+					{% set postDate = p.created | date("yyyy") %}
+					{% if postDate !== displayYear %}
+						{% set displayYear = postDate %}
+						<h2>{{ displayYear }}</h2>
+					{% endif %}
+					<a href="{{ p.path.alias }}">{{ p.title }}</a><br/>
+				{% endfor %}
+			{% endif %}
+		</div>
+	</article>
+{% endblock %}
