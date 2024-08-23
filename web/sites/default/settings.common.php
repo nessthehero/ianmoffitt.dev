@@ -135,6 +135,8 @@
 	$settings['config_sync_directory'] = '../config/default';
 	$config['system.logging']['error_level'] = 'verbose';
 
+	$settings['state_cache'] = TRUE;
+
 	if (isset($_SERVER['IS_DEV']) && str_contains(__DIR__, 'dev.ianmoffitt.dev')) {
 		include __DIR__ . "/settings.dev.php";
 	} elseif (str_contains(__DIR__, 'ianmoffitt.dev') && !str_contains(__DIR__, 'dev.ianmoffitt.dev')) {
