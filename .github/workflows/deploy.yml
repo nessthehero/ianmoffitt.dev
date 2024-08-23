@@ -1,0 +1,26 @@
+name: Deploy Development
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: deployment
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.IP }}
+          username: ian
+          key: ${{ secrets.SSH_PRIV_KEY }}
+          script: |
+            cd /var/www/ianmoffitt.dev
+            bash scripts/prepare.sh
