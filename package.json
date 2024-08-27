@@ -7,8 +7,8 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"clean": "rm -rf ./dist/* && rm -rf ./.cache/*",
 		"build": "npm run clean && npx @11ty/eleventy",
-		"prod": "npm run clean && npx @11ty/eleventy --quiet",
-		"serve": "npm run clean && DEBUG=Eleventy* npx @11ty/eleventy --serve"
+		"prod": "npm run clean && MODE=production npx @11ty/eleventy --quiet",
+		"serve": "npm run clean && MODE=development DEBUG=Eleventy* npx @11ty/eleventy --serve"
 	},
 	"keywords": [],
 	"author": "",

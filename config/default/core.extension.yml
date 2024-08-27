@@ -16,6 +16,7 @@ module:
   datetime: 0
   editor: 0
   field: 0
+  field_group: 0
   field_ui: 0
   file: 0
   filter: 0
@@ -42,6 +43,7 @@ module:
   taxonomy: 0
   text: 0
   token: 0
+  token_filter: 0
   toolbar: 0
   update: 0
   user: 0
