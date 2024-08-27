@@ -1,0 +1,21 @@
+uuid: b1bebfa1-ab56-40eb-9c1c-b4eb20190f68
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hide_from_archive
+    - node.type.post
+id: node.post.field_hide_from_archive
+field_name: field_hide_from_archive
+entity_type: node
+bundle: post
+label: 'Hide from Archive'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

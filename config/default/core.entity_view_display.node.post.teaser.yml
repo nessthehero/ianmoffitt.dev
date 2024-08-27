@@ -5,6 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.post.body
+    - field.field.node.post.field_display_style
+    - field.field.node.post.field_hide_date
+    - field.field.node.post.field_hide_from_archive
+    - field.field.node.post.field_hide_title
     - node.type.post
   module:
     - text
@@ -27,4 +31,8 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_display_style: true
+  field_hide_date: true
+  field_hide_from_archive: true
+  field_hide_title: true

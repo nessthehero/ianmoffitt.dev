@@ -11,15 +11,24 @@ eleventyComputed:
 {% extends "layouts/default.njk" %}
 
 {% block content %}
-
 	<article class="content">
-{#		{{ post | debug | safe }}#}
 		<header>
-			<time>{{ post.attributes.created | date('MMM d, yyyy') }}</time>
-			<h1>{{ post.attributes.title }}</h1>
+			{% if post.attributes.field_hide_date %}
+				<time>{{ post.attributes.created | date('MMM d, yyyy') }}</time>
+			{% endif %}
+			{% if post.attributes.field_hide_title %}
+				<h1>{{ post.attributes.title }}</h1>
+			{% endif %}
 		</header>
 		<div class="user-markup">
 			{{ post.attributes.body.processed | safe }}
 		</div>
 	</article>
+
+	{% if isDevelopment %}
+		<article class="content">
+			<p><a href="{{ post.links.self.href }}">View JSON Data</a></p>
+			<pre>{{ post | debug | safe }}</pre>
+		</article>
+	{% endif %}
 {% endblock %}

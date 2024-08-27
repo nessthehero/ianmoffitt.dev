@@ -4,8 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.post.body
+    - field.field.node.post.field_display_style
+    - field.field.node.post.field_hide_date
+    - field.field.node.post.field_hide_from_archive
+    - field.field.node.post.field_hide_title
     - node.type.post
   module:
+    - options
     - text
     - user
 id: node.post.default
@@ -19,6 +24,43 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 101
+    region: content
+  field_display_style:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_hide_date:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_hide_from_archive:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_hide_title:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 105
     region: content
   links:
     settings: {  }

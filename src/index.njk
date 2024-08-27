@@ -18,7 +18,7 @@ title: 'IanMoffitt.dev'
 	{% for post in posts.data | slice(5) %}
 		{% if post[0].attributes.title %}
 			{% set p = post[0].attributes %}
-			<article class="content content--snippet">
+			<article class="content{% if p.field_display_style %} content--{{ p.field_display_style }}{% endif %}">
 				<header>
 					<h2>{{ p.title }}</h2>
 				</header>

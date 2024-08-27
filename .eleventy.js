@@ -19,6 +19,10 @@ module.exports = function(eleventyConfig) {
 
     // Global Data
     eleventyConfig.addGlobalData("getYear", () => new Date().getFullYear());
+	eleventyConfig.addGlobalData("mode", () => process.env.MODE);
+	eleventyConfig.addGlobalData("isDevelopment", () => {
+		return process.env.MODE === 'development';
+	})
 
     // Markdown
     let mdOptions = {
@@ -32,7 +36,7 @@ module.exports = function(eleventyConfig) {
 	const md = new markdownIt({
 		html: true
 	});
-11
+
 	eleventyConfig.addPairedShortcode("markdown", (content) => {
 		return md.render(content);
 	});

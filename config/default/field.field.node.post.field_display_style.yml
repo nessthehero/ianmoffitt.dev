@@ -1,0 +1,23 @@
+uuid: c17efa06-131a-44f3-991c-c8f9cf05dc08
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_display_style
+    - node.type.post
+  module:
+    - options
+id: node.post.field_display_style
+field_name: field_display_style
+entity_type: node
+bundle: post
+label: 'Display Style'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: summary
+default_value_callback: ''
+settings: {  }
+field_type: list_string

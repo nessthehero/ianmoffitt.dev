@@ -1,0 +1,21 @@
+uuid: dfd56219-ec4d-4c3d-826e-b6a79949b3c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hide_title
+    - node.type.post
+id: node.post.field_hide_title
+field_name: field_hide_title
+entity_type: node
+bundle: post
+label: 'Hide Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
