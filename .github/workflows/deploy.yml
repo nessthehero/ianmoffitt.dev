@@ -15,12 +15,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: deployment
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.IP }}
-          username: ian
-          key: ${{ secrets.SSH_PRIV_KEY }}
-          script: |
-            cd /var/www/ianmoffitt.dev
-            bash scripts/prepare.sh
+#      - name: deployment
+#        uses: appleboy/ssh-action@v1.0.3
+#        with:
+#          host: ${{ secrets.IP }}
+#          username: ian
+#          key: ${{ secrets.SSH_PRIV_KEY }}
+#          script: |
+#            cd /var/www/ianmoffitt.dev
+#            bash scripts/prepare.sh
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$SSH_KEY" > ~/.ssh/production.key
+          chmod 600 ~/.ssh/production.key
+          cat >>~/.ssh/config <<END
+          Host production
+            HostName $SSH_HOST
+            User $SSH_USER
+            IdentityFile ~/.ssh/production.key
+            StrictHostKeyChecking no
+          END
+        env:
+          SSH_USER: ian
+          SSH_KEY: ${{ secrets.SSH_PRIV_KEY }}
+          SSH_HOST: ${{ secrets.IP }}
+
+      - name: Run Prod Script
+        run: ssh production 'cd /var/www/ianmoffitt.dev && bash scripts/prepare.sh'
