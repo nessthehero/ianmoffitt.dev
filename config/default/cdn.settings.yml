@@ -1,0 +1,16 @@
+_core:
+  default_config_hash: _QWheLY4erYyAlt1vdLtxMirLer05mMexNbeoNJd_As
+status: true
+mapping:
+  type: simple
+  conditions:
+    not:
+      extensions:
+        - css
+        - js
+  domain: cms.ianmoffitt.dev
+scheme: //
+farfuture:
+  status: true
+stream_wrappers:
+  - public
