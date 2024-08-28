@@ -1,0 +1,21 @@
+uuid: b4b051f5-edd0-4837-93c6-d965f4f9435b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_show_last_updated
+    - node.type.post
+id: node.post.field_show_last_updated
+field_name: field_show_last_updated
+entity_type: node
+bundle: post
+label: 'Show Last Updated'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

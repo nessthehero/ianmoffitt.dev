@@ -6,9 +6,10 @@
     --color-primary: #00665c;
     --color-secondary: #259a92;
     --color-secondary-light: #5cc5c3;
-}
+	--color-tertiary: #e8c453;
 
-:root {
     --heading-color: var(--color-primary);
     --heading-shadow-color: var(--color-secondary);
+
+	--link-color: var(--color-tertiary);
 }

@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.post.field_hide_date
     - field.field.node.post.field_hide_from_archive
     - field.field.node.post.field_hide_title
+    - field.field.node.post.field_show_last_updated
     - node.type.post
   module:
     - field_group
@@ -19,6 +20,7 @@ third_party_settings:
       children:
         - field_display_style
         - field_hide_date
+        - field_show_last_updated
         - field_hide_title
         - field_hide_from_archive
       label: 'Custom Settings'
@@ -71,12 +73,19 @@ content:
     third_party_settings: {  }
   field_hide_from_archive:
     type: boolean_checkbox
-    weight: 12
+    weight: 13
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_hide_title:
+    type: boolean_checkbox
+    weight: 12
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_show_last_updated:
     type: boolean_checkbox
     weight: 11
     region: content

@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.post.field_hide_date
     - field.field.node.post.field_hide_from_archive
     - field.field.node.post.field_hide_title
+    - field.field.node.post.field_show_last_updated
     - node.type.post
   module:
     - options
@@ -61,6 +62,16 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     weight: 105
+    region: content
+  field_show_last_updated:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 106
     region: content
   links:
     settings: {  }

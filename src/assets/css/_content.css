@@ -20,3 +20,26 @@
         margin: 16px 0;
     }
 }
+
+.content--snippet {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 1rem;
+
+	header {
+		flex: 1 0 auto;
+		max-width: calc(100% - 5rem);
+		margin-top: 0;
+		padding-right: 1rem;
+
+		:is(h1, h2, h3, h4, h5, h6) {
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	.user-markup {
+		padding: 0;
+		margin: 0;
+	}
+}

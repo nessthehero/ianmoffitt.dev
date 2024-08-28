@@ -74,6 +74,11 @@ main > * + *,
 
 .button {
 	background-color: var(--color-primary);
+
+	&:hover,
+	&:active {
+		color: var(--color-tertiary);
+	}
 }
 
 

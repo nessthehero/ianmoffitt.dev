@@ -16,6 +16,9 @@ eleventyComputed:
 			{% if post.attributes.field_hide_date === FALSE %}
 				<time>{{ post.attributes.created | date('MMM d, yyyy') }}</time>
 			{% endif %}
+			{% if post.attributes.show_last_updated === TRUE %}
+				<time>Last updated {{ post.attributes.changed | date('MMM d, yyyy') }}</time>
+			{% endif %}
 			{% if post.attributes.field_hide_title === FALSE %}
 				<h1>{{ post.attributes.title }}</h1>
 			{% endif %}
