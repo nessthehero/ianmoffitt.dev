@@ -41,7 +41,7 @@ jobs:
             git reset --hard
             git pull
           
-            sh scripts/prod.sh
+            bash scripts/prod.sh
           "
 
   npminstall:
