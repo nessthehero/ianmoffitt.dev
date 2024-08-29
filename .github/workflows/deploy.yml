@@ -33,7 +33,10 @@ jobs:
           SSH_HOST: ${{ secrets.IP }}
       - name: Update Repository to Latest
         run: >
-          ssh production "
+          ssh production "          
+            export NVM_DIR=$HOME/.nvm
+            source $NVM_DIR/nvm.sh
+          
             cd /var/www/ianmoffitt.dev
           
             git fetch origin --depth=5
