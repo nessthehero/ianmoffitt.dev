@@ -33,7 +33,8 @@ jobs:
           SSH_HOST: ${{ secrets.IP }}
       - name: Update Repository to Latest
         run: >
-          ssh production "          
+          ssh production "
+            export PATH="$PATH"
             export NVM_DIR=$HOME/.nvm
             source $NVM_DIR/nvm.sh
           
