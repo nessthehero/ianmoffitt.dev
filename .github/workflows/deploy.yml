@@ -55,6 +55,7 @@ jobs:
           "
 
   npminstall:
+    needs: update
     runs-on: ubuntu-latest
 
     steps:
@@ -80,36 +81,87 @@ jobs:
             cd /var/www/ianmoffitt.dev
             npm install --omit=dev
           "
-#
-#  composerinstall:
-#    needs: ssh
-#    runs-on: ubuntu-latest
-#
-#    steps:
-#      - name: Composer Install
-#        run: ssh production <<EOF
-#          cd /var/www/ianmoffitt.dev
-#          composer install -q
-#        EOF
-#
-#  drupaldeploy:
-#    needs: ssh
-#    runs-on: ubuntu-latest
-#
-#    steps:
-#      - name: Composer Install
-#        run: ssh production <<EOF
-#          cd /var/www/ianmoffitt.dev
-#          drush deploy
-#        EOF
-#
-#  eleventybuild:
-#    needs: ssh
-#    runs-on: ubuntu-latest
-#
-#    steps:
-#      - name: Composer Install
-#        run: ssh production <<EOF
-#          cd /var/www/ianmoffitt.dev
-#          npm run prod
-#        EOF
+
+  composerinstall:
+    needs: update
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: SSH
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$SSH_KEY" > ~/.ssh/production.key
+          chmod 600 ~/.ssh/production.key
+          cat >>~/.ssh/config <<END
+          Host production
+            HostName $SSH_HOST
+            User $SSH_USER
+            IdentityFile ~/.ssh/production.key
+            StrictHostKeyChecking no
+          END
+        env:
+          SSH_USER: ian
+          SSH_KEY: ${{ secrets.SSH_PRIV_KEY }}
+          SSH_HOST: ${{ secrets.IP }}
+      - name: NPM Install
+        run: >
+          ssh production "
+            cd /var/www/ianmoffitt.dev
+            composer install -q
+          "
+
+  drupaldeploy:
+    needs: composerinstall
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: SSH
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$SSH_KEY" > ~/.ssh/production.key
+          chmod 600 ~/.ssh/production.key
+          cat >>~/.ssh/config <<END
+          Host production
+            HostName $SSH_HOST
+            User $SSH_USER
+            IdentityFile ~/.ssh/production.key
+            StrictHostKeyChecking no
+          END
+        env:
+          SSH_USER: ian
+          SSH_KEY: ${{ secrets.SSH_PRIV_KEY }}
+          SSH_HOST: ${{ secrets.IP }}
+      - name: NPM Install
+        run: >
+          ssh production "
+            cd /var/www/ianmoffitt.dev
+            drush deploy
+          "
+
+  eleventybuild:
+    needs: drupaldeploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: SSH
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$SSH_KEY" > ~/.ssh/production.key
+          chmod 600 ~/.ssh/production.key
+          cat >>~/.ssh/config <<END
+          Host production
+            HostName $SSH_HOST
+            User $SSH_USER
+            IdentityFile ~/.ssh/production.key
+            StrictHostKeyChecking no
+          END
+        env:
+          SSH_USER: ian
+          SSH_KEY: ${{ secrets.SSH_PRIV_KEY }}
+          SSH_HOST: ${{ secrets.IP }}
+      - name: NPM Install
+        run: >
+          ssh production "
+            cd /var/www/ianmoffitt.dev
+            npm run prod
+          "
