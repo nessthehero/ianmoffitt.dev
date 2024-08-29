@@ -20,27 +20,3 @@ ls -la
 
 # View Git status
 git status
-
-# NPM
-npm install --omit=dev
-
-# Composer
-composer install -q
-
-# Drush deploy
-drush status
-
-drush cr
-
-drush cim -v -y
-
-drush cr
-
-drush updb -v -y
-
-drush deploy:hook
-
-# Build static site
-npm run prod
-
-

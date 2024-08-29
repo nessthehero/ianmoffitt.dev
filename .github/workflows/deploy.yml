@@ -33,29 +33,15 @@ jobs:
           SSH_HOST: ${{ secrets.IP }}
       - name: Update Repository to Latest
         run: >
-          ssh production "
-            export PATH="$PATH"
-            export NVM_DIR=$HOME/.nvm
-            source $NVM_DIR/nvm.sh
-          
+          ssh production "          
             cd /var/www/ianmoffitt.dev
           
             git fetch origin --depth=5
             git clean -df
             git reset --hard
             git pull
-
-            whoami
-            which nvm
-            nvm use 18
-
-            node --version
-            npm --version
-            composer --version
-
-            ls -la
-
-            git status  
+          
+            sh scripts/prod.sh
           "
 
   npminstall:
