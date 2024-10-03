@@ -9,6 +9,7 @@
 		"drupal/admin_toolbar": "^3.5",
 		"drupal/auto_entitylabel": "^3.0@beta",
 		"drupal/cdn": "^5.0@alpha",
+		"drupal/ckeditor_media_resize": "^1.0@beta",
 		"drupal/config_ignore": "^3.3",
 		"drupal/config_split": "^2.0",
 		"drupal/core-composer-scaffold": "^11",
@@ -26,6 +27,7 @@
 		"drupal/stable": "^2.0",
 		"drupal/token_filter": "^2.2",
 		"drush/drush": "^13.0",
+		"imoffitt/spotify_playing": "dev-master",
 		"vlucas/phpdotenv": "^5.6"
 	},
 	"license": "MIT",
@@ -53,7 +55,11 @@
         "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
-        }
+        },
+		"spotify-now-playing": {
+			"type": "path",
+			"url": "web/modules/custom/spotify_playing"
+		}
 	},
 	"extra": {
 		"installer-types": [

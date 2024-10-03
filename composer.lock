@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "415aa8f0d80f59092759d1b67a053071",
+    "content-hash": "2b14adce1ff9e5c847aa668ae0b2435e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1349,6 +1349,59 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/cdn",
                 "issues": "https://www.drupal.org/project/issues/cdn"
+            }
+        },
+        {
+            "name": "drupal/ckeditor_media_resize",
+            "version": "1.0.0-beta2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ckeditor_media_resize.git",
+                "reference": "1.0.0-beta2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/ckeditor_media_resize-1.0.0-beta2.zip",
+                "reference": "1.0.0-beta2",
+                "shasum": "f6f0509b8996a4f749df864950528ce4a1101932"
+            },
+            "require": {
+                "drupal/core": "^10.3.0 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-beta2",
+                    "datestamp": "1724065951",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Leu",
+                    "homepage": "https://www.drupal.org/u/s_leu",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "s_leu",
+                    "homepage": "https://www.drupal.org/user/1336864"
+                },
+                {
+                    "name": "Tim Bozeman",
+                    "homepage": "https://www.drupal.org/user/2241356"
+                }
+            ],
+            "description": "Provides a ckeditor5 plugin that allows resizing of embedded image media.",
+            "homepage": "https://drupal.org/project/ckeditor_media_resize",
+            "support": {
+                "source": "https://git.drupalcode.org/project/ckeditor_media_resize"
             }
         },
         {
@@ -3615,6 +3668,84 @@
                 "source": "https://github.com/laravel/framework"
             },
             "time": "2024-06-28T20:10:30+00:00"
+        },
+        {
+            "name": "imoffitt/spotify_playing",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "web/modules/custom/spotify_playing",
+                "reference": "6e32598da0c623d633613407da053ff3d4f9134f"
+            },
+            "require": {
+                "jwilsson/spotify-web-api-php": "^6.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Imoffitt\\SpotifyPlaying\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Ian Moffitt",
+                    "email": "imoffitt@andrew.cmu.edu"
+                }
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "jwilsson/spotify-web-api-php",
+            "version": "6.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jwilsson/spotify-web-api-php.git",
+                "reference": "482508df74e2b851be44d3c6ac7cbacae500ce7a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jwilsson/spotify-web-api-php/zipball/482508df74e2b851be44d3c6ac7cbacae500ce7a",
+                "reference": "482508df74e2b851be44d3c6ac7cbacae500ce7a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.5",
+                "php-mock/php-mock-phpunit": "^2.7",
+                "phpunit/phpunit": "^10.2",
+                "squizlabs/php_codesniffer": "^3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SpotifyWebAPI\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Wilsson",
+                    "email": "jonathan.wilsson@gmail.com"
+                }
+            ],
+            "description": "A PHP wrapper for Spotify's Web API.",
+            "homepage": "https://github.com/jwilsson/spotify-web-api-php",
+            "keywords": [
+                "spotify"
+            ],
+            "support": {
+                "issues": "https://github.com/jwilsson/spotify-web-api-php/issues",
+                "source": "https://github.com/jwilsson/spotify-web-api-php/tree/6.1.0"
+            },
+            "time": "2024-06-06T11:37:46+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -7884,6 +8015,7 @@
     "stability-flags": {
         "drupal/auto_entitylabel": 10,
         "drupal/cdn": 15,
+        "drupal/ckeditor_media_resize": 10,
         "drupal/gin": 5,
         "drupal/gin_toolbar": 10
     },

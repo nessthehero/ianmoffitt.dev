@@ -1,0 +1,31 @@
+spotify_playing.settings:
+  path: '/admin/config/spotify_playing'
+  defaults:
+    _form: '\Drupal\spotify_playing\Form\SpotifyConfigForm'
+    _title: 'Spotify Now Playing Settings'
+  requirements:
+    _permission: 'administer spotify now playing'
+
+spotify_playing.endpoint:
+  path: '/spotify_playing'
+  defaults:
+    _controller: '\Drupal\spotify_playing\Controller\SpotifyController::content'
+    _title: 'Spotify Now Playing'
+  requirements:
+    _permission: 'access content'
+
+spotify_playing.verify:
+  path: '/spotify_playing/status'
+  defaults:
+    _controller: '\Drupal\spotify_playing\Controller\SpotifyAuthController::content'
+    _title: 'Spotify Now Playing Verify Session'
+  requirements:
+    _permission: 'administer spotify now playing'
+
+spotify_playing.authorization:
+  path: '/spotify_playing/authorization'
+  defaults:
+    _controller: '\Drupal\spotify_playing\Controller\SpotifyAuthController::authorize'
+    _title: 'Spotify Now Playing Authorization Callback'
+  requirements:
+    _permission: 'administer spotify now playing'
