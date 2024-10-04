@@ -206,7 +206,7 @@ parameters:
   # for more information about the topic in general.
   # Note: By default the configuration is disabled.
   cors.config:
-    enabled: false
+    enabled: true
     # Specify allowed headers, like 'x-allowed-header'.
     allowedHeaders: []
     # Specify allowed request methods, specify ['*'] to allow all possible ones.
@@ -215,7 +215,14 @@ parameters:
     # slashes with URLs.
     allowedOrigins: ['*']
     # Configure requests allowed from origins, matching against regex patterns.
-    allowedOriginsPatterns: []
+    allowedOriginsPatterns: [
+      '#^http://localhost:8080$',
+      '#^https://localhost:8080$',
+      '#^http://localhost$',
+      '#^https://localhost$',
+      '#^https://ianmoffitt.dev$',
+      '#^https://www.ianmoffitt.dev$',
+    ]
     # Sets the Access-Control-Expose-Headers header.
     exposedHeaders: false
     # Sets the Access-Control-Max-Age header.

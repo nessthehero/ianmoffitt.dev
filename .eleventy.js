@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const markdownIt = require("markdown-it");
 const inspect = require("util").inspect;
 
@@ -22,7 +24,8 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addGlobalData("mode", () => process.env.MODE);
 	eleventyConfig.addGlobalData("isDevelopment", () => {
 		return process.env.MODE === 'development';
-	})
+	});
+	eleventyConfig.addGlobalData("spotifyEndpoint", () => process.env.SPOTIFY_ENDPOINT);
 
     // Markdown
     let mdOptions = {

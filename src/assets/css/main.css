@@ -9,6 +9,7 @@
 @import "_global-footer.css" layer(base);
 @import "_user-markup.css" layer(module);
 @import "_content.css" layer(module);
+@import "_spotify.css" layer(module);
 /*@import "_expand.css" layer(module);*/
 /*@import "_masthead.css" layer(module);*/
 

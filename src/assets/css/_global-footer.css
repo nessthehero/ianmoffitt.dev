@@ -1,4 +1,6 @@
 .global-footer {
+	--heading-color: #ffffff;
+
     background-color: #00665c;
     border-radius: 3px;
     margin: 100px 0;
@@ -19,8 +21,8 @@
         display: flex;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
+        -ms-flex-direction: column;
+        flex-direction: column;
         -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
         order: 1;
@@ -30,7 +32,6 @@
 }
 
 .global-footer__info {
-    --heading-color: #ffffff;
     color: #ffffff;
 }
 
