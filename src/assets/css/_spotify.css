@@ -42,6 +42,10 @@
 	}
 }
 
+.paused .spotify__progress {
+	display: none;
+}
+
 @keyframes spotify-progress {
 	from {
 		width: var(--animation-width, 0%);

@@ -66,6 +66,9 @@ const spotify = {
 				let header = 'what I\'m listening to right now:';
 				if (!now.is_playing) {
 					header += ' (paused)';
+					this.$el.classList.add('paused');
+				} else {
+					this.$el.classList.remove('paused');
 				}
 
 				this.$el.classList.add('loaded');
