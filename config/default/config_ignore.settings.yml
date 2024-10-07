@@ -7,3 +7,4 @@ ignored_config_entities:
   export:
     - cdn.settings
     - smtp.settings
+    - spotify_playing.settings
