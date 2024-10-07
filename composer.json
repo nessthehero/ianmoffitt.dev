@@ -26,6 +26,7 @@
 		"drupal/smtp": "^1.2",
 		"drupal/stable": "^2.0",
 		"drupal/token_filter": "^2.2",
+		"drupal/upgrade_status": "^4.3",
 		"drush/drush": "^13.0",
 		"imoffitt/spotify_playing": "dev-master",
 		"vlucas/phpdotenv": "^5.6"
