@@ -126,6 +126,7 @@ jobs:
           ssh production "
             cd /var/www/ianmoffitt.dev
             drush deploy
+            drush cron
           "
 
   eleventybuild:

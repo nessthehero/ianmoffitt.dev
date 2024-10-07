@@ -13,6 +13,9 @@
 		'port' => $_SERVER['IANMOFFITT_DATABASE_PORT'],
 		'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
 		'driver' => 'mysql',
+		'init_commands' => [
+			'isolation_level' => 'SET SESSION transaction_isolation=\'READ-COMMITTED\'',
+		],
 	);
 
 	$config['system.logging']['error_level'] = 'verbose';

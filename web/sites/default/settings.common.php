@@ -142,3 +142,7 @@
 	} elseif (str_contains(__DIR__, 'ianmoffitt.dev') && !str_contains(__DIR__, 'dev.ianmoffitt.dev')) {
 		include __DIR__ . "/settings.production.php";
 	}
+
+	$databases['default']['default']['init_commands'] = [
+		'isolation_level' => 'SET SESSION transaction_isolation=\'READ-COMMITTED\'',
+	];
