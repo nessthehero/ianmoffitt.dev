@@ -7,6 +7,8 @@
 	margin: 100px auto;
 	max-width: 600px;
 	display: none;
+	position: relative;
+	z-index: 10;
 
 	&.loaded {
 		display: block;
