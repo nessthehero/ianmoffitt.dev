@@ -127,7 +127,7 @@ jobs:
             cd /var/www/ianmoffitt.dev
           
             mysql_ready() {
-                mysqladmin ping --host=database --user=root --password=$MYSQL_ROOT_PW > /dev/null 2>&1
+                mysqladmin ping --host=localhost --user=root --password=$MYSQL_ROOT_PW > /dev/null 2>&1
             }
 
             while !(mysql_ready)
