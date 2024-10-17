@@ -4,6 +4,7 @@ mode: intermediate
 ignored_config_entities:
   import:
     - smtp.settings
+    - spotify_playing.settings
   export:
     - cdn.settings
     - smtp.settings
