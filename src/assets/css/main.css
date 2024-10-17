@@ -13,23 +13,6 @@
 /*@import "_expand.css" layer(module);*/
 /*@import "_masthead.css" layer(module);*/
 
-::-moz-selection {
-    background: #a2cdee;
-    text-shadow: none;
-}
-
-::selection {
-    background: #a2cdee;
-    text-shadow: none;
-}
-
-body {
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAIAAACQKrqGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPklEQVQokd3MsQ0AMAgDwdgyEpTsPxyjkCY96SLl69Ojqkia2ZoSSUnuPlNJEZGZIyWAER3a3bf0+fXS/Us3lcIJWaJk9Y8AAAAASUVORK5CYII=);
-    background-position: -1px -1px;
-	background-origin: border-box;
-    background-repeat: repeat;
-}
-
 .grid-base {
     left: 0;
     margin: 0;
@@ -45,18 +28,6 @@ body {
 
 .grid-base.loaded {
     opacity: 1;
-}
-
-main {
-    padding-top: var(--flow-space, 2.5rem);
-    pointer-events: none;
-    position: relative;
-    z-index: 2;
-}
-
-main > * + *,
-.flow > * + * {
-    margin-top: var(--flow-space, 2.5rem);
 }
 
 .logo {
@@ -81,8 +52,3 @@ main > * + *,
 		color: var(--color-tertiary);
 	}
 }
-
-
-
-
-

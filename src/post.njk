@@ -11,7 +11,7 @@ eleventyComputed:
 {% extends "layouts/default.njk" %}
 
 {% block content %}
-	<article class="content">
+	<article class="content" style="view-transition-name: post-{{ post.attributes.drupal_internal__nid }}">
 		<header>
 			{% if post.attributes.field_hide_date === FALSE %}
 				<time>{{ post.attributes.created | date('MMM d, yyyy') }}</time>
