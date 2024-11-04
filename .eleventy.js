@@ -14,7 +14,10 @@ module.exports = function(eleventyConfig) {
     // Assets
     eleventyConfig.addPassthroughCopy("src/assets/**/*.*");
 
-    // Watch
+	// CSS
+	eleventyConfig.addPlugin(require('@jgarber/eleventy-plugin-postcss'));
+
+	// Watch
     eleventyConfig.addWatchTarget("./src/_includes/**/*.njk");
     eleventyConfig.addWatchTarget("./src/_includes/**/*.pug");
     eleventyConfig.addWatchTarget("./src/assets/css/**/*.css");

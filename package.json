@@ -19,5 +19,8 @@
 		"dotenv": "^16.4.5",
 		"jstransformer-markdown-it": "^3.0.0",
 		"luxon": "^3.5.0"
+	},
+	"devDependencies": {
+		"@jgarber/eleventy-plugin-postcss": "^1.0.1"
 	}
 }

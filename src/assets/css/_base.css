@@ -52,7 +52,7 @@ main {
 
 main > * + *,
 .flow > * + * {
-	margin-top: var(--flow-space, 2.5rem);
+	margin-block-start: var(--flow-space, 2.5rem);
 }
 
 [class] :is(h1, h2, h3, h4, h5, h6) {

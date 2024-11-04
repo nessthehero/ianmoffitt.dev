@@ -61,7 +61,7 @@
 }
 .expand--open .content__expander {
     opacity: 1;
-    margin-bottom: 16px;
+    margin-block-end: 16px;
 }
 .expand--open .ian-icon-plus {
     display: none;

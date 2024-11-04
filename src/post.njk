@@ -31,7 +31,10 @@ eleventyComputed:
 	{% if isDevelopment %}
 		<article class="content">
 			<p><a href="{{ post.links.self.href }}">View JSON Data</a></p>
-			<pre>{{ post | debug | safe }}</pre>
+			<details>
+				<summary>Debug Info</summary>
+				<pre>{{ post | debug | safe }}</pre>
+			</details>
 		</article>
 	{% endif %}
 {% endblock %}
