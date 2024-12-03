@@ -13,6 +13,7 @@ module.exports = function(eleventyConfig) {
 
     // Assets
     eleventyConfig.addPassthroughCopy("src/assets/**/*.*");
+    eleventyConfig.addPassthroughCopy({ "src/_root": "/"});
 
 	// CSS
 	eleventyConfig.addPlugin(require('@jgarber/eleventy-plugin-postcss'));

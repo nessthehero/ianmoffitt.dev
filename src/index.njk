@@ -23,10 +23,14 @@ title: 'IanMoffitt.dev'
 					<h2>{{ p.title }}</h2>
 				</header>
 				<div class="user-markup">
-					{% if p.body.summary %}
-						<p>{{ p.body.summary }}</p>
+					{% if p.field_display_style !== 'snippet' %}
+						{% if p.body.summary %}
+							<p>{{ p.body.summary }}</p>
+						{% endif %}
 					{% endif %}
-					<a href="{{ p.path.alias }}" class="small button">Read More</a>
+					{% if p.field_display_style !== 'full' %}
+						<a href="{{ p.path.alias }}" class="small button">Read More</a>
+					{% endif %}
 				</div>
 			</article>
 		{% endif %}
