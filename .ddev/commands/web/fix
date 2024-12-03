@@ -1,0 +1,9 @@
+#!/bin/sh
+
+vendor/bin/phpcbf        \
+  --standard=Drupal     \
+  --ignore=*.css,*.js,web/themes/contrib/*,web/core/*  \
+  web/modules/custom    \
+  web/themes
+RESULT=$?
+exit $RESULT

@@ -1,0 +1,14 @@
+#!/bin/sh
+
+vendor/bin/phpcs        \
+  --standard=Drupal     \
+  --ignore=*.css,*.js,web/themes/contrib/*,web/core/*  \
+  web/modules/custom    \
+  web/themes
+RESULT=$?
+if [ $RESULT != 0 ]; then
+  printf '\033[1;33mTo skip commit checks, add -n or --no-verify flag to commit command\n\n'
+else
+  printf '\033[1;33mNo issues found\n\n'
+fi
+exit $RESULT

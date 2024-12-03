@@ -10,7 +10,7 @@ db_pull_command:
         # set -x   # You can enable bash debugging output by uncommenting
         set -eu -o pipefail
         drush sql:sync @remote.prod @self -y
-        drush deploy
+#        drush deploy
 
 files_import_command:
     command: |
