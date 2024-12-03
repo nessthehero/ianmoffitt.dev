@@ -28,6 +28,7 @@ node_modules
 
 # Compiled
 /html
+/dist
 
 # Cache
 .stylelintcache
