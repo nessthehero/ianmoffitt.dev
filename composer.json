@@ -6,6 +6,7 @@
 		"ext-intl": "*",
 		"composer/installers": "^1.12",
 		"cweagans/composer-patches": "^1.7",
+		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
 		"drupal/admin_toolbar": "^3.5",
 		"drupal/auto_entitylabel": "^3.0@beta",
 		"drupal/cdn": "^5.0@alpha",
@@ -24,11 +25,11 @@
 		"drupal/paragraphs": "^1.18",
 		"drupal/pathauto": "^1.13",
 		"drupal/smtp": "^1.2",
+		"drupal/spotify_playing": "^1.0",
 		"drupal/stable": "^2.0",
 		"drupal/token_filter": "^2.2",
 		"drupal/upgrade_status": "^4.3",
 		"drush/drush": "^13.0",
-		"imoffitt/spotify_playing": "dev-master",
 		"vlucas/phpdotenv": "^5.6"
 	},
 	"license": "MIT",
@@ -44,7 +45,8 @@
 			"composer/installers": true,
 			"cweagans/composer-patches": true,
 			"drupal/core-composer-scaffold": true,
-			"drupal/core-project-message": true
+			"drupal/core-project-message": true,
+			"dealerdirect/phpcodesniffer-composer-installer": true
 		}
 	},
 	"autoload": {
@@ -56,11 +58,7 @@
         "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
-        },
-		"spotify-now-playing": {
-			"type": "path",
-			"url": "web/modules/custom/spotify_playing"
-		}
+        }
 	},
 	"extra": {
 		"installer-types": [
@@ -107,5 +105,8 @@
 				"[web-root]/sites/development.services.yml": false
 			}
 		}
+	},
+	"require-dev": {
+		"drupal/coder": "^8.3"
 	}
 }
