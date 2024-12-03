@@ -1,4 +1,0 @@
-name: 'Spotify Now Playing'
-type: module
-core_version_requirement: ^11
-description: 'WIP. A "Now Playing" JSON endpoint from Spotify.'
