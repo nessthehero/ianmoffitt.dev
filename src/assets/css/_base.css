@@ -8,6 +8,15 @@
 	text-shadow: none;
 }
 
+:focus {
+	outline: 0.25rem dashed #000;
+	outline-offset: 0.25rem;
+
+	&:not(:focus-visible) {
+		outline: 0;
+	}
+}
+
 @media not (prefers-reduced-motion: reduce) {
 	@view-transition {
 		navigation: auto;
