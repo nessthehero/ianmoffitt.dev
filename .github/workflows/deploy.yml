@@ -136,11 +136,11 @@ jobs:
                echo "waiting for mysql ..."
             done
           
-            drush updatedb --no-cache-clear
-            drush cache:rebuild
-            drush config:import
-            drush cache:rebuild
-            drush deploy:hook
+            drush updb -y --no-cache-clear
+            drush cr
+            drush cim -y
+            drush cr
+            drush deploy:hook -y
             drush cron
           "
 
