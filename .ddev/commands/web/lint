@@ -1,7 +1,7 @@
 #!/bin/sh
 
 vendor/bin/phpcs        \
-  --standard=Drupal     \
+  --standard=Drupal,DrupalPractice     \
   --ignore=*.css,*.js,web/themes/contrib/*,web/core/*  \
   web/modules/custom    \
   web/themes
