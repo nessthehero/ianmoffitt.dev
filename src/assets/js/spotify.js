@@ -94,7 +94,6 @@ const spotify = {
 					});
 				}
 				else {
-					document.getElementById('spotify-header').innerText = header;
 					document.getElementById('spotify-progress').setAttribute('style', this.generateAnimationProperties(
 						percentage,
 						remaining,
