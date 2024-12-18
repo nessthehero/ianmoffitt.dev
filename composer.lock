@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1beffd016eaff9fe10184e5119525a39",
+    "content-hash": "3761db3a9e90501a788ef57493aaeb5a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2247,17 +2247,17 @@
         },
         {
             "name": "drupal/gin",
-            "version": "3.0.0-rc15",
+            "version": "3.0.0-rc16",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin.git",
-                "reference": "8.x-3.0-rc15"
+                "reference": "8.x-3.0-rc16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/gin-8.x-3.0-rc15.zip",
-                "reference": "8.x-3.0-rc15",
-                "shasum": "245f8444a8534cff04eac57c0b07e4f44481cabc"
+                "url": "https://ftp.drupal.org/files/projects/gin-8.x-3.0-rc16.zip",
+                "reference": "8.x-3.0-rc16",
+                "shasum": "29fecc9fbcf40b77ffde6b2e5e4400ba938ab3ee"
             },
             "require": {
                 "drupal/core": "^9 || ^10 || ^11",
@@ -2266,8 +2266,8 @@
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.0-rc15",
-                    "datestamp": "1733734246",
+                    "version": "8.x-3.0-rc16",
+                    "datestamp": "1734527306",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "RC releases are not covered by Drupal security advisories."
@@ -2372,17 +2372,17 @@
         },
         {
             "name": "drupal/gin_toolbar",
-            "version": "1.0.0-rc7",
+            "version": "1.0.0-rc8",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin_toolbar.git",
-                "reference": "8.x-1.0-rc7"
+                "reference": "8.x-1.0-rc8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/gin_toolbar-8.x-1.0-rc7.zip",
-                "reference": "8.x-1.0-rc7",
-                "shasum": "9ad2bdc0f1664ff3c5fb6767986e508c92196692"
+                "url": "https://ftp.drupal.org/files/projects/gin_toolbar-8.x-1.0-rc8.zip",
+                "reference": "8.x-1.0-rc8",
+                "shasum": "bc4c199708e0f47a2893cc93d2e1cd7d9e5d21c3"
             },
             "require": {
                 "drupal/core": "^9 || ^10 || ^11"
@@ -2390,8 +2390,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.0-rc7",
-                    "datestamp": "1733734483",
+                    "version": "8.x-1.0-rc8",
+                    "datestamp": "1734527411",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "RC releases are not covered by Drupal security advisories."
@@ -2715,17 +2715,11 @@
         },
         {
             "name": "drupal/spotify_playing",
-            "version": "1.1.0",
+            "version": "dev-1.1.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/spotify_playing.git",
-                "reference": "1.1.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/spotify_playing-1.1.0.zip",
-                "reference": "1.1.0",
-                "shasum": "3d6f19c73e3bcbf9421ac1da535da2cf25a4e449"
+                "reference": "311d72ac21c61523e1c09e495c5c7240e78a8e02"
             },
             "require": {
                 "drupal/core": "^11",
@@ -2736,9 +2730,12 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-1.1.x": "1.1.x-dev"
+                },
                 "drupal": {
-                    "version": "1.1.0",
-                    "datestamp": "1734440431",
+                    "version": "1.1.1+2-dev",
+                    "datestamp": "1734536597",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -3730,16 +3727,16 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v11.35.1",
+            "version": "v11.36.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
-                "reference": "b8be9c0fedfc5be1524b290fed640d4b7d42c813"
+                "reference": "21868f9ac221a42d4346dc56495d11ab7e0d339a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/collections/zipball/b8be9c0fedfc5be1524b290fed640d4b7d42c813",
-                "reference": "b8be9c0fedfc5be1524b290fed640d4b7d42c813",
+                "url": "https://api.github.com/repos/illuminate/collections/zipball/21868f9ac221a42d4346dc56495d11ab7e0d339a",
+                "reference": "21868f9ac221a42d4346dc56495d11ab7e0d339a",
                 "shasum": ""
             },
             "require": {
@@ -3782,11 +3779,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2024-12-10T14:54:28+00:00"
+            "time": "2024-12-13T13:58:10+00:00"
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v11.35.1",
+            "version": "v11.36.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/conditionable.git",
@@ -3832,7 +3829,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v11.35.1",
+            "version": "v11.36.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -3880,7 +3877,7 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v11.35.1",
+            "version": "v11.36.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -5009,16 +5006,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.12.12",
+            "version": "1.12.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "b5ae1b88f471d3fd4ba1aa0046234b5ca3776dd0"
+                "reference": "9b469068840cfa031e1deaf2fa1886d00e20680f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/b5ae1b88f471d3fd4ba1aa0046234b5ca3776dd0",
-                "reference": "b5ae1b88f471d3fd4ba1aa0046234b5ca3776dd0",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/9b469068840cfa031e1deaf2fa1886d00e20680f",
+                "reference": "9b469068840cfa031e1deaf2fa1886d00e20680f",
                 "shasum": ""
             },
             "require": {
@@ -5063,7 +5060,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-11-28T22:13:23+00:00"
+            "time": "2024-12-17T17:00:20+00:00"
         },
         {
             "name": "phpstan/phpstan-deprecation-rules",
@@ -6929,8 +6926,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {
@@ -8877,7 +8874,8 @@
         "drupal/cdn": 15,
         "drupal/ckeditor_media_resize": 10,
         "drupal/gin": 5,
-        "drupal/gin_toolbar": 10
+        "drupal/gin_toolbar": 10,
+        "drupal/spotify_playing": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

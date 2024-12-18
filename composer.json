@@ -25,7 +25,7 @@
 		"drupal/paragraphs": "^1.18",
 		"drupal/pathauto": "^1.13",
 		"drupal/smtp": "^1.2",
-		"drupal/spotify_playing": "^1.1",
+		"drupal/spotify_playing": "1.1.x-dev@dev",
 		"drupal/stable": "^2.0",
 		"drupal/token_filter": "^2.2",
 		"drupal/upgrade_status": "^4.3",

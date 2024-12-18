@@ -67,7 +67,8 @@ const spotify = {
 				if (!now.is_playing) {
 					header += ' (paused)';
 					this.$el.classList.add('paused');
-				} else {
+				}
+				else {
 					this.$el.classList.remove('paused');
 				}
 
@@ -94,6 +95,9 @@ const spotify = {
 					});
 				}
 				else {
+					if (document.getElementById('spotify-header')) {
+						document.getElementById('spotify-header').innerText = header;
+					}
 					document.getElementById('spotify-progress').setAttribute('style', this.generateAnimationProperties(
 						percentage,
 						remaining,
