@@ -97,7 +97,7 @@ jobs:
         run: >
           ssh production "
             cd /var/www/ianmoffitt.dev
-            composer install -q
+            composer install --no-dev --optimize-autoloader --quiet
           "
 
   drupaldeploy:
