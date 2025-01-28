@@ -261,7 +261,6 @@ nodejs_version: "18"
 # See https://ddev.readthedocs.io/en/stable/users/extend/custom-commands/ for more
 # information on the commands that can be extended and the tasks you can define
 # for them. Example:
-#hooks:
-# post-import-db:
-#   - exec: drush cr
-#   - exec: drush updb
+hooks:
+ post-import-db:
+   - exec: drush deploy
