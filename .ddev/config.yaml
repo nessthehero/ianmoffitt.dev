@@ -263,4 +263,8 @@ nodejs_version: "18"
 # for them. Example:
 hooks:
  post-import-db:
-   - exec: drush deploy
+   - exec: | 
+        drush deploy
+        drush user:create tester --mail='tester@ianmoffitt.dev' --password='zzzTester'
+        drush user:role:add 'administrator' tester
+    

@@ -11,5 +11,13 @@ jobs:
       - name: Setup DDEV
         uses: ddev/github-action-setup-ddev@v1
 
-      - run: ddev composer install
+      - run: ddev describe
 
+      - run: ddev composer install
+      - run: ddev npm install
+
+      - run: ddev pull drush -y
+
+      - run: npm run serve &
+
+      - run: npm test

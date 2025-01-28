@@ -4,7 +4,9 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
+		"test": "npm run test:drupal && npm run test:eleventy",
+		"test:drupal": "cypress run e2e/drupal.cy.js,e2e/drupal-authenticated.cy.js --config baseUrl=https://ianmoffitt.ddev.site",
+		"test:eleventy": "cypress run e2e/eleventy.cy.js --config baseUrl=https://localhost:8080",
 		"clean": "rm -rf ./dist/* && rm -rf ./.cache/*",
 		"build": "npm run clean && npx @11ty/eleventy",
 		"prod": "npm run clean && MODE=production npx @11ty/eleventy --quiet",
@@ -21,6 +23,8 @@
 		"luxon": "^3.5.0"
 	},
 	"devDependencies": {
-		"@jgarber/eleventy-plugin-postcss": "^1.0.1"
+		"@jgarber/eleventy-plugin-postcss": "^1.0.1",
+		"cypress": "^14.0.0",
+		"cypress-map": "^1.43.0"
 	}
 }
