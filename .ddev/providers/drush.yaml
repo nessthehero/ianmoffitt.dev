@@ -2,7 +2,7 @@
 auth_command:
     command: |
         set -eu -o pipefail
-        if ! command -v drush >/dev/null ; then echo "Please make sure your project contains drush, ddev composer require drush/drush" && exit 1; fi
+        if ! command -v ./vendor/bin/drush >/dev/null ; then echo "Please make sure your project contains drush, ddev composer require drush/drush" && exit 1; fi
         ssh-add -l >/dev/null || ( echo "Please 'ddev auth ssh' before running this command." && exit 1 )
 
 db_pull_command:
