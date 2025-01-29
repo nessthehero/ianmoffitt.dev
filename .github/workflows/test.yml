@@ -29,6 +29,8 @@ jobs:
 
       - run: ddev pull drush -y
 
+      - run: cypress install
+
       - run: npm run serve &
 
       - run: npm test
