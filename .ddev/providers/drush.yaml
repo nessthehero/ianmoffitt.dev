@@ -2,8 +2,9 @@
 auth_command:
     command: |
         set -eu -o pipefail
-        if ! command -v ./vendor/bin/drush >/dev/null ; then echo "Please make sure your project contains drush, ddev composer require drush/drush" && exit 1; fi
-        ssh-add -l >/dev/null || ( echo "Please 'ddev auth ssh' before running this command." && exit 1 )
+         if ! command -v ./vendor/bin/drush >/dev/null ; then echo "Please make sure your project contains drush, ddev composer require drush/drush" && exit 1; fi
+         ssh-add -l >/dev/null || ( echo "Please 'ddev auth ssh' before running this command." && exit 1 )
+        echo "No need to authenticate?"
 
 db_pull_command:
     command: |

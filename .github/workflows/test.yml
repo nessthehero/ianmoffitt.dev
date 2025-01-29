@@ -21,6 +21,8 @@ jobs:
 
       - run: ddev describe
 
+      - run: ddev auth ssh
+
       - run: ddev composer install
       - run: ddev npm install
 
