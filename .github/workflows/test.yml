@@ -21,6 +21,11 @@ jobs:
             IdentityFile ~/.ssh/id_rsa
             StrictHostKeyChecking no
           END
+          
+          mkdir -p .ddev/homeadditions/.ssh
+          echo "$SSH_KEY" > .ddev/homeadditions/.ssh/id_rsa
+          chmod 700 .ddev/homeadditions/.ssh
+          chmod 600 .ddev/homeadditions/.ssh/id_rsa
         env:
           SSH_USER: ian
           SSH_KEY: ${{ secrets.SSH_PRIV_KEY }}
@@ -28,7 +33,10 @@ jobs:
 
       - name: Set up host keys
         run: |
-          echo "${{ secrets.IP }}" > ~/.ssh/known_hosts
+          mkdir -p ~/.ssh-agent/
+          echo "${{ secrets.IP }}" > ~/.ssh-agent/known_hosts          
+          echo "${{ secrets.IP }}" > .ddev/homeadditions/.ssh/known_hosts
+
       - name: Setup DDEV
         uses: ddev/github-action-setup-ddev@v1
 
