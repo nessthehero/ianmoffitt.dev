@@ -12,12 +12,19 @@ jobs:
       - name: SSH
         run: |
           mkdir -p ~/.ssh/
-          echo "${{ secrets.SSH_PRIV_KEY }}" > ~/.ssh/id_rsa
+          echo "$SSH_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          mkdir -p .ddev/homeadditions/.ssh
-          echo "${{ secrets.SSH_PRIV_KEY }}" > .ddev/homeadditions/.ssh/id_rsa
-          chmod 700 .ddev/homeadditions/.ssh
-          chmod 600 .ddev/homeadditions/.ssh/id_rsa
+          cat >>~/.ssh/config <<END
+          Host production
+            HostName $SSH_HOST
+            User $SSH_USER
+            IdentityFile ~/.ssh/id_rsa
+            StrictHostKeyChecking no
+          END
+        env:
+          SSH_USER: ian
+          SSH_KEY: ${{ secrets.SSH_PRIV_KEY }}
+          SSH_HOST: ${{ secrets.IP }}
 
       - name: Setup DDEV
         uses: ddev/github-action-setup-ddev@v1
@@ -29,7 +36,9 @@ jobs:
 
       - run: ddev pull drush -y
 
-      - run: cypress install
+      - run: |
+          npm install cypress -g
+          cypress install
 
       - run: npm run serve &
 
