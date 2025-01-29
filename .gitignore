@@ -44,3 +44,6 @@ settings.ddev.php
 
 # Project Notes
 IDEAS.txt
+
+# Cypress screenshots
+cypress/screenshots
