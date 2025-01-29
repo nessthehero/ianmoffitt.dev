@@ -7,6 +7,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v1
+
       - name: SSH
         run: |
           mkdir -p .ddev/homeadditions/.ssh
@@ -14,7 +16,6 @@ jobs:
           chmod 700 .ddev/homeadditions/.ssh
           chmod 600 .ddev/homeadditions/.ssh/id_rsa
 
-      - uses: actions/checkout@v1
       - name: Setup DDEV
         uses: ddev/github-action-setup-ddev@v1
 
