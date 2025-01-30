@@ -19,6 +19,8 @@ use_dns_when_possible: true
 composer_version: "2"
 web_environment:
     - IANMOFFITT_ENV=dev
+    - POSTS=https://ianmoffitt.ddev.site/jsonapi/node/post?sort[sort-sticky][path]=sticky&sort[sort-sticky][direction]=DESC&sort[sort-created][path]=created&sort[sort-created][direction]=DESC
+    - SPOTIFY_ENDPOINT=https://ianmoffitt.ddev.site/spotify_playing?reduce=1
 nodejs_version: "18"
 corepack_enable: false
 
