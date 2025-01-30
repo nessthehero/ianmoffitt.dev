@@ -34,7 +34,7 @@ Cypress.Commands.add('login',
 	 * @param {string} password - Password of user.
 	 * @example cy.login();
 	 */
-	(username = 'zzzAdministrator', password = 'drupalAdministrator') => {
+	(username, password) => {
 		cy.session([username, password], () => {
 			cy.visit('/user/login');
 			cy.get('#edit-name').type(username);
