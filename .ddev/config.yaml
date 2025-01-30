@@ -264,7 +264,7 @@ nodejs_version: "18"
 hooks:
  post-import-db:
    - exec: | 
-        ./vendor/bin/drush deploy
+        ./vendor/bin/drush deploy -v
         ./vendor/bin/drush user:create tester --mail='tester@ianmoffitt.dev' --password='zzzTester'
         ./vendor/bin/drush user:role:add 'administrator' tester
     
