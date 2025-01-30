@@ -66,4 +66,5 @@ jobs:
 
       - run: ddev npm run serve &
 
-      - run: ddev npm test
+      - run: ddev cypress-run e2e/drupal.cy.js,e2e/drupal-authenticated.cy.js --config baseUrl=https://ianmoffitt.ddev.site
+      - run: ddev cypress-run e2e/eleventy.cy.js --config baseUrl=https://localhost:8080
