@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cypress run --config-file cypress.drupal.config.js --spec "cypress/e2e/drupal.cy.js,cypress/e2e/drupal-authenticated.cy.js"
+npm run test

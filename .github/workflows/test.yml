@@ -40,17 +40,15 @@ jobs:
       - name: Setup DDEV
         uses: ddev/github-action-setup-ddev@v1
 
-      - run: ddev describe
+      - name: Describe DDEV
+        run: ddev describe
 
-      - run: ddev composer install
+      - name: Composer Install
+        run: ddev composer install
 
       - name: Install Dependencies
         run: ddev npm ci
 
       - run: ddev pull drush -y
 
-      - run: ddev cypress-run --config-file cypress.drupal.config.js --spec "cypress/e2e/drupal.cy.js,cypress/e2e/drupal-authenticated.cy.js"
-
-      - run: |
-          ddev npm run serve &
-          ddev cypress-run --config-file cypress.eleventy.config.js --spec "cypress/e2e/eleventy.cy.js"
+      - run: ddev test

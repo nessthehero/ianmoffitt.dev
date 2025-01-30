@@ -4,12 +4,13 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
+		"test": "npm run prod && mocha './mocha/*.js'",
 		"clean": "rm -rf ./dist/* && rm -rf ./.cache/*",
 		"build": "npm run clean && npx @11ty/eleventy",
 		"prod": "npm run clean && MODE=production npx @11ty/eleventy --quiet",
 		"serve": "npm run clean && MODE=development DEBUG=Eleventy* npx @11ty/eleventy --serve"
 	},
+	"mocha": {},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
@@ -22,7 +23,6 @@
 	},
 	"devDependencies": {
 		"@jgarber/eleventy-plugin-postcss": "^1.0.1",
-		"cypress": "^14.0.0",
-		"cypress-map": "^1.43.0"
+		"mocha": "^11.1.0"
 	}
 }
