@@ -44,27 +44,13 @@ jobs:
 
       - run: ddev composer install
 
-      - name: Cache Node Modules
-        id: cache-node-modules
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: modules-${{ hashFiles('package-lock.json') }}
-
-      - name: Cache Cypress Binary
-        id: cache-cypress-binary
-        uses: actions/cache@v2
-        with:
-          path: ~/.cache/Cypress
-          key: binary-${{ hashFiles('package-lock.json') }}
-
       - name: Install Dependencies
         run: ddev npm ci
 
       - run: ddev pull drush -y
 
-      - run: ddev npm run serve &
-
       - run: ddev cypress-run --config-file cypress.drupal.config.js --spec "cypress/e2e/drupal.cy.js,cypress/e2e/drupal-authenticated.cy.js"
 
-      - run: ddev cypress-run --config-file cypress.eleventy.config.js --spec "cypress/e2e/eleventy.cy.js"
+      - run: |
+          ddev npm run serve &
+          ddev cypress-run --config-file cypress.eleventy.config.js --spec "cypress/e2e/eleventy.cy.js"
