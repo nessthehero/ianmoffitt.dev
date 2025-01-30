@@ -44,6 +44,13 @@ jobs:
 
       - run: ddev composer install
 
+      - name: Cache Node Modules
+        id: cache-node-modules
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: modules-${{ hashFiles('package-lock.json') }}
+
       - name: Cache Cypress Binary
         id: cache-cypress-binary
         uses: actions/cache@v2
@@ -51,10 +58,12 @@ jobs:
           path: ~/.cache/Cypress
           key: binary-${{ hashFiles('package-lock.json') }}
 
-      - run: ddev npm ci
+      - name: Install Dependencies
+        if: steps.cache-node-modules.outputs.cache-hit != 'true'
+        run: ddev npm ci
 
       - run: ddev pull drush -y
 
-      - run: npm run serve &
+      - run: ddev npm run serve &
 
-      - run: npm test
+      - run: ddev npm test
