@@ -9,7 +9,7 @@
 	},
 	"rebaseWhen": "auto",
 	"platform": "github",
-	"automerge": false,
+	"automerge": true,
 	"prConcurrentLimit": 1,
 	"rangeStrategy": "bump",
 	"addLabels": [
