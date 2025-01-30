@@ -11,8 +11,8 @@ describe("Check pages in Drupal as an authenticated user.", () => {
 		'/admin/content',
 		'/node/add/post'
 	].forEach((path) => {
-		it("Check authenticated path: " + path, () => {
-			cy.visit(path);
+		it("Check authenticated path: " + Cypress.config('baseUrl') + path, () => {
+			cy.visit(Cypress.config('baseUrl') + path);
 			cy.contains('Error').should('not.exist');
 		});
 	});

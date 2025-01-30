@@ -12,7 +12,6 @@ services:
     tty: true
 
     environment:
-      - CYPRESS_baseUrl=${DDEV_PRIMARY_URL}
       - DISPLAY
       - HOME=/root
 

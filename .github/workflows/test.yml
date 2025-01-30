@@ -59,12 +59,12 @@ jobs:
           key: binary-${{ hashFiles('package-lock.json') }}
 
       - name: Install Dependencies
-        if: steps.cache-node-modules.outputs.cache-hit != 'true'
         run: ddev npm ci
 
       - run: ddev pull drush -y
 
       - run: ddev npm run serve &
 
-      - run: ddev cypress-run e2e/drupal.cy.js,e2e/drupal-authenticated.cy.js --config baseUrl=https://ianmoffitt.ddev.site
-      - run: ddev cypress-run e2e/eleventy.cy.js --config baseUrl=https://localhost:8080
+      - run: ddev cypress-run --config-file cypress.drupal.config.js --spec "cypress/e2e/drupal.cy.js,cypress/e2e/drupal-authenticated.cy.js"
+
+      - run: ddev cypress-run --config-file cypress.eleventy.config.js --spec "cypress/e2e/eleventy.cy.js"
