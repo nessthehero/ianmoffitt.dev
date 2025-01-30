@@ -43,7 +43,17 @@ jobs:
       - run: ddev describe
 
       - run: ddev composer install
+
+      - name: Cache Cypress Binary
+        id: cache-cypress-binary
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/Cypress
+          key: binary-${{ hashFiles('package-lock.json') }}
+
       - run: ddev npm ci
+
+      - run: ./node_modules/bin/cypress install
 
       - run: ddev pull drush -y
 
