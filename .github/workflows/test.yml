@@ -1,0 +1,54 @@
+name: Test
+
+on: [pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: SSH
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$SSH_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          cat >>~/.ssh/config <<END
+          Host production
+            HostName $SSH_HOST
+            User $SSH_USER
+            IdentityFile ~/.ssh/id_rsa
+            StrictHostKeyChecking no
+          END
+          
+          mkdir -p .ddev/homeadditions/.ssh
+          echo "$SSH_KEY" > .ddev/homeadditions/.ssh/id_rsa
+          chmod 700 .ddev/homeadditions/.ssh
+          chmod 600 .ddev/homeadditions/.ssh/id_rsa
+        env:
+          SSH_USER: ian
+          SSH_KEY: ${{ secrets.SSH_PRIV_KEY }}
+          SSH_HOST: ${{ secrets.IP }}
+
+      - name: Set up host keys
+        run: |
+          mkdir -p ~/.ssh-agent/           
+          echo "${{ secrets.IP }}" > .ddev/homeadditions/.ssh/known_hosts
+          chmod 600 .ddev/homeadditions/.ssh/known_hosts   
+
+      - name: Setup DDEV
+        uses: ddev/github-action-setup-ddev@v1
+
+      - run: ddev describe
+
+      - run: ddev composer install
+
+      - name: Install Dependencies
+        run: ddev npm ci
+
+      - run: ddev pull drush -y
+
+      - run: ddev cypress-run --config-file cypress.drupal.config.js --spec "cypress/e2e/drupal.cy.js,cypress/e2e/drupal-authenticated.cy.js"
+
+      - run: ddev npm test

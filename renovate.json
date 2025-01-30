@@ -1,0 +1,36 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"extends": [
+		"config:base"
+	],
+	"timezone": "America/New_York",
+	"lockFileMaintenance": {
+		"enabled": true
+	},
+	"rebaseWhen": "auto",
+	"platform": "github",
+	"automerge": false,
+	"prConcurrentLimit": 1,
+	"rangeStrategy": "bump",
+	"addLabels": [
+		"renovate"
+	],
+	"branchPrefix": "renovate/",
+	"enabledManagers": [
+		"composer"
+	],
+	"dependencyDashboard": true,
+	"packageRules": [
+		{
+			"matchUpdateTypes": ["minor", "patch"],
+			"matchPackageNames": ["drupal/core"],
+			"matchPackagePatterns": ["^drupal/core-.*"],
+			"groupName": "Drupal Core",
+			"automerge": false
+		},
+		{
+			"matchUpdateTypes": ["major"],
+			"enabled": false
+		}
+	]
+}
