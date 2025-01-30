@@ -5,7 +5,7 @@
 	"require": {
 		"ext-intl": "*",
 		"composer/installers": "^1.12",
-		"cweagans/composer-patches": "^1.7",
+		"cweagans/composer-patches": "^1.7.3",
 		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
 		"drupal/admin_toolbar": "^3.5",
 		"drupal/auto_entitylabel": "^3.0@beta",
