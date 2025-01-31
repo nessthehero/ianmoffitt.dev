@@ -3,6 +3,7 @@
 	"extends": [
 		"config:base"
 	],
+	"configMigration": true,
 	"timezone": "America/New_York",
 	"lockFileMaintenance": {
 		"enabled": true
