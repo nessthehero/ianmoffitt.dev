@@ -10,6 +10,7 @@
 	"rebaseWhen": "auto",
 	"platform": "github",
 	"automerge": true,
+	"automergeSchedule": ["*/15 4-21 * * *"],
 	"prConcurrentLimit": 1,
 	"rangeStrategy": "bump",
 	"addLabels": [
