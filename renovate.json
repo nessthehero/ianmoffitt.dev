@@ -1,7 +1,7 @@
 {
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
 	"extends": [
-		"config:base"
+		"config:recommended"
 	],
 	"configMigration": true,
 	"timezone": "America/New_York",
@@ -11,7 +11,9 @@
 	"rebaseWhen": "auto",
 	"platform": "github",
 	"automerge": true,
-	"automergeSchedule": ["*/15 4-21 * * *"],
+	"automergeSchedule": [
+		"*/15 4-21 * * *"
+	],
 	"prConcurrentLimit": 1,
 	"rangeStrategy": "bump",
 	"addLabels": [
@@ -24,14 +26,21 @@
 	"dependencyDashboard": true,
 	"packageRules": [
 		{
-			"matchUpdateTypes": ["minor", "patch"],
-			"matchPackageNames": ["drupal/core"],
-			"matchPackagePatterns": ["^drupal/core-.*"],
+			"matchUpdateTypes": [
+				"minor",
+				"patch"
+			],
+			"matchPackageNames": [
+				"drupal/core",
+				"/^drupal/core-.*/"
+			],
 			"groupName": "Drupal Core",
 			"automerge": false
 		},
 		{
-			"matchUpdateTypes": ["major"],
+			"matchUpdateTypes": [
+				"major"
+			],
 			"enabled": false
 		}
 	]
