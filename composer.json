@@ -106,7 +106,7 @@
 		}
 	},
 	"require-dev": {
-		"drupal/coder": "^8.3",
+		"drupal/coder": "^8.3.28",
 		"drupal/upgrade_status": "^4.3"
 	}
 }
