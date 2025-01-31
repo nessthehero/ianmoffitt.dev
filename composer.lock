@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4bca3c4f4cc8691f765c2c4cd7240ef3",
+    "content-hash": "e70e88f79a61cc68d14f9b519123dcf5",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2667,11 +2667,17 @@
         },
         {
             "name": "drupal/spotify_playing",
-            "version": "dev-1.1.x",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/spotify_playing.git",
-                "reference": "311d72ac21c61523e1c09e495c5c7240e78a8e02"
+                "reference": "1.1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/spotify_playing-1.1.1.zip",
+                "reference": "1.1.1",
+                "shasum": "897168b7e419d70214e36a403ce2410379e7720b"
             },
             "require": {
                 "drupal/core": "^11",
@@ -2682,12 +2688,9 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.1.x": "1.1.x-dev"
-                },
                 "drupal": {
-                    "version": "1.1.1+2-dev",
-                    "datestamp": "1734536597",
+                    "version": "1.1.1",
+                    "datestamp": "1734442018",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -8878,8 +8881,7 @@
         "drupal/cdn": 15,
         "drupal/ckeditor_media_resize": 10,
         "drupal/gin": 5,
-        "drupal/gin_toolbar": 10,
-        "drupal/spotify_playing": 20
+        "drupal/gin_toolbar": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,

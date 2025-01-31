@@ -9,7 +9,6 @@
 		"enabled": true
 	},
 	"rebaseWhen": "auto",
-	"platform": "github",
 	"automerge": true,
 	"automergeSchedule": [
 		"* 4-21 * * *"
