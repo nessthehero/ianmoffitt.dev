@@ -8,7 +8,7 @@
 		"cweagans/composer-patches": "^1.7.3",
 		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
 		"drupal/admin_toolbar": "^3.5.1",
-		"drupal/auto_entitylabel": "^3.0@beta",
+		"drupal/auto_entitylabel": "^3.4.0@beta",
 		"drupal/cdn": "^5.0@alpha",
 		"drupal/ckeditor_media_resize": "^1.0@beta",
 		"drupal/config_ignore": "^3.3",
