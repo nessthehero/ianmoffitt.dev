@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "699c44f87c390322cda9fda15ac112e6",
+    "content-hash": "4f44aa21436775e533c6abaf7adf201f",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3624,7 +3624,7 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v11.41.0",
+            "version": "v11.41.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
@@ -3680,7 +3680,7 @@
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v11.41.0",
+            "version": "v11.41.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/conditionable.git",
@@ -3726,7 +3726,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v11.41.0",
+            "version": "v11.41.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -3774,7 +3774,7 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v11.41.0",
+            "version": "v11.41.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
