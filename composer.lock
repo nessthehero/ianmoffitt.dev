@@ -1621,16 +1621,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "11.1.1",
+            "version": "11.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "aa2bca2d785aaa63461ec73b5620a8543c894bc7"
+                "reference": "82b6dbe201bbff477283a286f0f09890a94c8e74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/aa2bca2d785aaa63461ec73b5620a8543c894bc7",
-                "reference": "aa2bca2d785aaa63461ec73b5620a8543c894bc7",
+                "url": "https://api.github.com/repos/drupal/core/zipball/82b6dbe201bbff477283a286f0f09890a94c8e74",
+                "reference": "82b6dbe201bbff477283a286f0f09890a94c8e74",
                 "shasum": ""
             },
             "require": {
@@ -1783,13 +1783,13 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-                "source": "https://github.com/drupal/core/tree/11.1.1"
+                "source": "https://github.com/drupal/core/tree/11.1.2"
             },
-            "time": "2025-01-06T22:41:17+00:00"
+            "time": "2025-02-05T22:47:05+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "11.1.1",
+            "version": "11.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
@@ -1833,13 +1833,13 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-composer-scaffold/tree/11.1.1"
+                "source": "https://github.com/drupal/core-composer-scaffold/tree/11.1.2"
             },
             "time": "2024-11-02T22:49:15+00:00"
         },
         {
             "name": "drupal/core-project-message",
-            "version": "11.1.1",
+            "version": "11.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-project-message.git",
@@ -1874,22 +1874,22 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-project-message/tree/11.1.1"
+                "source": "https://github.com/drupal/core-project-message/tree/11.1.2"
             },
             "time": "2023-07-24T07:55:25+00:00"
         },
         {
             "name": "drupal/core-recommended",
-            "version": "11.1.1",
+            "version": "11.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "b4c0a092e66edd41cbfc7a3b7049b3af0b2ab496"
+                "reference": "30a19d4632e9a94a576fdd3fb9cb5daf0b25b0c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/b4c0a092e66edd41cbfc7a3b7049b3af0b2ab496",
-                "reference": "b4c0a092e66edd41cbfc7a3b7049b3af0b2ab496",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/30a19d4632e9a94a576fdd3fb9cb5daf0b25b0c9",
+                "reference": "30a19d4632e9a94a576fdd3fb9cb5daf0b25b0c9",
                 "shasum": ""
             },
             "require": {
@@ -1898,7 +1898,7 @@
                 "doctrine/annotations": "~2.0.2",
                 "doctrine/deprecations": "~1.1.3",
                 "doctrine/lexer": "~2.1.1",
-                "drupal/core": "11.1.1",
+                "drupal/core": "11.1.2",
                 "egulias/email-validator": "~4.0.2",
                 "guzzlehttp/guzzle": "~7.9.2",
                 "guzzlehttp/promises": "~2.0.4",
@@ -1948,7 +1948,7 @@
                 "symfony/var-dumper": "~v7.2.0",
                 "symfony/var-exporter": "~v7.2.0",
                 "symfony/yaml": "~v7.2.0",
-                "twig/twig": "~v3.16.0"
+                "twig/twig": "~v3.19.0"
             },
             "conflict": {
                 "webflo/drupal-core-strict": "*"
@@ -1960,9 +1960,9 @@
             ],
             "description": "Core and its dependencies with known-compatible minor versions. Require this project INSTEAD OF drupal/core.",
             "support": {
-                "source": "https://github.com/drupal/core-recommended/tree/11.1.1"
+                "source": "https://github.com/drupal/core-recommended/tree/11.1.2"
             },
-            "time": "2025-01-06T22:41:17+00:00"
+            "time": "2025-02-05T22:47:05+00:00"
         },
         {
             "name": "drupal/ctools",
@@ -8127,16 +8127,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v3.16.0",
+            "version": "v3.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "475ad2dc97d65d8631393e721e7e44fb544f0561"
+                "reference": "d4f8c2b86374f08efc859323dbcd95c590f7124e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/475ad2dc97d65d8631393e721e7e44fb544f0561",
-                "reference": "475ad2dc97d65d8631393e721e7e44fb544f0561",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/d4f8c2b86374f08efc859323dbcd95c590f7124e",
+                "reference": "d4f8c2b86374f08efc859323dbcd95c590f7124e",
                 "shasum": ""
             },
             "require": {
@@ -8191,7 +8191,7 @@
             ],
             "support": {
                 "issues": "https://github.com/twigphp/Twig/issues",
-                "source": "https://github.com/twigphp/Twig/tree/v3.16.0"
+                "source": "https://github.com/twigphp/Twig/tree/v3.19.0"
             },
             "funding": [
                 {
@@ -8203,7 +8203,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-11-29T08:27:05+00:00"
+            "time": "2025-01-29T07:06:14+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -8602,16 +8602,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.12.16",
+            "version": "1.12.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "e0bb5cb78545aae631220735aa706eac633a6be9"
+                "reference": "7027b3b0270bf392de0cfba12825979768d728bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/e0bb5cb78545aae631220735aa706eac633a6be9",
-                "reference": "e0bb5cb78545aae631220735aa706eac633a6be9",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/7027b3b0270bf392de0cfba12825979768d728bf",
+                "reference": "7027b3b0270bf392de0cfba12825979768d728bf",
                 "shasum": ""
             },
             "require": {
@@ -8656,7 +8656,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-01-21T14:50:05+00:00"
+            "time": "2025-02-07T15:01:57+00:00"
         },
         {
             "name": "phpstan/phpstan-deprecation-rules",
