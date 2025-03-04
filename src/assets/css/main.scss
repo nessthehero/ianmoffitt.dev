@@ -1,0 +1,69 @@
+@import "foundation.scss";
+
+@include foundation-global-styles();
+@include foundation-typography();
+@include foundation-xy-grid-classes();
+@include foundation-button();
+
+@import "vars";
+@import "reset";
+@import "base";
+@import "drupal";
+@import "global-footer";
+@import "user-markup";
+@import "content";
+@import "spotify";
+/*@import "_expand.scss" layer(module);*/
+/*@import "_masthead.scss" layer(module);*/
+
+.grid-base {
+	left: 0;
+	margin: 0;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	opacity: 0;
+
+	&.ready {
+		transition: opacity 1s linear;
+	}
+
+	&.loaded {
+		opacity: 1;
+	}
+}
+
+.logo {
+	display: inline-block;
+	margin: 10px 0 0;
+	width: 45px;
+
+	.letter_i {
+		fill: var(--color-secondary);
+	}
+
+	.letter_m {
+		fill: var(--color-secondary-light);
+	}
+}
+
+.button {
+	background-color: var(--color-primary);
+
+	&:hover,
+	&:active {
+		background-color: var(--color-primary);
+		color: var(--color-tertiary);
+	}
+}
+
+.view-more {
+	text-align: center;
+
+	a {
+		display: inline-block;
+		position: relative;
+		z-index: 10;
+		pointer-events: all;
+	}
+}

@@ -1,0 +1,9 @@
+uuid: 89cb15b5-9353-4f6d-9e30-e853cae2278c
+langcode: en
+status: true
+dependencies: {  }
+id: node__post
+label: 'Content: Post'
+tags:
+  article_modified_time: '[node:changed]'
+  article_published_time: '[node:created]'

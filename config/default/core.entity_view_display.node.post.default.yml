@@ -8,9 +8,11 @@ dependencies:
     - field.field.node.post.field_hide_date
     - field.field.node.post.field_hide_from_archive
     - field.field.node.post.field_hide_title
+    - field.field.node.post.field_meta
     - field.field.node.post.field_show_last_updated
     - node.type.post
   module:
+    - metatag
     - options
     - text
     - user
@@ -62,6 +64,13 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     weight: 105
+    region: content
+  field_meta:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 107
     region: content
   field_show_last_updated:
     type: boolean

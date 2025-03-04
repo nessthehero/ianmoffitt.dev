@@ -8,10 +8,12 @@ dependencies:
     - field.field.node.post.field_hide_date
     - field.field.node.post.field_hide_from_archive
     - field.field.node.post.field_hide_title
+    - field.field.node.post.field_meta
     - field.field.node.post.field_show_last_updated
     - node.type.post
   module:
     - field_group
+    - metatag
     - path
     - text
 third_party_settings:
@@ -84,6 +86,14 @@ content:
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  field_meta:
+    type: metatag_firehose
+    weight: 26
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   field_show_last_updated:
     type: boolean_checkbox

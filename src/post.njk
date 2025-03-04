@@ -10,8 +10,27 @@ eleventyComputed:
 ---
 {% extends "layouts/default.njk" %}
 
+{% block meta %}
+	{{ super() }}
+	{%- if post.attributes.metatag -%}
+		{%- for metatag in post.attributes.metatag -%}
+			{%- if metatag.tag == 'meta' %}
+				<meta {% if metatag.attributes.name %}name="{{ metatag.attributes.name }}" {% endif %}{% if metatag.attributes.content %}content="{{ metatag.attributes.content }}" {% endif %}/>
+			{% elseif metatag.tag == 'link' %}
+				<link {% if metatag.attributes.rel %}rel="{{ metatag.attributes.rel }}" {% endif %}{% if metatag.attributes.href %}href="{{ metatag.attributes.href }}" {% endif %}/>
+			{% endif -%}
+		{%- endfor -%}
+	{%- endif -%}
+	{% if post.created %}
+		<meta name="article:published_time" content="{{ post.created }}" />
+	{% endif %}
+	{% if post.changed %}
+		<meta name="article:modified_time" content="{{ post.changed }}" />
+	{% endif %}
+{% endblock %}
+
 {% block content %}
-	<article class="content" style="view-transition-name: post-{{ post.attributes.drupal_internal__nid }}">
+	<article class="content cell" style="view-transition-name: post-{{ post.attributes.drupal_internal__nid }}">
 		<header>
 			{% if post.attributes.field_hide_date === FALSE %}
 				<time>{{ post.attributes.created | date('MMM d, yyyy') }}</time>
