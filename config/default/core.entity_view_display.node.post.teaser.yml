@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.post.field_hide_date
     - field.field.node.post.field_hide_from_archive
     - field.field.node.post.field_hide_title
+    - field.field.node.post.field_meta
     - field.field.node.post.field_show_last_updated
     - node.type.post
   module:
@@ -37,4 +38,5 @@ hidden:
   field_hide_date: true
   field_hide_from_archive: true
   field_hide_title: true
+  field_meta: true
   field_show_last_updated: true

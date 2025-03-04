@@ -11,7 +11,7 @@ dynamicPermalink: false
 			<h1>Archive</h1>
 			{% set displayYear = 0 %}
 			{% if posts %}
-				{% for post in posts.data %}
+				{% for post in posts.data|sort(attribute='attributes.created')|reverse %}
 					{% set p = post.attributes %}
 					{% set postDate = p.created | date("yyyy") %}
 					{% if postDate !== displayYear %}
