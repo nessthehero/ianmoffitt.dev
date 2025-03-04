@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e70e88f79a61cc68d14f9b519123dcf5",
+    "content-hash": "28080ae84a207d454c7233c2a1d43403",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1965,6 +1965,63 @@
             "time": "2025-01-06T22:41:17+00:00"
         },
         {
+            "name": "drupal/crop",
+            "version": "2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/crop.git",
+                "reference": "8.x-2.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/crop-8.x-2.4.zip",
+                "reference": "8.x-2.4",
+                "shasum": "be11fad0abf1d53544d35cb4ca6cedd8e91d2542"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.4",
+                    "datestamp": "1720455738",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Drupal Media Team",
+                    "homepage": "https://www.drupal.org/user/3260690"
+                },
+                {
+                    "name": "phenaproxima",
+                    "homepage": "https://www.drupal.org/user/205645"
+                },
+                {
+                    "name": "slashrsm",
+                    "homepage": "https://www.drupal.org/user/744628"
+                },
+                {
+                    "name": "woprrr",
+                    "homepage": "https://www.drupal.org/user/858604"
+                }
+            ],
+            "description": "Provides storage and API for image crops.",
+            "homepage": "https://www.drupal.org/project/crop",
+            "support": {
+                "source": "https://git.drupalcode.org/project/crop",
+                "issues": "https://www.drupal.org/project/issues/crop"
+            }
+        },
+        {
             "name": "drupal/ctools",
             "version": "4.1.0",
             "source": {
@@ -2386,6 +2443,82 @@
             ]
         },
         {
+            "name": "drupal/image_widget_crop",
+            "version": "dev-2.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/image_widget_crop.git",
+                "reference": "2f10025d2119422e8b33f2bcb24068704d88bbf5"
+            },
+            "require": {
+                "drupal/core": "^9.5 || ^10 || ^11",
+                "drupal/crop": "^2"
+            },
+            "require-dev": {
+                "drupal/crop": "*",
+                "drupal/ctools": "^4.1",
+                "drupal/entity_browser": "^2",
+                "drupal/inline_entity_form": "^1 || ^3"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.x-dev",
+                    "datestamp": "1732191489",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Alexandre Mallet",
+                    "homepage": "https://github.com/woprrr",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Drupal media CI",
+                    "homepage": "https://www.drupal.org/user/3057985"
+                },
+                {
+                    "name": "Drupal Media Team",
+                    "homepage": "https://www.drupal.org/user/3260690"
+                },
+                {
+                    "name": "phenaproxima",
+                    "homepage": "https://www.drupal.org/user/205645"
+                },
+                {
+                    "name": "slashrsm",
+                    "homepage": "https://www.drupal.org/user/744628"
+                },
+                {
+                    "name": "woprrr",
+                    "homepage": "https://www.drupal.org/user/858604"
+                }
+            ],
+            "description": "Provides an interface for using the features of the Crop API.",
+            "homepage": "https://www.drupal.org/project/image_widget_crop",
+            "keywords": [
+                "Crop",
+                "Drupal",
+                "Drupal Media"
+            ],
+            "support": {
+                "source": "https://www.drupal.org/project/image_widget_crop",
+                "issues": "https://www.drupal.org/project/issues/image_widget_crop",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
             "name": "drupal/link_attributes",
             "version": "2.1.1",
             "source": {
@@ -2435,6 +2568,316 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/link_attributes",
                 "issues": "https://www.drupal.org/project/issues/link_attributes"
+            }
+        },
+        {
+            "name": "drupal/media_contextual_crop",
+            "version": "2.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/media_contextual_crop.git",
+                "reference": "2.1.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/media_contextual_crop-2.1.5.zip",
+                "reference": "2.1.5",
+                "shasum": "d511e031ec5b13c93fe5e1352ee455a902a3ec73"
+            },
+            "require": {
+                "composer/installers": "^1.9 || ^2.0",
+                "cweagans/composer-patches": "^1.7 || ^2.0",
+                "drupal/core": "^10 || ^11",
+                "drupal/crop": "^2.3",
+                "drush/drush": ">11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.1.5",
+                    "datestamp": "1736325942",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "enable-patching": true,
+                "patches": {
+                    "drupal/crop": {
+                        "provide_contextual_capability_to_crops": "https://www.drupal.org/files/issues/2024-01-21/2617818-32-provide_contextual_capability_to_crops.patch"
+                    },
+                    "drupal/core": {
+                        "Refactor ImageStyleDownloadController": "https://www.drupal.org/files/issues/2024-09-04/2685905-35-factorizeImageDeliver.patch"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "drdam",
+                    "homepage": "https://www.drupal.org/user/1555440"
+                }
+            ],
+            "description": "Media Contextual Cropping API",
+            "homepage": "https://www.drupal.org/project/media_contextual_crop",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/media_contextual_crop"
+            }
+        },
+        {
+            "name": "drupal/media_contextual_crop_field_formatter",
+            "version": "2.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/media_contextual_crop_field_formatter.git",
+                "reference": "2.0.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/media_contextual_crop_field_formatter-2.0.7.zip",
+                "reference": "2.0.7",
+                "shasum": "f3409352b36dfd6ae3936536e76cfc618c92712c"
+            },
+            "require": {
+                "composer/installers": "^1.9 || ^2.0",
+                "cweagans/composer-patches": "^1.7",
+                "drupal/core": "^10 || ^11",
+                "drupal/media_contextual_crop": "~2.0",
+                "drupal/media_library_media_modify": "^1.0.0 || ^2.0.0@beta"
+            },
+            "require-dev": {
+                "drupal/advanced_help": "^1"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.7",
+                    "datestamp": "1728401162",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "enable-patching": true,
+                "patches": {
+                    "drupal/media_library_media_modify": {
+                        "#3270150 Add alteration": "https://git.drupalcode.org/project/media_library_media_modify/-/merge_requests/65.patch"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "drdam",
+                    "homepage": "https://www.drupal.org/user/1555440"
+                }
+            ],
+            "description": "An implementation of media_contextual_crop API for media references",
+            "homepage": "https://www.drupal.org/project/media_contextual_crop_field_formatter",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/media_contextual_crop_field_formatter"
+            }
+        },
+        {
+            "name": "drupal/media_contextual_crop_iwc_adapter",
+            "version": "dev-2.0.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/media_contextual_crop_iwc_adapter.git",
+                "reference": "19493afb2678a9fbcd369129927cff29ae7d49df"
+            },
+            "require": {
+                "drupal/core": "^10 || ^11",
+                "drupal/image_widget_crop": "^2.4",
+                "drupal/media_contextual_crop": "~2.0"
+            },
+            "require-dev": {
+                "drupal/advanced_help": "^1"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.0.x": "2.0.x-dev"
+                },
+                "drupal": {
+                    "version": "2.0.2+8-dev",
+                    "datestamp": "1724685576",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "drdam",
+                    "homepage": "https://www.drupal.org/user/1555440"
+                }
+            ],
+            "description": "An adapter between focal_point crop plugin and media_contextual_crop",
+            "homepage": "https://www.drupal.org/project/media_contextual_crop_iwc_adapter",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/media_contextual_crop_iwc_adapter"
+            }
+        },
+        {
+            "name": "drupal/media_library_media_modify",
+            "version": "2.0.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/media_library_media_modify.git",
+                "reference": "2.0.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/media_library_media_modify-2.0.0-beta1.zip",
+                "reference": "2.0.0-beta1",
+                "shasum": "98960184fc0fe113441cd8af8b0e120fe59e33f9"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11"
+            },
+            "require-dev": {
+                "drupal/diff": "^1.0",
+                "drupal/inline_entity_form": "^1.0||^3.0",
+                "drush/drush": "^12.0 || ^13.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0-beta1",
+                    "datestamp": "1725960750",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                },
+                "patches": {
+                    "drupal/core": {
+                        "Issue #3263397-10: Simplify form logic in media library": "https://www.drupal.org/files/issues/2023-01-19/3263397-16.patch"
+                    },
+                    "drupal/inline_entity_form": {
+                        "Issue #3271293: Changes are lost when collapsing a paragraphs subform including an inline_entity_form": "https://www.drupal.org/files/issues/2022-09-22/47-8.diff"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Fritsch",
+                    "homepage": "https://www.drupal.org/user/157725",
+                    "email": "christian.fritsch@burda.com"
+                },
+                {
+                    "name": "chr.fritsch",
+                    "homepage": "https://www.drupal.org/user/2103716"
+                },
+                {
+                    "name": "daniel.bosen",
+                    "homepage": "https://www.drupal.org/user/404865"
+                },
+                {
+                    "name": "volkerk",
+                    "homepage": "https://www.drupal.org/user/57527"
+                }
+            ],
+            "description": "Store context specific overrides for entity reference fields.",
+            "homepage": "https://www.drupal.org/project/media_library_media_modify",
+            "support": {
+                "source": "https://git.drupalcode.org/project/media_library_media_modify"
+            }
+        },
+        {
+            "name": "drupal/metatag",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/metatag.git",
+                "reference": "2.1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/metatag-2.1.0.zip",
+                "reference": "2.1.0",
+                "shasum": "c28fe2fdac68a9370a6af6cbafff4425dd5148f3"
+            },
+            "require": {
+                "drupal/core": "^9.4 || ^10 || ^11",
+                "drupal/token": "^1.0",
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "drupal/forum": "*",
+                "drupal/hal": "^1 || ^2 || ^9",
+                "drupal/metatag_dc": "*",
+                "drupal/metatag_open_graph": "*",
+                "drupal/page_manager": "^4.0",
+                "drupal/redirect": "^1.0",
+                "ergebnis/composer-normalize": "*",
+                "mpyw/phpunit-patch-serializable-comparison": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.1.0",
+                    "datestamp": "1731004042",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "composer-normalize": {
+                    "indent-size": 2,
+                    "indent-style": "space"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "See contributors",
+                    "homepage": "https://www.drupal.org/node/640498/committers",
+                    "role": "Developer"
+                },
+                {
+                    "name": "dave reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                }
+            ],
+            "description": "Manage meta tags for all entities.",
+            "homepage": "https://www.drupal.org/project/metatag",
+            "keywords": [
+                "Drupal",
+                "seo"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/metatag",
+                "issues": "https://www.drupal.org/project/issues/metatag",
+                "docs": "https://www.drupal.org/docs/8/modules/metatag"
             }
         },
         {

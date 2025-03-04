@@ -2,26 +2,32 @@ require('dotenv').config();
 
 const markdownIt = require("markdown-it");
 const inspect = require("util").inspect;
+const eleventySass = require("eleventy-sass");
+const postcss = require("postcss");
 
 module.exports = function(eleventyConfig) {
 
 	// Templating
 	eleventyConfig.setTemplateFormats("html,njk,pug");
 
-    // Pug
-    // eleventyConfig.setPugOptions({ debug: true });
-
     // Assets
-    eleventyConfig.addPassthroughCopy("src/assets/**/*.*");
+    eleventyConfig.addPassthroughCopy("src/assets/js/**/*.*");
     eleventyConfig.addPassthroughCopy({ "src/_root": "/"});
-
-	// CSS
-	eleventyConfig.addPlugin(require('@jgarber/eleventy-plugin-postcss'));
 
 	// Watch
     eleventyConfig.addWatchTarget("./src/_includes/**/*.njk");
     eleventyConfig.addWatchTarget("./src/_includes/**/*.pug");
     eleventyConfig.addWatchTarget("./src/assets/css/**/*.css");
+
+	eleventyConfig.addPlugin(eleventySass, {
+		sass: {
+			loadPaths: ["./node_modules/foundation-sites/scss"],
+			sourceMap: true
+		},
+		postcss: postcss([
+			require('cssnano')
+		])
+	});
 
     // Global Data
     eleventyConfig.addGlobalData("getYear", () => new Date().getFullYear());

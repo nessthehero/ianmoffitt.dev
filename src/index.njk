@@ -1,5 +1,6 @@
 ---
 title: 'IanMoffitt.dev'
+description: 'Hi there! I am Ian Moffitt, a front-end developer living in Pittsburgh! This is my website.'
 ---
 {% extends "layouts/default.njk" %}
 
@@ -35,11 +36,8 @@ title: 'IanMoffitt.dev'
 			</article>
 		{% endif %}
 	{% endfor %}
-	{% if posts.length > 5 %}
-		<article class="content">
-			<div class="user-markup">
-				<a href="/posts" class="expanded button">View More Posts</a>
-			</div>
-		</article>
-	{% endif %}
+
+	<article class="grid-x grid-padding-x align-center view-more">
+		<a href="/posts" class="button">View More Posts</a>
+	</article>
 {% endblock %}
