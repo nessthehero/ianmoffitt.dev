@@ -54,61 +54,64 @@ const spotify = {
 			.then((data) => {
 
 				const now = data.now;
-				const item = now.item;
 
-				const progress = now.progress_ms;
-				const duration = item.duration_ms;
+				if (typeof now.item !== 'undefined') {
+					const item = now.item;
 
-				const percentage = (progress / duration) * 100;
-				const not_played = duration - progress;
-				const remaining = ((duration - (duration * (progress / duration))) / 1000);
+					const progress = now.progress_ms;
+					const duration = item.duration_ms;
 
-				let header = 'what I\'m listening to right now:';
-				if (!now.is_playing) {
-					header += ' (paused)';
-					this.$el.classList.add('paused');
-				}
-				else {
-					this.$el.classList.remove('paused');
-				}
+					const percentage = (progress / duration) * 100;
+					const not_played = duration - progress;
+					const remaining = ((duration - (duration * (progress / duration))) / 1000);
 
-				this.$el.classList.add('loaded');
-
-				if (this.playingKey !== item.id) {
-					this.playingKey = item.id;
-
-					let artists = [];
-					for (let artist in item.artists) {
-						artists.push(item.artists[artist].name);
+					let header = 'what I\'m listening to right now:';
+					if (!now.is_playing) {
+						header += ' (paused)';
+						this.$el.classList.add('paused');
+					}
+					else {
+						this.$el.classList.remove('paused');
 					}
 
-					this.$el.innerHTML = ttt(this.template, {
-						'imgsrc': item.album.images[1].url,
-						'imgalt': item.album.name,
-						'songlink': item.external_urls.spotify,
-						'header': header,
-						'title': item.name,
-						'artist': artists.join(', '),
-						'aw': percentage + '%',
-						'al': (not_played / 1000) + 's',
-						'state': (!now.is_playing) ? 'paused' : 'running'
-					});
-				}
-				else {
-					if (document.getElementById('spotify-header')) {
-						document.getElementById('spotify-header').innerText = header;
-					}
-					document.getElementById('spotify-progress').setAttribute('style', this.generateAnimationProperties(
-						percentage,
-						remaining,
-						(!now.is_playing) ? 'paused' : 'running'
-					));
+					this.$el.classList.add('loaded');
 
-					let animations = document.getAnimations();
-					for (let a in animations) {
-						if (animations[a].animationName === 'spotify-progress') {
-							animations[a].cancel();
-							animations[a].play();
+					if (this.playingKey !== item.id) {
+						this.playingKey = item.id;
+
+						let artists = [];
+						for (let artist in item.artists) {
+							artists.push(item.artists[artist].name);
+						}
+
+						this.$el.innerHTML = ttt(this.template, {
+							'imgsrc': item.album.images[1].url,
+							'imgalt': item.album.name,
+							'songlink': item.external_urls.spotify,
+							'header': header,
+							'title': item.name,
+							'artist': artists.join(', '),
+							'aw': percentage + '%',
+							'al': (not_played / 1000) + 's',
+							'state': (!now.is_playing) ? 'paused' : 'running'
+						});
+					}
+					else {
+						if (document.getElementById('spotify-header')) {
+							document.getElementById('spotify-header').innerText = header;
+						}
+						document.getElementById('spotify-progress').setAttribute('style', this.generateAnimationProperties(
+							percentage,
+							remaining,
+							(!now.is_playing) ? 'paused' : 'running'
+						));
+
+						let animations = document.getAnimations();
+						for (let a in animations) {
+							if (animations[a].animationName === 'spotify-progress') {
+								animations[a].cancel();
+								animations[a].play();
+							}
 						}
 					}
 				}
