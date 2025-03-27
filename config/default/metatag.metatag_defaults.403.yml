@@ -7,6 +7,6 @@ _core:
 id: '403'
 label: '403 access denied'
 tags:
+  canonical_url: 'https://ianmoffitt.dev/403'
   robots: noindex
-  canonical_url: '[site:url]'
-  shortlink: '[site:url]'
+  shortlink: 'https://ianmoffitt.dev/403'

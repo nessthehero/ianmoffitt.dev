@@ -12,7 +12,11 @@ database:
 hooks:
     post-import-db:
         - exec: |
-            ./vendor/bin/drush deploy -v
+            ./vendor/bin/drush updb --no-cache-clear -y -v
+            ./vendor/bin/drush cache:rebuild -y
+            ./vendor/bin/drush config:import -v
+            ./vendor/bin/drush cache:rebuild -y             
+            ./vendor/bin/drush deploy:hook -y -v
             ./vendor/bin/drush user:create tester --mail='tester@ianmoffitt.dev' --password='zzzTester'
             ./vendor/bin/drush user:role:add 'administrator' tester
 use_dns_when_possible: true
