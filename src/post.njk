@@ -32,13 +32,13 @@ eleventyComputed:
 {% block content %}
 	<article class="content cell" style="view-transition-name: post-{{ post.attributes.drupal_internal__nid }}">
 		<header>
-			{% if post.attributes.field_hide_date === FALSE %}
+			{% if not post.attributes.field_hide_date %}
 				<time>{{ post.attributes.created | date('MMM d, yyyy') }}</time>
 			{% endif %}
-			{% if post.attributes.show_last_updated === TRUE %}
+			{% if post.attributes.field_show_last_updated %}
 				<time>Last updated {{ post.attributes.changed | date('MMM d, yyyy') }}</time>
 			{% endif %}
-			{% if post.attributes.field_hide_title === FALSE %}
+			{% if not post.attributes.field_hide_title %}
 				<h1>{{ post.attributes.title }}</h1>
 			{% endif %}
 		</header>
