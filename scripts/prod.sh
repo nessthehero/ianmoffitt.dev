@@ -9,7 +9,7 @@ whoami
 
 which nvm
 
-nvm use 18
+nvm use --lts
 
 node --version
 npm --version
