@@ -68,6 +68,9 @@ jobs:
       - name: NPM Install
         run: > 
           ssh production "
+            export NVM_DIR=$HOME/.nvm;
+            source $NVM_DIR/nvm.sh;
+          
             cd /var/www/ianmoffitt.dev
             npm install --omit=dev
           "
@@ -127,7 +130,7 @@ jobs:
             cd /var/www/ianmoffitt.dev
           
             mysql_ready() {
-                mysqladmin ping --host=localhost --user=root --password=$MYSQL_ROOT_PW > /dev/null 2>&1
+                mysqladmin ping --host=localhost --user=$MYSQL_USER --password=$MYSQL_ROOT_PW > /dev/null 2>&1
             }
 
             while !(mysql_ready)
@@ -136,12 +139,12 @@ jobs:
                echo "waiting for mysql ..."
             done
           
-            drush updb -y --no-cache-clear
-            drush cr
-            drush cim -y
-            drush cr
-            drush deploy:hook -y
-            drush cron
+            /vendor/bin/drush updb -y --no-cache-clear
+            /vendor/bin/drush cr
+            /vendor/bin/drush cim -y
+            /vendor/bin/drush cr
+            /vendor/bin/drush deploy:hook -y
+            /vendor/bin/drush cron
           "
 
   eleventybuild:
