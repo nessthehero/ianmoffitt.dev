@@ -10,7 +10,7 @@ db_pull_command:
     command: |
         # set -x   # You can enable bash debugging output by uncommenting
         set -eu -o pipefail
-        ./vendor/bin/drush @remote.prod sql:dump -y -v --create-db --skip-tables-list=cache,cache_* --result-file= > ./.ddev/.downloads/db.sql
+        ./vendor/bin/drush @remote.prod sql:dump -y -v --create-db --extra-dump=--no-tablespaces --skip-tables-list=cache,cache_* --result-file= > ./.ddev/.downloads/db.sql
 
 files_import_command:
     command: |
