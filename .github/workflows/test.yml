@@ -35,7 +35,6 @@ jobs:
         run: |
           mkdir -p ~/.ssh-agent/           
           echo "${{ secrets.IP }}" > .ddev/homeadditions/.ssh/known_hosts
-          chmod 600 .ddev/homeadditions/.ssh/known_hosts   
 
       - name: Setup DDEV
         uses: ddev/github-action-setup-ddev@v1

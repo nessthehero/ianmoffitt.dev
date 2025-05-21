@@ -20,12 +20,17 @@
 	],
 	"branchPrefix": "renovate/",
 	"enabledManagers": [
-		"composer"
+		"composer",
+		"npm"
 	],
 	"dependencyDashboard": true,
 	"packageRules": [
 		{
 			"groupName": "Major all - skipped to update manually",
+			"matchManagers": [
+				"composer",
+				"npm"
+			],
 			"matchDatasources": [
 				"packagist"
 			],
@@ -38,8 +43,25 @@
 			]
 		},
 		{
+			"groupName": "[npm] Minor and Patch",
+			"groupSlug": "npm-minor-patch",
+			"matchManagers": [
+				"npm"
+			],
+			"matchUpdateTypes": [
+				"patch",
+				"minor"
+			],
+			"matchPackageNames": [
+				"/.*/"
+			]
+		},
+		{
 			"groupName": "Minor and Patch Contrib",
 			"groupSlug": "minor-patch-contrib",
+			"matchManagers": [
+				"composer"
+			],
 			"matchDatasources": [
 				"packagist"
 			],
@@ -54,6 +76,9 @@
 		{
 			"groupName": "Minor and Patch Core",
 			"groupSlug": "minor-patch-core",
+			"matchManagers": [
+				"composer"
+			],
 			"schedule": [
 				"before 2am"
 			],

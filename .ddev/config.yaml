@@ -14,7 +14,8 @@ hooks:
         - exec: |
             ./vendor/bin/drush updb --no-cache-clear -y -v
             ./vendor/bin/drush cache:rebuild -y
-            ./vendor/bin/drush config:import -v
+            ./vendor/bin/drush config:import -y -v
+            ./vendor/bin/drush config-split:import development -y -v
             ./vendor/bin/drush cache:rebuild -y             
             ./vendor/bin/drush deploy:hook -y -v
             ./vendor/bin/drush user:create tester --mail='tester@ianmoffitt.dev' --password='zzzTester'
