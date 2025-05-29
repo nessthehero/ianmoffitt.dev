@@ -35,7 +35,12 @@ jobs:
           SSH_KEY: ${{ secrets.SSH_PRIV_KEY }}
           SSH_HOST: ${{ secrets.IP }}
 
-      - name: Test SSH connections
+      - name: Test SSH connections 1
+        run: |
+          ssh -q -i ${{ github.workspace}}/.ssh/id_rsa.key "exit"
+          echo $?
+
+      - name: Test SSH connections 2
         run: |
           ssh -q production "exit"
           echo $?
