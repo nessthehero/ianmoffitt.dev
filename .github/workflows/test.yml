@@ -37,12 +37,12 @@ jobs:
 
       - name: Test SSH connections 1
         run: |
-          ssh -q -i ~/.ssh/id_rsa.key "exit"
+          ssh -v -i ~/.ssh/id_rsa.key "exit"
           echo $?
 
       - name: Test SSH connections 2
         run: |
-          ssh -q production "exit"
+          ssh -v production "exit"
           echo $?
 
       - name: Setup DDEV
