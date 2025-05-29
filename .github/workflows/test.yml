@@ -36,18 +36,16 @@ jobs:
           SSH_KEY: ${{ secrets.SSH_PRIV_KEY }}
           SSH_HOST: ${{ secrets.IP }}
 
-      - name: Test SSH connections 1
-        run: |
-          ssh -v -i ~/.ssh/id_rsa.key ian@${{ secrets.IP }} "exit"
-          echo $?
-
-      - name: Test SSH connections 2
+      - name: Test SSH connection
         run: |
           ssh -v production "exit"
           echo $?
 
       - name: Setup DDEV
         uses: ddev/github-action-setup-ddev@v1
+
+      - name: Auth DDEV
+        run: ddev auth ssh
 
       - name: Show DDEV Information
         run: ddev describe
