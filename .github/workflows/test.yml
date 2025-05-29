@@ -34,7 +34,11 @@ jobs:
       - name: Set up host keys
         run: |
           mkdir -p ~/.ssh-agent/           
+          chown -v $SSH_USER ~/.ssh/known_hosts
           echo "${{ secrets.IP }}" > .ddev/homeadditions/.ssh/known_hosts
+        env:
+          SSH_USER: ian
+
 
       - name: Setup DDEV
         uses: ddev/github-action-setup-ddev@v1
