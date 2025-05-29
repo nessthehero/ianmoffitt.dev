@@ -37,7 +37,7 @@ jobs:
 
       - name: Test SSH connections 1
         run: |
-          ssh -q -i ${{ github.workspace}}/.ssh/id_rsa.key "exit"
+          ssh -q -i ~/.ssh/id_rsa.key "exit"
           echo $?
 
       - name: Test SSH connections 2
