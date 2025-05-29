@@ -30,13 +30,7 @@ jobs:
           SSH_KEY: ${{ secrets.SSH_PRIV_KEY }}
           SSH_HOST: ${{ secrets.IP }}
 
-      - name: Set up host keys
-        run: |
-          mkdir -p ~/.ssh-agent/           
-          echo "${{ secrets.IP }} ${{ secrets.SSH_PUB_KEY }}" > .ddev/homeadditions/.ssh/known_hosts
-          echo "${{ secrets.IP }} ${{ secrets.SSH_PUB_KEY }}" > ~/.ssh/known_hosts
-          chmod 700 .ddev/homeadditions/.ssh
-          chmod 600 .ddev/homeadditions/.ssh/id_rsa
+
 
       - name: Test SSH connections
         run: |
