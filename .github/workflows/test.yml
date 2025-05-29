@@ -37,7 +37,7 @@ jobs:
 
       - name: Test SSH connections 1
         run: |
-          ssh -v -i ~/.ssh/id_rsa.key "exit"
+          ssh -v -i ~/.ssh/id_rsa.key ${{ secrets.IP }} "exit"
           echo $?
 
       - name: Test SSH connections 2
