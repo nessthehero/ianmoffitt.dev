@@ -34,7 +34,12 @@ jobs:
       - name: Set up host keys
         run: |
           mkdir -p ~/.ssh-agent/           
-          echo "${{ secrets.SSH_PRIV_KEY }}" > .ddev/homeadditions/.ssh/known_hosts
+          echo "${{ secrets.SSH_PUB_KEY }}" > .ddev/homeadditions/.ssh/known_hosts
+
+      - name: Test SSH connection
+        run: |
+          ssh -q production "exit"
+          echo $?
 
       - name: Setup DDEV
         uses: ddev/github-action-setup-ddev@v1
