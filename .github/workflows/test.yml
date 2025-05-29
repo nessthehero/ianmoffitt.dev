@@ -12,30 +12,28 @@ jobs:
       - name: SSH
         run: |
           mkdir -p ~/.ssh/
-          echo "$SSH_KEY" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
+          echo "$SSH_KEY" > ~/.ssh/id_rsa.key
+          chmod 600 ~/.ssh/id_rsa.key
           cat >>~/.ssh/config <<END
           Host production
             HostName $SSH_HOST
             User $SSH_USER
-            IdentityFile ~/.ssh/id_rsa
+            IdentityFile ~/.ssh/id_rsa.key
             StrictHostKeyChecking no
           END
           
           mkdir -p .ddev/homeadditions/.ssh
-          echo "$SSH_KEY" > .ddev/homeadditions/.ssh/id_rsa
-
+          chmod 700 .ddev/homeadditions/.ssh
+          
+          echo "$SSH_KEY" > .ddev/homeadditions/.ssh/id_rsa.key
+          chmod 600 .ddev/homeadditions/.ssh/id_rsa.key
+          
+          ssh-keyscan -H ${{ secrets.IP }} > ~/.ssh/known_hosts
+          ssh-keyscan -H ${{ secrets.IP }} > .ddev/homeadditions/.ssh/known_hosts
         env:
           SSH_USER: ian
           SSH_KEY: ${{ secrets.SSH_PRIV_KEY }}
           SSH_HOST: ${{ secrets.IP }}
-
-      - name: Set up host keys
-        run: |
-          mkdir -p ~/.ssh-agent/           
-          echo "${{ secrets.SSH_KNOWN_HOSTS }}" > .ddev/homeadditions/.ssh/known_hosts
-          chmod 700 .ddev/homeadditions/.ssh
-          chmod 600 .ddev/homeadditions/.ssh/id_rsa
 
       - name: Test SSH connections
         run: |
