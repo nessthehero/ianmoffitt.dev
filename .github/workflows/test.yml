@@ -35,6 +35,7 @@ jobs:
         run: |
           mkdir -p ~/.ssh-agent/           
           echo "${{ secrets.SSH_PUB_KEY }}" > .ddev/homeadditions/.ssh/known_hosts
+          echo "${{ secrets.SSH_PUB_KEY }}" > ~/.ssh/known_hosts
 
       - name: Test SSH connection
         run: |
