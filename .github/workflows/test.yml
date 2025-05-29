@@ -24,8 +24,7 @@ jobs:
           
           mkdir -p .ddev/homeadditions/.ssh
           echo "$SSH_KEY" > .ddev/homeadditions/.ssh/id_rsa
-          chmod 700 .ddev/homeadditions/.ssh
-          chmod 600 .ddev/homeadditions/.ssh/id_rsa
+
         env:
           SSH_USER: ian
           SSH_KEY: ${{ secrets.SSH_PRIV_KEY }}
@@ -36,6 +35,8 @@ jobs:
           mkdir -p ~/.ssh-agent/           
           echo "${{ secrets.SSH_PUB_KEY }}" > .ddev/homeadditions/.ssh/known_hosts
           echo "${{ secrets.SSH_PUB_KEY }}" > ~/.ssh/known_hosts
+          chmod 700 .ddev/homeadditions/.ssh
+          chmod 600 .ddev/homeadditions/.ssh/id_rsa
 
       - name: Test SSH connection
         run: |
