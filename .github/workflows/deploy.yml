@@ -169,7 +169,9 @@ jobs:
           SSH_HOST: ${{ secrets.IP }}
       - name: Build 11ty Site
         run: >
-          ssh production "
+          ssh production "            
+            source ~/.nvm/nvm.sh;
+          
             cd /var/www/ianmoffitt.dev
             npm run prod
           "
