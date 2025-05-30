@@ -8,7 +8,8 @@
 		"clean": "rm -rf ./dist/* && rm -rf ./.cache/*",
 		"build": "npm run clean && npx @11ty/eleventy",
 		"prod": "npm run clean && MODE=production npx @11ty/eleventy --quiet",
-		"serve": "npm run clean && MODE=development DEBUG=Eleventy* npx @11ty/eleventy --serve"
+		"serve": "npm run clean && MODE=development DEBUG=Eleventy* npx @11ty/eleventy --serve",
+		"cypress": "cypress open"
 	},
 	"mocha": {},
 	"keywords": [],
@@ -17,16 +18,18 @@
 	"dependencies": {
 		"@11ty/eleventy": "^2.0.1",
 		"@11ty/eleventy-fetch": "^4.0.0",
+		"cssnano": "^7.0.6",
 		"dotenv": "^16.4.5",
 		"eleventy-sass": "^2.2.6",
 		"foundation-sites": "^6.9.0",
 		"jstransformer-markdown-it": "^3.0.0",
 		"luxon": "^3.5.0",
 		"postcss": "^8.5.3",
-		"sass": "^1.85.1",
-		"cssnano": "^7.0.6"
+		"sass": "^1.85.1"
 	},
 	"devDependencies": {
+		"@cypress/code-coverage": "^3.14.4",
+		"cypress": "^14.4.0",
 		"mocha": "^11.1.0"
 	}
 }

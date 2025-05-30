@@ -1,5 +1,7 @@
 describe("Check pages in Drupal as an authenticated user.", () => {
 
+	// TODO: Create a post here?
+
 	beforeEach(() => {
 		cy.login('tester', 'zzzTester');
 	});
