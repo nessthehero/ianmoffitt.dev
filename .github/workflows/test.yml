@@ -44,9 +44,6 @@ jobs:
       - name: Setup DDEV
         uses: ddev/github-action-setup-ddev@v1
 
-      - name: Auth DDEV
-        run: ddev auth ssh
-
       - name: Show DDEV Information
         run: ddev describe
 
@@ -56,8 +53,14 @@ jobs:
       - name: Install Dependencies
         run: ddev npm ci
 
-      - name: Pull Database
-        run: ddev pull drush -y
+      - name: Set up site
+        run: |
+          ddev drush site:install --existing-config --yes
+          ddev drush user:create tester --mail='tester@ianmoffitt.dev' --password='zzzTester'
+          ddev drush user:role:add 'administrator' tester
+
+#      - name: Pull Database
+#        run: ddev pull drush -y
 
       - name: Run Drupal Tests with Cypress
         run: ddev cypress-run --config-file cypress.drupal.config.js --spec "cypress/e2e/drupal.cy.js,cypress/e2e/drupal-authenticated.cy.js"
