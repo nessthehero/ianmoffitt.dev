@@ -67,9 +67,8 @@ jobs:
           SSH_HOST: ${{ secrets.IP }}
       - name: NPM Install
         run: > 
-          ssh production "
-            export NVM_DIR=$HOME/.nvm;
-            source $NVM_DIR/nvm.sh;
+          ssh production "            
+            source ~/.nvm/nvm.sh;
           
             cd /var/www/ianmoffitt.dev
             npm install --omit=dev
