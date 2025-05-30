@@ -5,6 +5,7 @@ module.exports = defineConfig({
 		setupNodeEvents(on, config) {
 			// implement node event listeners here
 		},
-		baseUrl: 'https://ianmoffitt.ddev.site'
+		baseUrl: 'https://ianmoffitt.ddev.site',
+		supportFile: 'cypress/support/e2e.js'
 	},
 });

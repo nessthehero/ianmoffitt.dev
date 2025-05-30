@@ -25,22 +25,21 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 Cypress.Commands.add('login',
-	/**
-	 * Logs in user
-	 *
-	 * @memberOf Admin
-	 * @method login
-	 * @param {string} username - Username of user.
-	 * @param {string} password - Password of user.
-	 * @example cy.login();
-	 */
-	(username, password) => {
-		cy.session([username, password], () => {
-			cy.visit('/user/login');
-			cy.get('#edit-name').type(username);
-			cy.get('#edit-pass').type(password);
-			cy.get('#edit-submit').click();
-			cy.contains(username).should('exist');
-		});
-		cy.log(cy.session);
-	});
+    /**
+     * Logs in user
+     *
+     * @method login
+     * @param {string} username - Username of user.
+     * @param {string} password - Password of user.
+     * @example cy.login();
+     */
+    (username, password) => {
+        cy.session([username, password], () => {
+            cy.visit('/user/login');
+            cy.get('#edit-name').type(username);
+            cy.get('#edit-pass').type(password);
+            cy.get('#edit-submit').click();
+            cy.contains(username).should('exist');
+        });
+        cy.log(cy.session);
+    });
