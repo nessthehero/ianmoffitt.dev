@@ -56,6 +56,7 @@ jobs:
       - name: Set up site
         run: |
           ddev drush site:install --existing-config --yes
+          ddev drush deploy -y
           ddev drush user:create tester --mail='tester@ianmoffitt.dev' --password='zzzTester'
           ddev drush user:role:add 'administrator' tester
 
