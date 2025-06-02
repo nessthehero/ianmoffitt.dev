@@ -67,6 +67,7 @@ jobs:
         run: ddev cypress-run --config-file cypress.drupal.config.js --spec "cypress/e2e/drupal.cy.js,cypress/e2e/drupal-authenticated.cy.js"
 
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           path: /cypress/screenshots
           if-no-files-found: 'ignore'
