@@ -43,8 +43,6 @@
 			]
 		},
 		{
-			"groupName": "[npm] Minor and Patch",
-			"groupSlug": "npm-minor-patch",
 			"matchManagers": [
 				"npm"
 			],
@@ -57,8 +55,6 @@
 			]
 		},
 		{
-			"groupName": "Minor and Patch Contrib",
-			"groupSlug": "minor-patch-contrib",
 			"matchManagers": [
 				"composer"
 			],
@@ -74,8 +70,6 @@
 			]
 		},
 		{
-			"groupName": "Minor and Patch Core",
-			"groupSlug": "minor-patch-core",
 			"matchManagers": [
 				"composer"
 			],
