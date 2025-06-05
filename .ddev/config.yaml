@@ -26,7 +26,7 @@ web_environment:
     - IANMOFFITT_ENV=dev
     - POSTS=https://ianmoffitt.ddev.site/jsonapi/node/post?sort[sort-sticky][path]=sticky&sort[sort-sticky][direction]=DESC&sort[sort-created][path]=created&sort[sort-created][direction]=DESC
     - SPOTIFY_ENDPOINT=https://ianmoffitt.ddev.site/spotify_playing?reduce=1
-nodejs_version: "18"
+nodejs_version: "lts"
 corepack_enable: false
 
 # Key features of DDEV's config.yaml:
