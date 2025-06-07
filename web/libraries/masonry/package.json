@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "chalk": "^5.4.1",
-    "gulp": "^3.9.1",
+    "gulp": "^5.0.1",
     "gulp-jshint": "^2.1.0",
     "gulp-json-lint": "^0.1.0",
     "gulp-rename": "^1.4.0",
