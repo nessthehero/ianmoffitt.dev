@@ -2991,6 +2991,70 @@
             }
         },
         {
+            "name": "drupal/trailing_slash",
+            "version": "2.0.0-alpha3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/trailing_slash.git",
+                "reference": "2.0.0-alpha3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/trailing_slash-2.0.0-alpha3.zip",
+                "reference": "2.0.0-alpha3",
+                "shasum": "e846b71df9704234efefef54b03e3ccc6dbd9e09"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0-alpha3",
+                    "datestamp": "1712155993",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Martín (mgzrobles)",
+                    "homepage": "https://www.drupal.org/u/mgzrobles",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Pappu Kumar Singh (pappuksingh)",
+                    "homepage": "https://www.drupal.org/u/pappuksingh",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Maksim Kulichkin (SAVEL)",
+                    "homepage": "https://www.drupal.org/u/savel",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Viktor Holovachek (AstonVictor)",
+                    "homepage": "https://www.drupal.org/u/astonvictor",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Adds trailing slashes to all URLs you want.",
+            "homepage": "https://www.drupal.org/project/trailing_slash",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/trailing_slash",
+                "issues": "https://www.drupal.org/project/issues/trailing_slash"
+            }
+        },
+        {
             "name": "drupal/xmlsitemap",
             "version": "2.0.0",
             "source": {
@@ -8811,6 +8875,7 @@
         "drupal/auto_entitylabel": 10,
         "drupal/cdn": 15,
         "drupal/ckeditor_media_resize": 10,
+        "drupal/trailing_slash": 15,
         "drupal/xmlsitemap": 10
     },
     "prefer-stable": true,

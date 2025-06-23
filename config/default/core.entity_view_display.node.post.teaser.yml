@@ -40,3 +40,4 @@ hidden:
   field_hide_title: true
   field_meta: true
   field_show_last_updated: true
+  langcode: true

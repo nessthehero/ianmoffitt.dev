@@ -29,6 +29,7 @@
 		"drupal/spotify_playing": "^1.1.2",
 		"drupal/stable": "^2.1.0",
 		"drupal/token_filter": "^2.2.1",
+		"drupal/trailing_slash": "^2.0@alpha",
 		"drupal/xmlsitemap": "^2.0.0@beta",
 		"drush/drush": "^13.6.0",
 		"vlucas/phpdotenv": "^5.6.2"
@@ -62,6 +63,11 @@
         }
 	},
 	"extra": {
+		"patches": {
+			"drupal/trailing_slash": {
+				"Fix settings page": "https://git.drupalcode.org/project/trailing_slash/-/merge_requests/16.diff"
+			}
+		},
 		"installer-types": [
 			"npm-asset"
 		],
