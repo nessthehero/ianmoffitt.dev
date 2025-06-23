@@ -1,0 +1,5 @@
+_core:
+  default_config_hash: SlH61T3fokeMgZ1EqsMR92gy7GIrwp1wo61_AerPqyo
+enabled: true
+paths: ''
+enabled_entity_types: 'a:9:{s:13:"block_content";a:1:{s:5:"basic";i:0;}s:4:"file";a:1:{s:4:"file";i:0;}s:5:"media";a:1:{s:5:"image";i:0;}s:17:"menu_link_content";a:1:{s:17:"menu_link_content";i:0;}s:4:"node";a:1:{s:4:"post";i:1;}s:10:"path_alias";a:1:{s:10:"path_alias";i:0;}s:8:"shortcut";a:1:{s:7:"default";i:0;}s:13:"taxonomy_term";a:1:{s:4:"tags";i:0;}s:4:"user";a:1:{s:4:"user";i:0;}}'

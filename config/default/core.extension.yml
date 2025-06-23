@@ -25,6 +25,7 @@ module:
   help: 0
   image: 0
   jsonapi: 0
+  language: 0
   link: 0
   media: 0
   media_library: 0
@@ -48,6 +49,7 @@ module:
   token: 0
   token_filter: 0
   toolbar: 0
+  trailing_slash: 0
   update: 0
   user: 0
   views_ui: 0
@@ -55,9 +57,7 @@ module:
   pathauto: 1
   xmlsitemap: 1
   views: 10
-  minimal: 1000
 theme:
   olivero: 0
   claro: 0
   gin: 0
-profile: minimal
