@@ -55,9 +55,7 @@ module:
   pathauto: 1
   xmlsitemap: 1
   views: 10
-  minimal: 1000
 theme:
   olivero: 0
   claro: 0
   gin: 0
-profile: minimal
