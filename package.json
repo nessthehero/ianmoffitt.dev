@@ -28,7 +28,7 @@
 		"sass": "^1.89.2"
 	},
 	"devDependencies": {
-		"@cypress/code-coverage": "^3.14.4",
+		"@cypress/code-coverage": "^3.14.5",
 		"cypress": "^14.5.0",
 		"mocha": "^11.7.1"
 	}
