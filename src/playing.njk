@@ -1,0 +1,12 @@
+---
+title: Now Playing
+description: "See what I'm listening to on Spotify right now!"
+---
+
+{% extends "layouts/empty.njk" %}
+
+{% block content %}
+{% if spotifyEndpoint %}
+    <div id="spotify" class="spotify" data-endpoint="{{ spotifyEndpoint }}"></div>
+{% endif %}
+{% endblock %}
