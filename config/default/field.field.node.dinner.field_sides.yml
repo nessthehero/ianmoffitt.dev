@@ -1,0 +1,19 @@
+uuid: f3a7b606-fa0e-4db6-92bc-bdb44b87b024
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sides
+    - node.type.dinner
+id: node.dinner.field_sides
+field_name: field_sides
+entity_type: node
+bundle: dinner
+label: Sides
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

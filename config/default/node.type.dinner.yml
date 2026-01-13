@@ -1,0 +1,17 @@
+uuid: 0dc1bc23-1daa-48d3-84d8-a82a23a13e7b
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Dinner
+type: dinner
+description: null
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

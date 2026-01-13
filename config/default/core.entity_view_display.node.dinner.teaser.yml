@@ -1,0 +1,33 @@
+uuid: 6fb8d408-df9b-4922-b1f2-994fd6028a3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.dinner.body
+    - field.field.node.dinner.field_sides
+    - node.type.dinner
+  module:
+    - text
+    - user
+id: node.dinner.teaser
+targetEntityType: node
+bundle: dinner
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_sides: true
+  langcode: true
