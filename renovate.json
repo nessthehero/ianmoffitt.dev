@@ -35,7 +35,8 @@
 			],
 			"matchPackageNames": [
 				"/.*/"
-			]
+			],
+			"prPriority": 1
 		},
 		{
 			"matchUpdateTypes": [
@@ -50,7 +51,8 @@
 			],
 			"commitMessagePrefix": "[RENOVATE][patch|minor]",
 			"matchCurrentVersion": "!/^0/",
-			"automerge": true
+			"automerge": true,
+			"prPriority": 5
 		},
 		{
 			"matchUpdateTypes": [
@@ -64,7 +66,8 @@
 			],
 			"commitMessagePrefix": "[RENOVATE]",
 			"groupName": "[Drupal Core]",
-			"automerge": false
+			"automerge": false,
+			"prPriority": 10
 		},
 		{
 			"matchUpdateTypes": [
