@@ -10,4 +10,4 @@ fetch:
 notification:
   emails:
     - admin@ianmoffitt.dev
-  threshold: all
+  threshold: security

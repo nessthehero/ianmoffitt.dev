@@ -7,12 +7,12 @@ dependencies:
 id: post
 label: Post
 type: 'canonical_entities:node'
-pattern: '/posts/[node:title]'
+pattern: '/posts/[node:title]/'
 selection_criteria:
-  aaa43f75-41c3-4c51-b5dd-34c72dc8b62a:
+  87b1702f-7359-408a-a5e5-cca3e725cfad:
     id: 'entity_bundle:node'
     negate: false
-    uuid: aaa43f75-41c3-4c51-b5dd-34c72dc8b62a
+    uuid: 87b1702f-7359-408a-a5e5-cca3e725cfad
     context_mapping:
       node: node
     bundles:

@@ -26,23 +26,6 @@
 	"dependencyDashboard": true,
 	"packageRules": [
 		{
-			"groupName": "Major all - skipped to update manually",
-			"matchManagers": [
-				"composer",
-				"npm"
-			],
-			"matchDatasources": [
-				"packagist"
-			],
-			"matchUpdateTypes": [
-				"major"
-			],
-			"enabled": false,
-			"matchPackageNames": [
-				"/.*/"
-			]
-		},
-		{
 			"matchManagers": [
 				"npm"
 			],
@@ -55,30 +38,21 @@
 			]
 		},
 		{
-			"matchManagers": [
-				"composer"
+			"matchUpdateTypes": [
+				"patch",
+				"minor"
 			],
-			"matchDatasources": [
-				"packagist"
-			],
-			"separateMinorPatch": false,
 			"matchPackageNames": [
 				"/.*/",
 				"!drupal/core-composer-scaffold",
 				"!drupal/core-project-message",
 				"!drupal/core-recommended"
-			]
+			],
+			"commitMessagePrefix": "[RENOVATE][patch|minor]",
+			"matchCurrentVersion": "!/^0/",
+			"automerge": true
 		},
 		{
-			"matchManagers": [
-				"composer"
-			],
-			"schedule": [
-				"before 2am"
-			],
-			"matchDatasources": [
-				"packagist"
-			],
 			"matchUpdateTypes": [
 				"patch",
 				"minor"
@@ -87,7 +61,16 @@
 				"drupal/core-composer-scaffold",
 				"drupal/core-project-message",
 				"drupal/core-recommended"
-			]
+			],
+			"commitMessagePrefix": "[RENOVATE]",
+			"groupName": "[Drupal Core]",
+			"automerge": false
+		},
+		{
+			"matchUpdateTypes": [
+				"major"
+			],
+			"enabled": false
 		}
 	]
 }
