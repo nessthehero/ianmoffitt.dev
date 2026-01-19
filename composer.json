@@ -24,7 +24,7 @@
 		"drupal/link_attributes": "^2.1.2",
 		"drupal/metatag": "^2.2.0",
 		"drupal/paragraphs": "^1.20.0",
-		"drupal/pathauto": "^1.13",
+		"drupal/pathauto": "^1.14.0",
 		"drupal/smtp": "^1.4.0",
 		"drupal/spotify_playing": "^1.1.2",
 		"drupal/stable": "^2.1.0",
