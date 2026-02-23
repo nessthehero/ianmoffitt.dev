@@ -4,10 +4,11 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"test": "npm run prod && mocha './mocha/*.js'",
+		"test": "npm run prod_debug && mocha './mocha/*.js'",
 		"clean": "rm -rf ./dist/* && rm -rf ./.cache/*",
 		"build": "npm run clean && npx @11ty/eleventy",
 		"prod": "npm run clean && MODE=production npx @11ty/eleventy --quiet",
+		"prod_debug": "npm run clean && MODE=development DEBUG=Eleventy* npx @11ty/eleventy",
 		"serve": "npm run clean && MODE=development DEBUG=Eleventy* npx @11ty/eleventy --serve",
 		"cypress": "cypress open"
 	},
