@@ -115,6 +115,6 @@
 	},
 	"require-dev": {
 		"drupal/coder": "^8.3.31",
-		"drupal/upgrade_status": "^4.3.8"
+		"drupal/upgrade_status": "^4.3.9"
 	}
 }
