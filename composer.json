@@ -18,7 +18,7 @@
 		"drupal/core-recommended": "11.3.10",
 		"drupal/entity_reference_revisions": "^1.14.0",
 		"drupal/field_group": "^3.6",
-		"drupal/gin": "^5.0.13",
+		"drupal/gin": "^5.0.14",
 		"drupal/gin_login": "^2.1.4",
 		"drupal/gin_toolbar": "^3.0.3",
 		"drupal/link_attributes": "^2.1.2",
