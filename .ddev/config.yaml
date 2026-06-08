@@ -30,6 +30,17 @@ web_environment:
 nodejs_version: "lts"
 corepack_enable: false
 
+web_extra_exposed_ports:
+  - name: eleventy
+    container_port: 8080
+    http_port: 8081
+    https_port: 8080
+
+web_extra_daemons:
+  - name: "eleventy"
+    command: "npm run serve"
+    directory: /var/www/html
+
 # Key features of DDEV's config.yaml:
 
 # name: <projectname> # Name of the project, automatically provides
