@@ -46,9 +46,10 @@
 		"allow-plugins": {
 			"composer/installers": true,
 			"cweagans/composer-patches": true,
+			"dealerdirect/phpcodesniffer-composer-installer": true,
 			"drupal/core-composer-scaffold": true,
 			"drupal/core-project-message": true,
-			"dealerdirect/phpcodesniffer-composer-installer": true
+			"symfony/runtime": true
 		}
 	},
 	"autoload": {
