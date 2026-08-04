@@ -36,6 +36,8 @@
 			"matchPackageNames": [
 				"/.*/"
 			],
+			"commitMessagePrefix": "[RENOVATE] [NPM]",
+			"automerge": true,
 			"prPriority": 1
 		},
 		{
@@ -49,7 +51,7 @@
 				"!drupal/core-project-message",
 				"!drupal/core-recommended"
 			],
-			"commitMessagePrefix": "[RENOVATE][patch|minor]",
+			"commitMessagePrefix": "[RENOVATE] [Module]",
 			"matchCurrentVersion": "!/^0/",
 			"automerge": true,
 			"prPriority": 5
