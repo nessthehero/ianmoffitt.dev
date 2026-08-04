@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "57e0ba43e46b7afda345180cf7360206",
+    "content-hash": "f5b1c30e076af6e608e92b36a5223f0e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2903,17 +2903,17 @@
         },
         {
             "name": "drupal/trailing_slash",
-            "version": "2.0.0-alpha3",
+            "version": "2.0.0-alpha4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/trailing_slash.git",
-                "reference": "2.0.0-alpha3"
+                "reference": "2.0.0-alpha4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/trailing_slash-2.0.0-alpha3.zip",
-                "reference": "2.0.0-alpha3",
-                "shasum": "e846b71df9704234efefef54b03e3ccc6dbd9e09"
+                "url": "https://ftp.drupal.org/files/projects/trailing_slash-2.0.0-alpha4.zip",
+                "reference": "2.0.0-alpha4",
+                "shasum": "98289ed41a566fccc452125fc5cb75cc8b93f0a1"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9 || ^10 || ^11"
@@ -2921,8 +2921,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.0-alpha3",
-                    "datestamp": "1712155993",
+                    "version": "2.0.0-alpha4",
+                    "datestamp": "1782905387",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
