@@ -30,7 +30,7 @@
 	},
 	"devDependencies": {
 		"@cypress/code-coverage": "^3.14.7",
-		"cypress": "^15.21.0",
+		"cypress": "^15.21.1",
 		"mocha": "^11.8.0"
 	}
 }
