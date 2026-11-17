@@ -23,7 +23,9 @@
 		"composer",
 		"npm"
 	],
-	"dependencyDashboard": true,
+	"dependencyDashboard": {
+		"enabled": true
+	},
 	"packageRules": [
 		{
 			"matchManagers": [
